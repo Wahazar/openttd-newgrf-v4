@@ -1,0 +1,140 @@
+/*
+ *  Copyright (C) 2017 Transportman, McZapkie
+ *  This file is part of the V4 CEE set based on 2cc Trains In NML fork
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_purchase, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+/*
+* Oil
+*/
+
+//Livery 1 - Variant 1 - Oil
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S1, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(535, 1)
+}
+
+//Livery 1 - Variant 2 - Oil
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S2, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(535, 32)
+}
+
+//Livery 1 - Variant 3 - Oil
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S3, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(535, 64)
+}
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_Oil_livery) {
+	2: spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S1;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S2;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Oil_L1_S3;
+}
+
+/*
+* Rubber
+*/
+
+//Livery 2 - Variant 1 - Rubber
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S1, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(1, 1)
+}
+
+//Livery 2 - Variant 2 - Rubber
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S2, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(1, 32)
+}
+
+//Livery 2 - Variant 3 - Rubber
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S3, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(1, 64)
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_Rubber_livery) {
+	2: spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S1;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S2;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Rubber_L2_S3;
+}
+
+/*
+* Water
+*/
+
+//Livery 3 - Variant 1 - Water
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S1, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(357, 1)
+}
+
+//Livery 3 - Variant 2 - Water
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S2, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(357, 32)
+}
+
+//Livery 3 - Variant 3 - Water
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S3, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(357, 64)
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_Water_livery) {
+	2: spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S1;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S2;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Water_L3_S3;
+}
+
+/*
+* Chemicals
+*/
+
+//Livery 4 - Variant 1 - Rfpr
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S1, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(179, 1)
+}
+
+//Livery 4 - Variant 2 - Rfpr
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S2, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(179, 32)
+}
+
+//Livery 4 - Variant 3 - Rfpr
+spriteset(spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S3, "gfx/Wagons/Gen4/Gen4_Tanker_Type1_Standard.png") {
+	template_2cc_wagons(179, 64)
+}
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_Rfpr_livery) {
+	2: spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S1;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S2;
+	1: spriteset_wagon_Gen4_Tanker_Type1_Rfpr_L4_S3;
+}
+
+//Plastic can have multiple liveries
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_Plastic_livery) {
+	1: switch_wagon_Gen4_Tanker_Type1_Oil_livery;
+	1: switch_wagon_Gen4_Tanker_Type1_Rubber_livery;
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Tanker_Type1_cargo_selection, cargo_type_in_veh) {
+	OIL_: switch_wagon_Gen4_Tanker_Type1_Oil_livery;
+	RUBR: switch_wagon_Gen4_Tanker_Type1_Rubber_livery;
+	PETR: switch_wagon_Gen4_Tanker_Type1_Rubber_livery;
+	PLST: switch_wagon_Gen4_Tanker_Type1_Plastic_livery;
+//	PETR: switch_wagon_Gen4_Tanker_Type1_Oil_livery;
+	PLAS: switch_wagon_Gen4_Tanker_Type1_Plastic_livery;
+	RFPR: switch_wagon_Gen4_Tanker_Type1_Rfpr_livery;
+	switch_wagon_Gen4_Tanker_Type1_Water_livery; //WATR, COLA, BEER, DYES, MILK
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

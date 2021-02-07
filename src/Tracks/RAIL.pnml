@@ -1,0 +1,188 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+#define IMAGEFILE  "gfx/Tracks/RAIL/gui_rail_OpenGFX.png"
+spriteset(RAIL_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+#undef IMAGEFILE
+
+
+spriteset(tunnel_tracks_RAIL, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_RAIL_snow, "gfx/Tracks/RAIL/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_RAIL_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_RAIL_snow;
+	tunnel_tracks_RAIL;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_RAIL, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_RAIL_arctic, "gfx/Tracks/RAIL/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_RAIL, terrain_type) {
+	TILETYPE_SNOW: track_underlays_RAIL_arctic;
+	track_underlays_RAIL;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_RAIL, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_RAIL_arctic, "gfx/Tracks/RAIL/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_RAIL, terrain_type) {
+	TILETYPE_SNOW: track_overlays_RAIL_arctic;
+	track_overlays_RAIL;
+}
+
+/**********************************************
+ * Fences: no fence
+ **********************************************/
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_RAIL_overlay, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_RAIL_overlay_snow, "gfx/Tracks/RAIL/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_RAIL_underlay, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_RAIL_underlay_snow, "gfx/Tracks/RAIL/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+switch(FEAT_RAILTYPES, SELF, bridge_RAIL_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_RAIL_overlay_snow;
+    bridges_RAIL_overlay;
+}
+
+// level crossings
+
+spriteset(level_crossing_RAIL_empty, "gfx/Tracks/RAIL/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(level_crossing_RAIL_closed, "gfx/Tracks/RAIL/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_RAIL_open, "gfx/Tracks/RAIL/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+spriteset(level_crossing_RAIL_closed_snow, "gfx/Tracks/RAIL/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_RAIL_open_snow, "gfx/Tracks/RAIL/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_RAIL_switch_closed, terrain_type) {
+	TILETYPE_SNOW: level_crossing_RAIL_closed_snow;
+	level_crossing_RAIL_closed;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_RAIL_switch_open, terrain_type) {
+	TILETYPE_SNOW: level_crossing_RAIL_open_snow;
+	level_crossing_RAIL_open;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_RAIL_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED)) {
+	1: level_crossing_RAIL_switch_closed;
+	level_crossing_RAIL_switch_open;
+}
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/RAIL/RAIL_depot_normal.png"
+spriteset(RAIL_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RAIL/RAIL_depot_snow.png"
+spriteset(RAIL_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, RAIL_depot, terrain_type) {
+	TILETYPE_SNOW: RAIL_depot_snow;
+	RAIL_depot_normal;
+}
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("RAIL") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, RAIL)
+  {
+    property
+    {
+      label: "RAIL";
+      introduction_date: date(RAIL_YEAR, 1, 1);
+      name: string(STR_RAIL_NAME);
+      toolbar_caption: string(STR_RAIL_TOOLBAR);
+      menu_text: string(STR_RAIL_MENU);
+      build_window_caption: string(STR_RAIL_BUILD_CAPTION);
+      autoreplace_text: string(STR_RAI_AUTOREPLACE);
+      new_engine_text: string(STR_RAI_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      curve_speed_multiplier: 2;
+      construction_cost: RAIL_BUILDCOST
+      maintenance_cost: RAIL_INFRACOST
+      speed_limit: RAIL_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xD0;
+      sort_order: RAIL_SORT;
+      railtype_flags: bitmask();
+    }
+	graphics {
+       		gui: RAIL_gui;
+		track_overlay:   ground_switch_overlay_RAIL;
+		underlay:        ground_switch_underlay_RAIL;
+		tunnels:         tunnel_track_RAIL_switch;
+		bridge_surfaces: bridge_RAIL_overlay_terrain_switch;
+                fences: EMPTY_SPRITESET
+      		level_crossings: level_crossing_RAIL_switch;
+      		depots: RAIL_depot;
+	}
+  }
+}
+}
+
+

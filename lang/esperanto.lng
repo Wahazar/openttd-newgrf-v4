@@ -1,0 +1,196 @@
+##grflangid 0x05
+##plural 0
+##case n
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+
+#General error messages
+
+#parameter strings
+#cost parameters
+
+STR_PARAM_DIVIDE_16                 :16ono
+STR_PARAM_DIVIDE_4                  :4ona
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+
+#region parameters
+
+#loading speed parameter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#VEHICLE NAMES
+
+#Railbus-steam
+
+#Railbus-diesel
+str_rbd_Lithuania_Lithuanian_Railways_AR2               :Litova Fervojoj AR2 (Dizelo Relobuso)
+str_rbd_Germany_Saxon_DET_1_2                           :Saxon DET 1-2 (Dizelo Relobuso)
+
+#Railbus-electric
+
+#Steam
+str_steam_Russia_RZD_9P                         :RZD 9P (Vaporo)
+# str_steam_Yugoslavia_JZ_01 :JZ 01 {STRING}
+# str_steam_Yugoslavia_JZ_06 :JZ 06 {STRING}
+
+#Diesel
+str_diesel_Hungary_MAV_M44                      :MAV M44 (Dizelo)
+str_diesel_Czech_Republic_CD_720_ChME2          :CD 720 ChME2 (Dizelo)
+# str_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
+# str_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
+# str_diesel_Austria_OBB_2016	:OBB 2016 {STRING}
+# str_diesel_Czechia_CSD_753_T669 		:CSD T669.0/CD 753 {STRING}
+# str_diesel_Czechia_CSD_742_T4662 		:CSD T466.2/CD 742 {STRING}
+# str_diesel_Czechia_CSD_7415 		:CD 741.5 {STRING}
+# str_diesel_Czechia_CSD_794 		:CD 794 {STRING}
+# str_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
+# str_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
+
+
+str_diesel_Russia_RZD_M62                       :RZD M62 (Dizelo)
+str_diesel_Russia_RZD_GT1                       :RZD GT1 (Dizelo)
+
+#Electric
+str_electric_Austria_OBB_1044                                   :OBB 1044 (Elektra)
+str_electric_Austria_OBB_1063                                   :OBB 1063 (Elektra)
+
+str_electric_Russia_RZD_EP20                                    :RZD EP20 (Elektra)
+#str_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
+
+
+#DMU
+#str_dmu_Germany_DB_VT_040_Flying_Hamburger 	:DB VT 04.0 'Flying Hamburger' {STRING}
+#str_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
+#str_dmu_Germany_DB_VT_085 					:DB VT 08.5 {STRING}
+#str_dmu_Germany_DB_VT_115 					:DB VT11.5/DB 601 'TEE' {STRING}
+str_dmu_Russia_RZD_RA2                                          :RZD RA2 (DMU)
+
+#EMU
+str_emu_Czech_Republic_CD_680_Pendolino                         :CD 680 'Pendolino' (EMU)
+str_emu_Germany_DB_403_ICE_3                                    :DB 403 ICE-3 (EMU)
+str_emu_Austria_OBB_4030                                        :OBB 4030 (EMU)
+
+#Multiple Unit Metro
+str_mtro_Germany_Munchen_MVG_A2                                 :Munchen MVG A2 (Metro)
+str_mtro_Russia_Moscow_81_7175M                                 :Moskvo 81-717.5M (Metro)
+str_mtro_Germany_Berlin_U_Bahn_A_I                              :Berlino U-Bahn A I (Metro)
+
+
+#wagons
+#str_wagon_Gen2_Armoured_Boxcar_Russian			:2nd Gen Wooden Armoured Car (broad gauge)
+# str_wagon_Gen2_Silo_Russian 				:2nd Gen Silo (broad gauge)
+# str_wagon_Gen2_Hopper_European 				:2nd Gen Wooden Hopper (normal gauge)
+# str_wagon_Gen2_Hopper_Russian 				:2nd Gen Wooden Hopper (broad gauge)
+
+
+
+# str_wagon_Gen5_Flat_Wagon_European 			:5th Gen Flat Wagon
+# str_wagon_Gen5_Flat_Wagon_Russian 			:5th Gen Flat Wagon (broad gauge)
+# str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
+# str_wagon_Gen5_Gondola_Russian 					:5th Gen Gondola (broad gauge)
+str_wagon_Gen5_Container_Carrier                :5a Gen Ujo Portilo
+# str_wagon_Gen5_Heavy_Flatcar_Russian 			:5th Gen Heavy Flatcar (broad gauge)
+
+
+#coaches
+str_coach_Gen1_Clerestory_Mail_Coach                    :Klerestorio Poŝto Kaleŝo
+str_coach_Gen2_Heavyweight_Intercity_Coach              :Forta Interurba Kaleŝo
+str_coach_Gen2_Steel_Compartment_Coach                  :Ŝtalo Kupeo Kaleŝo
+str_coach_Gen2_Steel_3_axle_Compartment_Coach           :Ŝtalo 3-akso Kupeo Kaleŝo
+str_coach_Gen2_Steel_3_axle_Mail_Coach                  :Ŝtalo 3-akso Poŝto Kaleŝo
+#str_coach_Gen3_Aluminium_Lightweight_Intercity_Coach 	:Aluminium Lightweight Intercity Coach
+#str_coach_Gen3_Aluminium_Lightweight_Regional_Coach 	:Aluminium Lightweight Regional Coach
+#str_coach_Gen3_Aluminium_Lightweight_Mail_Coach 		:Aluminium Lightweight Mail Coach
+#str_coach_Gen3_Gallery_Car 								:Gallery Car
+#str_coach_Gen3_Mk1_Intercity_Coach 						:Mk1 Intercity Coach
+#str_coach_Gen3_Mk1_Regional_Coach 						:Mk1 Regional Coach
+#str_coach_Gen3_Mk1_Mail_Coach 							:Mk1 Mail Coach
+str_coach_Gen4_Silberling_Commuter_Coach                :'Silberling' Komutila Kaleŝo
+str_coach_Gen4_Russian_Mail_Coach                       :Rusa Poŝto Kaleŝo
+str_coach_Gen5_High_Speed_Coach                         :Altrapida Kaleŝo
+str_coach_Gen5_Talgo_Pendular                           :Talgo Pendular
+#str_coach_Gen6_Grand_Regio_Coach 			:Euro Regio Coach (normal gauge)
+str_coach_Gen6_Speedmail_Coach                          :Altrapida Poŝto Kaleŝo
+
+#special wagons
+
+
+#VEHICLE CLASS NAMES
+#Railbus-steam
+
+#Railbus-diesel
+
+#Railbus-electric
+
+#Steam
+
+#Diesel
+
+#Electric
+# str_class_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
+
+#DMU
+#str_class_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
+
+#EMU
+
+
+#PURCHASE MENU TEXTS
+
+#Can attach vehicle texts
+
+
+#liveries
+
+
+
+
+
+
+
+# str_Steam_Universal	: (Steam, broad or normal gauge)
+# str_Electric_Universal	: (Electric, broad or normal gauge, DC system)
+
+
+
+
+#Obsolete vehicles

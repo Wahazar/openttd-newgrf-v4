@@ -1,0 +1,180 @@
+/*
+ *  Copyright (C) 2019 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/RLOW/gui_rail_OpenGFX.png"
+
+spriteset(RLOW_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_RLOW, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_RLOW_snow, "gfx/Tracks/RLOW/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_RLOW_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_RLOW_snow;
+	tunnel_tracks_RLOW;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_RLOW, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_RLOW_arctic, "gfx/Tracks/RLOW/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_RLOW, terrain_type) {
+	TILETYPE_SNOW: track_underlays_RLOW_arctic;
+	track_underlays_RLOW;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_RLOW, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_RLOW_arctic, "gfx/Tracks/RLOW/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_RLOW, terrain_type) {
+	TILETYPE_SNOW: track_overlays_RLOW_arctic;
+	track_overlays_RLOW;
+}
+
+/**********************************************
+ * Fences: no fence
+ **********************************************/
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_RLOW_overlay, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_RLOW_overlay_snow, "gfx/Tracks/RLOW/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_RLOW_underlay, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_RLOW_underlay_snow, "gfx/Tracks/RLOW/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+switch(FEAT_RAILTYPES, SELF, bridge_RLOW_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_RLOW_overlay_snow;
+    bridges_RLOW_overlay;
+}
+
+// level crossings
+
+spriteset(level_crossing_RLOW_empty, "gfx/Tracks/RLOW/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(level_crossing_RLOW_closed, "gfx/Tracks/RLOW/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+//spriteset(level_crossing_RLOW_open, "gfx/Tracks/RLOW/level_crossing_track_types.png") {
+//	tmpl_level_crossing_track_types_open(50)
+//}
+spriteset(level_crossing_RLOW_closed_snow, "gfx/Tracks/RLOW/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+//spriteset(level_crossing_RLOW_open_snow, "gfx/Tracks/RLOW/level_crossing_track_types_snow.png") {
+//	tmpl_level_crossing_track_types_open(50)
+//}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_RLOW_switch, terrain_type) {
+	TILETYPE_SNOW: level_crossing_RLOW_closed_snow;
+	level_crossing_RLOW_closed;
+}
+#undef IMAGEFILE
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/RLOW/RLOW_depot_normal.png"
+spriteset(RLOW_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLOW/RLOW_depot_snow.png"
+spriteset(RLOW_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, RLOW_depot, terrain_type) {
+	TILETYPE_SNOW: RLOW_depot_snow;
+	RLOW_depot_normal;
+}
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("RLOW") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, RLOW)
+  {
+    property
+    {
+      label: "RLOW";
+      introduction_date: date(RLOW_YEAR, 1, 1);
+      name: string(STR_RLOW_NAME);
+      toolbar_caption: string(STR_RLOW_TOOLBAR);
+      menu_text: string(STR_RLOW_MENU);
+      build_window_caption: string(STR_RLOW_BUILD_CAPTION);
+      autoreplace_text: string(STR_RAI_AUTOREPLACE);
+      new_engine_text: string(STR_RAI_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      curve_speed_multiplier: 1;
+      construction_cost: RLOW_BUILDCOST
+      maintenance_cost: RLOW_INFRACOST
+      speed_limit: RLOW_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xCE;
+      sort_order: RLOW_SORT;
+      railtype_flags: bitmask();
+    }
+	graphics {
+       		gui: RLOW_gui;
+		track_overlay:   ground_switch_overlay_RLOW;
+		underlay:        ground_switch_underlay_RLOW;
+		tunnels:         tunnel_track_RLOW_switch;
+		bridge_surfaces: bridge_RLOW_overlay_terrain_switch;
+                fences: EMPTY_SPRITESET
+      		level_crossings: level_crossing_RLOW_switch;
+      		depots: RLOW_depot;
+	}
+  }
+}
+}
+
+

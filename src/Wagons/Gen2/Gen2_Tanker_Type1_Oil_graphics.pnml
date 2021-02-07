@@ -1,0 +1,42 @@
+/*
+ *  Copyright (C) 2017 Transportman, McZapkie
+ *  This file is part of the V4 CEE set based on 2cc Trains In NML fork
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen2_Tanker_Type1_Petro_purchase, "gfx/Wagons/Gen2/Gen2_Tanker_Type1_Oil_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+/*
+* Oil
+*/
+
+//Livery 1 - Variant 1 - Oil
+spriteset(spriteset_wagon_Gen2_Tanker_Type1_Petro_L1_S1, "gfx/Wagons/Gen2/Gen2_Tanker_Type1_Oil.png") {
+	template_2cc_wagons(1, 1)
+}
+
+//Livery 1 - Variant 2 - Oil
+spriteset(spriteset_wagon_Gen2_Tanker_Type1_Petro_L1_S2, "gfx/Wagons/Gen2/Gen2_Tanker_Type1_Oil.png") {
+	template_2cc_wagons(1, 32)
+}
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Tanker_Type1_Petro_livery) {
+	3: spriteset_wagon_Gen2_Tanker_Type1_Petro_L1_S1;
+	2: spriteset_wagon_Gen2_Tanker_Type1_Petro_L1_S2;
+}
+
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

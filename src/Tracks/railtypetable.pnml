@@ -1,0 +1,47 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+//railtype ranges
+
+#define NORMAL_GAUGES_NONELECTRIFIED "RLOW", "RAIL", "RHIG", "SAaN", "SAAN", "SBAN", "SCAN", "SDAN", "SEAN"
+
+#define NORMAL_GAUGES_3KV "ELOW", "EMED", "EHIG", "SAAD", "SBAD", "SCAD", "SDAD", "SEAD", "SFAD"
+
+#define NORMAL_GAUGES_15KV "DBNE", "DBHE", "DBHS", "SAAa", "SBAa", "SCAa", "SDAa", "SEAa"
+
+#define NORMAL_GAUGES_25KV "SAAA", "SBAA", "SBAA", "SCAA", "SDAA", "SEAA"
+
+#define NORMAL_GAUGES_MULTISYSTEM "ELRL", "SAAE"
+
+#define NORMAL_GAUGES_METRO "MTRO", "NAA3", "NSA3", "NUA3"
+
+#define ALL_NORMAL_GAUGES NORMAL_GAUGES_NONELECTRIFIED, NORMAL_GAUGES_3KV, NORMAL_GAUGES_15KV, NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM, NORMAL_GAUGES_METRO, "NG6R", "DAAN"
+
+
+#define BROAD_GAUGES_NONELECTRIFIED "RLA0", "RLA1", "RLA2", "RLA3", "BAAN", "BBAN", "BCAN", "BDAN", "BEAN"
+
+#define BROAD_GAUGES_3KV "ERD1", "ERD2", "ERD3", "BAAD", "BBAD", "BCAD", "BDAD", "BEAD"
+
+#define ALL_BROAD_GAUGES BROAD_GAUGES_NONELECTRIFIED, BROAD_GAUGES_3KV
+
+
+#define DUAL_GAUGES "RL2S", "DAAN"
+
+#define DUAL_GAUGES_3KV "ER2S", "DAAD"
+
+
+//Railtype translation table
+//This set uses the default labels and adds Metro-vehicles. 
+
+railtypetable {
+	ALL_NORMAL_GAUGES,
+	ALL_BROAD_GAUGES,
+	RL2S: ["RL2S", RAIL],
+	DUAL_GAUGES_3KV,
+	MTRO: [SAB3, "3RDR", MTRO, MONO] // fall back to monorail if no Metro-tracks are available
+}

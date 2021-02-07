@@ -1,0 +1,33 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the 2cc Trains In NML and is based on The Dutch Trainset 2.0 by Jasper Vries
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+//this file is used to define electric railbus vehicle type information
+
+#include "undefine_type.pnml"
+
+#define SET_TRACK_TYPE if (param_custom_tracks) {\
+ item(FEAT_TRAINS, ITEM ) {\
+  property {\
+   track_type: SAAa;\
+  }\
+ }\
+} 
+
+#define CURRENT_TRACK_TYPE ELRL
+
+#define CURRENT_RUNNING_COST_BASE RUNNING_COST_ELECTRIC
+#define CURRENT_ENGINE_CLASS ENGINE_CLASS_ELECTRIC
+
+// Room for specific defines
+#define PURCHASECOSTVALUE PURCHASECOSTELECTRICRAILBUSVALUE
+#define RUNNINGCOSTVALUE RUNNINGCOSTELECTRICRAILBUSVALUE
+
+#define DEFAULT_LIVERY_RECOLOUR colour_mapping: switch_livery_subtype_default_rbe_mapping;
+#define DEFAULT_LIVERY_TEXT cargo_subtype_text: switch_livery_subtype_default_text;
+
+#define DEFAULT_RELIABILITY_DECAY ELECTRIC_RELIABILITY_DECAY

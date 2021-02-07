@@ -1,0 +1,203 @@
+/*
+ *  Copyright (C) 2020 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/SCAA/gui_erail_OpenGFX.png"
+
+spriteset(gui_SCAA_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_SCAA, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_SCAA_snow, "gfx/Tracks/SCAA/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_SCAA_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_SCAA_snow;
+	tunnel_tracks_SCAA;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_SCAA, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_SCAA_arctic, "gfx/Tracks/SCAA/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_SCAA, terrain_type) {
+	TILETYPE_SNOW: track_underlays_SCAA_arctic;
+	track_underlays_SCAA;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_SCAA, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_SCAA_arctic, "gfx/Tracks/SCAA/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_SCAA, terrain_type) {
+	TILETYPE_SNOW: track_overlays_SCAA_arctic;
+	track_overlays_SCAA;
+}
+
+//fences - no fence
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_SCAA_overlay, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_SCAA_overlay_snow, "gfx/Tracks/SCAA/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_SCAA_underlay, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_SCAA_underlay_snow, "gfx/Tracks/SCAA/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_SCAA_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_SCAA_overlay_snow;
+    bridges_SCAA_overlay;
+}
+
+// level crossings
+
+spriteset(level_crossing_SCAA_empty, "gfx/Tracks/SCAA/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(level_crossing_SCAA_closed, "gfx/Tracks/SCAA/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_SCAA_open, "gfx/Tracks/SCAA/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+spriteset(level_crossing_SCAA_closed_snow, "gfx/Tracks/SCAA/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_SCAA_open_snow, "gfx/Tracks/SCAA/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_SCAA_switch_closed, terrain_type) {
+	TILETYPE_SNOW: level_crossing_SCAA_closed_snow;
+	level_crossing_SCAA_closed;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_SCAA_switch_open, terrain_type) {
+	TILETYPE_SNOW: level_crossing_SCAA_open_snow;
+	level_crossing_SCAA_open;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_SCAA_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED)) {
+	1: level_crossing_SCAA_switch_closed;
+	level_crossing_SCAA_switch_open;
+}
+
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/SCAA/SCAA_depot_normal.png"
+spriteset(SCAA_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/SCAA/SCAA_depot_snow.png"
+spriteset(SCAA_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, SCAA_depot, terrain_type) {
+	TILETYPE_SNOW: SCAA_depot_snow;
+	SCAA_depot_normal;
+}
+
+
+#define IMAGEFILE  "gfx/Tracks/SCAA/SCAA-catenary-wire-pylons.png"
+spriteset(SCAA_catenary_wire, IMAGEFILE)
+{
+  catenary_wire_template(5, 27)
+}
+
+spriteset(SCAA_catenary_pylons, IMAGEFILE)
+{
+  pylons_template(5, 191)
+}
+#undef IMAGEFILE
+
+//properties
+
+if ((param_custom_tracks) && (CZECHIA || HUNGARY || ROMANIA || SOUTHERNEUROPE)) {
+if (railtype_available("SCAA") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, SCAA)
+  {
+    property
+    {
+      label: "SCAA";
+      introduction_date: date(SCAA_YEAR, 1, 1);
+      name: string(STR_SCAA_NAME);
+      toolbar_caption: string(STR_SCAA_TOOLBAR);
+      menu_text: string(STR_SCAA_MENU);
+      build_window_caption: string(STR_SCAA_BUILD_CAPTION);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM];
+      alternative_railtype_list: [NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM];
+      curve_speed_multiplier: 2;
+      construction_cost: SCAA_BUILDCOST
+      maintenance_cost: SCAA_INFRACOST
+      speed_limit: SCAA_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x92;
+      sort_order: SCAA_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_SCAA;
+		underlay:        ground_switch_underlay_SCAA;
+		tunnels:         tunnel_track_SCAA_switch;
+		bridge_surfaces: bridge_SCAA_overlay_terrain_switch;
+      		fences: EMPTY_SPRITESET
+		gui:             gui_SCAA_opengfx;
+      		level_crossings: level_crossing_SCAA_switch;
+      		depots: SCAA_depot;
+     		catenary_wire: SCAA_catenary_wire;
+      		catenary_pylons: SCAA_catenary_pylons;
+	}
+  }
+}
+}
+
+

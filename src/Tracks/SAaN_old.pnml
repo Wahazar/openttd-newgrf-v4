@@ -1,0 +1,150 @@
+/*
+ *  Copyright (C) 2019 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/SAaN/SAaN_gui.png"
+
+spriteset(SAaN_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/SAaN/SAaN_track_normal.png"
+
+spriteset(SAaN_track_overlay_normal, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(SAaN_underlay_normal, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(SAaN_bridge_surfaces_normal, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(SAaN_tunnels_normal, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/SAaN/SAaN_track_snow.png"
+
+spriteset(SAaN_track_overlay_snow, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(SAaN_underlay_snow, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(SAaN_bridge_surfaces_snow, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(SAaN_tunnels_snow, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+// depot - standard
+
+
+//x
+#define IMAGEFILE1  "gfx/Tracks/SAaN/SAaN_track_normal.png"
+#define IMAGEFILE2  "gfx/Tracks/crossing_slow.png"
+spriteset(SAaN_level_crossings_open)
+{
+  level_crossings_railway_template(2, 298, IMAGEFILE1)
+  level_crossings_1_template(10, 133, IMAGEFILE2)
+}
+#undef IMAGEFILE1
+#undef IMAGEFILE2
+
+//fences - no fence
+
+
+// switches
+
+switch(FEAT_RAILTYPES, SELF, SAaN_track_overlay, terrain_type) {
+	TILETYPE_SNOW: SAaN_track_overlay_snow;
+	SAaN_track_overlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, SAaN_underlay, terrain_type) {
+	TILETYPE_SNOW: SAaN_underlay_snow;
+	SAaN_underlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, SAaN_bridge_surfaces, terrain_type) {
+	TILETYPE_SNOW: SAaN_bridge_surfaces_snow;
+	SAaN_bridge_surfaces_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, SAaN_tunnels, terrain_type) {
+	TILETYPE_SNOW: SAaN_tunnels_snow;
+	SAaN_tunnels_normal;
+}
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("SAaN") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, SAaN)
+  {
+    property
+    {
+      label: "SAaN";
+      introduction_date: date(SAaN_YEAR, 1, 1);
+      name: string(STR_SAaN_NAME);
+      toolbar_caption: string(STR_SAaN_TOOLBAR);
+      menu_text: string(STR_SAaN_MENU);
+      build_window_caption: string(STR_SAaN_BUILD_CAPTION);
+      autoreplace_text: string(STR_RAI_AUTOREPLACE);
+      new_engine_text: string(STR_RAI_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      curve_speed_multiplier: 1;
+      construction_cost: SAaN_BUILDCOST
+      maintenance_cost: SAaN_INFRACOST
+      speed_limit: SAaN_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x50;
+      sort_order: SAaN_SORT;
+      railtype_flags: bitmask();
+    }
+	graphics {
+      gui: SAaN_gui;
+      track_overlay: SAaN_track_overlay;
+      underlay: SAaN_underlay;
+      tunnels: SAaN_tunnels;
+//      tunnel_overlay: SAaN_tunnels;
+      fences: EMPTY_SPRITESET
+      bridge_surfaces: SAaN_bridge_surfaces;
+      level_crossings: SAaN_level_crossings_open;
+//      		depots: SAaN_depot;
+	}
+  }
+}
+}
+
+

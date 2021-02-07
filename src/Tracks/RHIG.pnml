@@ -1,0 +1,180 @@
+/*
+ *  Copyright (C) 2019 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/RHIG/gui_rail_OpenGFX.png"
+spriteset(RHIG_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_RHIG, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_RHIG_snow, "gfx/Tracks/RHIG/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_RHIG_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_RHIG_snow;
+	tunnel_tracks_RHIG;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_RHIG, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_RHIG_arctic, "gfx/Tracks/RHIG/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_RHIG, terrain_type) {
+	TILETYPE_SNOW: track_underlays_RHIG_arctic;
+	track_underlays_RHIG;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_RHIG, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_RHIG_arctic, "gfx/Tracks/RHIG/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_RHIG, terrain_type) {
+	TILETYPE_SNOW: track_overlays_RHIG_arctic;
+	track_overlays_RHIG;
+}
+
+/**********************************************
+ * Fences:
+ **********************************************/
+spriteset(fences_RHIG_snow, "gfx/Tracks/RHIG/fences.png") {
+	tmpl_fences(50)
+}
+spriteset(fences_RHIG, "gfx/Tracks/RHIG/fences.png") {
+	tmpl_fences(0)
+}
+
+switch(FEAT_RAILTYPES, SELF, fences_RHIG_terrain_switch, terrain_type) {
+	TILETYPE_SNOW: fences_RHIG_snow;
+	fences_RHIG;
+}
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_RHIG_overlay, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_RHIG_overlay_snow, "gfx/Tracks/RHIG/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_RHIG_underlay, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_RHIG_underlay_snow, "gfx/Tracks/RHIG/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_RHIG_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_RHIG_overlay_snow;
+    bridges_RHIG_overlay;
+}
+
+/**********************************************
+ * Level crossings:
+ **********************************************/
+
+spriteset(lc_RHIG_empty, "gfx/Tracks/RHIG/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(lc_RHIG_closed, "gfx/Tracks/RHIG/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(lc_RHIG_open, "gfx/Tracks/RHIG/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+spriteset(lc_RHIG_closed_snow, "gfx/Tracks/RHIG/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(lc_RHIG_open_snow, "gfx/Tracks/RHIG/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+
+switch(FEAT_RAILTYPES, SELF, right_level_crossing_RHIG_state_switch_snow, level_crossing_status) {
+	LEVEL_CROSSING_CLOSED: lc_RHIG_closed_snow;
+	lc_RHIG_open_snow;
+}
+switch(FEAT_RAILTYPES, SELF, right_level_crossing_RHIG_state_switch, level_crossing_status) {
+	LEVEL_CROSSING_CLOSED: lc_RHIG_closed;
+	lc_RHIG_open;
+}
+switch(FEAT_RAILTYPES, SELF, right_level_crossing_RHIG_terrain_switch, terrain_type) {
+	TILETYPE_SNOW: right_level_crossing_RHIG_state_switch_snow;
+	right_level_crossing_RHIG_state_switch;
+}
+
+
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("RHIG") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, RHIG)
+  {
+    property
+    {
+      label: "RHIG";
+      introduction_date: date(RHIG_YEAR, 1, 1);
+      name: string(STR_RHIG_NAME);
+      toolbar_caption: string(STR_RHIG_TOOLBAR);
+      menu_text: string(STR_RHIG_MENU);
+      build_window_caption: string(STR_RHIG_BUILD_CAPTION);
+      autoreplace_text: string(STR_RAI_AUTOREPLACE);
+      new_engine_text: string(STR_RAI_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      curve_speed_multiplier: 3;
+      construction_cost: RHIG_BUILDCOST
+      maintenance_cost: RHIG_INFRACOST
+      speed_limit: RHIG_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xD1;
+      sort_order: RHIG_SORT;
+      railtype_flags: bitmask();
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_RHIG;
+		underlay:        ground_switch_underlay_RHIG;
+		tunnels:         tunnel_track_RHIG_switch;
+		bridge_surfaces: bridge_RHIG_overlay_terrain_switch;
+		fences:          fences_RHIG_terrain_switch;
+		level_crossings: right_level_crossing_RHIG_terrain_switch;
+		gui:             RHIG_gui;
+      		depots: RAIL_depot;
+	}
+  }
+}
+}
+
+

@@ -1,0 +1,129 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+#define SAaN_BUILDCOST 4;
+#define SAaN_INFRACOST 1;
+#define SAaN_VMAX  	50
+#define SAaN_YEAR 1800
+#define SAaN_SORT 109
+#define RLOW_BUILDCOST 6;
+#define RLOW_INFRACOST 8;
+#define RLOW_VMAX  	80
+#define RLOW_YEAR 1850
+#define RLOW_SORT 111
+#define RAIL_BUILDCOST 12;
+#define RAIL_INFRACOST 12;
+#define RAIL_VMAX 	120
+#define RAIL_YEAR 1890
+#define RAIL_SORT 112
+#define RHIG_BUILDCOST 24;
+#define RHIG_INFRACOST 16;
+#define RHIG_YEAR 1940
+#define RHIG_VMAX 	160
+#define RHIG_SORT 113
+
+#define ELOW_BUILDCOST 16;
+#define ELOW_INFRACOST 18;
+#define ELOW_VMAX  	110
+#define ELOW_YEAR 1934
+#define ELOW_SORT 121
+#define EMED_BUILDCOST 22;
+#define EMED_INFRACOST 24;
+#define EMED_VMAX  	160
+#define EMED_YEAR 1970
+#define EMED_SORT 122
+#define EHIG_BUILDCOST 32;
+#define EHIG_INFRACOST 30;
+#define EHIG_VMAX  	250
+#define EHIG_YEAR 1990
+#define EHIG_SORT 123
+
+#define DBNE_BUILDCOST 28;
+#define DBNE_INFRACOST 15;
+#define DBNE_VMAX  	90
+#define DBNE_YEAR 1930
+#define DBNE_SORT 141
+#define DBHE_BUILDCOST 36;
+#define DBHE_INFRACOST 22;
+#define DBHE_VMAX  	130
+#define DBHE_YEAR 1935
+#define DBHE_SORT 142
+#define DBHS_BUILDCOST 55;
+#define DBHS_INFRACOST 31;
+#define DBHS_VMAX  	300
+#define DBHS_YEAR 2000
+#define DBHS_SORT 143
+
+#define SCAA_BUILDCOST 34;
+#define SCAA_INFRACOST 19;
+#define SCAA_VMAX  	120
+#define SCAA_YEAR 1965
+#define SCAA_SORT 145
+#define SDAA_BUILDCOST 45;
+#define SDAA_INFRACOST 22;
+#define SDAA_VMAX  	180
+#define SDAA_YEAR 1980
+#define SDAA_SORT 146
+#define SEAA_BUILDCOST 65;
+#define SEAA_INFRACOST 29;
+#define SEAA_VMAX  	320
+#define SEAA_YEAR 2010
+#define SEAA_SORT 147
+
+#define ELRL_BUILDCOST 18;
+#define ELRL_INFRACOST 14;
+#define ELRL_VMAX  70
+#define ELRL_YEAR 	1905
+#define ELRL_SORT 151
+
+#define RL2S_BUILDCOST 10;
+#define RL2S_INFRACOST 8;
+#define RL2S_VMAX  60
+#define RL2S_YEAR 1870
+#define RL2S_SORT 161
+#define ER2S_BUILDCOST 12;
+#define ER2S_INFRACOST 10;
+#define ER2S_VMAX  60
+#define ER2S_YEAR 1965
+#define ER2S_SORT 165
+
+#define RLA0_BUILDCOST 7;
+#define RLA0_INFRACOST 7;
+#define RLA0_VMAX  70
+#define RLA0_YEAR 	1860
+#define RLA0_SORT 171
+#define RLA1_BUILDCOST 14;
+#define RLA1_INFRACOST 12;
+#define RLA1_VMAX  110
+#define RLA1_YEAR 	1920
+#define RLA1_SORT 172
+#define RLA2_BUILDCOST 28;
+#define RLA2_INFRACOST 18;
+#define RLA2_VMAX  160
+#define RLA2_YEAR 	1960
+#define RLA2_SORT 173
+
+#define ERD1_BUILDCOST 18;
+#define ERD1_INFRACOST 16;
+#define ERD1_VMAX  110
+#define ERD1_YEAR 1925
+#define ERD1_SORT 181
+#define ERD2_BUILDCOST 36;
+#define ERD2_INFRACOST 24;
+#define ERD2_VMAX  200
+#define ERD2_YEAR 1980
+#define ERD2_SORT 182
+
+
+#define MTRO_BUILDCOST 19;
+#define MTRO_INFRACOST 10;
+#define MTRO_VMAX  80
+#define MTRO_YEAR 1895
+#define MTRO_SORT 191
+
+

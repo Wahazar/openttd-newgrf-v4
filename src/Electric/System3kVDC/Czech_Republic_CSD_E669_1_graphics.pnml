@@ -1,0 +1,59 @@
+/*
+ *  Copyright (C) 2017-2020 Transportman, McZapkie
+ *  This file is part of the V4 CEE Train Set based on 2cc Trains  
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_electric_Czech_Republic_CSD_E669_1_purchase, "gfx/Electric/Czech_Republic_CSD_E669_1.png") {
+	template_purchase(0, 127)
+}
+
+/*
+* VEHICLE
+*/
+
+//Engine
+spriteset(spriteset_electric_Czech_Republic_CSD_E669_1, "gfx/Electric/Czech_Republic_CSD_E669_1.png") {
+	template_2cc_L12(0, 0)
+}
+
+switch(FEAT_TRAINS, SELF, switch_electric_Czech_Republic_CSD_E669_1_position, position_in_vehid_chain % 2) {
+	0: spriteset_electric_Czech_Republic_CSD_E669_1;
+	EMPTY_SPRITESET
+}
+
+/*
+* Visual effect
+*/
+
+switch(FEAT_TRAINS, SELF, switch_electric_Czech_Republic_CSD_E669_1_visual_effect, position_in_vehid_chain % 2) {
+	0: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, switch_electric_Czech_Republic_CSD_E669_1_length, position_in_vehid_chain % 2) {
+	0: LENGTH;
+	ACTUAL_LENGTH-LENGTH;
+}
+
+
+/*
+* Articulated part
+*/
+
+switch(FEAT_TRAINS, SELF, switch_electric_Czech_Republic_CSD_E669_1_articulated, extra_callback_info1) {
+	1: return item_electric_Czech_Republic_CSD_E669_1;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

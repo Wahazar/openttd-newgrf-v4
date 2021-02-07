@@ -1,0 +1,38 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+//Railtype translation table
+//This set uses the default labels and adds Metro-vehicles. 
+
+railtypetable {
+//normal gauge
+  "RLOW", // normal gauge local
+  "RAIL", // base, normal gauge trunk 
+  "RHIG", // normal gauge HS
+//normal gauge electrified
+  "ELOW", // normal gauge, 3kV DC local
+  "EMED", // normal gauge, 3kV DC trunk
+  "EHIG", // normal gauge, 3kV DC HS
+  "DBNE", // normal gauge, 15kV AC branch
+  "DBHE", // normal gauge, 15kV AC trunk
+  "DBHS", // normal gauge, 15kV AC HS
+  "SEAE", // normal gauge, 25kV AC main
+  "ELRL", // base, normal gauge, multisystem
+//broad gauge
+  "RLA0",
+  "RLA1",
+  "RLA2",
+  "RLA3",
+// broad gauge, 3kV DC
+  "ERD1",
+  "ERD2",
+  "ERD3",
+// dual gauge. 3kV DC
+  "ER2S",
+	MTRO: [SAB3, "3RDR", MTRO, MONO] // fall back to monorail if no Metro-tracks are available
+}

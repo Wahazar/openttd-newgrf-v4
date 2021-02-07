@@ -1,0 +1,255 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_gui.png"
+
+spriteset(ERD1_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_track_normal.png"
+
+spriteset(ERD1_track_overlay_normal, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(ERD1_underlay_normal, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(ERD1_bridge_surfaces_normal, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(ERD1_tunnels_normal, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_track_snow.png"
+
+spriteset(ERD1_track_overlay_snow, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(ERD1_underlay_snow, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(ERD1_bridge_surfaces_snow, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(ERD1_tunnels_snow, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_depot_normal.png"
+
+spriteset(ERD1_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_depot_snow.png"
+
+spriteset(ERD1_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+//old depot
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_depot_normal_old.png"
+
+spriteset(ERD1_depot_normal_old, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1_depot_snow_old.png"
+
+spriteset(ERD1_depot_snow_old, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+//crossing
+
+#define IMAGEFILE1  "gfx/Tracks/ERD1/ERD1_track_normal.png"
+#define IMAGEFILE2  "gfx/Tracks/crossing2.png"
+
+spriteset(ERD1_2_level_crossings_open_ramp)
+{
+  level_crossings_railway_template(2, 298, IMAGEFILE1)
+  level_crossings_2_open_template(10, 133, IMAGEFILE2)
+}
+
+spriteset(ERD1_2_level_crossings_closed_ramp)
+{
+  level_crossings_railway_template(162, 298, IMAGEFILE1)
+  level_crossings_2_closed_template(10, 217, IMAGEFILE2)
+}
+
+#undef IMAGEFILE2
+#undef IMAGEFILE1
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/ERD1-catenary-wire-pylons.png"
+spriteset(ERD1_catenary_wire, IMAGEFILE)
+{
+  catenary_wire_template(5, 230)
+}
+
+spriteset(ERD1_catenary_pylons, IMAGEFILE)
+{
+  pylons_template(5, 394)
+}
+#undef IMAGEFILE
+
+
+switch (FEAT_RAILTYPES, SELF, ERD1_2_level_crossings_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED))
+{
+  0: ERD1_2_level_crossings_open_ramp; 
+  1: ERD1_2_level_crossings_closed_ramp; 
+}
+
+/**********************************************
+ * Fences:
+ **********************************************/
+#define IMAGEFILE  "gfx/Tracks/ERD1/fence_snow.png"
+spriteset(fences_ERD1_snow, IMAGEFILE)
+{
+  fences_template(1, 1)
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ERD1/fence.png"
+spriteset(fences_ERD1, IMAGEFILE)
+{
+  fences_template(1, 1)
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, fences_ERD1_terrain_switch, terrain_type) {
+	TILETYPE_SNOW: fences_ERD1_snow;
+	fences_ERD1;
+}
+
+
+// switches
+
+switch(FEAT_RAILTYPES, SELF, ERD1_track_overlay, terrain_type) {
+	TILETYPE_SNOW: ERD1_track_overlay_snow;
+	ERD1_track_overlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_underlay, terrain_type) {
+	TILETYPE_SNOW: ERD1_underlay_snow;
+	ERD1_underlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_bridge_surfaces, terrain_type) {
+	TILETYPE_SNOW: ERD1_bridge_surfaces_snow;
+	ERD1_bridge_surfaces_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_tunnels, terrain_type) {
+	TILETYPE_SNOW: ERD1_tunnels_snow;
+	ERD1_tunnels_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_depot_old, terrain_type) {
+	TILETYPE_SNOW: ERD1_depot_snow_old;
+	ERD1_depot_normal_old;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_depot_new, terrain_type) {
+	TILETYPE_SNOW: ERD1_depot_snow;
+	ERD1_depot_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ERD1_depot, (build_date>date(1980, 1, 1))) {
+	1: ERD1_depot_new;
+	ERD1_depot_old;
+}
+
+
+//properties
+
+if ((param_custom_tracks) && (EASTERNEUROPE)) {
+if (railtype_available("ERD1") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, ERD1)
+  {
+    property
+    {
+      label: "ERD1";
+      introduction_date: date(ERD1_YEAR, 1, 1);
+      name: string(STR_ERD1_NAME);
+      toolbar_caption: string(STR_ERD1_TOOLBAR);
+      menu_text: string(STR_ERD1_MENU);
+      build_window_caption: string(STR_ERD1_BUILD_CAPTION);
+      autoreplace_text: string(STR_ERD_AUTOREPLACE);
+      new_engine_text: string(STR_ERD_NEW_ENGINE);
+      compatible_railtype_list: [ALL_BROAD_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      powered_railtype_list:    [BROAD_GAUGES_3KV, DUAL_GAUGES_3KV];
+      alternative_railtype_list: [BROAD_GAUGES_3KV, DUAL_GAUGES_3KV];
+      curve_speed_multiplier: 2;
+      station_graphics: RAILTYPE_STATION_NORMAL;
+      construction_cost: ERD1_BUILDCOST
+      maintenance_cost: ERD1_INFRACOST
+      speed_limit: ERD1_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xac;
+      sort_order: ERD1_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+    graphics
+    {
+      gui: ERD1_gui;
+      track_overlay: ERD1_track_overlay;
+      underlay: ERD1_underlay;
+      tunnels: ERD1_tunnels;
+//      tunnel_overlay: ERD1_tunnels;
+      fences: fences_ERD1_terrain_switch;
+      bridge_surfaces: ERD1_bridge_surfaces;
+      level_crossings: ERD1_2_level_crossings_switch;
+      depots: ERD1_depot;
+      catenary_wire: ERD1_catenary_wire;
+      catenary_pylons: ERD1_catenary_pylons;
+      signals: switch_signals_russian_type;
+    }
+  }
+}
+}

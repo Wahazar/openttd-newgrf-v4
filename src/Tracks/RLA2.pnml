@@ -1,0 +1,173 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/RLA2/RLA2_gui.png"
+
+spriteset(RLA2_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLA2/RLA2_track_normal.png"
+
+spriteset(RLA2_track_overlay_normal, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(RLA2_underlay_normal, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(RLA2_bridge_surfaces_normal, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(RLA2_tunnels_normal, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLA2/RLA2_track_snow.png"
+
+spriteset(RLA2_track_overlay_snow, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(RLA2_underlay_snow, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(RLA2_bridge_surfaces_snow, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(RLA2_tunnels_snow, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+// depot: RLA1
+
+#define IMAGEFILE1  "gfx/Tracks/RLA2/RLA2_track_normal.png"
+#define IMAGEFILE2  "gfx/Tracks/crossing2.png"
+
+spriteset(RLA2_2_level_crossings_open_ramp)
+{
+  level_crossings_railway_template(2, 298, IMAGEFILE1)
+  level_crossings_2_open_template(10, 133, IMAGEFILE2)
+}
+
+spriteset(RLA2_2_level_crossings_closed_ramp)
+{
+  level_crossings_railway_template(162, 298, IMAGEFILE1)
+  level_crossings_2_closed_template(10, 217, IMAGEFILE2)
+}
+
+#undef IMAGEFILE1
+#undef IMAGEFILE2
+
+switch (FEAT_RAILTYPES, SELF, RLA2_2_level_crossings_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED))
+{
+  0: RLA2_2_level_crossings_open_ramp; 
+  1: RLA2_2_level_crossings_closed_ramp; 
+}
+
+
+/**********************************************
+ * Fences:
+ **********************************************/
+
+spriteset(fences_RLA2, "gfx/Tracks/RLA2/fences.png") {
+	tmpl_fences(0)
+}
+
+
+
+// switches
+
+switch(FEAT_RAILTYPES, SELF, RLA2_track_overlay, terrain_type) {
+	TILETYPE_SNOW: RLA2_track_overlay_snow;
+	RLA2_track_overlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA2_underlay, terrain_type) {
+	TILETYPE_SNOW: RLA2_underlay_snow;
+	RLA2_underlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA2_bridge_surfaces, terrain_type) {
+	TILETYPE_SNOW: RLA2_bridge_surfaces_snow;
+	RLA2_bridge_surfaces_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA2_tunnels, terrain_type) {
+	TILETYPE_SNOW: RLA2_tunnels_snow;
+	RLA2_tunnels_normal;
+}
+
+
+//properties
+
+if ((param_custom_tracks) && (EASTERNEUROPE)) {
+if (railtype_available("RLA2") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, RLA2)
+  {
+    property
+    {
+      label: "RLA2";
+      introduction_date: date(RLA2_YEAR, 1, 1);
+      name: string(STR_RLA2_NAME);
+      toolbar_caption: string(STR_RLA2_TOOLBAR);
+      menu_text: string(STR_RLA2_MENU);
+      build_window_caption: string(STR_RLA2_BUILD_CAPTION);
+      autoreplace_text: string(STR_RLA_AUTOREPLACE);
+      new_engine_text: string(STR_RLA_NEW_ENGINE);
+      compatible_railtype_list: [ALL_BROAD_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      powered_railtype_list:    [ALL_BROAD_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      alternative_railtype_list: [BROAD_GAUGES_NONELECTRIFIED];
+      curve_speed_multiplier: 3;
+      station_graphics: RAILTYPE_STATION_NORMAL;
+      construction_cost: RLA2_BUILDCOST
+      maintenance_cost: RLA2_INFRACOST
+      speed_limit: RLA2_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x39;
+      sort_order: RLA2_SORT;
+      railtype_flags: bitmask();
+    }
+    graphics
+    {
+      gui: RLA2_gui;
+      track_overlay: RLA2_track_overlay;
+      underlay: RLA2_underlay;
+      tunnels: RLA2_tunnels;
+//      tunnel_overlay: RLA2_tunnels;
+      fences: fences_RLA2;
+      bridge_surfaces: RLA2_bridge_surfaces;
+      level_crossings: RLA2_2_level_crossings_switch;
+      depots: RLA0_depot;
+      signals: switch_signals_russian_type;
+    }
+  }
+}
+}

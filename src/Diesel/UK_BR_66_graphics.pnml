@@ -1,0 +1,50 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_diesel_UK_BR_66_purchase, "gfx/Diesel/UK_BR_66.png") {
+	template_purchase(1, 128)
+}
+
+/*
+* VEHICLE
+*/
+
+//Engine
+spriteset(spriteset_diesel_UK_BR_66, "gfx/Diesel/UK_BR_66.png") {
+	template_2cc_L12(1, 1)
+}
+
+switch(FEAT_TRAINS, SELF, switch_diesel_UK_BR_66_position, position_in_vehid_chain % 2) {
+	0: spriteset_diesel_UK_BR_66;
+	EMPTY_SPRITESET
+}
+
+switch(FEAT_TRAINS, SELF, switch_diesel_UK_BR_66_visual_effect, position_in_vehid_chain % 2) {
+	0: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+	return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, switch_diesel_UK_BR_66_length, position_in_vehid_chain % 2) {
+	0: LENGTH;
+	ACTUAL_LENGTH-LENGTH;
+}
+
+switch(FEAT_TRAINS, SELF, switch_diesel_UK_BR_66_articulated, extra_callback_info1) {
+	1: return item_diesel_UK_BR_66;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

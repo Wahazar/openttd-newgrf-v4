@@ -1,0 +1,1127 @@
+/*  Copyright (C) 2018 McZapkie
+ *  This file is part of the V4 CEE Train set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/* steam locomotive palettes */
+#define COMPANY_PALETTE_BLACK1WHITEBLACK2  		\
+0xC6: 0x01;  0xC7: 0x02;  0xC8: 0x03;  0xC9: 0x10;  0xCA: 0x04;  0xCB: 0x11;  0xCC: 0x05;  0xCD: 0x06;	0x50: 0x02;  0x51: 0x03;  0x52: 0x10;  0x53: 0x04;  0x54: 0x11;  0x55: 0x12;  0x56: 0x14;  0x57: 0x16;
+
+#define COMPANY_PALETTE_BLACK1RED2  		\
+0xC6: 0x01;  0xC7: 0x02;  0xC8: 0x03;  0xC9: 0x10;  0xCA: 0x04;  0xCB: 0x11;  0xCC: 0x05;  0xCD: 0x06;	0x50: 0xB2;  0x51: 0xB3;  0x52: 0xB4;  0x53: 0xB6;  0x54: 0xA2;  0x55: 0xB7;  0x56: 0xB9;  0x57: 0xA3;
+
+#define COMPANY_PALETTE_BLACK1WHITERED2  		\
+0xC6: 0x01;  0xC7: 0x02;  0xC8: 0x03;  0xC9: 0x10;  0xCA: 0x04;  0xCB: 0x11;  0xCC: 0x05;  0xCD: 0x06;	0x50: 0xB4;  0x51: 0xB5;  0x52: 0xB6;  0x53: 0xB8;  0x54: 0xA2;  0x55: 0xA3;  0x56: 0xA5;  0x57: 0xA7;
+
+#define COMPANY_PALETTE_OLIVE1WHITERED2  		\
+0xC6: 0x50;  0xC7: 0x58;  0xC8: 0x59;  0xC9: 0x5A;  0xCA: 0x5B;  0xCB: 0x5C;  0xCC: 0x5D;  0xCD: 0x5E;	0x50: 0xB4;  0x51: 0xB5;  0x52: 0xB6;  0x53: 0xB8;  0x54: 0xA2;  0x55: 0xA3;  0x56: 0xA5;  0x57: 0xA7;
+
+#define COMPANY_PALETTE_OLIVE1RED2  		\
+0xC6: 0x50;  0xC7: 0x58;  0xC8: 0x59;  0xC9: 0x5A;  0xCA: 0x5B;  0xCB: 0x5C;  0xCC: 0x5D;  0xCD: 0x5E;	0x50: 0xB2;  0x51: 0xB3;  0x52: 0xB4;  0x53: 0xB6;  0x54: 0xA2;  0x55: 0xB7;  0x56: 0xB9;  0x57: 0xA3;
+
+#define COMPANY_PALETTE_BLUE1WHITERED2  		\
+0x50: 0xB4;  0x51: 0xB5;  0x52: 0xB6;  0x53: 0xB8;  0x54: 0xA2;  0x55: 0xA3;  0x56: 0xA5;  0x57: 0xA7;
+
+
+#define RECOLOUR_LOCOMOTIVE_SPRITE(company_colors) recolour_##company_colors##_loc = reserve_sprites(1); \
+replace(recolour_##company_colors##_loc ) { recolour_sprite { company_colors } }
+
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLACK1WHITEBLACK2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLACK1RED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLACK1WHITERED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_OLIVE1RED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_OLIVE1WHITERED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1WHITERED2)
+
+switch (FEAT_TRAINS, SELF, switch_livery_pseudocc_steam, company_colour1)
+{
+   0: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc; 
+   1: return recolour_COMPANY_PALETTE_OLIVE1WHITERED2_loc;  
+   2: return recolour_COMPANY_PALETTE_BLACK1RED2_loc; 
+   3: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  
+   4: return recolour_COMPANY_PALETTE_BLACK1RED2_loc;  
+   5: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc; 
+   6: return recolour_COMPANY_PALETTE_OLIVE1RED2_loc;  
+   7: return recolour_COMPANY_PALETTE_OLIVE1RED2_loc;  
+   8: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc;  
+   9: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  
+  10: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc;  
+  11: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  
+  12: return recolour_COMPANY_PALETTE_BLACK1RED2_loc;  
+  13: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;  
+  14: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc;  
+  15: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  
+  return CB_FAILED;
+}  
+
+
+switch(FEAT_TRAINS, SELF, switch_CSD_steam_loc_livery, REACHED_DATE(1945)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1WHITERED2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_DRG_steam_loc_livery, REACHED_DATE(1920)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1RED2_loc;
+  return recolour_COMPANY_PALETTE_BLACK1RED2_loc;
+}
+
+//all steam liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_steam_mapping, cargo_subtype)
+{
+  1: return switch_CSD_steam_loc_livery;  //Czechoslovakian
+  2: return recolour_COMPANY_PALETTE_OLIVE1WHITERED2_loc;  //Polish
+  3: return switch_DRG_steam_loc_livery;  //German
+  4: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Yugoslavian
+  0: return switch_livery_pseudocc_steam; //PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+}  
+
+//freight steam liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_freight_steam_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Czechoslovakian
+  2: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Polish
+  3: return recolour_COMPANY_PALETTE_BLACK1RED2_loc;  //German
+  4: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLACK1WHITEBLACK2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Yugoslavian
+  0: return recolour_COMPANY_PALETTE_BLACK1RED2_loc; //PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+}  
+
+#define COMPANY_PALETTE_RED1YELLOW2  		\
+0xC6: 0xB2;  0xC7: 0xB3;  0xC8: 0xB4;  0xC9: 0xB5;  0xCA: 0xB6;  0xCB: 0xB7;  0xCC: 0xB8;  0xCD: 0xB9;	0x50: 0xBA;  0x51: 0xBB;  0x52: 0xBC;  0x53: 0xBD;  0x54: 0xBE;  0x55: 0xBF;  0x56: 0x34;  0x57: 0x45;
+
+#define COMPANY_PALETTE_RED1WHITE2  		\
+0xC6: 0x46;  0xC7: 0xB2;  0xC8: 0xB3;  0xC9: 0xB4;  0xCA: 0xB5;  0xCB: 0xB6;  0xCC: 0xB7;  0xCD: 0xB8;	0x50: 0xA2;  0x51: 0xA3;  0x52: 0xA5;  0x53: 0xA6;  0x54: 0xA7;  0x55: 0xA8;  0x56: 0xA9;  0x57: 0x0F;
+
+#define COMPANY_PALETTE_OLIVE1GREEN2  		\
+0xC6: 0x50;  0xC7: 0x58;  0xC8: 0x59;  0xC9: 0x5A;  0xCA: 0x5B;  0xCB: 0x5C;  0xCC: 0x5D;  0xCD: 0x5E;	
+
+#define COMPANY_PALETTE_BLUE1GRAY2  		\
+0x50: 0x11;  0x51: 0x12;  0x52: 0x13;  0x53: 0x14;  0x54: 0x15;  0x55: 0x16;  0x56: 0x17;  0x57: 0x0F;
+
+#define COMPANY_PALETTE_GRAY1GRAY2  		\
+0xC6: 0x04;  0xC7: 0x05;  0xC8: 0x06;  0xC9: 0x07;  0xCA: 0x08;  0xCB: 0x09;  0xCC: 0x0A;  0xCD: 0x0B; 0x50: 0x11;  0x51: 0x12;  0x52: 0x13;  0x53: 0x14;  0x54: 0x15;  0x55: 0x16;  0x56: 0x17;  0x57: 0x0F;
+
+#define COMPANY_PALETTE_BLUE1YELLOW2  		\
+0x50: 0x3F;  0x51: 0x40;  0x52: 0x41;  0x53: 0x42;  0x54: 0x43;  0x55: 0xBE;  0x56: 0xBF;  0x57: 0x34;
+
+#define COMPANY_PALETTE_GREEN1YELLOW2  		\
+0xC6: 0x50;  0xC7: 0x51;  0xC8: 0x52;  0xC9: 0x53;  0xCA: 0x54;  0xCB: 0x55;  0xCC: 0x56;  0xCD: 0x57;	0x50: 0xCE;  0x51: 0xCF;  0x52: 0xD0;  0x53: 0xD1;  0x54: 0x5F;  0x55: 0x33;  0x56: 0xBF;  0x57: 0x34;
+
+#define COMPANY_PALETTE_BLUE1GREEN2  		\
+0xC6: 0x90;  0xC7: 0x91;  0xC8: 0x92;  0xC9: 0x93;  0xCA: 0x94;  0xCB: 0x95;  0xCC: 0x97;  0xCD: 0x99;	
+
+#define COMPANY_PALETTE_BLUE1WHITE2  		\
+0x50: 0x07;  0x51: 0x08;  0x52: 0x09;  0x53: 0x0A;  0x54: 0x0B;  0x55: 0x0C;  0x56: 0x0D;  0x57: 0x0E;
+
+#define COMPANY_PALETTE_ORANGE1RED2  		\
+0xC6: 0xB8;  0xC7: 0xB9;  0xC8: 0xBA;  0xC9: 0xBB;  0xCA: 0xBC;  0xCB: 0xBD;  0xCC: 0xBE;  0xCD: 0xBF;	0x50: 0x46;  0x51: 0xB2;  0x52: 0xB3;  0x53: 0xB4;  0x54: 0xB5;  0x55: 0xB6;  0x56: 0xB7;  0x57: 0xB8;	
+
+#define COMPANY_PALETTE_WHITE1RED2  		\
+0xC6: 0xA3;  0xC7: 0x74;  0xC8: 0x0B;  0xC9: 0x0D;  0xCA: 0xA8;  0xCB: 0x0E;  0xCC: 0xA9;  0xCD: 0x0F;	0x50: 0x46;  0x51: 0xB2;  0x52: 0xB3;  0x53: 0xB4;  0x54: 0xB5;  0x55: 0xB6;  0x56: 0xB7;  0x57: 0xB8;	
+
+#define COMPANY_PALETTE_RED1GRAY2  		\
+0xC6: 0xB3;  0xC7: 0xB4;  0xC8: 0xB5;  0xC9: 0xB6;  0xCA: 0xB8;  0xCB: 0xB9;  0xCC: 0xA3;  0xCD: 0xA4;	0x50: 0x01;  0x51: 0x02;  0x52: 0x03;  0x53: 0x04;  0x54: 0x05;  0x55: 0x06;  0x56: 0x07;  0x57: 0x08;	
+
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_RED1YELLOW2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_RED1WHITE2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_OLIVE1GREEN2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1GRAY2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_GRAY1GRAY2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1YELLOW2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_GREEN1YELLOW2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1GREEN2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1WHITE2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_ORANGE1RED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_WHITE1RED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_RED1GRAY2)
+
+switch(FEAT_TRAINS, SELF, switch_JZ_diesel_loc_livery, REACHED_DATE(1990)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_loc6_livery, REACHED_DATE(2010)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_loc4_livery, REACHED_DATE(1985)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return switch_PKP_loc6_livery;
+}
+
+switch(FEAT_TRAINS, SELF, switch_DRG_diesel_loc_livery, REACHED_DATE(1955)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1RED2_loc;
+  return recolour_COMPANY_PALETTE_RED1WHITE2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MAV_diesel_loc_livery, REACHED_DATE(1960)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;
+}
+
+
+//all 1435mm diesel liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_normalgauge_diesel_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Czechoslovakian
+  2: return switch_PKP_loc4_livery;  //Polish
+  3: return switch_DRG_diesel_loc_livery;  //German
+  4: return switch_MAV_diesel_loc_livery;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_RED1WHITE2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return switch_JZ_diesel_loc_livery;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+switch(FEAT_TRAINS, SELF, switch_OBB_rbd_livery, REACHED_DATE(1960)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_CD_rbd_livery, REACHED_DATE(2005)) {
+  0: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MAV_rbd_livery, REACHED_DATE(1960)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_rbd_livery3, REACHED_DATE(2000)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_RED1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_rbd_livery2, REACHED_DATE(1960)) {
+  0: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;
+  return switch_PKP_rbd_livery3;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_rbd_livery, REACHED_DATE(1920)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return switch_PKP_rbd_livery2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_CFR_rbd_livery, REACHED_DATE(1985)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_JZ_rbd_livery, REACHED_DATE(1990)) {
+  0: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+//railbus diesel liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_rbd_mapping, cargo_subtype)
+{
+  1: return switch_CD_rbd_livery;  //Czechoslovakian
+  2: return switch_PKP_rbd_livery;  //Polish
+  3: return switch_DRG_diesel_loc_livery;  //German
+  4: return switch_MAV_rbd_livery;  //Hungarian
+  5: return switch_OBB_rbd_livery; //Austrian
+  6: return switch_CFR_rbd_livery;  //Romanian
+  7: return switch_JZ_rbd_livery;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+switch(FEAT_TRAINS, PARENT, switch_PKP_dmu_livery_trailer, REACHED_DATE(2000)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_RED1GRAY2_loc;
+}
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_trailer_dmu_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Czechoslovakian
+  2: return switch_PKP_dmu_livery_trailer;  //Polish
+  3: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //German
+  4: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_dmu_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Czechoslovakian
+  2: return switch_PKP_rbd_livery3;  //Polish
+  3: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //German
+  4: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+switch(FEAT_TRAINS, SELF, switch_CD_electric_loc_livery, REACHED_DATE(1995)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_German_electric_loc_livery, REACHED_DATE(1970)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_RED1WHITE2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MAV_electric_loc_livery, REACHED_DATE(1960)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;
+}
+
+//all electric locomotive liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_electric_mapping, cargo_subtype)
+{
+  1: return switch_CD_electric_loc_livery;  //Czechoslovakian
+  2: return switch_PKP_loc4_livery;  //Polish
+  3: return switch_German_electric_loc_livery;  //German
+  4: return switch_MAV_electric_loc_livery;  //Hungarian
+  5: return switch_German_electric_loc_livery; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+switch(FEAT_TRAINS, SELF, switch_PKP_express_electric_loc_livery2, REACHED_DATE(2010)) {
+  0: return recolour_COMPANY_PALETTE_ORANGE1RED2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_express_electric_loc_livery, REACHED_DATE(1970)) {
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;
+  return switch_PKP_express_electric_loc_livery2;
+}
+
+//express electric locomotive liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_express_electric_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Czechoslovakian
+  2: return switch_PKP_express_electric_loc_livery;  //Polish
+  3: return switch_German_electric_loc_livery;  //German
+  4: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_RED1WHITE2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+//railbus electric liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_rbe_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //Czechoslovakian
+  2: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Polish
+  3: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;  //German
+  4: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_RED1WHITE2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;  //Romanian
+  7: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+}
+
+#define COMPANY_PALETTE_GRAY1RED2  		\
+0xC6: 0x02;  0xC7: 0x03;  0xC8: 0x04;  0xC9: 0x05;  0xCA: 0x06;  0xCB: 0x07;  0xCC: 0x08;  0xCD: 0x09;	0x50: 0x46;  0x51: 0xB2;  0x52: 0xB3;  0x53: 0xB4;  0x54: 0xB5;  0x55: 0xB6;  0x56: 0xB7;  0x57: 0xB8;	
+
+#define COMPANY_PALETTE_GREEN1GREEN2  		\
+0xC6: 0x50;  0xC7: 0x51;  0xC8: 0x52;  0xC9: 0x53;  0xCA: 0x54;  0xCB: 0x55;  0xCC: 0x56;  0xCD: 0x57;	
+
+#define COMPANY_PALETTE_BLUE1BLUE2  		\
+0x90: 0xA2;  0x51: 0x92;  0x52: 0x93;  0x53: 0x94;  0x54: 0x95;  0x55: 0x96;  0x56: 0x97;  0x57: 0x98;
+
+#define COMPANY_PALETTE_KHAKI1OLIVE2  		\
+0xC6: 0x58;  0xC7: 0x18;  0xC8: 0x19;  0xC9: 0x1A;  0xCA: 0x1B;  0xCB: 0x1C;  0xCC: 0x1D;  0xCD: 0x1E;	0x50: 0x58;  0x51: 0x59;  0x52: 0x5A;  0x53: 0x5B;  0x54: 0x5C;  0x55: 0x5D;  0x56: 0x5E;  0x57: 0x5F;	
+
+#define COMPANY_PALETTE_GREEN1CREAM2  		\
+0xC6: 0x50;  0xC7: 0x51;  0xC8: 0x52;  0xC9: 0x53;  0xCA: 0x54;  0xCB: 0x55;  0xCC: 0x56;  0xCD: 0x57;	0x50: 0x22;  0x51: 0x23;  0x52: 0x24;  0x53: 0x25;  0x54: 0x26;  0x55: 0x27;  0x56: 0xA8;  0x57: 0xA9;	
+
+#define COMPANY_PALETTE_RED1CREAM2  		\
+0xC6: 0xB3;  0xC7: 0xB4;  0xC8: 0xB5;  0xC9: 0xB6;  0xCA: 0xB7;  0xCB: 0xB8;  0xCC: 0xB9;  0xCD: 0xA2;	0x50: 0x22;  0x51: 0x23;  0x52: 0x24;  0x53: 0x25;  0x54: 0x26;  0x55: 0x27;  0x56: 0xA8;  0x57: 0xA9;
+
+#define COMPANY_PALETTE_CREAM1VIOLET2  		\
+0xC6: 0x22;  0xC7: 0x23;  0xC8: 0x24;  0xC9: 0x25;  0xCA: 0x26;  0xCB: 0x27;  0xCC: 0xA8;  0xCD: 0xA9;	0x50: 0x89;  0x51: 0x8A;  0x52: 0x8B;  0x53: 0x8B;  0x54: 0x8C;  0x55: 0x8D;  0x56: 0x8E;  0x57: 0x8F;
+
+
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_GRAY1RED2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_GREEN1GREEN2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1BLUE2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_KHAKI1OLIVE2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_GREEN1CREAM2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_RED1CREAM2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_CREAM1VIOLET2)
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_CSD_passenger_mapping, REACHED_DATE(1980))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_OBB4_passenger_mapping, REACHED_DATE(1975))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_DR_passenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_KPEV_passenger_mapping, REACHED_DATE(1915))
+{
+  1: return switch_livery_subtype_DR_passenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_PKP_passenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_KHAKI1OLIVE2_loc;  
+  1: return recolour_COMPANY_PALETTE_GREEN1CREAM2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_MAV_passenger_mapping, REACHED_DATE(1965))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+//passenger car liveries
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_default_passenger_mapping, cargo_subtype)
+{
+  1: return switch_livery_subtype_CSD_passenger_mapping;  //Czechoslovakian
+  2: return switch_livery_subtype_PKP_passenger_mapping;  //Polish
+  3: return switch_livery_subtype_KPEV_passenger_mapping;  //German
+  4: return switch_livery_subtype_MAV_passenger_mapping;  //Hungarian
+  5: return switch_livery_subtype_OBB4_passenger_mapping; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_PKP_dopplestock_passenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_KHAKI1OLIVE2_loc;  
+  1: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_CFR_dopplestock_passenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  
+  1: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+//passenger car liveries
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_dopplestock_passenger_mapping, cargo_subtype)
+{
+  1: return switch_livery_subtype_CSD_passenger_mapping;  //Czechoslovakian
+  2: return switch_livery_subtype_PKP_dopplestock_passenger_mapping;  //Polish
+  3: return switch_livery_subtype_DR_passenger_mapping;  //German
+  4: return switch_livery_subtype_MAV_passenger_mapping;  //Hungarian
+  5: return switch_livery_subtype_OBB4_passenger_mapping; //Austrian
+  6: return switch_livery_subtype_CFR_dopplestock_passenger_mapping;  //Romanian
+  7: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_OBB6_ICpassenger_mapping, REACHED_DATE(2000))
+{
+  0: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  
+  1: return recolour_COMPANY_PALETTE_GRAY1RED2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_OBB4_ICpassenger_mapping, REACHED_DATE(1975))
+{
+  0: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc;  
+  1: return switch_livery_subtype_OBB6_ICpassenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_OBB3_ICpassenger_mapping, REACHED_DATE(1955))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return switch_livery_subtype_OBB4_ICpassenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_DB_ICpassenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;  
+  1: return recolour_COMPANY_PALETTE_WHITE1RED2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_DR_ICpassenger_mapping, REACHED_DATE(1980))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  
+  1: return switch_livery_subtype_DB_ICpassenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_KPEV_ICpassenger_mapping, REACHED_DATE(1915))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;  
+  1: return switch_livery_subtype_DR_ICpassenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_PKP6_ICpassenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_RED1CREAM2_loc;  
+  1: return recolour_COMPANY_PALETTE_CREAM1VIOLET2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_PKP5_ICpassenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_KHAKI1OLIVE2_loc;  
+  1: return switch_livery_subtype_PKP6_ICpassenger_mapping;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_CFR_ICpassenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  
+  1: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_JZ_ICpassenger_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;  
+  return CB_FAILED;
+} 
+
+//passenger car liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_IC_passenger_mapping, cargo_subtype)
+{
+  1: return switch_livery_subtype_CSD_passenger_mapping;  //Czechoslovakian
+  2: return switch_livery_subtype_PKP5_ICpassenger_mapping;  //Polish
+  3: return switch_livery_subtype_KPEV_ICpassenger_mapping;  //German
+  4: return switch_livery_subtype_MAV_passenger_mapping;  //Hungarian
+  5: return switch_livery_subtype_OBB3_ICpassenger_mapping; //Austrian
+  6: return switch_livery_subtype_CFR_ICpassenger_mapping;  //Romanian
+  7: return switch_livery_subtype_JZ_ICpassenger_mapping;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+
+
+#define COMPANY_PALETTE_YELLOW1GRAY2  		\
+0xC6: 0xBA;  0xC7: 0xBB;  0xC8: 0xBC;  0xC9: 0xBD;  0xCA: 0xBE;  0xCB: 0xBF;  0xCC: 0x34;  0xCD: 0x45; 0x50: 0x01;  0x51: 0x02;  0x52: 0x03;  0x53: 0x04;  0x54: 0x05;  0x55: 0x06;  0x56: 0x07;  0x57: 0x09;
+
+#define COMPANY_PALETTE_KHAKI1ORANGE2  		\
+0xC6: 0x18;  0xC7: 0x19;  0xC8: 0x1A;  0xC9: 0x1B;  0xCA: 0x1C;  0xCB: 0x1D;  0xCC: 0x1E;  0xCD: 0x1F;	0x50: 0xB8;  0x51: 0xB9;  0x52: 0xBA;  0x53: 0xBB;  0x54: 0xBC;  0x55: 0xBD;  0x56: 0xBE;  0x57: 0xBF;	
+
+#define COMPANY_PALETTE_BLUE1RED2  		\
+0x50: 0x46;  0x51: 0xB2;  0x52: 0xB3;  0x53: 0xB4;  0x54: 0xB5;  0x55: 0xB6;  0x56: 0xB7;  0x57: 0xB8;	
+
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_YELLOW1GRAY2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_KHAKI1ORANGE2)
+RECOLOUR_LOCOMOTIVE_SPRITE(COMPANY_PALETTE_BLUE1RED2)
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_PKP_mail_mapping, REACHED_DATE(1990))
+{
+  0: return recolour_COMPANY_PALETTE_KHAKI1ORANGE2_loc;  
+  1: return recolour_COMPANY_PALETTE_ORANGE1RED2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_DB_mail_mapping, REACHED_DATE(1995))
+{
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;  
+  1: return recolour_COMPANY_PALETTE_YELLOW1GRAY2_loc;  
+  return CB_FAILED;
+} 
+
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_OBB_mail_mapping, REACHED_DATE(1975))
+{
+  0: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;  
+  1: return recolour_COMPANY_PALETTE_WHITE1RED2_loc;  
+  return CB_FAILED;
+} 
+
+//mail car liveries
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_default_mail_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  //Czechoslovakian
+  2: return switch_livery_subtype_PKP_mail_mapping;  //Polish
+  3: return switch_livery_subtype_DB_mail_mapping;  //German
+  4: return recolour_COMPANY_PALETTE_BLUE1RED2_loc;  //Hungarian
+  5: return switch_livery_subtype_OBB_mail_mapping; //Austrian
+  6: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_GREEN1GREEN2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+
+//all 1435mm liveries subtypes
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_text, cargo_subtype)
+{
+  1: return string(STR_LIVERY_CZECHOSLOVAKIA);
+  2: return string(STR_LIVERY_POLAND);
+  3: return string(STR_LIVERY_GERMANY);
+  4: return string(STR_LIVERY_HUNGARY);
+  5: return string(STR_LIVERY_AUSTRIA);
+  6: return string(STR_LIVERY_ROMANIA);
+  7: return string(STR_LIVERY_YUGOSLAVIA);
+  0: return string(STR_LIVERY_2CC);
+  return CB_RESULT_NO_TEXT;
+}  
+
+switch(FEAT_TRAINS, SELF, switch_CSD_emu_loc_livery, REACHED_DATE(1990)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PKP_emu_loc_livery, REACHED_DATE(1995)) {
+  0: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_RED1GRAY2_loc;
+}
+
+//electric multiple units liveries
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_emu_mapping, cargo_subtype)
+{
+  1: return switch_CSD_emu_loc_livery;  //Czechoslovakian
+  2: return switch_PKP_emu_loc_livery;  //Polish
+  3: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //German
+  4: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+
+
+//electric multiple units liveries - reversed
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_emu_mapping_reversed, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_BLUE1BLUE2_loc;  //UZ
+  2: return recolour_COMPANY_PALETTE_KHAKI1OLIVE2_loc;  //RZD
+  3: return recolour_COMPANY_PALETTE_ORANGE1RED2_loc;  //BCh
+  4: return recolour_COMPANY_PALETTE_WHITE1RED2_loc;  //LG
+  return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+} 
+
+switch(FEAT_TRAINS, PARENT, switch_CSD_emu_car_livery, REACHED_DATE(1990)) {
+  0: return recolour_COMPANY_PALETTE_GREEN1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_BLUE1GRAY2_loc;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_PKP_emu_car_livery, REACHED_DATE(1995)) {
+  0: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;
+  return recolour_COMPANY_PALETTE_RED1GRAY2_loc;
+}
+
+//electric multiple units liveries
+switch (FEAT_TRAINS, PARENT, switch_livery_subtype_trailer_emu_mapping, cargo_subtype)
+{
+  1: return switch_CSD_emu_car_livery;  //Czechoslovakian
+  2: return switch_PKP_emu_car_livery;  //Polish
+  3: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //German
+  4: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  //Hungarian
+  5: return recolour_COMPANY_PALETTE_BLUE1WHITE2_loc; //Austrian
+  6: return recolour_COMPANY_PALETTE_GRAY1GRAY2_loc;  //Romanian
+  7: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Yugoslavian
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+// Sprites for recolouring cargoes in open wagons/trucks
+#define NUM_CARGO_COLOURS   16
+// cargo colors:
+#define CARGO_PALETTE_0_COAL \
+        0x10: 0x01;\
+        0x11: 0x01;\
+        0x12: 0x02;\
+        0x13: 0x02;\
+        0x14: 0x03;\
+        0x15: 0x04;
+
+#define CARGO_PALETTE_1_GRAI \
+        0x10: 0x41;\
+        0x11: 0x42;\
+        0x12: 0x44;\
+        0x13: 0x33;\
+        0x14: 0x44;\
+        0x15: 0x45;
+
+#define CARGO_PALETTE_2_IORE \
+        0x10: 0x69;\
+        0x11: 0x47;\
+        0x12: 0x48;\
+        0x13: 0x49;\
+        0x14: 0x4A;\
+        0x15: 0x4B;
+
+#define CARGO_PALETTE_3_CORE \
+        0x10: 0x58;\
+        0x11: 0x19;\
+        0x12: 0x36;\
+        0x13: 0x1A;\
+        0x14: 0x37;\
+        0x15: 0x38;
+
+#define CARGO_PALETTE_4_AORE \
+        0x10: 0x2A;\
+        0x11: 0x2B;\
+        0x12: 0x4A;\
+        0x13: 0x2C;\
+        0x14: 0xA2;\
+        0x15: 0x2E;
+
+#define CARGO_PALETTE_5_CLAY \
+        0x10: 0x22;\
+        0x11: 0x6D;\
+        0x12: 0x4C;\
+        0x13: 0x75;\
+        0x14: 0x25;\
+        0x15: 0x4F;
+
+#define CARGO_PALETTE_6_GRAV \
+        0x10: 0x07;\
+        0x11: 0x08;\
+        0x12: 0x09;\
+        0x13: 0x0A;\
+        0x14: 0x0B;\
+        0x15: 0x0C;
+
+#define CARGO_PALETTE_7_LIME \
+        0x10: 0x08;\
+        0x11: 0x0A;\
+        0x12: 0x1E;\
+        0x13: 0x0B;\
+        0x14: 0x3B;\
+        0x15: 0x0C;
+
+#define CARGO_PALETTE_8_OLSD \
+        0x10: 0x22;\
+        0x11: 0x6D;\
+        0x12: 0x38;\
+        0x13: 0x5C;\
+        0x14: 0x6F;\
+        0x15: 0x5E;
+
+#define CARGO_PALETTE_9_SAND \
+        0x10: 0x6F;\
+        0x11: 0x3A;\
+        0x12: 0x1E;\
+        0x13: 0x3B;\
+        0x14: 0x26;\
+        0x15: 0x27;
+
+#define CARGO_PALETTE_A_SCMT \
+        0x10: 0x02;\
+        0x11: 0x03;\
+        0x12: 0x7B;\
+        0x13: 0x11;\
+        0x14: 0x72;\
+        0x15: 0x4D;
+
+#define CARGO_PALETTE_B_SGBT \
+        0x10: 0x22;\
+        0x11: 0x6F;\
+        0x12: 0x78;\
+        0x13: 0x1F;\
+        0x14: 0x27;\
+        0x15: 0xA9;
+
+#define CARGO_PALETTE_C_SULP \
+        0x10: 0x40;\
+        0x11: 0x41;\
+        0x12: 0x57;\
+        0x13: 0x5E;\
+        0x14: 0x42;\
+        0x15: 0x32;
+
+//#define CARGO_PALETTE_D_UNKN \
+        0x10: 0x10;\
+        0x11: 0x11;\
+        0x12: 0x12;\
+        0x13: 0x13;\
+        0x14: 0x14;\
+        0x15: 0x15;
+
+#define CARGO_PALETTE_D_MNO2 \
+        0x10: 0x02;\
+        0x11: 0x28;\
+        0x12: 0x46;\
+        0x13: 0x80;\
+        0x14: 0x10;\
+        0x15: 0x11;
+
+#define CARGO_PALETTE_E_COKE \
+        0x10: 0x01;\
+        0x11: 0x02;\
+        0x12: 0x04;\
+        0x13: 0x05;\
+        0x14: 0x10;\
+        0x15: 0x11;
+
+//#define CARGO_PALETTE_10_SLAG \
+        0x10: 0x18;\
+        0x11: 0x01;\
+        0x12: 0xB3;\
+        0x13: 0x35;\
+        0x14: 0x36;\
+        0x15: 0x38;
+
+#define CARGO_PALETTE_F_NITR \
+        0x10: 0x16;\
+        0x11: 0x0B;\
+        0x12: 0x0C;\
+        0x13: 0x17;\
+        0x14: 0x0D;\
+        0x15: 0x0E;
+
+
+#define NUM_CC_COLOURS  8
+// freight car palettes 
+#define COMPANY_PALETTE_GRAYccGRAYcc  		\
+0xC6: 0x10;  0xC7: 0x11;  0xC8: 0x12;  0xC9: 0x13;  0xCA: 0x14;  0xCB: 0x15;  0xCC: 0x16;  0xCD: 0x17; 	0x50: 0x02;  0x51: 0x03;  0x52: 0x04;  0x53: 0x05;  0x54: 0x05;  0x55: 0x06;  0x56: 0x07;  0x57: 0x08;
+
+#define COMPANY_PALETTE_BROWNREDccGRAYcc   		\
+0xC6: 0x46;  0xC7: 0x47;  0xC8: 0x48;  0xC9: 0x49;  0xCA: 0x4A;  0xCB: 0x4B;  0xCC: 0x4C;  0xCD: 0x4D; 	0x50: 0x02;  0x51: 0x03;  0x52: 0x04;  0x53: 0x05;  0x54: 0x05;  0x55: 0x06;  0x56: 0x07;  0x57: 0x08;
+
+#define COMPANY_PALETTE_BROWNREDccBROWNcc   		\
+0xC6: 0x46;  0xC7: 0x47;  0xC8: 0x48;  0xC9: 0x49;  0xCA: 0x4A;  0xCB: 0x4B;  0xCC: 0x4C;  0xCD: 0x4D; 	0x50: 0x3C;  0x51: 0x7A;  0x52: 0x7B;  0x53: 0x6C;  0x54: 0x7C;  0x55: 0x6D;  0x56: 0x7D;  0x57: 0x7E;
+
+#define COMPANY_PALETTE_BLUEccBROWNcc   		\
+0x50: 0x3C;  0x51: 0x7A;  0x52: 0x7B;  0x53: 0x6C;  0x54: 0x7C;  0x55: 0x6D;  0x56: 0x7D;  0x57: 0x7E;
+
+#define COMPANY_PALETTE_REDccREDcc   		\
+0xC6: 0xB2;  0xC7: 0xB3;  0xC8: 0xB4;  0xC9: 0xB5;  0xCA: 0xB6;  0xCB: 0xB7;  0xCC: 0xB8;  0xCD: 0xB9; 	0x50: 0xB3;  0x51: 0x29;  0x52: 0xB4;  0x53: 0x2A;  0x54: 0xB5;  0x55: 0x2B;  0x56: 0xB6;  0x57: 0xB7;
+
+#define COMPANY_PALETTE_BROWNccBROWNcc  		\
+0xC6: 0x7A;  0xC7: 0x48;  0xC8: 0x7B;  0xC9: 0x49;  0xCA: 0x7C;  0xCB: 0x4A;  0xCC: 0x7D;  0xCD: 0x7E; 	0x50: 0x68;  0x51: 0x69;  0x52: 0x6A;  0x53: 0x6B;  0x54: 0x6C;  0x55: 0x6D;  0x56: 0x6E;  0x57: 0x6F;
+
+#define COMPANY_PALETTE_BROWNREDccBLUEcc   		\
+0xC6: 0x46;  0xC7: 0x47;  0xC8: 0x48;  0xC9: 0x49;  0xCA: 0x4A;  0xCB: 0x4B;  0xCC: 0x4C;  0xCD: 0x4D; 	0x50: 0x90;  0x51: 0x91;  0x52: 0x92;  0x53: 0x93;  0x54: 0x94;  0x55: 0x95;  0x56: 0x96;  0x57: 0x97;
+
+#define COMPANY_PALETTE_BROWNccGREENcc  		\
+0xC6: 0x7A;  0xC7: 0x48;  0xC8: 0x7B;  0xC9: 0x49;  0xCA: 0x7C;  0xCB: 0x4A;  0xCC: 0x7D;  0xCD: 0x7E; 	
+
+#define RECOLOUR_CARGOVAN_SPRITE(company_colors) recolour_##company_colors##_cargo_van = reserve_sprites(1); \
+replace(recolour_##company_colors##_cargo_van) { recolour_sprite { COMPANY_PALETTE_##company_colors } }
+
+RECOLOUR_CARGOVAN_SPRITE(BLUEccBROWNcc)
+RECOLOUR_CARGOVAN_SPRITE(BROWNccBROWNcc)
+RECOLOUR_CARGOVAN_SPRITE(GRAYccGRAYcc) 
+RECOLOUR_CARGOVAN_SPRITE(BROWNREDccGRAYcc) 
+RECOLOUR_CARGOVAN_SPRITE(BROWNREDccBROWNcc) 
+RECOLOUR_CARGOVAN_SPRITE(REDccREDcc)
+RECOLOUR_CARGOVAN_SPRITE(BROWNREDccBLUEcc)
+RECOLOUR_CARGOVAN_SPRITE(BROWNccGREENcc)  
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_CSD, REACHED_DATE(2010)) {
+	0 : return recolour_BROWNccBROWNcc_cargo_van;
+	1 : return recolour_BROWNREDccBLUEcc_cargo_van;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_OBB, REACHED_DATE(2015)) {
+	0 : return recolour_BROWNREDccBROWNcc_cargo_van;
+	1 : return recolour_BROWNREDccGRAYcc_cargo_van;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_BBO, REACHED_DATE(1953)) {
+	0 : return recolour_GRAYccGRAYcc_cargo_van;
+	1 : return switch_freight_recolour_OBB;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_DB, REACHED_DATE(1997)) {
+	0 : return recolour_BROWNREDccBROWNcc_cargo_van;
+	1 : return recolour_REDccREDcc_cargo_van;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_DRG, REACHED_DATE(1920)) {
+	0 : return recolour_BROWNccGREENcc_cargo_van;
+	1 : return switch_freight_recolour_DB;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_PKP_E6, REACHED_DATE(2020)) {
+	0 : return recolour_BROWNREDccBLUEcc_cargo_van;
+	1 : return recolour_BLUEccBROWNcc_cargo_van;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_PKP_E5, REACHED_DATE(2000)) {
+	0 : return recolour_BROWNREDccBROWNcc_cargo_van;
+	1 : return switch_freight_recolour_PKP_E6;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_PKP_E2, REACHED_DATE(1953)) {
+	0 : return recolour_BROWNREDccGRAYcc_cargo_van;
+	1 : return switch_freight_recolour_PKP_E5;
+	return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_freight_recolour_from_locomotive, cargo_subtype) {
+	1 : return switch_freight_recolour_CSD; 	//CSD
+	2 : return switch_freight_recolour_PKP_E2;	//PKP
+	3 : return switch_freight_recolour_DRG;		//KPEV, DRG, DB
+	4 : return recolour_REDccREDcc_cargo_van;		//MAV
+	5 : return switch_freight_recolour_BBO;		//kkStB, BBO, OBB
+	6 : return recolour_BROWNREDccBROWNcc_cargo_van;	//CFR
+	7 : return recolour_BROWNccBROWNcc_cargo_van;	//JZ
+	0 : return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;	//2cc
+	return CB_FAILED;
+}
+
+#define RECOLOUR_BULK_SPRITE(cargo, company_colors) recolour_sprite { CARGO_PALETTE_##cargo COMPANY_PALETTE_##company_colors }
+
+#define RECOLOUR_BULK_SPRITE_REAL_COMPANY(cargo) \
+    RECOLOUR_BULK_SPRITE(cargo, BLUEccBROWNcc) \
+    RECOLOUR_BULK_SPRITE(cargo, GRAYccGRAYcc) \
+    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccGRAYcc) \
+    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccBROWNcc) \
+    RECOLOUR_BULK_SPRITE(cargo, REDccREDcc) \
+    RECOLOUR_BULK_SPRITE(cargo, BROWNccBROWNcc) \
+    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccBLUEcc) \
+    RECOLOUR_BULK_SPRITE(cargo, BROWNccGREENcc) \
+
+palette_cargo_bulk_company = reserve_sprites(NUM_CARGO_COLOURS*NUM_CC_COLOURS);
+
+replace(palette_cargo_bulk_company){
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(0_COAL)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(1_GRAI)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(2_IORE)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(3_CORE)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(4_AORE)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(5_CLAY)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(6_GRAV)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(7_LIME)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(8_OLSD)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(9_SAND)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(A_SCMT)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(B_SGBT)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(C_SULP)
+//    RECOLOUR_BULK_SPRITE_REAL_COMPANY(D_UNKN)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(D_MNO2)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(E_COKE)
+//    RECOLOUR_BULK_SPRITE_REAL_COMPANY(10_SLAG)
+    RECOLOUR_BULK_SPRITE_REAL_COMPANY(F_NITR)
+    }
+
+
+switch(FEAT_TRAINS, SELF, switch_bulk_recolour, cargo_type_in_veh) {
+    COAL: return palette_cargo_bulk_company + 0*NUM_CC_COLOURS + LOAD_TEMP(1);
+    GRAI: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1);
+    WHEA: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+    MAIZ: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+    IORE: return palette_cargo_bulk_company + 2*NUM_CC_COLOURS + LOAD_TEMP(1);
+    CORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1);
+    AORE: return palette_cargo_bulk_company + 4*NUM_CC_COLOURS + LOAD_TEMP(1);
+    CLAY: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1);
+    FERT: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CLAY
+    GRVL: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1);
+    LIME: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1);
+    OLSD: return palette_cargo_bulk_company + 8*NUM_CC_COLOURS + LOAD_TEMP(1);
+    POTA: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
+    SAND: return palette_cargo_bulk_company + 9*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SCMT: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SGBT: return palette_cargo_bulk_company + 11*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SGCN: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1); //same as SCMT
+    SULP: return palette_cargo_bulk_company + 12*NUM_CC_COLOURS + LOAD_TEMP(1);
+    MNO2: return palette_cargo_bulk_company + 13*NUM_CC_COLOURS + LOAD_TEMP(1);
+    COKE: return palette_cargo_bulk_company + 14*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SLAG: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
+    NITR: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
+    PHOS: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1); //same as NITR
+    SASH: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
+    CMNT: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1); //same as GRVL
+    PORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CORE
+ return palette_cargo_bulk_company + 14*NUM_CC_COLOURS + LOAD_TEMP(1);
+}
+
+//0    RECOLOUR_BULK_SPRITE(cargo, BLUEccBROWNcc) \
+//1    RECOLOUR_BULK_SPRITE(cargo, GRAYccGRAYcc) \
+//2    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccGRAY) \
+//3    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccBROWN) \
+//4    RECOLOUR_BULK_SPRITE(cargo, REDccREDcc) \
+//5    RECOLOUR_BULK_SPRITE(cargo, BROWNccBROWNcc) \
+//6    RECOLOUR_BULK_SPRITE(cargo, BROWNREDccBLUEcc) \
+//7    RECOLOUR_BULK_SPRITE(cargo, BROWNccGREENcc) \
+
+switch(FEAT_TRAINS, SELF, cc_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1990) ? 0 : 7, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, CSD_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(2010) ? 6 : 5, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, OBB_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1953) ? 1 : (REACHED_DATE(2010) ? 5 : 2), 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, DRG_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1998) ? 4 : 5, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, MAV_bulk_cargo_livery, [STORE_TEMP(4, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, PKP_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1955) ? 2 : (REACHED_DATE(2020) ? 0 : (REACHED_DATE(2000) ? 6 : 3)), 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, CFR_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(2010) ? 6 : (REACHED_DATE(1915) ? 3 : 2), 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, JZ_bulk_cargo_livery, [STORE_TEMP(5, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, bulk_cargo_subtype_from_locomotive_era, cargo_subtype) {
+	0 : return cc_bulk_cargo_livery;
+	1 : return CSD_bulk_cargo_livery;
+	2 : return PKP_bulk_cargo_livery;
+	3 : return DRG_bulk_cargo_livery;
+	4 : return MAV_bulk_cargo_livery;
+	5 : return OBB_bulk_cargo_livery;
+	6 : return CFR_bulk_cargo_livery;
+	7 : return JZ_bulk_cargo_livery;
+  return CB_FAILED;
+}
+
+switch(FEAT_TRAINS, PARENT, UZ_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1968) ? 7 : 3, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, BCh_bulk_cargo_livery, [STORE_TEMP(REACHED_DATE(1978) ? 2 : 7, 1)]) {
+  return switch_bulk_recolour;
+}
+
+switch(FEAT_TRAINS, PARENT, bulk_cargo_subtype_from_russian_locomotive_era, cargo_subtype) {
+	0 : return cc_bulk_cargo_livery;
+	1 : return UZ_bulk_cargo_livery;
+	2 : return PKP_bulk_cargo_livery;
+	3 : return DRG_bulk_cargo_livery;
+	4 : return BCh_bulk_cargo_livery;
+	5 : return OBB_bulk_cargo_livery;
+	6 : return CFR_bulk_cargo_livery;
+	7 : return JZ_bulk_cargo_livery;
+  return CB_FAILED;
+}
+
+
+//caboose, draisine
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_service_text, cargo_subtype)
+{
+  1: return string(STR_LIVERY_YELLOW_MAIL);
+  2: return string(STR_LIVERY_GREEN_PASS);
+  0: return string(STR_LIVERY_2CC);
+  return CB_RESULT_NO_TEXT;
+}  
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_service_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_YELLOW1GRAY2_loc;
+  2: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc; 
+  0: return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+  return CB_FAILED;
+} 
+
+//all 1520mm liveries subtypes
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_broadgauge_text, cargo_subtype)
+{
+  1: return string(STR_LIVERY_UKRAINE);
+  2: return string(STR_LIVERY_RUSSIA);
+  3: return string(STR_LIVERY_WHITERUSSIA);
+  4: return string(STR_LIVERY_PRIBALTICA);
+  0: return string(STR_LIVERY_2CC);
+  return CB_RESULT_NO_TEXT;
+}  
+//1435mm liveries subtypes for mixed gauge
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_normalgauge_text, cargo_subtype)
+{
+  1: return string(STR_LIVERY_CZECHOSLOVAKIA);
+  2: return string(STR_LIVERY_POLAND);
+  3: return string(STR_LIVERY_GERMANY);
+  4: return string(STR_LIVERY_HUNGARY);
+  0: return string(STR_LIVERY_2CC);
+  return CB_RESULT_NO_TEXT;
+}  
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_2gauge_text, cargo_type_in_veh)
+{
+  MAIL: return switch_livery_subtype_broadgauge_text;
+  PASS: return switch_livery_subtype_normalgauge_text;
+  return CB_RESULT_NO_TEXT;
+}  
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_shedshunter_text, cargo_type_in_veh)
+{
+  MAIL: return switch_livery_subtype_broadgauge_text;
+  PASS: return switch_livery_subtype_normalgauge_text;
+  GOOD: return string(STR_LIVERY_INVISIBLE);
+  return CB_RESULT_NO_TEXT;
+}  
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_broadgauge_steam_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc;  //Ukrainian
+  2: return recolour_COMPANY_PALETTE_OLIVE1WHITERED2_loc;  //Russian/Soviet
+  3: return recolour_COMPANY_PALETTE_BLACK1WHITERED2_loc;  //Belarussian
+  4: return recolour_COMPANY_PALETTE_BLUE1WHITERED2_loc;  //Baltic
+  return switch_livery_pseudocc_steam;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_broadgauge_diesel_mapping, cargo_subtype)
+{
+  1: return recolour_COMPANY_PALETTE_BLUE1YELLOW2_loc;  //Ukrainian
+  2: return recolour_COMPANY_PALETTE_OLIVE1GREEN2_loc;  //Russian/Soviet
+  3: return recolour_COMPANY_PALETTE_RED1WHITE2_loc;  //Belarussian
+  4: return recolour_COMPANY_PALETTE_RED1YELLOW2_loc;  //Baltic
+  return PALETTE_USE_DEFAULT + CB_RESULT_COLOUR_MAPPING_ADD_CC;
+} 
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_diesel_mapping, cargo_type_in_veh)
+{
+  MAIL: return switch_livery_subtype_broadgauge_diesel_mapping;
+  PASS: return switch_livery_subtype_normalgauge_diesel_mapping;
+  return CB_FAILED;
+}  
+
+

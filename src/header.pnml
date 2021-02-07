@@ -1,0 +1,189 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the V4 CEE Train set derived from 2cc Trains In NML fork
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+// define the newgrf
+grf {
+	grfid:	"MCTM";
+	name:	string(STR_GRF_NAME);
+	desc:	string(STR_GRF_DESCRIPTION);
+    url:    string(STR_GRF_URL);
+	version:		REPO_REVISION;
+	min_compatible_version:	7582;
+    param {
+        param_purchase_cost {
+            type:   int;
+            name:   string(STR_PARAM_PURCHASE_COST);
+            desc:   string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+        param_running_cost {
+            type:   int;
+            name:   string(STR_PARAM_RUNNING_COST);
+            desc:   string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+	param {
+		AUSTRIA {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_AUSTRIA);
+			desc:	string(STR_PARAM_REGION_AUSTRIA_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		CZECHIA {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_CZECHIA);
+			desc:	string(STR_PARAM_REGION_CZECHIA_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		GERMANY {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_GERMANY);
+			desc:	string(STR_PARAM_REGION_GERMANY_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		HUNGARY {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_HUNGARY);
+			desc:	string(STR_PARAM_REGION_HUNGARY_DESC);
+			def_value: 1;
+		}
+	}	
+	param {
+		POLAND {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_POLAND);
+			desc:	string(STR_PARAM_REGION_POLAND_DESC);
+			def_value: 1;
+		}
+	}	
+	param {
+		ROMANIA {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_ROMANIA);
+			desc:	string(STR_PARAM_REGION_ROMANIA_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		EASTERNEUROPE {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_EASTERNEUROPE);
+			desc:	string(STR_PARAM_REGION_EASTERNEUROPE_DESC);
+			def_value: 0;
+		}
+	}	
+	param {
+		SOUTHERNEUROPE {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_SOUTHERNEUROPE);
+			desc:	string(STR_PARAM_REGION_SOUTHERNEUROPE_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		PRIVATE {
+			type:	bool;
+			name:	string(STR_PARAM_REGION_PRIVATE);
+			desc:	string(STR_PARAM_REGION_PRIVATE_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		param_loadingspeed {
+				type:	int;
+				name:	string(STR_PARAM_LOADINGSPEED);
+				desc:	string(STR_PARAM_LOADINGSPEED_DESC);
+				min_value: 0;
+				max_value: 3;
+				def_value: 1;
+				names: {
+							0: string(STR_PARAM_LOADINGSPEED_SLOW);
+							1: string(STR_PARAM_LOADINGSPEED_NORMAL);
+							2: string(STR_PARAM_LOADINGSPEED_FAST);
+							3: string(STR_PARAM_LOADINGSPEED_ULTRA);
+				};
+		}
+	}
+/*	param {
+		param_variable_freigth_costs {
+			type:	bool;
+			name:	string(STR_PARAM_CARGO_RUNNING_COST);
+			desc:	string(STR_PARAM_CARGO_RUNNING_COST_DESC);
+			def_value: 1;
+		}
+	}
+*/
+	param {
+		param_custom_tracks {
+			type:	bool;
+			name:	string(STR_PARAM_CUSTOM_TRACKS);
+			desc:	string(STR_PARAM_CUSTOM_TRACKS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
+		param_disable_attach {
+			type:	bool;
+			name:	string(STR_PARAM_DISABLE_ATTACH);
+			desc:	string(STR_PARAM_DISABLE_ATTACH_DESC);
+			def_value: 1;
+		}
+	}
+}
+
+//disable original rail vehicles
+disable_item(FEAT_TRAINS, 0, 115);
+
+//set base cost multiplier for this set
+basecost {
+	PR_BUILD_VEHICLE_TRAIN:    1 + param_purchase_cost - 4;
+	PR_BUILD_VEHICLE_WAGON:    4 + param_purchase_cost - 4;
+	PR_RUNNING_TRAIN_STEAM:    0 + param_running_cost  - 4;
+	PR_RUNNING_TRAIN_DIESEL:   0 + param_running_cost  - 4;
+	PR_RUNNING_TRAIN_ELECTRIC: 0 + param_running_cost  - 4;
+}
+
+//set depot vehicle width to 32px to avoid overlap
+train_width_32_px = 1;
+//align train properly in depot window
+traininfo_y_offset = 2;

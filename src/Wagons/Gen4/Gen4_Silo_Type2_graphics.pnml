@@ -1,0 +1,68 @@
+/*
+ *  Copyright (C) 2017 Transportman, McZapkie
+ *  This file is part of the V4 CEE set based on 2cc Trains In NML fork
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen4_Silo_Type2_purchase, "gfx/Wagons/Gen4/Gen4_Silo_Type2_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+/*
+* No livery
+*/
+
+//Livery 1 - Loading State 1
+spriteset(spriteset_wagon_Gen4_Silo_Type2_CC1_S1, "gfx/Wagons/Gen4/Gen4_Silo_Type2.png") {
+	template_2cc_wagons(1, 1)
+}
+
+
+//Livery 2 - Loading State 1
+spriteset(spriteset_wagon_Gen4_Silo_Type2_CC2_S1, "gfx/Wagons/Gen4/Gen4_Silo_Type2.png") {
+	template_2cc_wagons(179, 1)
+}
+
+
+//Livery 3 - Loading State 1
+spriteset(spriteset_wagon_Gen4_Silo_Type2_White_S1, "gfx/Wagons/Gen4/Gen4_Silo_Type2.png") {
+	template_2cc_wagons(357, 1)
+}
+
+
+//Livery 4 - Loading State 1
+spriteset(spriteset_wagon_Gen4_Silo_Type2_Gray_S1, "gfx/Wagons/Gen4/Gen4_Silo_Type2.png") {
+	template_2cc_wagons(535, 1)
+}
+
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Silo_Type2_livery, cargo_type_in_veh) {
+	GRAI: return spriteset_wagon_Gen4_Silo_Type2_CC1_S1;
+	CLAY: return spriteset_wagon_Gen4_Silo_Type2_CC2_S1;
+	KAOL: return spriteset_wagon_Gen4_Silo_Type2_CC2_S1;
+	SULP: return spriteset_wagon_Gen4_Silo_Type2_CC2_S1;
+	URAN: return spriteset_wagon_Gen4_Silo_Type2_CC2_S1;
+	NITR: return spriteset_wagon_Gen4_Silo_Type2_CC2_S1;
+	CMNT: return spriteset_wagon_Gen4_Silo_Type2_White_S1;
+	QLME: return spriteset_wagon_Gen4_Silo_Type2_White_S1;
+	BDMT: return spriteset_wagon_Gen4_Silo_Type2_White_S1;
+	MNO2: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	FERT: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	POTA: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	PHOS: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	SASH: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	SLAG: return spriteset_wagon_Gen4_Silo_Type2_Gray_S1;
+	return spriteset_wagon_Gen4_Silo_Type2_CC1_S1; //cereals etc
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

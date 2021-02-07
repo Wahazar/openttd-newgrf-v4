@@ -1,0 +1,156 @@
+V4 Trains changelog
+=========================
+
+ - normal gauge centerbeam added
+ - TE3 fixed
+ - EW51 fixed
+
+7694:
+ - new 25 kV track SDAA
+ - locomotive IS added
+
+7682:
+- fixed bugs
+- new russian locomotives: F, D, SO17
+- new electric locomotives: DR 251, PKP ET43
+- Service cars/draisnes can carry mail/pass
+
+7666:
+ - gfx fixes
+ - PKP EL200, CSD 69Er
+
+7665:
+- PKP SM42, CD 731 diesel engine
+- KPEV/DR/DB 15kV engines
+
+7663: 
+- Newag ET26 diesel+electric locomotive
+ - sorting fixed
+ - additional diesel CSD and PKP locomotives
+ - BR 66 included
+ - new early steam locomotives, fixed steam loco params
+ - improved SZD signals, 2x zoom
+
+7609:
+- bugfixes
+- M62 added
+
+7604:
+- additional CSD locomotives, DMU
+- road crossing for RHIG added
+
+7600:
+- custom signals/semaphores for broad gauge track
+- additional steam locomotives (kkStB, BBO, CSD)
+- RHIG track crossing added
+
+7592:
+ - release
+
+7592:
+ - some electrified railway depots sprites depend on building date.
+ - animated pixels fixed
+
+7591:
+ - vehicles assigned to track types
+
+7589:
+ - custom rail selectors
+
+7582
+ - at least: all track types graphics imported/repainted
+
+7326
+ - Switch 0x61 removed from mixed cars
+ - DR E42, DR 243, CD 372, SZ 362 added
+ - SQRT removed
+ - Multisystem EMU added: CD Regio-Panter 640
+ - PKP EN71, CSD SM488, CSD EM488, PKP EN76 added
+ - PKP ET22 added
+
+7075
+ - normal gauge HS track 15 kV AC
+ - normal gauge non-electrified 3 tier tracks
+ - dual-gauge electrified track
+ - broad gauge non-electrified tracks
+7062
+ - added DR E 18 and OBB 1010 electric locomotives
+ - disabled variable running costs (desync debug)
+ - added JZ 30 steam locomotive, SZD D1, BCh DP3 DMUs
+7060
+ - fixed broad gauge Id's
+ - description of cargo decay and loading speed
+ - sleeping cars
+7033
+ - mixed wagon glitch fixed
+ - KPEV T11 added
+7023
+ - purchase costs corrected, sqrt fixed
+ - DR 132/DB 232 added
+ - DRG 03 added
+ - CLB I, RZD MZk and T13 added
+ - talgo dual gauge coaches added
+ - removed engines reversal palettes
+7009
+ - graphic glithes fixed
+ - running cost adjusted
+ - separate gen1 freight cars for broad and normal gauge
+ - universal box car without refit
+
+6730
+- freight running costs switches
+- Hungarian railbuses
+- USATC S160 locomotive
+6722
+- mixed freight wagons
+- minimal length switches for MU
+- icons for voltage description
+- Swiss made FLIRT (Leo Express etc)
+- Hungarian V41, V63, V46 25kV locomotives
+- Yugoslavian SZ 363 3kV locomotive
+- Russian reefers and livestock vans
+- recolour scheme for Russian open freight wagons
+6712
+- Russian S and ER2 EMU
+- UK66 as private company locomotive, DB V200 as JZ761
+- sorted vehicles
+- added sprites for rail gauge information
+- Russian locomotives Lv, TGM23, broad gauge sleeping Pullman, 2 generations of service cars
+6703
+- Russian steam locomotives: E (repaint), Y, Su, FD20, Ow, Kh, V, TEM2u, 2M62
+6699
+- concept vehicle: CNG hybrid shunter
+- mockup of vehid ctd
+6690
+- mockup of vehids
+- specialised reefers, livestock vans, armoured vans
+6662
+- locomotive added: MAV 335, 325, 203, 61, 41, CFR LDH-70, CSD M131.1 as rbd, light railbuses and trailers
+- increased tractive force for early locomotives
+- less tare weight for freight vans
+6661
+- 060DA repaint
+- locomotive added: KkStB 4, SB 29, DRG 86, Meklenburg I, PKP Ty23, Ty45, Pt31, CFR 060DA1
+- improved 2cc recolour for steam locomotives
+6656
+- KPEV locomotives added: G3, G7.2, T3, T9, P2, P8
+- flags rearranged to depict producer/origin of the given locomotive
+- locomotive traction designators detached from locomotive names
+- SudBahn 29 locomotive added
+
+6656
+- recolour refit for broad gauge trains
+- directory mockup for broad/normal gauge and different traction voltage systems
+- tweaked costs, popularity and voltage tag added
+
+6647
+- new description for normal and broad gauge freight cars
+- altered purchase and running cost functions
+- recolour refit options for normal gauge vehicles 
+- repaint of freigt cars
+- repaint of locomotive details
+
+66xx
+-----------------------
+- Fork from 2cct NML
+

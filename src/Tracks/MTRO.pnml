@@ -1,0 +1,153 @@
+/*
+ *  Copyright (C) 2019 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+
+#define IMAGEFILE  "gfx/Tracks/MTRO/gui_rail_OpenGFX.png"
+
+spriteset(gui_MTRO_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_MTRO, "gfx/Tracks/MTRO/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_MTRO_snow, "gfx/Tracks/MTRO/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_MTRO_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_MTRO_snow;
+	tunnel_tracks_MTRO;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_MTRO, "gfx/Tracks/MTRO/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_MTRO_arctic, "gfx/Tracks/MTRO/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_MTRO, terrain_type) {
+	TILETYPE_SNOW: track_underlays_MTRO_arctic;
+	track_underlays_MTRO;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_MTRO, "gfx/Tracks/MTRO/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_MTRO_arctic, "gfx/Tracks/MTRO/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_MTRO, terrain_type) {
+	TILETYPE_SNOW: track_overlays_MTRO_arctic;
+	track_overlays_MTRO;
+}
+
+/**********************************************
+ * Fences:
+ **********************************************/
+spriteset(fences_MTRO_snow, "gfx/Tracks/MTRO/fences.png") {
+	tmpl_fences(50)
+}
+spriteset(fences_MTRO, "gfx/Tracks/MTRO/fences.png") {
+	tmpl_fences(0)
+}
+
+switch(FEAT_RAILTYPES, SELF, fences_MTRO_terrain_switch, terrain_type) {
+	TILETYPE_SNOW: fences_MTRO_snow;
+	fences_MTRO;
+}
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_MTRO_overlay, "gfx/Tracks/MTRO/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_MTRO_overlay_snow, "gfx/Tracks/MTRO/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_MTRO_underlay, "gfx/Tracks/MTRO/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_MTRO_underlay_snow, "gfx/Tracks/MTRO/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_MTRO_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_MTRO_overlay_snow;
+    bridges_MTRO_overlay;
+}
+
+/**********************************************
+ * Level crossings: none
+ **********************************************/
+
+
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("MTRO") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, MTRO)
+  {
+    property
+    {
+      label: "MTRO";
+      introduction_date: date(MTRO_YEAR, 1, 1);
+      name: string(STR_MTRO_NAME);
+      toolbar_caption: string(STR_MTRO_TOOLBAR);
+      menu_text: string(STR_MTRO_MENU);
+      build_window_caption: string(STR_MTRO_BUILD_CAPTION);
+      autoreplace_text: string(STR_MTR_AUTOREPLACE);
+      new_engine_text: string(STR_MTR_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: ["MTRO"];
+      curve_speed_multiplier: 1;
+      construction_cost: MTRO_BUILDCOST
+      maintenance_cost: MTRO_INFRACOST
+      speed_limit: MTRO_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xC5;
+      sort_order: MTRO_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_MTRO;
+		underlay:        ground_switch_underlay_MTRO;
+		tunnels:         tunnel_track_MTRO_switch;
+		bridge_surfaces: bridge_MTRO_overlay_terrain_switch;
+		fences:          fences_MTRO_terrain_switch;
+//		level_crossings: right_level_crossing_MTRO_terrain_switch;
+		gui:             gui_MTRO_opengfx;
+	}
+  }
+}
+}
+
+

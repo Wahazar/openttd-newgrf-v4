@@ -1,0 +1,224 @@
+/*
+ *  Copyright (C) 2020 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/DBNE/gui_erail_OpenGFX.png"
+
+spriteset(gui_DBNE_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_DBNE, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_DBNE_snow, "gfx/Tracks/DBNE/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_DBNE_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_DBNE_snow;
+	tunnel_tracks_DBNE;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_DBNE, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_DBNE_arctic, "gfx/Tracks/DBNE/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_DBNE, terrain_type) {
+	TILETYPE_SNOW: track_underlays_DBNE_arctic;
+	track_underlays_DBNE;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_DBNE, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_DBNE_arctic, "gfx/Tracks/DBNE/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_DBNE, terrain_type) {
+	TILETYPE_SNOW: track_overlays_DBNE_arctic;
+	track_overlays_DBNE;
+}
+
+//fences - no fence
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_DBNE_overlay, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_DBNE_overlay_snow, "gfx/Tracks/DBNE/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_DBNE_underlay, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_DBNE_underlay_snow, "gfx/Tracks/DBNE/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_DBNE_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_DBNE_overlay_snow;
+    bridges_DBNE_overlay;
+}
+
+// level crossings
+
+spriteset(level_crossing_DBNE_empty, "gfx/Tracks/DBNE/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(level_crossing_DBNE_closed, "gfx/Tracks/DBNE/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_DBNE_open, "gfx/Tracks/DBNE/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+spriteset(level_crossing_DBNE_closed_snow, "gfx/Tracks/DBNE/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_DBNE_open_snow, "gfx/Tracks/DBNE/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_DBNE_switch_closed, terrain_type) {
+	TILETYPE_SNOW: level_crossing_DBNE_closed_snow;
+	level_crossing_DBNE_closed;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_DBNE_switch_open, terrain_type) {
+	TILETYPE_SNOW: level_crossing_DBNE_open_snow;
+	level_crossing_DBNE_open;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_DBNE_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED)) {
+	1: level_crossing_DBNE_switch_closed;
+	level_crossing_DBNE_switch_open;
+}
+
+//old depot
+
+spriteset(DBNE_depot_normal_old, "gfx/Tracks/DBNE/DBNE_depot_normal_old.png") 
+{
+  tmpl_depot_modular_2()
+}
+spriteset(DBNE_depot_snow_old, "gfx/Tracks/DBNE/DBNE_depot_snow_old.png") 
+{
+  tmpl_depot_modular_2()
+}
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/DBNE/DBNE_depot_normal.png"
+spriteset(DBNE_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/DBNE/DBNE_depot_snow.png"
+spriteset(DBNE_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, DBNE_depot_old, terrain_type) {
+	TILETYPE_SNOW: DBNE_depot_snow_old;
+	DBNE_depot_normal_old;
+}
+
+switch(FEAT_RAILTYPES, SELF, DBNE_depot_new, terrain_type) {
+	TILETYPE_SNOW: DBNE_depot_snow;
+	DBNE_depot_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, DBNE_depot, (build_date>date(1940, 1, 1))) {
+	1: DBNE_depot_new;
+	DBNE_depot_old;
+}
+
+
+
+#define IMAGEFILE  "gfx/Tracks/DBNE/DBNE-catenary-wire-pylons.png"
+spriteset(DBNE_catenary_wire, IMAGEFILE)
+{
+  catenary_wire_template(5, 27)
+}
+
+spriteset(DBNE_catenary_pylons, IMAGEFILE)
+{
+  pylons_template(5, 191)
+}
+#undef IMAGEFILE
+
+//properties
+
+if ((param_custom_tracks) && (AUSTRIA || GERMANY)) {
+if (railtype_available("DBNE") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, DBNE)
+  {
+    property
+    {
+      label: "DBNE";
+      introduction_date: date(DBNE_YEAR, 1, 1);
+      name: string(STR_DBNE_NAME);
+      toolbar_caption: string(STR_DBNE_TOOLBAR);
+      menu_text: string(STR_DBNE_MENU);
+      build_window_caption: string(STR_DBNE_BUILD_CAPTION);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [NORMAL_GAUGES_15KV, NORMAL_GAUGES_MULTISYSTEM];
+      alternative_railtype_list: [NORMAL_GAUGES_15KV, NORMAL_GAUGES_MULTISYSTEM];
+      curve_speed_multiplier: 1;
+      construction_cost: DBNE_BUILDCOST
+      maintenance_cost: DBNE_INFRACOST
+      speed_limit: DBNE_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0xB5;
+      sort_order: DBNE_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_DBNE;
+		underlay:        ground_switch_underlay_DBNE;
+		tunnels:         tunnel_track_DBNE_switch;
+		bridge_surfaces: bridge_DBNE_overlay_terrain_switch;
+      		fences: EMPTY_SPRITESET
+		gui:             gui_DBNE_opengfx;
+      		level_crossings: level_crossing_DBNE_switch;
+      		depots: DBNE_depot;
+     		catenary_wire: DBNE_catenary_wire;
+      		catenary_pylons: DBNE_catenary_pylons;
+	}
+  }
+}
+}
+
+

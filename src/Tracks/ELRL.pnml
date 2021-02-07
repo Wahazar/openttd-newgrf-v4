@@ -1,0 +1,78 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/ELRL/gui_erail_OpenGFX.png"
+
+spriteset(gui_ELRL_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/ELRL/ELRL_depot_normal.png"
+spriteset(ELRL_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ELRL/ELRL_depot_snow.png"
+spriteset(ELRL_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, ELRL_depot, terrain_type) {
+	TILETYPE_SNOW: ELRL_depot_snow;
+	ELRL_depot_normal;
+}
+
+//properties
+
+if (param_custom_tracks) {
+if (railtype_available("ELRL") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, ELRL)
+  {
+    property
+    {
+      label: "ELRL";
+      introduction_date: date(ELRL_YEAR, 1, 1);
+      name: string(STR_ELRL_NAME);
+      toolbar_caption: string(STR_ELRL_TOOLBAR);
+      menu_text: string(STR_ELRL_MENU);
+      build_window_caption: string(STR_ELRL_BUILD_CAPTION);
+      autoreplace_text: string(STR_ELR_AUTOREPLACE);
+      new_engine_text: string(STR_ELR_NEW_ENGINE);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      powered_railtype_list: [NORMAL_GAUGES_3KV, NORMAL_GAUGES_15KV, NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM, DUAL_GAUGES_3KV];
+      curve_speed_multiplier: 1;
+      station_graphics: RAILTYPE_STATION_NORMAL;
+      construction_cost: ELRL_BUILDCOST
+      maintenance_cost: ELRL_INFRACOST
+      speed_limit: ELRL_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x97;
+      sort_order: ELRL_SORT;
+      railtype_flags:	bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+	graphics {
+		fences:          EMPTY_SPRITESET
+		gui:             gui_ELRL_opengfx;
+//      		depots: ELRL_depot;
+	}
+  }
+}
+}
+
+

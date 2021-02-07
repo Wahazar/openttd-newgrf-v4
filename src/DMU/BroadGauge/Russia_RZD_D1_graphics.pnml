@@ -1,0 +1,98 @@
+/*
+ *  Copyright (C) 2017 Transportman, McZapkie
+ *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_dmu_Russia_RZD_D1_purchase, "gfx/DMU/Russia_RZD_D1.png") {
+	template_purchase_dualheaded(1, 192)
+}
+
+/*
+* VEHICLE
+*/
+
+//Front
+spriteset(spriteset_dmu_Russia_RZD_D1_frontpass, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 1)
+}
+
+//Front MAIL
+spriteset(spriteset_dmu_Russia_RZD_D1_frontmail, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 32)
+}
+
+
+//Back
+spriteset(spriteset_dmu_Russia_RZD_D1_backpass, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 64)
+}
+
+//Back MAIL
+spriteset(spriteset_dmu_Russia_RZD_D1_backmail, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 96)
+}
+
+//Middle - PAX
+spriteset(spriteset_dmu_Russia_RZD_D1_middlepass, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 128)
+}
+//Middle - MAIL
+spriteset(spriteset_dmu_Russia_RZD_D1_middlemail, "gfx/DMU/Russia_RZD_D1.png") {
+	template_2cc_engines_general(1, 160)
+}
+
+//Dualheaded engines
+
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_D1_reversed_pass, var[0xC8]) {
+	0xFE: spriteset_dmu_Russia_RZD_D1_backpass;
+    0xFF: spriteset_dmu_Russia_RZD_D1_backpass; 
+    spriteset_dmu_Russia_RZD_D1_frontpass;
+}
+
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_D1_reversed_mail, var[0xC8]) {
+	0xFE: spriteset_dmu_Russia_RZD_D1_backmail;
+    0xFF: spriteset_dmu_Russia_RZD_D1_backmail; 
+    spriteset_dmu_Russia_RZD_D1_frontmail;
+}
+
+//Graphics for the head unit wagon based on cargo class
+
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_D1_reversed, cargo_classes) {
+	bitmask(CC_PASSENGERS): switch_dmu_Russia_RZD_D1_reversed_pass;
+      	switch_dmu_Russia_RZD_D1_reversed_mail;
+}
+
+
+//Visual effect, for DMU this is done on the front and rear engine
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_D1_visual_effect_and_powered, 1) {
+	visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
+}
+	
+/*
+* Cargo capacity
+*/
+
+ENGINECAPACITYSWITCH(VEHIDCODE)
+
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
+//Graphics for the unit wagon based on cargo class
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_D1_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): spriteset_dmu_Russia_RZD_D1_middlepass;
+	spriteset_dmu_Russia_RZD_D1_middlemail;
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+RUNNINGCOSTMUWAGONSWITCH
+
+PURCHASETEXTSWITCH

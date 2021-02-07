@@ -1,0 +1,414 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+//Purchase templates
+//Engines
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x, y,  87, 12, -25, -8]
+}
+
+//Dualheaded Engines
+template template_purchase_dualheaded(x,y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+	[1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [x	,  y,  87, 12, -11, -8]
+    [1	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+}
+
+//Wagons+coaches
+template template_purchase_wagon_old(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x, y,  63, 12, -15, -8]
+}
+
+//Wagons+coaches - new template for rail gauge sprite
+template template_purchase_wagon(x, y) {
+    [x, y,  82, 12, -15, -8]
+}
+
+//Unit wagons
+template template_purchase_wagon_special(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x, y,  63, 12, -25, -8]
+}
+
+template template_wagon_special(x,y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+	[1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+	[x	,  y, 33, 12, -16,  -8]
+    [1	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+}
+
+/*
+ * The templates below are derived from the 2cc trainset.
+*/
+
+//MU back
+template template_2cc_engines_back(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x+88 , y,  8, 24,  -3, -12]
+    [x+97 , y, 22, 20, -14, -12]
+    [x+120, y, 32, 16, -16, -12]
+    [x+153, y, 22, 20,  -6, -12]
+    [x    , y,  8, 24,  -3, -12]
+    [x+9  , y, 22, 20, -14, -12]
+    [x+32 , y, 32, 16, -16, -12]
+    [x+65 , y, 22, 20,  -6, -12]
+}
+
+//All engines and front+middle parts of MUs
+template template_2cc_engines_general(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x    , y,  8, 24,  -3, -12, ANIM]
+    [x+9  , y, 22, 20, -14, -12, ANIM]
+    [x+32 , y, 32, 16, -16, -12, ANIM]
+    [x+65 , y, 22, 20,  -6, -12, ANIM]
+    [x+88 , y,  8, 24,  -3, -12, ANIM]
+    [x+97 , y, 22, 20, -14, -12, ANIM]
+    [x+120, y, 32, 16, -16, -12, ANIM]
+    [x+153, y, 22, 20,  -6, -12, ANIM]
+}
+
+template template_2cc_engines_general_r(x, y, len) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x+88 , y,  8, 24,  -3, 	-12-3*(8-len), 	ANIM]
+    [x+97 , y, 22, 20, -14+2*(8-len), 	-12-1*(8-len), 	ANIM]
+    [x+120, y, 32, 16, -16+4*(8-len), 	-12, 	ANIM]
+    [x+153, y, 22, 20,  -6+2*(8-len), 	-12+1*(8-len), ANIM]
+    [x    , y,  8, 24,  -3, 	-12+3*(8-len), 	ANIM]
+    [x+9  , y, 22, 20, -14-2*(8-len),	-12+1*(8-len), 	ANIM]
+    [x+32 , y, 32, 16, -16-4*(8-len), 	-12, 	ANIM]
+    [x+65 , y, 22, 20,  -6-2*(8-len), -12-1*(8-len), 	ANIM]     
+}
+
+//Wagons+Coaches
+template template_2cc_wagons(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x    , y,  8, 24,  -3, -12]
+    [x+9  , y, 22, 20, -14, -12]
+    [x+32 , y, 32, 16, -16, -12]
+    [x+65 , y, 22, 20,  -6, -12]
+    [x+88 , y,  8, 24,  -3, -12]
+    [x+97 , y, 22, 20, -14, -12]
+    [x+120, y, 32, 16, -16, -12]
+    [x+153, y, 22, 20,  -6, -12]
+}
+
+//railbus and single unit metros
+template template_2cc_railbus_general(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+	[x    , y,  8, 24,  -3, -12]
+    [x+9  , y, 22, 20, -14, -12]
+    [x+32 , y, 32, 16, -16, -10]
+    [x+65 , y, 22, 20,  -6, -12]
+    [x+88 , y,  8, 24,  -3, -12]
+    [x+97 , y, 22, 20, -14, -12]
+    [x+120, y, 32, 16, -16, -10]
+    [x+153, y, 22, 20,  -6, -12]	
+}
+
+//Special template for vehicles with length 12
+template template_2cc_L12(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x    , y,  8, 36,  -3, -15]
+    [x+9  , y, 30, 26, -22, -14]
+    [x+40 , y, 48, 16, -33, -12]
+    [x+89 , y, 30, 26, -14, -18]
+    [x+120, y,  8, 36,  -3, -20]
+    [x+129, y, 29, 25, -13, -18]
+    [x+160, y, 48, 16, -16, -12]
+    [x+209, y, 29, 25,  -4, -13]
+}
+
+//Special template for empty spritesets (vehicles with length 10 use this)
+template template_empty_spriteset() {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+	[1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1  ,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1 	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+    [1	,  1,  1,  1,   0,   0, "gfx/Empty.png"]
+}
+
+spriteset(spriteset_empty) {
+	template_empty_spriteset()
+}
+
+template template_2cc_engines_10(x, y) {
+// [left_x,   upper_y,    width,    height,    offset_x,      offset_y]
+    [x,          y,       12,      32,       -5,        (-16-2)]
+    [x+ 16,    y,       30,      30,     (-21+2),   (-18)  ]
+    [x+ 50,    y,       44,      20,     (-25+1),    -14     ]
+    [x+ 98,    y,       30,      30,     (-11+2),   (-20)  ]
+    [x+134,    y,       12,      32,       -5,        (-20+2)]
+    [x+150,    y,       30,      30,     (-17-2),   (-20)  ]
+    [x+184,    y,       44,      20,     (-17-3),    -14     ]
+    [x+232,    y,       30,      30,      (-7-2),   (-18)  ]
+}
+#define EMPTY_SPRITESET spriteset_empty;
+
+
+
+ // railsprite templates
+
+// gui icons templates
+
+template rail_gui_template(x, y)
+{
+  // icons
+  [    x, y, 20, 20, 0, 0]
+  [ x+25, y, 20, 20, 0, 0]
+  [ x+50, y, 20, 20, 0, 0]
+  [ x+75, y, 20, 20, 0, 0]
+  [x+100, y, 20, 20, 0, 0]
+  [x+125, y, 20, 20, 0, 0]
+  [x+150, y, 20, 20, 0, 0]
+  [x+175, y, 20, 20, 0, 0]
+
+  // cursors
+  [x+200, y, 32, 32, 0, 0]
+  [x+250, y, 32, 32, 0, 0]
+  [x+300, y, 32, 32, 0, 0]
+  [x+350, y, 32, 32, 0, 0]
+  [x+400, y, 32, 32, 0, 0]
+  [x+450, y, 32, 32, 0, 0]
+  [x+500, y, 32, 32, 0, 0]
+  [x+550, y, 32, 32, 0, 0]
+}
+
+// track templates
+
+template rail_track_overlay_template(x, y)
+{
+  [    x, y, 64, 31, -31,  0]
+  [ x+80, y, 64, 31, -31,  0]
+  [x+160, y, 64, 16, -31,  0]
+  [x+240, y, 64, 16, -31, 15]
+  [x+320, y, 32, 31,   1,  0]
+  [x+368, y, 32, 31, -31,  0]
+  [x+416, y, 64, 39, -31, -8]
+  [x+496, y, 64, 23, -31,  0]
+  [x+576, y, 64, 23, -31,  0]
+  [x+656, y, 64, 39, -31, -8]
+}       
+
+template rail_underlay_template(x, y)
+{
+  [    x, y, 64, 31, -31,  0]
+  [ x+80, y, 64, 31, -31,  0]
+  [x+160, y, 64, 16, -31,  0]
+  [x+240, y, 64, 16, -31, 15]
+  [x+320, y, 32, 31,   1,  0]
+  [x+368, y, 32, 31, -31,  0]
+  [x+416, y, 64, 39, -31, -8]
+  [x+496, y, 64, 23, -31,  0]
+  [x+576, y, 64, 23, -31,  0]
+  [x+656, y, 64, 39, -31, -8]
+  [x+736, y, 64, 31, -31,  0]
+
+  [    x, y+164, 64, 31, -31,  0]
+  [ x+80, y+164, 64, 31, -31,  0]
+  [x+160, y+164, 64, 31, -31,  0]
+  [x+240, y+164, 64, 31, -31,  0]
+  [x+320, y+164, 64, 31, -31,  0]
+}
+
+template rail_tunnels_template(x, y)
+{
+  [    x, y, 64, 31, -31,  1]
+  [ x+80, y, 64, 31, -31,  1]
+  [x+160, y, 64, 31, -31,  1]
+  [x+240, y, 64, 31, -31,  1]
+}
+
+template rail_bridge_surfaces_template(x, y)
+{
+  [    x, y, 64, 32, -31,  0]
+  [ x+80, y, 64, 32, -31,  0]
+
+  [x+416, y, 64, 39, -31, -8]
+  [x+496, y, 64, 23, -31,  0]
+  [x+576, y, 64, 23, -31,  0]
+  [x+656, y, 64, 39, -31, -8]
+}
+
+// depot sprites with tracks (used with rail types)
+template depot_template() {
+	[118,128, 64,31, -31,  -4]
+	[118,  8, 64,47,  -9, -31]
+	[ 37,128, 64,31, -31,  -4]
+	[ 37,  8, 64,47, -53, -31]
+	[ 37, 63, 64,47, -53, -31]
+	[118, 63, 64,47,  -9, -31]
+}
+
+template level_crossings_railway_template(x, y, filename)
+{
+  [    x, y, 64, 31, -31,  0, filename]
+  [ x+80, y, 64, 31, -31,  0, filename]
+}
+
+// A open level crossing with warning lights and signs
+
+template level_crossings_1_template(x, y, filename)
+{
+  [    x, y,  7, 13,   0,   0, ANIM, filename]
+  [ x+50, y,  7, 13,  -3,  -9, ANIM, filename]
+  [x+100, y,  7, 13,  -6, -10, ANIM, filename]
+  [x+150, y,  7, 13,   0,   0, ANIM, filename]
+  [x+200, y,  7, 13,  -1,  -9, ANIM, filename]
+  [x+250, y,  7, 13,   0,   0, ANIM, filename]
+  [x+300, y,  7, 13,   0,   0, ANIM, filename]
+  [x+350, y,  7, 13,  -2, -11, ANIM, filename]
+}
+
+// A half barrier level crossing
+
+template level_crossings_2_open_template(x, y, filename)
+{
+  [    x, y,  7, 20,   0,   0, ANIM, filename]
+  [ x+48, y,  9, 20,  -9, -13, ANIM, filename]
+  [x+100, y,  9, 20,  -8, -18, ANIM, filename]
+  [x+150, y,  7, 20,   0,   0, ANIM, filename]
+  [x+198, y,  9, 20,   1, -14, ANIM, filename]
+  [x+250, y,  7, 20,   0,   0, ANIM, filename]
+  [x+300, y,  7, 20,   0,   0, ANIM, filename]
+  [x+350, y,  9, 20,   2, -19, ANIM, filename]
+}
+
+template level_crossings_2_closed_template(x, y, filename)
+{
+  [    x, y,  7, 20,   0,   0, ANIM, filename]
+  [ x+48, y, 22, 25,  -9, -13, ANIM, filename]
+  [ x+87, y, 22, 25, -21, -18, ANIM, filename]
+  [x+150, y,  7, 20,   0,   0, ANIM, filename]
+  [x+198, y, 22, 20,   1, -14, ANIM, filename]
+  [x+250, y,  7, 20,   0,   0, ANIM, filename]
+  [x+300, y,  7, 20,   0,   0, ANIM, filename]
+  [x+337, y, 22, 20, -11, -19, ANIM, filename]
+}
+
+template catenary_wire_template(x, y)
+{
+  [x,     y, 32, 26, -29, -11]
+  [x+48,  y, 32, 26,  -1, -12]
+  [x+96,  y, 32, 11,  -1, -12]
+  [x+144, y,  1, 26,   1, -13+1]
+  [x+160, y, 32, 34, -29, -12]
+  [x+208, y, 32, 19,  -1,  -4]
+  [x+256, y, 32, 19, -29, -2]
+  [x+302, y, 32, 34, -1, -13]
+
+  [x,     y+43, 32, 26, -29, -11]
+  [x+48,  y+43, 32, 26, -1, -12]
+  [x+96,  y+43, 32, 11, -1, -12]
+  [x+144, y+43,  1, 25, 1, -13+1]
+  [x+160, y+43, 32, 34, -29, -12]
+  [x+208, y+43, 32, 19, -1, -4]
+  [x+256, y+43, 32, 19, -29, -2]
+  [x+302, y+43, 32, 34, -1, -13]
+
+  [x,     y+86, 32, 26, -29, -11]
+  [x+48,  y+86, 32, 26, -1, -12]
+  [x+96,  y+86, 32, 11, -1, -12]
+  [x+144, y+86,  1, 26, 1, -13+1]
+  [x+160, y+86, 32, 34, -29, -12]
+  [x+208, y+86, 32, 19, -1, -4]
+  [x+256, y+86, 32, 19, -29, -2]
+  [x+302, y+86, 32, 34, -1, -13]
+
+  [x,     y+129, 16, 18, -29, -3]
+  [x+32,  y+129, 16, 18, -1, -12]
+  [x+64,  y+129, 16, 18, -13, -11]
+  [x+96,  y+129, 16, 18, 15, -4]
+}
+
+template pylons_template(x, y)
+{
+  [x,     y, 12, 28, -9+1, -25+2]
+  [x+32,  y, 12, 30, 0-2, -28]
+  [x+64,  y, 12, 30, -1+1, -25]
+  [x+96,  y, 12, 30, -9+1, -27]
+  [x+115, y,  6, 28, -2+1, -26]
+  [x+131, y,  6, 30, -2+1, -27]
+  [x+147, y, 14, 28, -3, -26+2]
+  [x+179, y, 14, 28, -10, -26+2]
+}
+
+template pylons_template_shifted(x, y)
+{
+  [x,     y, 12, 28, -9+2, -25+2]
+  [x+32,  y, 12, 30, 0-3, -28]
+  [x+64,  y, 12, 30, -1+0, -25]
+  [x+96,  y, 12, 30, -9+0, -27+2]
+  [x+115, y,  6, 28, -2+1, -26]
+  [x+131, y,  6, 30, -2+1, -27]
+  [x+147, y, 14, 28, -3, -26+2]
+  [x+179, y, 14, 28, -10, -26+2]
+}
+
+template fences_template(x, y)
+{
+  [ x,	    	y,	34,	22,	-31-4,	-5]
+  [ x+48,	y,	34,	22,	0+1,	-5-1]
+  [ x+96,	y,	 4,	40,	0-1,	-18-3]
+  [ x+112,	y,	66,	 8,	-31-2,	-5-2]
+  [ x+192,	y,	34,	14,	-31-4,	-5]
+  [ x+240,	y,	34,	14,	0+1,	-5]
+  [ x+288,	y,	34,	30,	-31-4,	-13]
+  [ x+336,	y,	34,	30,	0+1,	-13]
+
+  [ x,	    	y+46,	34,	22,	-31,	-5+1]   // right
+  [ x+48,	y+46,	34,	22,	0-3,	-5]
+  [ x+96,	y+46,	 4,	40,	0-2,	-18-3]
+  [ x+112,	y+46,	66,	 8,	-31-2,	-5-1]
+  [ x+192,	y+46,	34,	14,	-31,	-5+1]
+  [ x+240,	y+46,	34,	14,	0-3,	-5+1]
+  [ x+288,	y+46,	34,	30,	-31,	-13+1]
+  [ x+336,	y+46,	34,	30,	0-3,	-13]
+
+}
+
+
+template tmpl_signals() {
+    [0, 0, 64, 64, -35, -57, ANIM]
+    [65, 0, 64, 64, -29, -40, ANIM]
+    [195, 0, 64, 64, -14, -50, ANIM]
+    [130, 0, 64, 64, -46, -47, ANIM]
+    [390, 0, 64, 64, -45, -50, ANIM]
+    [455, 0, 64, 64, -19, -47, ANIM]
+    [260, 0, 64, 64, -27, -55, ANIM]
+    [325, 0, 64, 64, -35, -43, ANIM]
+}
+
+template tmpl_signals_x2() {
+    [0, 0, 64, 64, -35, -57, ANIM]
+    [65, 0, 64, 64, -29, -40, ANIM]
+    [195, 0, 64, 64, -14, -50, ANIM]
+    [130, 0, 64, 64, -46, -47, ANIM]
+    [390, 0, 64, 64, -45, -50, ANIM]
+    [455, 0, 64, 64, -19, -47, ANIM]
+    [260, 0, 64, 64, -27, -55, ANIM]
+    [325, 0, 64, 64, -35, -43, ANIM]
+}
+
+

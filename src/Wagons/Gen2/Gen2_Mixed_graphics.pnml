@@ -1,0 +1,186 @@
+/*
+ *  Copyright (C) 2017 Transportman, McZapkie
+ *  This file is part of the V4 EEC set based on 2cc Trains In NML fork.
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen2_Mixed_purchase, "gfx/Wagons/Gen2/Gen2_Mixed_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+
+
+//speciific cargo liveries
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Livestock_livery) {
+	7: switch_wagon_Gen2_Boxcar_Type1_Livestock_livery;
+	3: switch_wagon_Gen2_Boxcar_Type1_Standard_livery;
+	1: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Covered_livery) {
+	5: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+	2: switch_wagon_Gen2_Boxcar_Type1_Standard_livery;
+	1: switch_wagon_Gen2_Boxcar_Type1_Livestock_livery;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Crates_L2;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Crates_L2;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Crates_L3;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Crates_L3;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Reefer_L2_S3;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Pieces_livery) {
+	3: switch_wagon_Gen2_Boxcar_Type1_Standard_livery;
+	2: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+	1: switch_wagon_Gen2_Boxcar_Type1_Livestock_livery;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Crates_L2;
+	1: switch_wagon_Gen3_Flat_Wagon_Type1_Machinery_livery;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Crates_L3;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Crates_L3;
+	1: switch_wagon_Gen3_Flat_Wagon_Type1_cargo_selection;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Reefer_L2_S3;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Reefer_livery) {
+	7: switch_wagon_Gen2_Boxcar_Type1_Reefer_livery;
+	3: switch_wagon_Gen2_Boxcar_Type1_Standard_livery;
+	1: switch_wagon_Gen2_Mixed_Covered_livery;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_ReeferLiquid_livery) {
+	3: switch_wagon_Gen2_Boxcar_Type1_Reefer_livery;
+	2: spriteset_wagon_Gen2_Tanker_Type1_Water_L3_S3;
+	1: spriteset_wagon_Gen2_Tanker_Type1_Rubber_L2_S3;
+	1: switch_wagon_Gen2_Mixed_Reefer_livery;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Wood_livery) {
+	5: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Wood_L2;
+	2: spritegroup_wagon_Gen3_Open_Wagon_Wood_L2;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Wood_L3;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Wood_L4;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Wood_L3;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S3;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Planks_livery) {
+	3: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Planks_L2;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Gray_L2;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Planks_L3;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Planks_L4;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Gray_L3;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S1;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S2;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S3;
+	1: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Steel_livery) {
+	5: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Steel_L2;
+	2: spritegroup_wagon_Gen3_Open_Wagon_Crates_L2;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Steel_L3;
+	1: spritegroup_wagon_Gen3_Flat_Wagon_Type1_Steel_L4;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Crates_L3;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S1;
+	2: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S2;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S3;
+	2: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+}
+
+//specific class liveries
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_CoveredBulk_livery) {
+	5: spritegroup_wagon_Gen3_Open_Wagon_Grain_L2;
+	3: spritegroup_wagon_Gen3_Open_Wagon_Grain_L3;
+	1: spritegroup_wagon_Gen3_Open_Wagon_Grain_L4;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S1;
+	2: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S2;
+	1: spriteset_wagon_Gen2_Boxcar_Type1_Standard_L1_S3;
+	1: spriteset_wagon_Gen3_Silo_Type1_CC1_S1;
+	1: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+}
+
+/*
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Bulk_livery) {
+	7: spritegroup_wagon_Gen3_Open_Wagon_Gray_L2;
+	5: spritegroup_wagon_Gen3_Open_Wagon_Gray_L3;
+	3: spritegroup_wagon_Gen3_Open_Wagon_Gray_L4;
+	1: switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;
+}
+*/
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_Liquid_livery) {
+	3: spriteset_wagon_Gen2_Tanker_Type1_Rfpr_L4_S2;
+	2: switch_wagon_Gen2_Mixed_Covered_livery;
+	1: spriteset_wagon_Gen3_Tanker_Type1_Rubber_L2_S2;
+	1: spriteset_wagon_Gen3_Silo_Type1_CC2_S1;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_General_Livery) {
+	3: switch_wagon_Gen2_Mixed_Covered_livery;
+	2: switch_wagon_Gen2_Boxcar_Type1_Standard_livery;
+	1: switch_wagon_Gen2_Mixed_ReeferLiquid_livery;
+	1: switch_wagon_Gen2_Mixed_Livestock_livery;
+	1: switch_wagon_Gen3_Flat_Wagon_Type1_cargo_selection;
+}
+
+/*
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_bulk_covered_class, hasbit(cargo_classes, CC_COVERED)) {
+	1 : return switch_wagon_Gen2_Mixed_CoveredBulk_livery;
+	return switch_wagon_Gen2_Mixed_CoveredBulk_livery; //switch_wagon_Gen2_Mixed_Bulk_Livery; 
+}
+*/
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_piecegood_class, hasbit(cargo_classes, CC_PIECE_GOODS)) {
+	1 : return switch_wagon_Gen2_Mixed_Pieces_livery;
+	return switch_wagon_Gen2_Mixed_General_Livery; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_liquid_class, hasbit(cargo_classes, CC_LIQUID)) {
+	1 : return switch_wagon_Gen2_Mixed_Liquid_livery;
+	return switch_wagon_Gen2_Mixed_piecegood_class; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_bulk_class, hasbit(cargo_classes, CC_BULK)) {
+	1 : return switch_wagon_Gen2_Mixed_CoveredBulk_livery; //switch_wagon_Gen2_Mixed_bulk_covered_class;
+	return switch_wagon_Gen2_Mixed_liquid_class; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_reefer_class, hasbit(cargo_classes, CC_REFRIGERATED)) {
+	1 : return switch_wagon_Gen2_Mixed_Reefer_livery;
+	return switch_wagon_Gen2_Mixed_bulk_class; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_cargo_selection, cargo_type_in_veh) {
+	LVST: return switch_wagon_Gen2_Mixed_Livestock_livery;
+	VALU: return switch_wagon_Gen2_Mixed_Covered_livery;
+	GOLD: return switch_wagon_Gen2_Mixed_Covered_livery;
+	FRUT: return switch_wagon_Gen2_Mixed_Reefer_livery;
+	DIAM: return switch_wagon_Gen2_Mixed_Covered_livery;
+	BEER: return switch_wagon_Gen2_Mixed_ReeferLiquid_livery;
+	MILK: return switch_wagon_Gen2_Mixed_ReeferLiquid_livery;
+	FISH: return switch_wagon_Gen2_Mixed_Reefer_livery;
+	WOOD: return switch_wagon_Gen2_Mixed_Wood_livery;
+	WDPR: return switch_wagon_Gen2_Mixed_Planks_livery;
+	STEL: return switch_wagon_Gen2_Mixed_Steel_livery;
+	METL: return switch_wagon_Gen2_Mixed_Steel_livery;
+	IRON: return switch_wagon_Gen2_Mixed_Steel_livery;
+	return switch_wagon_Gen2_Mixed_reefer_class; 
+}
+
+/*
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Mixed_caboose_position, [STORE_TEMP(-1, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+	ID_RANGE_WAGONS_N: switch_wagon_Gen2_Mixed_cargo_selection;
+	spriteset_wagon_Gen2_Service_Car_Type1_L1;
+}
+*/
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

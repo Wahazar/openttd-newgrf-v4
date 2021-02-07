@@ -1,0 +1,174 @@
+/*
+ *  Copyright (C) 2019 McZapkie
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/RLA0/RLA0_gui.png"
+
+spriteset(RLA0_gui, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLA0/RLA0_track_normal.png"
+
+spriteset(RLA0_track_overlay_normal, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(RLA0_underlay_normal, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(RLA0_bridge_surfaces_normal, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(RLA0_tunnels_normal, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLA0/RLA0_track_snow.png"
+
+spriteset(RLA0_track_overlay_snow, IMAGEFILE)
+{
+  rail_track_overlay_template(2, 23)
+}
+
+spriteset(RLA0_underlay_snow, IMAGEFILE)
+{
+  rail_underlay_template(2, 77)
+}
+
+spriteset(RLA0_bridge_surfaces_snow, IMAGEFILE)
+{
+  rail_bridge_surfaces_template(2, 131)
+}
+
+spriteset(RLA0_tunnels_snow, IMAGEFILE)
+{
+  rail_tunnels_template(2, 183)
+}
+
+#undef IMAGEFILE
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/RLA0/RLA0_depot_normal.png"
+
+spriteset(RLA0_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/RLA0/RLA0_depot_snow.png"
+
+spriteset(RLA0_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+
+#undef IMAGEFILE
+
+#define IMAGEFILE1  "gfx/Tracks/RLA0/RLA0_track_normal.png"
+#define IMAGEFILE2  "gfx/Tracks/crossing_slow.png"
+spriteset(RLA0_level_crossings_open)
+{
+  level_crossings_railway_template(2, 298, IMAGEFILE1)
+  level_crossings_1_template(10, 133, IMAGEFILE2)
+}
+#undef IMAGEFILE1
+#undef IMAGEFILE2
+
+//fences - no fence
+
+
+// switches
+
+switch(FEAT_RAILTYPES, SELF, RLA0_track_overlay, terrain_type) {
+	TILETYPE_SNOW: RLA0_track_overlay_snow;
+	RLA0_track_overlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA0_underlay, terrain_type) {
+	TILETYPE_SNOW: RLA0_underlay_snow;
+	RLA0_underlay_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA0_bridge_surfaces, terrain_type) {
+	TILETYPE_SNOW: RLA0_bridge_surfaces_snow;
+	RLA0_bridge_surfaces_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA0_tunnels, terrain_type) {
+	TILETYPE_SNOW: RLA0_tunnels_snow;
+	RLA0_tunnels_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, RLA0_depot, terrain_type) {
+	TILETYPE_SNOW: RLA0_depot_snow;
+	RLA0_depot_normal;
+}
+
+//properties
+
+if ((param_custom_tracks) && (EASTERNEUROPE)) {
+if (railtype_available("RLA0") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, RLA0)
+  {
+    property
+    {
+      label: "RLA0";
+      introduction_date: date(RLA0_YEAR, 1, 1);
+      name: string(STR_RLA0_NAME);
+      toolbar_caption: string(STR_RLA0_TOOLBAR);
+      menu_text: string(STR_RLA0_MENU);
+      build_window_caption: string(STR_RLA0_BUILD_CAPTION);
+      autoreplace_text: string(STR_RLA_AUTOREPLACE);
+      new_engine_text: string(STR_RLA_NEW_ENGINE);
+      compatible_railtype_list: [ALL_BROAD_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      powered_railtype_list:    [ALL_BROAD_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV];
+      alternative_railtype_list: [BROAD_GAUGES_NONELECTRIFIED];
+      curve_speed_multiplier: 2;
+      station_graphics: RAILTYPE_STATION_NORMAL;
+      construction_cost: RLA0_BUILDCOST
+      maintenance_cost: RLA0_INFRACOST
+      speed_limit: RLA0_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x35;
+      sort_order: RLA0_SORT;
+      railtype_flags: bitmask();
+      enable_programmable_pre_signals: 1;
+    }
+    graphics
+    {
+      gui: RLA0_gui;
+      track_overlay: RLA0_track_overlay;
+      underlay: RLA0_underlay;
+      tunnels: RLA0_tunnels;
+//      tunnel_overlay: RLA0_tunnels;
+      fences: EMPTY_SPRITESET
+      bridge_surfaces: RLA0_bridge_surfaces;
+      level_crossings: RLA0_level_crossings_open;
+      depots: RLA0_depot;
+      signals: switch_signals_russian_type;
+    }
+  }
+}
+}

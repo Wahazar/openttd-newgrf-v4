@@ -1,0 +1,661 @@
+##grflangid 0x27
+##plural 0
+##gender m ma f
+##case fp fs mp ms
+
+#Main grf title and description
+STR_GRF_NAME                    :{TITLE}
+
+#General error messages
+str_used_with_dynamic_engines           :dynamic_engines = true (impostazione nel file "openttd.cfg")
+str_error_region                                        :Nessuna regione attiva, {STRING} disabilitato.
+
+#parameter strings
+#cost parameters
+STR_PARAM_PURCHASE_COST             :Moltiplicatore per i costi d'acquisto
+STR_PARAM_PURCHASE_COST_DESC        :È possibile utilizzare questa impostazione per aumentare o diminuire i costi d'acquisto dei veicoli in questo set.
+STR_PARAM_RUNNING_COST              :Moltiplicatore per i costi d'esercizio
+STR_PARAM_RUNNING_COST_DESC         :Aumenta o diminuisce i costi d'esercizio dei veicoli di questo set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (impostazione di base)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+#region parameters
+
+#loading speed parameter
+STR_PARAM_LOADINGSPEED                                  :Velocità di caricamento
+STR_PARAM_LOADINGSPEED_DESC                             :Impostate la velocità di caricamento di questo set
+STR_PARAM_LOADINGSPEED_SLOW                             :Lenta
+STR_PARAM_LOADINGSPEED_NORMAL                   :Normale (impostazione di base)
+STR_PARAM_LOADINGSPEED_FAST                             :Veloce
+STR_PARAM_LOADINGSPEED_ULTRA                    :Velocissima
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#VEHICLE NAMES
+
+#Railbus-steam
+str_rbs_Austria_NOLB_1          :NOLB 1 {STRING}
+str_rbs_Germany_Bavarian_MCCi :MCCi Maffei B'2' {STRING}
+str_rbs_Austria_kkStB_4_0       :IXb Floridsdorf A1 (automotrice a vapore per merci)
+
+#Railbus-diesel
+str_rbd_Germany_DB_VT_133                                               :VT 133 Wismar A1 {STRING}
+str_rbd_Austria_OBB_5042                                                :VT42 Simmering (1A)'(A1)' {STRING}
+str_rbd_Germany_DB_VT_989                                               :DB VT 98.9/DB 798 'Uerdingen railbus' {STRING}
+str_rbd_Russia_RZD_ACh2                                                 :ACh2 Studenka B'2' {STRING}
+str_rbd_Austria_OBB_5047                                                :5047 Jenbacher 2'B' {STRING}
+str_rbd_Germany_DB_670                                                  :670 DWA 1'A' {STRING}
+str_rbd_Lithuania_Lithuanian_Railways_AR2               :AR2 RVR B'2' {STRING}
+str_rbd_Austria_kkStB_19                                :19 Austro-Daimler 1A{STRING}
+str_rbd_Germany_Saxon_DET_1_2                           :DET Rastatt 3'B' {STRING}
+str_rbd_Germany_BSt_6001                                :BSt AEG 1A {STRING}
+str_rbd_Czech_Republic_CD_M120                          :M120 Tatra A1 {STRING}
+str_rbd_Czech_Republic_CD_M290                          :M290 Tatra (1A)'(A1)' {STRING}
+str_rbd_Czech_Republic_CD_840                                   :RS1 Stadler Pankow B'B' {STRING}
+str_rbd_Czech_Republic_CSD_M131                                 :M131.1 Tatra A1 {STRING}
+str_rbd_Czech_Republic_CSD_CDlm                                 :CDlm (for M131.1) {STRING}
+str_rbd_Czech_Republic_CD_809                                   :810 Studenka A1 {STRING}
+str_rbd_Czech_Republic_CSD_Btax_Trailer                         :Btax (for 810) {STRING}
+str_rbd_Hungary_MAV_Bcmot                                       :Bcmot Ganz 1'A {STRING}
+str_rbd_Hungary_MAV_Bbmot                                       :Bbmot Ganz (1B) 2' {STRING}
+str_rbd_Hungary_MAV_Aamot                                       :"Arpad" Ganz 2'B {STRING}
+str_rbd_Poland_PKP_SN61                                         :SN61 Ganz-Mavag (1B) 2' {STRING}
+
+#Railbus-electric
+str_rbe_Austria_OBB_4855 :4855 Knotz Bo'Bo' {STRING}
+str_rbe_Austria_MBS_ET_10109 :ET 10.109 Stadler Rail Bo'Bo' {STRING}
+str_rbe_Poland_PKP_EN81 :308B Pesa Bo'2' {STRING}
+
+#Steam
+str_steam_Germany_Adler                         :Stephenson & Co 1A1 {STRING}
+str_steam_Austria_CLB_I                         :Wr. Neustadt 1B {STRING}
+str_steam_USA_4_6_0_Ten_wheeler         :V Baldwin 2'C {STRING}
+str_steam_USA_2_8_0_Consolidation       :Kh Baldwin 1'D {STRING}
+str_steam_Hungary_MAV_335                       :335 Sigl/Wr. Neustadt Ct {STRING}
+str_steam_Hungary_MAV_325                       :325 Gepgyar C {STRING}
+str_steam_Hungary_MAV_377                       :377 MAVAG Ct {STRING}
+str_steam_Hungary_MAV_203                       :203  Gepgyar 2B1 {STRING}
+str_steam_Austria_SudBahn_29                    :Esslingen C {STRING}
+str_steam_Austria_KkStB_4                       :4 Wr. Neustadt 2'B {STRING}
+str_steam_Austria_KkStB_99                      :99 Krauss 1Ct {STRING}
+str_steam_Austria_KkStB_299                     :299 Krauss 1Ct {STRING}
+str_steam_Hungary_MAV_375                       :375 MAVAG 1'Ct {STRING}
+str_steam_Germany_Prussian_S10          :S10 Schwartzkopff 2'C {STRING}
+str_steam_Russia_RZD_9P                         :9P Kolomna Ct {STRING}
+str_steam_Germany_DRG_86                        :86 Schichau 1'D1' t {STRING}
+str_steam_Germany_DRG_03                        :03 Borsig 2'C1' {STRING}
+str_steam_Germany_DB_52                         :52 'Kriegslok' 1'E{STRING}
+str_steam_Russia_RZD_P36                        :P36 Kolomna 2'D2' {STRING}
+str_steam_Poland_PKP_Okz32                      :OKz32 Cegielski 1'E1' {STRING}
+str_steam_Germany_Prussian_S_3                  :S3 Hanomag 2'B {STRING}
+str_steam_Germany_Saxon_XX_HV                   :XX HV Chemnitz 1'D1' {STRING}
+str_steam_Russia_RZD_MZk                        :MZk Kolomna Bt {STRING}
+str_steam_Russia_RZD_T13                        :T13 Kolomna C {STRING}
+str_steam_Russia_RZD_Ow                         :Ov Bryansk D {STRING}
+str_steam_Russia_RZD_U                          :U St. Petersburg 2'C {STRING}
+str_steam_Russia_RZD_E                          :E Luhansk E {STRING}
+str_steam_Russia_RZD_Y                          :Y Kolomna D {STRING}
+str_steam_Russia_RZD_Su                         :Su Bryansk 1'C1' {STRING}
+str_steam_Russia_RZD_FD20                       :FD20 Luhansk 1'E1' {STRING}
+str_steam_Russia_RZD_Lv                         :Lv Voroshilovgrad 1'E1' {STRING}
+str_steam_Germany_Prussian_G_10                 :G10 Hanomag E {STRING}
+str_steam_Poland_PKP_Ok22                       :Ok22 Fablok 2'C {STRING}
+str_steam_Poland_PKP_Ty23                       :Ty23 WSABP 1'E {STRING}
+str_steam_Poland_PKP_Pt31                       :Pt31 Fablok 1'D1' {STRING}
+str_steam_Hungary_MAV_424                       :424 MAVAG 2'D {STRING}
+str_steam_Hungary_MAV_242                       :242 MAVAG 2'B2't {STRING}
+str_steam_Liberation_Class_9F                   :9F Vulcan 1'D {STRING}
+str_steam_USATC_Class_S160                      :S160 Lima 1'D {STRING}
+str_steam_Poland_PKP_Ty45                       :Ty45 Fablok 1'E {STRING}
+str_steam_Poland_PKP_OI49                       :Ol49 Fablok 1'C1' {STRING}
+str_steam_Austria_KkStB_310                     :310 Floridsdorf 1'C2' {STRING}
+str_steam_Austria_Rakete2                       :Sigl 1A1 {STRING}
+str_steam_Austria_Ajax                          :Vulcan B1 {STRING}
+str_steam_Germany_Mecklenburg_1                 :Borsig 1A1 {STRING}
+str_steam_Germany_Konigstein                    :Schwartzkopff Bt {STRING}
+str_steam_Germany_Prussian_G_3                  :G3 Henschel C {STRING}
+str_steam_Germany_Prussian_G_7_2                :G 7.2 {STRING}
+str_steam_Germany_Prussian_T_3                  :T3 Henschel Ct {STRING}
+str_steam_Germany_Prussian_T_9                  :T9 Krauss C1t {STRING}
+str_steam_Germany_Prussian_T_11                 :T11 Union 1'Ct {STRING}
+str_steam_Germany_Prussian_P_2                  :P2 Henschel 2'B {STRING}
+str_steam_Germany_Prussian_P_8                  :P8 Henschel 2'C {STRING}
+# str_steam_Yugoslavia_JZ_01 :JZ 01 {STRING}
+# str_steam_Yugoslavia_JZ_06 :JZ 06 {STRING}
+str_steam_Yugoslavia_JZ_30                      :30 Borsig 1'E {STRING}
+str_steam_Austria_KkStB_170                     :170 Wr. Neustadt 1'D {STRING}
+
+#Diesel
+str_diesel_Germany_DB_Kof_II                    :KofII BMAG B {STRING}
+str_diesel_Germany_DB_270                       :WR 200 Deutz B {STRING}
+str_diesel_Austria_OBB_2060                     :2060 Jenbacher B {STRING}
+str_diesel_Hungary_MAV_M44                      :DVM2 Ganz-MAVAG Bo'Bo' {STRING}
+str_diesel_Hungary_MAV_M28                      :A21 Raba B {STRING}
+str_diesel_Hungary_MAV_M61                      :NoHAB Co'Co' {STRING}
+str_diesel_Hungary_MAV_M41                      :DHM7 Ganz-MAVAG B'B' {STRING}
+str_diesel_Germany_DB_220                       :ML2200 Krauss-Maffei C'C' {STRING}
+str_diesel_Czech_Republic_CD_720_ChME2          :T435.0 CKD Praha Bo'Bo' {STRING}
+str_diesel_Romania_CFR_LDH_70                   :LDH70 Bucharest B'B' {STRING}
+str_diesel_Romania_CFR_060_DA                   :060DA Craiova Co'Co' {STRING}
+str_diesel_Romania_CFR_060_DA1                  :060DA1 Craiova Co'Co' {STRING}
+str_diesel_Croatia_HZ_2062                      :JZ 664/HZ 2062 {STRING}
+str_diesel_Germany_DB_261_Gravita_10BB          :'Gravita' Voith B'B' {STRING}
+str_diesel_Germany_HVLE_V490                    :'Maxima 30CC' Voith Turbo Kiel C'C'{STRING}
+str_diesel_Poland_PKP_SP32                      :LDE1300 FAUR Bo'Bo' {STRING}
+str_diesel_Serbia_ZS_621                        :T234.0 CKD Praha Bo {STRING}
+str_diesel_UK_BR_66             :JT42CWRM EMD Co'Co'
+# str_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
+# str_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
+# str_diesel_Austria_OBB_2016	:OBB 2016 {STRING}
+# str_diesel_Czechia_CSD_753_T669 		:CSD T669.0/CD 753 {STRING}
+# str_diesel_Czechia_CSD_742_T4662 		:CSD T466.2/CD 742 {STRING}
+# str_diesel_Czechia_CSD_7415 		:CD 741.5 {STRING}
+# str_diesel_Czechia_CSD_794 		:CD 794 {STRING}
+str_diesel_Germany_DR_132               :TE109 Luhansk Co'Co' {STRING}
+# str_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
+# str_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
+str_diesel_Poland_PKP_SM42              :Ls800 Fablok Bo'Bo' {STRING}
+
+str_diesel_UE_CNG_Shunter       :CNG Shunter (Diesel Hybrid)
+str_diesel_Shed_shunter :Shed shunter {STRING}
+
+str_diesel_Russia_RZD_Db        :Db Baldwin Co'Co' {STRING}
+str_diesel_Russia_RZD_TEM1      :TEM1 BMZ Co'Co' {STRING}
+str_diesel_Russia_RZD_TEM2      :TEM2 BMZ Co'Co' {STRING}
+str_diesel_Russia_RZD_TEM2U     :TEM2U BMZ Co'Co' {STRING}
+str_diesel_Russia_RZD_TGM23     :TGM23 Murom B {STRING}
+str_diesel_Russia_RZD_TE3                       :TE3 Kharkiv Co'Co' {STRING}
+str_diesel_Russia_RZD_TEP60                     :TEP60 Kolomna  Co'Co' {STRING}
+str_diesel_Russia_RZD_ChME3                     :S200 CKD Praha Co'Co'{STRING}
+str_diesel_Russia_RZD_M62                       :M62 Luhansk Co'Co' {STRING}
+str_diesel_Russia_RZD_2M62                      :2M62 Luhansk Co'Co'+Co'Co' {STRING}
+str_diesel_Ukraine_UZ_2TE10Ut                   :2TE10Ut  Luhansk Co'Co'+Co'Co' {STRING}
+str_diesel_Ukraine_UZ_TEP10L                    :TEP10L Luhansk Co'Co' {STRING}
+str_diesel_Belarus_BCh_2TE10M                   :2TE10M Luhansk Co'Co'+Co'Co' {STRING}
+str_diesel_Ukraine_UZ_3TE116U                   :3TE116U Luhansk Co'Co'+Co'Co'+Co'Co' {STRING}
+str_diesel_Ukraine_UZ_TE33A                     :ES44ACi Astana Co'Co'{STRING}
+str_diesel_Ukraine_UZ_TEP150                    :TEP150 Luhanskteplovoz Co'Co' {STRING}
+str_diesel_Russia_RZD_GT1                       :GT1 Lyudinovsky Bo'Bo'Bo'+Bo'Bo'Bo' {STRING}
+
+#Electric
+str_electric_Austria_OBB_1161                                   :1070 ELIN D {STRING}
+str_electric_Germany_DB_169                                     :LAG Siemens Bo {STRING}
+str_electric_Germany_DB_104                                     :E04 AEG 1'C1' {STRING}
+str_electric_Germany_DR_E_18                                    :E18 AEG 1'Do1' {STRING}
+str_electric_Germany_Prussian_ES_6                              :ES6 Borsig 1'C1' {STRING}
+str_electric_Germany_DR_230                                     :76E Skoda Bo'Bo' {STRING}
+str_electric_Austria_OBB_1020_Crocodile                         :'Crocodile' AEG Co'Co' {STRING}
+str_electric_Austria_OBB_1010                                   :1010 ABES Co'Co' {STRING}
+str_electric_Germany_DB_1031                                    :103.1 Henschel Co'Co' {STRING}
+str_electric_Austria_OBB_1044                                   :1044 BBC Baden Bo'Bo' {STRING}
+str_electric_Austria_OBB_1063                                   :1063 SGP Bo'Bo' {STRING}
+str_electric_Germany_DB_185_TRAXX_F140                          :TRAXX F140MS Bombardier Bo'Bo' {STRING}
+str_electric_Germany_DB_182_ES64U_Taurus                        :ES64U 'Taurus' Siemens Bo'Bo' {STRING}
+str_electric_Germany_DB_E_919                                   :E91.9 Krauss C'C' {STRING}
+str_electric_Hungary_MAV_Class_V41              :VM11 Ganz-MAVAG Bo'Bo' {STRING}
+str_electric_Hungary_MAV_Class_V43              :VM14 Ganz-MAVAG B'B' {STRING}
+str_electric_Hungary_MAV_Class_V63              :VM15 Ganz-MAVAG Co'Co' {STRING}
+str_electric_Hungary_MAV_Class_V46              :VM16 Ganz-MAVAG Bo'Bo' {STRING}
+str_electric_Czech_Republic_CD_S499             :47E Skoda Bo'Bo' {STRING}
+str_electric_Czech_Republic_CD_380              :109E Skoda Bo'Bo' {STRING}
+str_electric_Croatia_HZ_1141                                    :040-EC ASEA/Koncar Bo'Bo' {STRING}
+str_electric_Macedonia_Macedonian_Railways_462                  :060-EA ASEA/Electroputere Co'Co' {STRING}
+str_electric_Slovenia_SZ_363                                    :'Brigitte' Alsthom C'C' {STRING}
+str_electric_Czech_Republic_CD_363              :96E Skoda Bo'Bo' {STRING}
+str_electric_Poland_PKP_EP03            :E150 ASEA Bo'Bo' {STRING}
+str_electric_Poland_PKP_EU06            :AEI E Vulcan Bo'Bo' {STRING}
+str_electric_Poland_PKP_ET41            :203E HCP Bo'Bo'+Bo'Bo' {STRING}
+str_electric_Poland_PKP_EP09            :104E Pafawag Bo'Bo' {STRING}
+str_electric_Poland_PKP_ET22            :201E Pafawag Co'Co' {STRING}
+str_electric_Slovakia_ZSSK_162                  :98E Skoda Bo'Bo' {STRING}
+
+str_electric_Russia_RZD_VL22M                                   :VL22M NEVZ Co'Co' {STRING}
+str_electric_Russia_RZD_VL11                                    :VL11 TEVZ Bo'Bo'+Bo'Bo' {STRING}
+str_electric_Russia_RZD_VL15                                    :VL15 TEVZ Bo'Bo'Bo'+Bo'Bo'Bo' {STRING}
+str_electric_Russia_RZD_ChS3                                    :30E Skoda Bo'Bo' {STRING}
+str_electric_Russia_RZD_EP20                                    :EP20 NEVZ Bo'Bo'Bo' {STRING}
+str_electric_Ukraine_UZ_ChS7                                    :82E Skoda Bo'Bo'+Bo'Bo' {STRING}
+str_electric_Ukraine_UZ_DE1                                     :DE1DEVZ Bo'Bo'+Bo'Bo' {STRING}
+#str_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
+
+
+#DMU
+#str_dmu_Germany_DB_VT_040_Flying_Hamburger 	:DB VT 04.0 'Flying Hamburger' {STRING}
+#str_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
+#str_dmu_Germany_DB_VT_085 					:DB VT 08.5 {STRING}
+#str_dmu_Germany_DB_VT_115 					:DB VT11.5/DB 601 'TEE' {STRING}
+str_dmu_Serbia_ZS_811                                           :811 Ganz-MAVAG (1B)2'+2'2' {STRING}
+str_dmu_Germany_DB_612_Regio_Swinger                            :'Regio Swinger' Adtranz 2'B'+B'2' {STRING}
+str_dmu_Germany_DB_642_Desiro                                   :'Desiro' Siemens B'2'B' {STRING}
+str_dmu_Russia_RZD_D1                                           :D1 Ganz-MAVAG (A1A)2'+2'2' {STRING}
+str_dmu_Russia_RZD_RA2                                          :RA2 MWM B'2'+2'2' {STRING}
+str_dmu_Belarus_BCh_DP3                                         :730M Pesa Bo'2'+2'2' {STRING}
+str_dmu_Croatia_HZ_7022                                         :7022 TZV Gredelj Bo'2'+2'Bo' {STRING}
+str_dmu_Czech_Republic_CD_814                                   :'Regionova' PARS 1'A' + 1'1' {STRING}
+str_dmu_Slovakia_ZSSK_861                                       :861 ZOS Vrutky B'2'2'B' {STRING}
+str_dmu_Germany_DB_6282                                         :628.2 Duwag 2'B'+2'2' {STRING}
+str_dmu_Germany_DB_648                                          :'Lint 41' Alsthom B'(2)B' {STRING}
+
+#EMU
+str_emu_Austria_OBB_4041                                        :ET10 ELIN 3'(Ao1Ao)' {STRING}
+str_emu_Hungary_MAV_BDVmot                                      :BDVmot Ganz-MAVAG B'B'+2'2' {STRING}
+str_emu_Czech_Republic_CD_680_Pendolino                         :'Pendolino' Alstom Ferroviara (1A)'(A1)' + 2'2' {STRING}
+str_emu_Germany_DB_403_ICE_3                                    :ICE-3 Siemens Bo'Bo'+2'2' {STRING}
+str_emu_Slovenia_SZ_312_Desiro                                  :'Desiro' Siemens Bo'2'Bo' {STRING}
+str_emu_Poland_PKP_EW90                                         :E-91 English Electric Bo'Bo'+2'2' {STRING}
+str_emu_Austria_OBB_4030                                        :4030 SGP Bo'Bo'+2'2'{STRING}
+str_emu_Macedonia_Macedonian_Railways_412                       :ER31 RVR Bo'Bo' + 2'2' {STRING}
+str_emu_Poland_PKP_EW54                                         :E92 ASEA 2'2'+Bo'Bo' {STRING}
+str_emu_Romania_CFR_58                                          :Z6100 Alstom B'2' {STRING}
+str_emu_Austria_WESTbahn_4010_KISS                              :'KISS' Stadler Bo'Bo'+2'2' {STRING}
+str_emu_Croatia_HZ_6112                                         :6112 Koncar Bo'2'2'2'Bo' {STRING}
+str_emu_Europe_Sureot                                           :Sureot Bo'Bo' {STRING}
+str_emu_Germany_DB_ET420                                        :420 MAN Bo'Bo' {STRING}
+str_emu_Czechia_Leo_480                                         :'FLIRT" Stadler Bo'2'2'2'2' {STRING}
+str_emu_Russia_RZD_S                                    :S MWM Bo'Bo' {STRING}
+str_emu_Russia_RZD_ER2                                  :ER2 RVR Bo'Bo' {STRING}
+str_emu_Russia_RZD_ER200                                :ER200 RVR Bo'Bo' {STRING}
+str_emu_Russia_RZD_ES1_Lastochka                        :'Lastochka' Siemens/Ural Bo'Bo' {STRING}
+
+#Multiple Unit Metro
+str_mtro_Germany_DB_ET_171                                      :DB ET 171 / DB 471 (Metro)
+str_mtro_Hungary_Budapest_Ev3_200                               :Budapest Ev3-200 (Metro)
+str_mtro_Germany_Munchen_MVG_A2                                 :Monaco di Baviera MVG A2 (Metro)
+str_mtro_North_Korea_Pyongyang_D_stock                          :Pyongyang D stock (Metro)
+str_mtro_Russia_Moscow_81_720                                   :Mosca 81-720 (Metro)
+str_mtro_Russia_Moscow_81_7175M                                 :Mosca 81-717.5M (Metro)
+str_mtro_Russia_Moscow_81_740                                   :Mosca 81-740 (Metro)
+str_mtro_Singapore_Singapore_C830_Metropolis                    :Singapore C830 'Metropolis' (Metro)
+str_mtro_Germany_Berlin_U_Bahn_A_I                              :Berlino U-Bahn A I (Metro)
+str_mtro_Russia_Moscow_Type_A                                   :Mosca Tipo A (Metro)
+str_mtro_Russia_Moscow_Type_D                                   :Mosca Tipo D (Metro)
+str_mtro_Czech_Republic_Prague_ECS_Set                          :Praga Set ECS (Metro)
+str_mtro_Germany_Berlin_U_Bahn_IK                               :Berlino U-Bahn IK (Metro)
+
+
+#wagons
+#str_wagon_Gen2_Armoured_Boxcar_Russian			:2nd Gen Wooden Armoured Car (broad gauge)
+# str_wagon_Gen2_Silo_Russian 				:2nd Gen Silo (broad gauge)
+# str_wagon_Gen2_Hopper_European 				:2nd Gen Wooden Hopper (normal gauge)
+# str_wagon_Gen2_Hopper_Russian 				:2nd Gen Wooden Hopper (broad gauge)
+
+
+
+# str_wagon_Gen5_Flat_Wagon_European 			:5th Gen Flat Wagon
+# str_wagon_Gen5_Flat_Wagon_Russian 			:5th Gen Flat Wagon (broad gauge)
+# str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
+# str_wagon_Gen5_Gondola_Russian 					:5th Gen Gondola (broad gauge)
+# str_wagon_Gen5_Heavy_Flatcar_Russian 			:5th Gen Heavy Flatcar (broad gauge)
+
+
+#coaches
+str_coach_Gen1_Wooden_2_axle_Compartment_Coach          :Carrozza in legno a 2 assi a scompartimenti
+str_coach_Gen1_Wooden_2_axle_Regional_Coach             :Carrozza medie distanze in legno a 2 assi
+str_coach_Gen1_Wooden_2_axle_Mail_Coach                 :Carrozza postale in legno a 2 assi
+str_coach_Gen1_Clerestory_Compartment_Coach             :Carrozza a scompartimenti con lucernaio
+str_coach_Gen1_Clerestory_Regional_Coach                :Carrozza medie distanze con lucernaio
+str_coach_Gen1_Clerestory_Mail_Coach                    :Carrozza postale con lucernaio
+str_coach_Gen1_Wooden_3_axle_Compartment_Coach          :Carrozza in legno a 3 assi a scompartimenti
+str_coach_Gen1_Wooden_3_axle_Regional_Coach             :Carrozza medie distanze in legno a 3 assi
+str_coach_Gen1_Wooden_3_axle_Mail_Coach                 :Carrozza postale in legno a 3 assi
+str_coach_Gen2_Heavyweight_Intercity_Coach              :Carrozza Intercity
+str_coach_Gen2_Heavyweight_Mail_Coach                   :Carrozza postale pesante
+str_coach_Gen2_Steel_Intercity_Coach                    :Carrozza Intercity in acciaio
+str_coach_Gen2_Steel_Compartment_Coach                  :Carrozza in acciaio a scompartimenti
+str_coach_Gen2_Steel_Regional_Coach                     :Carrozza medie distanze in acciaio
+str_coach_Gen2_Steel_Mail_Coach                         :Carrozza postale in acciaio
+str_coach_Gen2_Steel_2_axle_Compartment_Coach           :Carrozza in acciaio a 2 assi a scompartimenti
+str_coach_Gen2_Steel_2_axle_Regional_Coach              :Carrozza medie distanze in acciaio a 2 assi
+str_coach_Gen2_Steel_2_axle_Mail_Coach                  :Carrozza postale in acciaio a 2 assi
+str_coach_Gen2_Steel_3_axle_Compartment_Coach           :Carrozza in acciaio a 3 assi a scompartimenti
+str_coach_Gen2_Steel_3_axle_Regional_Coach              :Carrozza medie distanze in acciaio a 3 assi
+str_coach_Gen2_Steel_3_axle_Mail_Coach                  :Carrozza postale in acciaio a 3 assi
+str_coach_Gen3_Steel_Lightweight_Intercity_Coach                :Carrozza Intercity leggera in acciaio
+str_coach_Gen3_Steel_Lightweight_Regional_Coach                 :Carrozza medie distanze leggera in acciaio
+str_coach_Gen3_Steel_Lightweight_Mail_Coach                     :Carrozza postale leggera in acciaio
+#str_coach_Gen3_Aluminium_Lightweight_Intercity_Coach 	:Aluminium Lightweight Intercity Coach
+#str_coach_Gen3_Aluminium_Lightweight_Regional_Coach 	:Aluminium Lightweight Regional Coach
+#str_coach_Gen3_Aluminium_Lightweight_Mail_Coach 		:Aluminium Lightweight Mail Coach
+#str_coach_Gen3_Gallery_Car 								:Gallery Car
+#str_coach_Gen3_Mk1_Intercity_Coach 						:Mk1 Intercity Coach
+#str_coach_Gen3_Mk1_Regional_Coach 						:Mk1 Regional Coach
+#str_coach_Gen3_Mk1_Mail_Coach 							:Mk1 Mail Coach
+str_coach_Gen3_UIC_X_Intercity_Coach                    :Carrozza Intercity UIC-X
+str_coach_Gen3_TEE_Intercity_Coach                                              :Carrozza Intercity tipo "TEE"
+str_coach_Gen3_UIC_X_Regional_Coach                     :Carrozza medie distanze UIC-X
+str_coach_Gen3_Umbauwagen_Local_Coach                   :Carrozza locale tipo 'Umbauwagen'
+str_coach_Gen3_Doppelstockwagen_Local_Coach             :Carrozza locale tipo 'Doppelstockwagen'
+str_coach_Gen3_UIC_X_Mail_Coach                         :Carrozza postale UIC-X
+str_coach_Gen4_Eurofima_Intercity_Coach                 :Carrozza tipo "Eurofima"
+str_coach_Gen4_InterRegio_Coach                         :Carrozza tipo "InterRegio"
+str_coach_Gen4_Silberling_Commuter_Coach                :Carrozza pendolare tipo 'Silberling'
+str_coach_Gen4_Eurofima_Mail_Coach                      :Carrozza postale tipo "Eurofima"
+str_coach_Gen4_Double_Decker_Coach                      :Carrozza a due piani
+str_coach_Gen4_Russian_Intercity_Coach                  :Carrozza Intercity russa
+str_coach_Gen4_Russian_Regional_Coach                   :Carrozza regionale russa
+str_coach_Gen4_Russian_Mail_Coach                       :Carrozza postale russa
+str_coach_Gen4_Bombardier_Bi_level                      :Carrozza Bombardier a due piani
+str_coach_Gen5_High_Speed_Coach                         :Carrozza per treni ad alta velocità
+str_coach_Gen5_Modern_Regional_Coach                    :Carozza medie distanze moderna
+str_coach_Gen5_Modern_Commuter_Coach                    :Carrozza pendolare moderna
+str_coach_Gen5_Modern_Double_Decker_Coach               :Carrozza a due piani moderna
+str_coach_Gen5_High_Speed_Double_Decker_IC2000          :Carrozza a due piani per treni ad alta velocità (IC2000)
+str_coach_Gen5_High_Speed_Mail_Coach                    :Carrozza postale per treni ad alta velocità
+str_coach_Gen5_Talgo_Pendular                           :Carrozza Talgo Pendular
+str_coach_Gen5_Talgo_Pendular_Mail                      :Carrozza postale Talgo Pendular
+#str_coach_Gen6_Grand_Regio_Coach 			:Euro Regio Coach (normal gauge)
+str_coach_Gen6_Metropolis_Coach                         :Carrozza Metropolis
+str_coach_Gen6_Speedmail_Coach                          :Carrozza postale Speedmail
+
+#special wagons
+str_mu_wagon_unpowered                  :Carrozza per treno articolato (non motorizzata)
+str_mtro_wagon_unpowered                :Carrozza della metropolitana (non motorizzata)
+str_mu_wagon_powered                    :Carrozza per treno articolato (motorizzata)
+str_mtro_wagon_powered                  :Carrozza della metropolitana (motorizzata)
+
+
+#VEHICLE CLASS NAMES
+#Railbus-steam
+str_class_rbs_Austria_NOLB_1            :NOLB 1/PKP PCix {STRING}
+str_class_rbs_Germany_Bavarian_MCCi :K.Bay.Sts.B. MCCi {STRING}
+str_class_rbs_Austria_kkStB_4_0 :ONWB IXb/CSD M112.0
+
+#Railbus-diesel
+str_class_rbd_Germany_DB_VT_133                                         :DRG/DB VT 133 {STRING}
+str_class_rbd_Austria_OBB_5042                                          :BBO VT42/OBB 5042 {STRING}
+str_class_rbd_Germany_DB_VT_989                                         :DB DB 795/OBB 5081/JZ 812 {STRING}
+str_class_rbd_Germany_OHE_520_GDT                                       :OHE 520 GDT {STRING}
+str_class_rbd_Russia_RZD_ACh2                                           :RZD ACh2 {STRING}
+str_class_rbd_Austria_OBB_5047                                          :OBB 5047/GySEV 5047 {STRING}
+str_class_rbd_Germany_DB_670                                            :DB 670 {STRING}
+str_class_rbd_Lithuania_Lithuanian_Railways_AR2                         :LG AR2 {STRING}
+str_class_rbd_Austria_kkStB_19                                          :kkStB 19/CSD BCM 14000 {STRING}
+str_class_rbd_Germany_Saxon_DET_1_2                                     :Saxon DET 1-2 {STRING}
+str_class_rbd_Germany_BSt_6001                                          :BSt 6001/DR VT133.5 {STRING}
+str_class_rbd_Czech_Republic_CD_M120                                    :CSD M120 {STRING}
+str_class_rbd_Czech_Republic_CD_M290                                    :CSD M290 {STRING}
+str_class_rbd_Czech_Republic_CD_840                                     :CD 840 {STRING}
+str_class_rbd_Czech_Republic_CSD_M131                           :CSD M131.1 {STRING}
+str_class_rbd_Czech_Republic_CSD_CDlm                           :CSD CDlm (for M131.1) {STRING}
+str_class_rbd_Czech_Republic_CD_809                                     :CSD 810/MAV Bzmot {STRING}
+str_class_rbd_Czech_Republic_CSD_Btax_Trailer                           :CSD Btax (for 810) {STRING}
+str_class_rbd_Hungary_MAV_Bcmot                                         :MAV Bcmot/PKP SBCi {STRING}
+str_class_rbd_Hungary_MAV_Bbmot                                         :MAV Bbmot/PKP SN52 {STRING}
+str_class_rbd_Hungary_MAV_Aamot                                         :MAV Aamot/CFR 78 {STRING}
+str_class_rbd_Poland_PKP_SN61                                   :PKP SN61 {STRING}
+
+#Railbus-electric
+str_class_rbe_Germany_DB_ET_85                          :DB ET 85/DB 485 {STRING}
+str_class_rbe_Austria_OBB_4855                                  :OBB 4855 {STRING}
+str_class_rbe_Austria_MBS_ET_10109                              :MBS ET 10.109 {STRING}
+str_class_rbe_Poland_PKP_EN81                                   :PKP EN81 {STRING}
+str_class_rbe_Germany_Buckower_Kleinbahn_Nr_1_3 :Buckower Kleinbahn Nr. 1-3 {STRING}
+str_class_rbe_Germany_DB_4792: DB 479.2 {STRING}
+
+#Steam
+str_class_steam_Germany_Adler                   :BL "Adler"/KFNB "Vindobona"/DZWW 3 {STRING}
+str_class_steam_Austria_CLB_I                   :CLB I/kkStB 11 {STRING}
+str_class_steam_Hungary_MAV_335                 :MAV 335/JZ 123/kkStB 46/CFR 335 {STRING}
+str_class_steam_Hungary_MAV_325                 :MAV 325/CSD 325.0/JZ 126/CFR 335 {STRING}
+str_class_steam_Hungary_MAV_377                 :MAV 377/CSD 310.4/JZ 51/CFR 375 {STRING}
+str_class_steam_Hungary_MAV_203                 :MAV 203/CFR 203 {STRING}
+str_class_steam_Austria_SudBahn_29              :SudBahn 29/JZ 124/kkStB 49/MAV 332 {STRING}
+str_class_steam_Austria_KkStB_4                 :kkStB 4/CSD 254.2/PKP Od13 {STRING}
+str_class_steam_Austria_KkStB_99                :kkStB 99/CSD 320.0/JZ 153/MAV 376" {STRING}
+str_class_steam_Austria_KkStB_299               :kkStB 299/NOLB 202 {STRING}
+str_class_steam_Hungary_MAV_375                 :MAV 375/CSD 331.0/JZ 51/CFR 375 {STRING}
+str_class_steam_Germany_Prussian_S10            :K.P.St.E. S 10/DRG 17.0-1/PKP Pk2 {STRING}
+str_class_steam_Germany_DRG_86                  :DRG 86/CSD 455.2/OBB 86/PKP TKt3 {STRING}
+str_class_steam_Germany_DRG_03                  :DRG 03/PKP Pm2 {STRING}
+str_class_steam_Germany_DB_52                   :DRG 52/CSD 555.0/JZ 33/OBB 152/MAV 520/PKP Ty2/CFR 50 {STRING}
+str_class_steam_Poland_DZWW_Ow                  :DZWW Ow/PKP Tp104 {STRING}
+str_class_steam_Poland_PKP_Okz32                :PKP OKz32 {STRING}
+str_class_steam_Germany_Prussian_S_3            :K.P.St.E. S 3/DRG 13/MAV 201'/PKP Pd1 {STRING}
+str_class_steam_Germany_Saxon_XX_HV             :Saxon XX HV/DRG 19.0 {STRING}
+str_class_steam_Germany_DB_18_201               :DB 18 201 {STRING}
+str_class_steam_USA_4_6_0_Ten_wheeler           :RZD/SZD V {STRING}
+str_class_steam_USA_2_8_0_Consolidation         :RZD/SZD Kh {STRING}
+str_class_steam_Russia_RZD_9P                   :SZD 9P {STRING}
+str_class_steam_Russia_RZD_P36                  :SZD P36 {STRING}
+str_class_steam_Russia_RZD_MZk                  :RZD/SZD MZk {STRING}
+str_class_steam_Russia_RZD_T13                  :RZD/SZD T13 {STRING}
+str_class_steam_Russia_RZD_Ow                   :RZD/SZD Ov {STRING}
+str_class_steam_Russia_RZD_U                    :RZD/SZD U {STRING}
+str_class_steam_Russia_RZD_E                    :RZD/SZD E {STRING}
+str_class_steam_Russia_RZD_Y                    :RZD/SZD Y {STRING}
+str_class_steam_Russia_RZD_Su                   :SZD Su {STRING}
+str_class_steam_Russia_RZD_FD20                 :SZD FD20 {STRING}
+str_class_steam_Russia_RZD_Lv                   :SZD Lv {STRING}
+str_class_steam_Russia_RZD_TE                   :SZD TE {STRING}
+str_class_steam_Germany_Prussian_G_10           :K.P.St.E. G 10/DRG 57.10/CSD 534.1/OBB 657/PKP Tw1/CFR 50.1 {STRING}
+str_class_steam_Poland_PKP_Ok22                 :PKP Ok22 {STRING}
+str_class_steam_Poland_PKP_Ty23                 :PKP Ty23/DR 58.2 {STRING}
+str_class_steam_Poland_PKP_Pt31                 :PKP Pt31/OBB 919 {STRING}
+str_class_steam_Hungary_MAV_424                 :MAV 424/CSD 565.0/JZ 11 {STRING}
+str_class_steam_Hungary_MAV_242                 :MAV 242 {STRING}
+str_class_steam_Liberation_Class_9F             :UNRRA 9F/CSD 459.0/JZ 38/PKP Tr202 {STRING}
+str_class_steam_USATC_Class_S160                :UNRRA S160/CSD 456.1/JZ 37/OBB 956/MAV 411/PKP Tr203  {STRING}
+str_class_steam_Poland_PKP_Ty45                 :PKP Ty45 {STRING}
+str_class_steam_Poland_PKP_OI49                 :PKP Ol49 {STRING}
+str_class_steam_Austria_KkStB_310               :kkStB 310/CSD 375.0/PKP Pn12 {STRING}
+str_class_steam_Austria_Rakete2                 :KNFB "Rakete II"/KrOs I {STRING}
+str_class_steam_Austria_Ajax                    :KNFB "Ajax"/DZWW 21 {STRING}
+str_class_steam_Germany_Mecklenburg_1           :Mecklenburg Class I {STRING}
+str_class_steam_Germany_Konigstein              :Magdeburg 1455/PKP TKb-1479 {STRING}
+str_class_steam_Germany_Prussian_G_3            :K.P.St.E. G 3/DRG 53.7/PKP Th1 {STRING}
+str_class_steam_Germany_Prussian_G_7_2          :K.P.St.E. G 7.2/DRG 55.7/CSD 413.0/MAV 431.3/PKP Tp2 {STRING}
+str_class_steam_Germany_Prussian_T_3            :K.P.St.E. T 3/DRG 89.7/PKP TKh1 {STRING}
+str_class_steam_Germany_Prussian_T_9            :K.P.St.E. T 9/DRG 90.0/PKP TKi1 {STRING}
+str_class_steam_Germany_Prussian_T_11           :K.P.St.E. T 11/DRG 74.0/PKP OKi1 {STRING}
+str_class_steam_Germany_Prussian_P_2            :K.P.St.E. P 2/DRG 34.73/PKP Oc1 {STRING}
+str_class_steam_Germany_Prussian_P_8            :K.P.St.E. P 8/DRG 38/PKP Ok1/CFR 230 {STRING}
+str_class_steam_Yugoslavia_JZ_01 :JZ 01 {STRING}
+str_class_steam_Yugoslavia_JZ_06 :JZ 06 {STRING}
+str_class_steam_Yugoslavia_JZ_30                :JZ 30 {STRING}
+str_class_steam_Austria_KkStB_170               :kkStB 170/BBO 170/CSD 434.0/JZ 24/PKP Tr11 {STRING}
+
+#Diesel
+str_class_diesel_Germany_DB_Kof_II                      :DRG Kof II/DR 100/DB 322/CSD T200/PKP SM01 {STRING}
+str_class_diesel_Germany_DB_270                         :DR V 20/DB 270/CFR 95 {STRING}
+str_class_diesel_Austria_OBB_2060                       :OBB 2060 {STRING}
+str_class_diesel_Hungary_MAV_M44                        :MAV M44/JZ 641/PKP SM41 {STRING}
+str_class_diesel_Hungary_MAV_M28                        :MAV M28 {STRING}
+str_class_diesel_Hungary_MAV_M61                        :MAV M61 {STRING}
+str_class_diesel_Hungary_MAV_M41                        :MAV M41 {STRING}
+str_class_diesel_Germany_DB_220                         :JZ 761 {STRING}
+str_class_diesel_Czech_Republic_CD_720                  :CSD T435.0/CD 720/DR 107 {STRING}
+str_class_diesel_Russia_RZD_ChME2                       :SZD ChME2 {STRING}
+str_class_diesel_Romania_CFR_LDH_70                     :CFR 85/MAV M47 {STRING}
+str_class_diesel_Romania_CFR_060_DA                     :CFR 60/PKP ST43 {STRING}
+str_class_diesel_Romania_CFR_060_DA1                    :CFR 63 {STRING}
+str_class_diesel_Russia_RZD_TE3                         :SZD TE3 {STRING}
+str_class_diesel_Russia_RZD_TEP60                       :SZD TEP60 {STRING}
+str_class_diesel_Czech_Republic_CD_770                  :CSD T669.0/CD 770 {STRING}
+str_class_diesel_Russia_RZD_ChME3                       :SZD/RZD ChME3 {STRING}
+str_class_diesel_Hungary_MAV_M62                        :MAV M62/CSD T679.1/DR 120/PKP ST44 {STRING}
+str_class_diesel_Russia_RZD_M62                         :SZD/RZD M62 {STRING}
+str_class_diesel_Russia_RZD_2M62                        :SZD/RZD 2M62 {STRING}
+str_class_diesel_Croatia_HZ_2062                        :JZ 664/HZ 2062 {STRING}
+str_class_diesel_Ukraine_UZ_TEP150                      :UZ TEP150 {STRING}
+str_class_diesel_Germany_DB_261_Gravita_10BB            :DB 261 {STRING}
+str_class_diesel_Russia_RZD_GT1                         :RZD GT1 {STRING}
+str_class_diesel_Germany_HVLE_V490                      :HVLE V490/IDSC 783 {STRING}
+str_class_diesel_Ukraine_UZ_TEP10L :UZ TEP10L {STRING}
+str_class_diesel_Belarus_BCh_2TE10M :BCh 2TE10M {STRING}
+str_class_diesel_Poland_PKP_SP32 :PKP SP32 {STRING}
+str_class_diesel_Ukraine_UZ_2TE10Ut :UZ 2TE10Ut {STRING}
+str_class_diesel_Ukraine_UZ_3TE116U :UZ 3TE116U {STRING}
+str_class_diesel_Ukraine_UZ_TE33A :UZ TE33A {STRING}
+str_class_diesel_Serbia_ZS_621 :CSD T239.1/CD 709/ZS 621 {STRING}
+str_class_diesel_Russia_RZD_Db :SZD Db {STRING}
+str_class_diesel_Russia_RZD_TEM1 :SZD TEM1 {STRING}
+str_class_diesel_Russia_RZD_TEM2 :PKP SM48/JZ 667/PTKiGK TEM2 {STRING}
+str_class_diesel_Russia_RZD_TEM2U :SZD/RZD TEM2U {STRING}
+str_class_diesel_Russia_RZD_TGM23 :SZD/RZD TGM23 {STRING}
+str_class_diesel_UE_CNG_Shunter :DB 372/ELP NGHS1
+str_class_diesel_UK_BR_66       :FPL 66/HGK 266/MRCE dispolok 66
+str_class_diesel_Austria_OBB_2043       :OBB 2043 {STRING}
+str_class_diesel_Austria_OBB_2070       :OBB 2070 {STRING}
+str_class_diesel_Austria_OBB_2016       :OBB 2016 {STRING}
+str_class_diesel_Czechia_CSD_753_T669           :CSD T669.0/CD 753 {STRING}
+str_class_diesel_Czechia_CSD_742_T4662          :CSD T466.2/CD 742 {STRING}
+str_class_diesel_Czechia_CSD_7415               :CD 741.5 {STRING}
+str_class_diesel_Czechia_CSD_794                :CD 794 {STRING}
+str_class_diesel_Germany_DR_132                 :DR 132/DB 232 {STRING}
+str_class_diesel_Croatia_HZ_2041                :JZ 642/HZ 2041 {STRING}
+str_class_diesel_Croatia_HZ_2044                :JZ 645/HZ 2044 {STRING}
+str_class_diesel_Poland_PKP_SM42                :PKP SM42 {STRING}
+str_hint_diesel_Shed_shunter            :Refit to goods to make invisible leading/spacer engine
+
+#Electric
+str_class_electric_Austria_OBB_1161                                     :BBO 1070/OBB 1161 {STRING}
+str_class_electric_Germany_DB_169                                       :DRG E 69 05/DB 169 005 {STRING}
+str_class_electric_Germany_DB_104                                       :DRG E 04/DB 104/DR 204 {STRING}
+str_class_electric_Germany_DR_E_18                                      :DRG E 18/DR 218/OBB 1018 {STRING}
+str_class_electric_Austria_OBB_1020_Crocodile                           :DRG E94/DR 254/OBB 1020  {STRING}
+str_class_electric_Austria_OBB_1010                                     :OBB 1010 {STRING}
+str_class_electric_Russia_RZD_VL22M                                     :SZD VL22M {STRING}
+str_class_electric_Croatia_HZ_1141                                      :JZ 441/HZ 1141/CFR 40 {STRING}
+str_class_electric_Germany_DB_1031                                      :DB 103.1 {STRING}
+str_class_electric_Austria_OBB_1044                                     :OBB 1044 {STRING}
+str_class_electric_Poland_PKP_ET41                                      :PKP ET41/HZ 1081 {STRING}
+str_class_electric_Austria_OBB_1063                                     :OBB 1063 {STRING}
+str_class_electric_Russia_RZD_VL15                                      :SZD VL15 {STRING}
+str_class_electric_Germany_DB_185_TRAXX_F140                            :DB 185/PKP-PR EU43 {STRING}
+str_class_electric_Germany_DB_182_ES64U_Taurus                          :DB 182/OBB 1016/MAV 1047/MRCE dispolok X4E{STRING}
+# str_class_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
+str_class_electric_Kazakhstan_KTZ_KZ4A                          :KTZ KZ4A {STRING}
+str_class_electric_Germany_DB_E_919                                     :E 91.9/DB 191.9 {STRING}
+str_class_electric_Poland_PKP_EP03                                      :PKP EP03 {STRING}
+str_class_electric_Russia_RZD_ChS3 :SZD ChS3 {STRING}
+str_class_electric_Czech_Republic_CSD_E499_1                            :CSD E499.1/CD 141/PKP EU05 {STRING}
+str_class_electric_Poland_PKP_EU06                                      :PKP EU06 {STRING}
+str_class_electric_Hungary_MAV_Class_V41                                :MAV V41 {STRING}
+str_class_electric_Hungary_MAV_Class_V43                                :MAV V43 {STRING}
+str_class_electric_Hungary_MAV_Class_V63                                :MAV V63 {STRING}
+str_class_electric_Hungary_MAV_Class_V46                                :MAV V46 {STRING}
+str_class_electric_Czech_Republic_CD_S499                               :CSD S499/CD 240 {STRING}
+str_class_electric_Czech_Republic_CD_380                                :CD 380/DB 102 {STRING}
+str_class_electric_Russia_RZD_EP20 :RZD EP20 {STRING}
+str_class_electric_Kazakhstan_KTZ_KZ8A :KTZ KZ8A {STRING}
+str_class_electric_Macedonia_Macedonian_Railways_462                    :CFR 40/JZ 461 {STRING}
+str_class_electric_Slovenia_SZ_363                                      :JZ 363/SZ 363 {STRING}
+str_class_electric_Czech_Republic_CD_363                                :CSD ES 499.1/CD 363 {STRING}
+str_class_electric_Ukraine_UZ_ChS7                              :UZ ChS7 {STRING}
+str_class_electric_Poland_PKP_EP09                                      :PKP EP09 {STRING}
+str_class_electric_Slovakia_ZSSK_162 :ZSSK 162 {STRING}
+str_class_electric_Ukraine_UZ_DE1                               :UZ DE1 {STRING}
+str_class_electric_Russia_RZD_VL11                              :SZD VL11 {STRING}
+str_class_electric_Germany_Prussian_ES_6                                :K.P.St.E. ES 6 {STRING}
+str_class_electric_Germany_DR_230                                       :DR 230/DB 180/CSD ES 499.2/CD 372 {STRING}
+str_class_electric_Poland_PKP_ET22                                      :PKP ET22 {STRING}
+
+#DMU
+#str_class_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
+str_class_dmu_Serbia_ZS_811                                             :JZ 811/ZS 811 {STRING}
+str_class_dmu_Germany_DB_612_Regio_Swinger                              :DB 612/HZ 7123 {STRING}
+str_class_dmu_Germany_DB_642_Desiro                                     :DB 642/OBB 5022/MAV 426/CFR 96 {STRING}
+str_class_dmu_Russia_RZD_D1                                             :RZD D1 {STRING}
+str_class_dmu_Russia_RZD_RA2                                            :RZD RA2 {STRING}
+str_class_dmu_Belarus_BCh_DP3                                           :BCh DP3 {STRING}
+str_class_dmu_Denmark_DSB_IC4                                   :DSB IC4 {STRING}
+str_class_dmu_Croatia_HZ_7022                                   :HZ 7022 {STRING}
+str_class_dmu_Czech_Republic_CD_814                             :CD 814 {STRING}
+str_class_dmu_UK_BR_150_0_Sprinter :BR 150/0 'Sprinter' {STRING}
+str_class_dmu_Slovakia_ZSSK_861                                 :ZSSK 861 {STRING}
+str_class_dmu_Germany_DB_6282                                   :DB 628.2 {STRING}
+str_class_dmu_Germany_DB_648                                    :DB 648 {STRING}
+
+#EMU
+str_class_emu_Austria_OBB_4041                                  :BBO ET10/OBB 4041 {STRING}
+str_class_emu_Hungary_MAV_BDVmot                                :MAV BDVmot/414 {STRING}
+str_class_emu_Czech_Republic_CD_680_Pendolino                   :CD 680/PKP ED250 {STRING}
+str_class_emu_Germany_DB_403_ICE_3                              :DB 403 {STRING}
+str_class_emu_Slovenia_SZ_312_Desiro                            :SZ 312 'Desiro' {STRING}
+str_class_emu_Poland_PKP_EW90                                   :PKP EW51 {STRING}
+str_class_emu_Austria_OBB_4030                                  :OBB 4030 {STRING}
+str_class_emu_Macedonia_Macedonian_Railways_412                 :JZ 412/MZ 412 {STRING}
+str_class_emu_Russia_RZD_S :RZD S {STRING}
+str_class_emu_Russia_RZD_ER2 :RZD ER2 {STRING}
+str_class_emu_Poland_PKP_EW54                                   :PKP EW54 {STRING}
+str_class_emu_Romania_CFR_58                                    :CFR 58 {STRING}
+str_class_emu_Russia_RZD_ER200 :RZD ER200 {STRING}
+str_class_emu_Russia_RZD_ES1_Lastochka :RZD ES1 'Lastochka' {STRING}
+str_class_emu_Austria_WESTbahn_4010_KISS                        :OBB 4010 {STRING}
+str_class_emu_Croatia_HZ_6112                                   :HZ 6112 {STRING}
+str_class_emu_Europe_Sureot :Sureot {STRING}
+str_class_emu_Germany_DB_ET420                                  :DB 420 {STRING}
+str_class_emu_Czechia_Leo_480                                   :LE 480/PKP ED160 {STRING}
+
+
+#PURCHASE MENU TEXTS
+str_unit_wagon_passenger        :Questa carrozza può essere usata solo con treni passeggeri a unità multiple
+str_unit_wagon_cargo            :Questo vagone può essere usato solo con treni merci a unità multiple
+
+#Can attach vehicle texts
+str_cannot_attach_wagon_to_MU                                   :Non è possibile agganciare carrozze normali a parti di unità multiple
+str_cannot_attach_wagon_to_Unit_Wagon                   :Non è possibile agganciare carrozze normali a parti di unità multiple
+str_cannot_attach_Unit_wagon_to_engine                  :Non è possibile agganciare parti di unità multiple a una locomotiva normale
+str_cannot_attach_Unit_wagon_to_wagon                   :Non è possibile agganciare parti di unità multiple a carrozze normali
+str_cannot_attach_Unit_wagon_cargo_to_passenger :Non è possibile agganciare parti di unità multiple per merci a un treno passeggeri a unità multiple
+str_cannot_attach_Unit_wagon_passenger_to_cargo :Non è possibile agganciare parti di unità multiple passeggeri a un treno merci a unità multiple
+
+
+#liveries
+
+
+
+
+
+
+
+# str_Steam_Universal	: (Steam, broad or normal gauge)
+# str_Electric_Universal	: (Electric, broad or normal gauge, DC system)
+
+
+
+
+#Obsolete vehicles

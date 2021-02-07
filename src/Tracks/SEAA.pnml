@@ -1,0 +1,155 @@
+/*
+ *  Copyright (C) 2020 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/SEAA/gui_erail_OpenGFX.png"
+
+spriteset(gui_SEAA_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_SEAA, "gfx/Tracks/SEAA/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_SEAA_snow, "gfx/Tracks/SEAA/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_SEAA_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_SEAA_snow;
+	tunnel_tracks_SEAA;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_SEAA, "gfx/Tracks/SEAA/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_SEAA_arctic, "gfx/Tracks/SEAA/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_SEAA, terrain_type) {
+	TILETYPE_SNOW: track_underlays_SEAA_arctic;
+	track_underlays_SEAA;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_SEAA, "gfx/Tracks/SEAA/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_SEAA_arctic, "gfx/Tracks/SEAA/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_SEAA, terrain_type) {
+	TILETYPE_SNOW: track_overlays_SEAA_arctic;
+	track_overlays_SEAA;
+}
+
+//fences - same as DBHE
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_SEAA_overlay, "gfx/Tracks/SEAA/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_SEAA_overlay_snow, "gfx/Tracks/SEAA/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_SEAA_underlay, "gfx/Tracks/SEAA/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_SEAA_underlay_snow, "gfx/Tracks/SEAA/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_SEAA_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_SEAA_overlay_snow;
+    bridges_SEAA_overlay;
+}
+
+// level crossings - none
+
+
+
+// depot
+
+//same as SCAA
+
+
+#define IMAGEFILE  "gfx/Tracks/SEAA/SEAA-catenary-wire-pylons.png"
+spriteset(SEAA_catenary_wire, IMAGEFILE)
+{
+  catenary_wire_template(5, 27)
+}
+
+spriteset(SEAA_catenary_pylons, IMAGEFILE)
+{
+  pylons_template_shifted(5, 191)
+}
+#undef IMAGEFILE
+
+//properties
+
+if ((param_custom_tracks) && (CZECHIA || HUNGARY || ROMANIA || SOUTHERNEUROPE)) {
+if (railtype_available("SEAA") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, SEAA)
+  {
+    property
+    {
+      label: "SEAA";
+      introduction_date: date(SEAA_YEAR, 1, 1);
+      name: string(STR_SEAA_NAME);
+      toolbar_caption: string(STR_SEAA_TOOLBAR);
+      menu_text: string(STR_SEAA_MENU);
+      build_window_caption: string(STR_SEAA_BUILD_CAPTION);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM];
+      alternative_railtype_list: [NORMAL_GAUGES_25KV, NORMAL_GAUGES_MULTISYSTEM];
+      curve_speed_multiplier: 4;
+      construction_cost: SEAA_BUILDCOST
+      maintenance_cost: SEAA_INFRACOST
+      speed_limit: SEAA_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x94;
+      sort_order: SEAA_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_SEAA;
+		underlay:        ground_switch_underlay_SEAA;
+		tunnels:         tunnel_track_SEAA_switch;
+		bridge_surfaces: bridge_SEAA_overlay_terrain_switch;
+      		fences: fences_DBHS_terrain_switch;
+		gui:             gui_SEAA_opengfx;
+      		level_crossings: EMPTY_SPRITESET
+      		depots: SCAA_depot;
+     		catenary_wire: SEAA_catenary_wire;
+      		catenary_pylons: SEAA_catenary_pylons;
+	}
+  }
+}
+}
+
+

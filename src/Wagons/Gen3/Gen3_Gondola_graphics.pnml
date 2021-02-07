@@ -1,0 +1,130 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen3_Gondola_purchase, "gfx/Wagons/Gen3/Gen3_Gondola_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+/*
+* Wood
+*/
+
+//Livery 1 - Loading State 1 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L1_S1, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(1, 1)
+}
+
+//Livery 1 - Loading State 2 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L1_S2, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(1, 32)
+}
+
+//Livery 1 - Loading State 3 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L1_S3, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(1, 64)
+}
+
+//Livery 1 Spritegroup - Wood
+spritegroup spritegroup_wagon_Gen3_Gondola_Wood_L1 {
+	loading: [spriteset_wagon_Gen3_Gondola_Wood_L1_S1, spriteset_wagon_Gen3_Gondola_Wood_L1_S2, spriteset_wagon_Gen3_Gondola_Wood_L1_S3];
+	loaded: [spriteset_wagon_Gen3_Gondola_Wood_L1_S1, spriteset_wagon_Gen3_Gondola_Wood_L1_S2, spriteset_wagon_Gen3_Gondola_Wood_L1_S3];
+}
+
+
+//Livery 4 - Loading State 1 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L4_S1, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(535, 1)
+}
+
+//Livery 4 - Loading State 2 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L4_S2, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(535, 32)
+}
+
+//Livery 4 - Loading State 3 - Wood
+spriteset(spriteset_wagon_Gen3_Gondola_Wood_L4_S3, "gfx/Wagons/Gen3/Gen3_Gondola_Wood.png") {
+	template_2cc_wagons(535, 64)
+}
+
+//Livery 4 Spritegroup - Wood
+spritegroup spritegroup_wagon_Gen3_Gondola_Wood_L4 {
+	loading: [spriteset_wagon_Gen3_Gondola_Wood_L4_S1, spriteset_wagon_Gen3_Gondola_Wood_L4_S2, spriteset_wagon_Gen3_Gondola_Wood_L4_S3];
+	loaded: [spriteset_wagon_Gen3_Gondola_Wood_L4_S1, spriteset_wagon_Gen3_Gondola_Wood_L4_S2, spriteset_wagon_Gen3_Gondola_Wood_L4_S3];	
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen3_Gondola_Wood_livery) {
+	2: spritegroup_wagon_Gen3_Gondola_Wood_L1;
+	1: spritegroup_wagon_Gen3_Gondola_Wood_L4;
+}
+
+/*
+* Gray
+*/
+
+//Livery 1 - Loading State 1 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L1_S1, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(1, 1)
+}
+
+//Livery 1 - Loading State 2 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L1_S2, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(1, 32)
+}
+
+//Livery 1 - Loading State 3 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L1_S3, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(1, 64)
+}
+
+//Livery 1 Spritegroup - Gray
+spritegroup spritegroup_wagon_Gen3_Gondola_Gray_L1 {
+	loading: [spriteset_wagon_Gen3_Gondola_Gray_L1_S1, spriteset_wagon_Gen3_Gondola_Gray_L1_S2, spriteset_wagon_Gen3_Gondola_Gray_L1_S3];
+	loaded: [spriteset_wagon_Gen3_Gondola_Gray_L1_S1, spriteset_wagon_Gen3_Gondola_Gray_L1_S2, spriteset_wagon_Gen3_Gondola_Gray_L1_S3];
+}
+
+
+//Livery 4 - Loading State 1 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L4_S1, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(535, 1)
+}
+
+//Livery 4 - Loading State 2 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L4_S2, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(535, 32)
+}
+
+//Livery 4 - Loading State 3 - Gray
+spriteset(spriteset_wagon_Gen3_Gondola_Gray_L4_S3, "gfx/Wagons/Gen3/Gen3_Gondola_Gray.png") {
+	template_2cc_wagons(535, 64)
+}
+
+//Livery 4 Spritegroup - Gray
+spritegroup spritegroup_wagon_Gen3_Gondola_Gray_L4 {
+	loading: [spriteset_wagon_Gen3_Gondola_Gray_L4_S1, spriteset_wagon_Gen3_Gondola_Gray_L4_S2, spriteset_wagon_Gen3_Gondola_Gray_L4_S3];
+	loaded: [spriteset_wagon_Gen3_Gondola_Gray_L4_S1, spriteset_wagon_Gen3_Gondola_Gray_L4_S2, spriteset_wagon_Gen3_Gondola_Gray_L4_S3];	
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen3_Gondola_Gray_livery) {
+	2: spritegroup_wagon_Gen3_Gondola_Gray_L1;
+	1: spritegroup_wagon_Gen3_Gondola_Gray_L4;
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen3_Gondola_cargo_selection, cargo_type_in_veh) {
+	WOOD: return switch_wagon_Gen3_Gondola_Wood_livery;
+	 return switch_wagon_Gen3_Gondola_Gray_livery;
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

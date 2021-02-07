@@ -1,0 +1,226 @@
+/*
+ *  Copyright (C) 2019 McZapkie, planetmaker
+ *  This file is part of the V4 CEE set 
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+
+//sprites
+
+#define IMAGEFILE  "gfx/Tracks/ELOW/gui_erail_OpenGFX.png"
+
+spriteset(gui_ELOW_opengfx, IMAGEFILE)
+{
+  rail_gui_template(0, 0)
+}
+
+#undef IMAGEFILE
+
+/**********************************************
+ * Tracks in tunnels with backwall:
+ **********************************************/
+
+spriteset(tunnel_tracks_ELOW, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_tunnel_tracks()
+}
+spriteset(tunnel_tracks_ELOW_snow, "gfx/Tracks/ELOW/rails_overlays_snow.png") {
+	tmpl_tunnel_tracks()
+}
+
+switch(FEAT_RAILTYPES, SELF, tunnel_track_ELOW_switch, terrain_type) {
+	TILETYPE_SNOW: tunnel_tracks_ELOW_snow;
+	tunnel_tracks_ELOW;
+}
+
+/**********************************************
+ * Track underlays for different ground types:
+ **********************************************/
+spriteset(track_underlays_ELOW, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_underlay_track_types()
+}
+spriteset(track_underlays_ELOW_arctic, "gfx/Tracks/ELOW/rails_overlays_snow.png") {
+	tmpl_underlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_underlay_ELOW, terrain_type) {
+	TILETYPE_SNOW: track_underlays_ELOW_arctic;
+	track_underlays_ELOW;
+}
+
+
+/**********************************************
+ * Track overlays for different ground types:
+ **********************************************/
+spriteset(track_overlays_ELOW, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_overlay_track_types()
+}
+spriteset(track_overlays_ELOW_arctic, "gfx/Tracks/ELOW/rails_overlays_snow.png") {
+	tmpl_overlay_track_types()
+}
+switch(FEAT_RAILTYPES, SELF, ground_switch_overlay_ELOW, terrain_type) {
+	TILETYPE_SNOW: track_overlays_ELOW_arctic;
+	track_overlays_ELOW;
+}
+
+/**********************************************
+ * Fences: no fence
+ **********************************************/
+
+
+/**********************************************
+ * Bridge surfaces:
+ **********************************************/
+spriteset(bridges_ELOW_overlay, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_bridges_overlay()
+}
+spriteset(bridges_ELOW_overlay_snow, "gfx/Tracks/ELOW/rails_overlays_snow.png") {
+	tmpl_bridges_overlay()
+}
+
+
+spriteset(bridge_ELOW_underlay, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_bridges_underlay()
+}
+spriteset(bridge_ELOW_underlay_snow, "gfx/Tracks/ELOW/rails_overlays_snow.png") {
+	tmpl_bridges_underlay()
+}
+
+
+switch(FEAT_RAILTYPES, SELF, bridge_ELOW_overlay_terrain_switch, terrain_type) {
+    TILETYPE_SNOW: bridges_ELOW_overlay_snow;
+    bridges_ELOW_overlay;
+}
+
+// level crossings
+
+spriteset(level_crossing_ELOW_empty, "gfx/Tracks/ELOW/rails_overlays.png") {
+	tmpl_level_crossing_track_types_empty()
+}
+
+spriteset(level_crossing_ELOW_closed, "gfx/Tracks/ELOW/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_ELOW_open, "gfx/Tracks/ELOW/level_crossing_track_types.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+spriteset(level_crossing_ELOW_closed_snow, "gfx/Tracks/ELOW/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_closed(100)
+}
+spriteset(level_crossing_ELOW_open_snow, "gfx/Tracks/ELOW/level_crossing_track_types_snow.png") {
+	tmpl_level_crossing_track_types_open(50)
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_ELOW_switch_closed, terrain_type) {
+	TILETYPE_SNOW: level_crossing_ELOW_closed_snow;
+	level_crossing_ELOW_closed;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_ELOW_switch_open, terrain_type) {
+	TILETYPE_SNOW: level_crossing_ELOW_open_snow;
+	level_crossing_ELOW_open;
+}
+
+switch(FEAT_RAILTYPES, SELF, level_crossing_ELOW_switch, (level_crossing_status == LEVEL_CROSSING_CLOSED)) {
+	1: level_crossing_ELOW_switch_closed;
+	level_crossing_ELOW_switch_open;
+}
+
+//old depot
+
+spriteset(ELOW_depot_normal_new, "gfx/Tracks/ELOW/ELOW_depot_normal_new.png") 
+{
+  tmpl_depot_modular_2()
+}
+spriteset(ELOW_depot_snow_new, "gfx/Tracks/ELOW/ELOW_depot_snow_new.png") 
+{
+  tmpl_depot_modular_2()
+}
+
+// depot
+
+#define IMAGEFILE  "gfx/Tracks/ELOW/ELOW_depot_normal.png"
+spriteset(ELOW_depot_normal, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+#define IMAGEFILE  "gfx/Tracks/ELOW/ELOW_depot_snow.png"
+spriteset(ELOW_depot_snow, IMAGEFILE)
+{
+  depot_template()
+}
+#undef IMAGEFILE
+
+switch(FEAT_RAILTYPES, SELF, ELOW_depot_old, terrain_type) {
+	TILETYPE_SNOW: ELOW_depot_snow;
+	ELOW_depot_normal;
+}
+
+switch(FEAT_RAILTYPES, SELF, ELOW_depot_new, terrain_type) {
+	TILETYPE_SNOW: ELOW_depot_snow_new;
+	ELOW_depot_normal_new;
+}
+
+switch(FEAT_RAILTYPES, SELF, ELOW_depot, (build_date>date(1990, 1, 1))) {
+	1: ELOW_depot_new;
+	ELOW_depot_old;
+}
+
+#define IMAGEFILE  "gfx/Tracks/ELOW/ELOW-catenary-wire-pylons.png"
+spriteset(ELOW_catenary_wire, IMAGEFILE)
+{
+  catenary_wire_template(5, 27)
+}
+
+spriteset(ELOW_catenary_pylons, IMAGEFILE)
+{
+  pylons_template(5, 191)
+}
+#undef IMAGEFILE
+
+
+//properties
+
+if ((param_custom_tracks) && (POLAND || CZECHIA || SOUTHERNEUROPE)) {
+if (railtype_available("SAAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, ELOW)
+  {
+    property
+    {
+      label: "SAAD";
+      introduction_date: date(ELOW_YEAR, 1, 1);
+      name: string(STR_ELOW_NAME);
+      toolbar_caption: string(STR_ELOW_TOOLBAR);
+      menu_text: string(STR_ELOW_MENU);
+      build_window_caption: string(STR_ELOW_BUILD_CAPTION);
+      compatible_railtype_list : [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, "NG6R"];
+      powered_railtype_list: [NORMAL_GAUGES_3KV, NORMAL_GAUGES_MULTISYSTEM];
+      alternative_railtype_list: [NORMAL_GAUGES_3KV, NORMAL_GAUGES_MULTISYSTEM];
+      curve_speed_multiplier: 1;
+      construction_cost: ELOW_BUILDCOST
+      maintenance_cost: ELOW_INFRACOST
+      speed_limit: ELOW_VMAX km/h;      
+      acceleration_model: ACC_MODEL_RAIL;
+      map_colour: 0x9C;
+      sort_order: ELOW_SORT;
+      railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+    }
+	graphics {
+		track_overlay:   ground_switch_overlay_ELOW;
+		underlay:        ground_switch_underlay_ELOW;
+		tunnels:         tunnel_track_ELOW_switch;
+		bridge_surfaces: bridge_ELOW_overlay_terrain_switch;
+		fences:          EMPTY_SPRITESET
+		gui:             gui_ELOW_opengfx;
+      		level_crossings: level_crossing_ELOW_switch;
+      		depots: ELOW_depot;
+     		catenary_wire: ELOW_catenary_wire;
+      		catenary_pylons: ELOW_catenary_pylons;
+	}
+  }
+}
+}
+
+
