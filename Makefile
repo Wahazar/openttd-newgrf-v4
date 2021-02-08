@@ -8,7 +8,6 @@
 SHELL := /bin/bash
 
 -include Makefile.config
--include Makefile.local
 
 ##################################################################
 #
@@ -20,10 +19,10 @@ SHELL := /bin/bash
 ##################################################################
 
 # Definition of the grfs
-REPO_NAME           ?= My NewGRF
+REPO_NAME           ?= V4 Trains
 
 # This is the filename part common to the grf file, main source file and the tar name
-BASE_FILENAME       ?= mynewgrf
+BASE_FILENAME       ?= v4
 
 # Documentation files
 DOC_FILES ?= docs/readme.txt docs/license.txt docs/changelog.txt
@@ -45,7 +44,7 @@ SCRIPT_DIR          ?= scripts
 #
 ##################################################################
 
-# Define the filenames of the grf and nml file. They must be in the main directoy
+# Define the filenames of the grf and nml file. They must be in the main directory
 GRF_FILE            ?= $(BASE_FILENAME).grf
 NML_FILE            ?= $(BASE_FILENAME).nml
 # uncomment MAIN_SRC_FILE if you do not want any preprocessing to happen to your source file
@@ -53,7 +52,7 @@ MAIN_SRC_FILE       ?= $(BASE_FILENAME).pnml
 
 # List of all files which will get shipped
 # documentation files: readme, changelog and license, usually $(DOC_FILES)
-# grf file: the above defined grf file, usualls $(GRF_FILE)
+# grf file: the above defined grf file, usually $(GRF_FILE)
 # Add any additional, not usual files here, too, including
 # their relative path to the root of the repository
 BUNDLE_FILES           ?= $(GRF_FILE) $(DOC_FILES)
@@ -66,20 +65,20 @@ REPLACE_GRFID       := {{GRF_ID}}
 REPLACE_REVISION    := {{REPO_REVISION}}
 REPLACE_FILENAME    := {{FILENAME}}
 
-GENERATE_GRF  ?= grf
-GENERATE_PNML ?= pnml
-GENERATE_NML  ?= nml
+GENERATE_GRF  ?= $(BASE_FILENAME).grf
+GENERATE_PNML ?=
+GENERATE_NML  ?= $(BASE_FILENAME).nml
 GENERATE_GFX  ?= gfx
-GENERATE_DOC  ?= doc
-GENERATE_LNG  ?= lng
+GENERATE_DOC  ?= $(DOC_FILES)
+GENERATE_LNG  ?= custom_tags.txt
 
 # target 'all' must be first target
 all: $(GENERATE_GRF) $(GENERATE_DOC) bundle_tar
 
--include Makefile.in
+#-include Makefile.in
 
 # general definitions (no rules!)
--include Makefile.dist
+#-include Makefile.dist
 .PHONY: all clean distclean doc bundle bundle_bsrc bundle_bzip bundle_gsrc bundle_src bundle_tar bundle_xsrc bundle_xz bundle_zip bundle_zsrc check
 
 # We want to disable the default rules. It's not c/c++ anyway
@@ -87,6 +86,7 @@ all: $(GENERATE_GRF) $(GENERATE_DOC) bundle_tar
 
 # Don't delete intermediate files
 .PRECIOUS: %.nml %.scm %.png
+
 .SECONDARY: %.nml %.scm %.png
 
 ################################################################
@@ -125,13 +125,13 @@ UNIX2DOS_FLAGS ?= $(shell [ -n $(UNIX2DOS) ] && $(UNIX2DOS) -q --version 2>/dev/
 # Get the Repository revision, tags and the modified status
 # The displayed name within OpenTTD / TTDPatch
 # Looks like either
-# a nightly build:                 GRF's Name nightly-r51
-# a release build (taged version): GRF's Name 0.1
+# a nightly build:                  GRF's Name v1234 (123456789abc)
+# a release build (tagged version): GRF's Name 0.1
 ################################################################
 # This must be conditional declarations, or building from the tar.gz won't work anymore
-VERSION_INFO ?= "$(shell ./findversion.sh)"
+VERSION_INFO ?= "$(shell ./findversion.sh 2>/dev/null)"
 
-USED_VCS ?= $(shell [ -d .hg ] && echo "HG"; [ -d .git ] && echo "GIT")
+USED_VCS ?= $(shell if [ -d .hg ]; then echo "HG"; elif [ -d .git ]; then echo "GIT"; else echo ""; fi)
 
 # Hash
 REPO_HASH            ?= $(shell echo ${VERSION_INFO} | cut -f1)
@@ -151,6 +151,14 @@ REPO_VERSION_STRING ?= $(shell echo ${VERSION_INFO} | cut -f5)
 # The title consists of name and version
 REPO_TITLE     ?= $(REPO_NAME) $(REPO_VERSION_STRING)
 
+# Get a list of files which contribute to the actual build of the grf (if using a hg or git checkout)
+MANIFEST ?= $(shell if [ "$(USED_VCS)" == "HG" ]; then echo "`hg st -ardmcn --exclude .devzone --exclude .hgtags --exclude .hgignore`"; elif [ "$(USED_VCS)" == "GIT" ]; then echo "`git ls-files | grep -v .devzone | grep -v .gitignore | grep \"pnml\|csv\|vm\"`"; fi)
+
+# Settings for Bananas
+BANANAS_INI = bananas.ini
+MUSA        = musa
+MUSA_FLAGS  =
+
 # Remove the @ when you want a more verbose output.
 _V ?= @
 _E ?= @echo
@@ -164,9 +172,8 @@ maintainer-clean:: distclean
 ################################################################
 
 # ifdef $(MAIN_SRC_FILE)
-pnml:
 
-nml: $(GENERATE_PNML)
+$(BASE_FILENAME).nml: $(BASE_FILENAME.pnml) $(MANIFEST)
 	$(_E) "[CPP] $(NML_FILE)"
 	$(_V) $(CC) -D REPO_REVISION=$(NEWGRF_VERSION) -D NEWGRF_VERSION=$(NEWGRF_VERSION) $(CC_USER_FLAGS) $(CC_FLAGS) -o $(NML_FILE) $(MAIN_SRC_FILE)
 
@@ -183,62 +190,63 @@ clean::
 # Targets related to creation of graphics files
 ################################################################
 # Dependency on source list file via dep check
-ifdef GFX_SCRIPT_LIST_FILES
-# include dependency file, if we generate graphics
--include Makefile_gfx.dep
 
-GIMP           ?= "$(shell [ `which gimp 2>/dev/null` ] && echo "gimp" || echo "")"
-GIMP_FLAGS     ?= -n -i -b - <
-
-%.scm: $(SCRIPT_DIR)/gimpscript $(SCRIPT_DIR)/gimp.sed
-	$(_E) "[GIMP-SCRIPT] $@"
-	$(_V) cat $(SCRIPT_DIR)/gimpscript > $@
-	$(_V) cat $(GFX_SCRIPT_LIST_FILES) | grep $(patsubst %.scm,%.png,$@) | sed -f $(SCRIPT_DIR)/gimp.sed >> $@
-	$(_V) echo "(gimp-quit 0)" >> $@
-
-# create the png file. And make sure it's re-created even when present in the repo
-%.png: %.scm
-	$(_E) "[GIMP] $@"
-	$(_V) $(GIMP) $(GIMP_FLAGS) $< >/dev/null
-
-Makefile_gfx.dep: $(GFX_SCRIPT_LIST_FILES) Makefile
-	$(_E) "[GFX-DEP] $@"
-	$(_V) echo "GIMP := $(GIMP)" > Makefile_gfx
-	$(_V) echo "GIMP_FLAGS := $(GIMP_FLAGS)" >> Makefile_gfx
-	$(_V) echo "%.scm: $(SCRIPT_DIR)/gimpscript $(SCRIPT_DIR)/gimp.sed" >> Makefile_gfx
-	$(_V) echo -e '\t$(_E) "[GIMP-SCRIPT] $@"' >> Makefile_gfx
-	$(_V) echo -e '\t$(_V) cat $(SCRIPT_DIR)/gimpscript > $$@' >> Makefile_gfx
-	$(_V) echo -e '\t$(_V) cat $(GFX_SCRIPT_LIST_FILES) | grep $$(patsubst %.scm,%.png,$$@) | sed -f $(SCRIPT_DIR)/gimp.sed >> $$@' >> Makefile_gfx
-	$(_V) echo -e '\t$(_V) echo "(gimp-quit 0)" >> $$@' >> Makefile_gfx
-	$(_V) echo -e "" >> Makefile_gfx
-	$(_V) echo -e '%.png: %.scm' >> Makefile_gfx
-	$(_V) echo -e '\t$(_E) [GIMP] $$@' >> Makefile_gfx
-	$(_V) echo -e '\t$(_V) $(GIMP) $(GIMP_FLAGS) $$< >/dev/null' >> Makefile_gfx
-	$(_V) echo -e "" >> Makefile_gfx
-	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | grep -v "^#" | cut -d\  -f1`; do echo "gimp: $$i" >> Makefile_gfx; done; done
-	$(_V) echo -e "`cat $(GFX_SCRIPT_LIST_FILES) | grep \"\([pP][cCnN][xXgG]\)\" | grep -v \"^#\" | $(AWK) '{print $1": "$2}'`" >> Makefile_gfx
-	$(_V) echo -e "" > $@
-	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | grep -v "^#" | cut -d\  -f1 | sed "s/\.\([pP][cCnN][xXgG]\)//"`; do echo "$$i.scm: $$j" >> $@; echo "$(GRF_FILE): $$i.png" >> $@; done; done
-
-
-ifeq ($(GIMP),"")
-gfx:
-	$(_E) "Gimp processing required, but gimp not found nor specified"
-	$(_V) false
-else
-gfx: Makefile_gfx.dep
-	$(_E) "[GFX]"
-	$(_V) make -f Makefile_gfx gimp
-endif
-
-maintainer-clean::
-	$(_E) "[MAINTAINER CLEAN GFX]"
-	$(_V) rm -rf Makefile_gfx.dep
-	$(_V) rm -rf Makefile_gfx
-	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | cut -d\  -f1 | sed "s/\.\([pP][cCnN][xXgG]\)//"`; do rm -rf $$i.scm; rm -rf $$i.png; done; done
-else
-gfx:
-endif
+#ifdef GFX_SCRIPT_LIST_FILES
+## include dependency file, if we generate graphics
+#-include Makefile_gfx.dep
+#
+#GIMP           ?= "$(shell [ `which gimp 2>/dev/null` ] && echo "gimp" || echo "")"
+#GIMP_FLAGS     ?= -n -i -b - <
+#
+#%.scm: $(SCRIPT_DIR)/gimpscript $(SCRIPT_DIR)/gimp.sed
+#	$(_E) "[GIMP-SCRIPT] $@"
+#	$(_V) cat $(SCRIPT_DIR)/gimpscript > $@
+#	$(_V) cat $(GFX_SCRIPT_LIST_FILES) | grep $(patsubst %.scm,%.png,$@) | sed -f $(SCRIPT_DIR)/gimp.sed >> $@
+#	$(_V) echo "(gimp-quit 0)" >> $@
+#
+## create the png file. And make sure it's re-created even when present in the repo
+#%.png: %.scm
+#	$(_E) "[GIMP] $@"
+#	$(_V) $(GIMP) $(GIMP_FLAGS) $< >/dev/null
+#
+#Makefile_gfx.dep: $(GFX_SCRIPT_LIST_FILES) Makefile
+#	$(_E) "[GFX-DEP] $@"
+#	$(_V) echo "GIMP := $(GIMP)" > Makefile_gfx
+#	$(_V) echo "GIMP_FLAGS := $(GIMP_FLAGS)" >> Makefile_gfx
+#	$(_V) echo "%.scm: $(SCRIPT_DIR)/gimpscript $(SCRIPT_DIR)/gimp.sed" >> Makefile_gfx
+#	$(_V) echo -e '\t$(_E) "[GIMP-SCRIPT] $@"' >> Makefile_gfx
+#	$(_V) echo -e '\t$(_V) cat $(SCRIPT_DIR)/gimpscript > $$@' >> Makefile_gfx
+#	$(_V) echo -e '\t$(_V) cat $(GFX_SCRIPT_LIST_FILES) | grep $$(patsubst %.scm,%.png,$$@) | sed -f $(SCRIPT_DIR)/gimp.sed >> $$@' >> Makefile_gfx
+#	$(_V) echo -e '\t$(_V) echo "(gimp-quit 0)" >> $$@' >> Makefile_gfx
+#	$(_V) echo -e "" >> Makefile_gfx
+#	$(_V) echo -e '%.png: %.scm' >> Makefile_gfx
+#	$(_V) echo -e '\t$(_E) [GIMP] $$@' >> Makefile_gfx
+#	$(_V) echo -e '\t$(_V) $(GIMP) $(GIMP_FLAGS) $$< >/dev/null' >> Makefile_gfx
+#	$(_V) echo -e "" >> Makefile_gfx
+#	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | grep -v "^#" | cut -d\  -f1`; do echo "gimp: $$i" >> Makefile_gfx; done; done
+#	$(_V) echo -e "`cat $(GFX_SCRIPT_LIST_FILES) | grep \"\([pP][cCnN][xXgG]\)\" | grep -v \"^#\" | $(AWK) '{print $1": "$2}'`" >> Makefile_gfx
+#	$(_V) echo -e "" > $@
+#	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | grep -v "^#" | cut -d\  -f1 | sed "s/\.\([pP][cCnN][xXgG]\)//"`; do echo "$$i.scm: $$j" >> $@; echo "$(GRF_FILE): $$i.png" >> $@; done; done
+#
+#
+#ifeq ($(GIMP),"")
+#gfx:
+#	$(_E) "Gimp processing required, but gimp not found nor specified"
+#	$(_V) false
+#else
+#gfx: Makefile_gfx.dep
+#	$(_E) "[GFX]"
+#	$(_V) make -f Makefile_gfx gimp
+#endif
+#
+#maintainer-clean::
+#	$(_E) "[MAINTAINER CLEAN GFX]"
+#	$(_V) rm -rf Makefile_gfx.dep
+#	$(_V) rm -rf Makefile_gfx
+#	$(_V) for j in $(GFX_SCRIPT_LIST_FILES); do for i in `cat $$j | grep "\([pP][cCnN][xXgG]\)" | cut -d\  -f1 | sed "s/\.\([pP][cCnN][xXgG]\)//"`; do rm -rf $$i.scm; rm -rf $$i.png; done; done
+#else
+#gfx:
+#endif
 
 #####################################################
 # target 'lng' which builds the lang/*.lng files
@@ -263,7 +271,7 @@ clean::
 # target 'grf' which builds the grf from the nml
 ################################################################
 
-grf: $(GENERATE_GFX) $(GENERATE_NML) $(GENERATE_LNG)
+$(BASE_FILENAME).grf: $(GENERATE_GFX) $(GENERATE_NML) $(GENERATE_LNG)
 	$(_E) "[NML] $(GRF_FILE)"
 ifeq ($(NML),)
 	$(_E) "No NML compiler found!"
@@ -283,8 +291,6 @@ endif
 endif
 	$(_V) $(NML) $(NML_FLAGS) --grf $(GRF_FILE) $(NML_FILE)
 
-$(GRF_FILE): $(GENERATE_GRF)
-
 clean::
 	$(_E) "[CLEAN GRF]"
 	$(_V)-rm -rf $(GRF_FILE)
@@ -301,7 +307,7 @@ maintainer-clean::
 # target 'doc' which builds the docs
 ################################################################
 
-%.txt: %.ptxt
+%.txt: %.ptxt $(GRF_FILE)
 	$(_E) "[DOC] $@"
 	$(_V) cat $< \
 		| sed -e "s/$(REPLACE_TITLE)/$(REPO_TITLE)/" \
@@ -309,8 +315,7 @@ maintainer-clean::
 		| sed -e "s/$(REPLACE_REVISION)/$(NEWGRF_VERSION)/" \
 		| sed -e "s/$(REPLACE_FILENAME)/$(OUTPUT_FILENAME)/" \
 		> $@
-	$(_V) [ -z "$(UNIX2DOS)" ] || $(UNIX2DOS) $(UNIX2DOS_FLAGS) $@
-doc: $(DOC_FILES) $(GRF_FILE)
+#	$(_V) [ -z "$(UNIX2DOS)" ] || $(UNIX2DOS) $(UNIX2DOS_FLAGS) $@
 
 clean::
 	$(_E) "[CLEAN DOC]"
@@ -350,7 +355,7 @@ GRFID_FLAGS    ?= -m
 
 # Define how the displayed name and the filename of the bundled grf shall look like:
 # The result will either be
-# nightly build:                   mynewgrf-nightly-r51
+# nightly build:                    mynewgrf-1234
 # a release build (tagged version): mynewgrf-0.1
 # followed by an M, if the source repository is not a clean version.
 
@@ -379,10 +384,20 @@ $(DIR_NAME): $(GENERATE_GRF) $(GENERATE_DOC)
 	$(_V) if [ -e $@ ]; then rm -rf $@; fi
 	$(_V) mkdir $@
 	$(_V) -for i in $(BUNDLE_FILES); do cp $(CP_FLAGS) $$i $@; done
+	$(_V) if [ -f $(BANANAS_INI) ]; then sed 's/^version *=.*/version = $(FILE_VERSION_STRING)/' $(BANANAS_INI) > $@/bananas.ini; fi
+
+bundle: $(DIR_NAME)
+
+# Upload distribution bundle to bananas
+# license.txt is excluded for standard license. Remove here, if using custom license
+bananas: $(DIR_NAME)
+	$(_E) "[BANANAS]"
+	$(_V) $(MUSA) $(MUSA_FLAGS) -x bananas.ini -x license.txt -c mynewgrf/bananas.ini -r $<
+
 
 $(DIR_NAME).tar: $(DIR_NAME)
 	$(_E) "[BUNDLE TAR] $@"
-	$(_V) $(TAR) $(TAR_FLAGS) $@ $<
+	$(_V) $(TAR) --exclude=bananas.ini $(TAR_FLAGS) $@ $<
 
 bundle_tar: $(DIR_NAME).tar
 bundle_zip: $(ZIP_FILENAME)
@@ -414,7 +429,7 @@ clean::
 
 ################################################################
 # Bundle source targets
-# target 'bundle_src which builds source bundle
+# target 'bundle_src' which builds source bundle
 ################################################################
 RE_FILES_NO_SRC_BUNDLE = ^.devzone|^.hg|^.git
 
@@ -426,7 +441,7 @@ check: $(MD5_FILENAME)
 $(DIR_NAME_SRC).tar: $(DIR_NAME_SRC)
 	$(_E) "[BUNDLE SRC]"
 ifeq ("$(USED_VCS)","HG")
-	$(_V) $(HG) archive -X .hgtags -X .hgignore -X .devzone -t tar $<.tar
+	$(_V) HGPLAIN= $(HG) archive -X .hgtags -X .hgignore -X .devzone -t tar $<.tar
 endif
 ifeq ("$(USED_VCS)","GIT")
 	$(_V) $(GIT) archive -o $<.tar HEAD
@@ -518,7 +533,7 @@ ifeq ($(shell echo "$(OSTYPE)" | cut -d_ -f1),CYGWIN)
 INSTALL_DIR :=$(shell cygpath -A -O)/OpenTTD/newgrf/$(BASE_FILENAME)
 endif
 
-# If non of the above matched, we'll assume we're on a unix-like system
+# If none of the above matched, we'll assume we're on a unix-like system
 ifeq ($(OSTYPE),Linux)
 INSTALL_DIR := $(HOME)/.openttd/newgrf/$(BASE_FILENAME)
 endif
@@ -573,6 +588,8 @@ endif
 	$(_E) "bundle_xsrc: Build the source bundle as tar archive compressed with xz"
 	$(_E) "bundle_zsrc: Build the source bundle as tar archive compressed with zip"
 	$(_E)
+	$(_E) "bananas:     Upload the distribution bundle to OpenTTD content service 'bananas'"
+	$(_E)
 	$(_E) "Valid command line variables are:"
 	$(_E) "Helper programmes:"
 	$(_E) "MAKE MAKE_FLAGS         defaults: $(MAKE) $(MAKE_FLAGS)"
@@ -599,4 +616,5 @@ endif
 	$(_E)
 	$(_E) "INSTALL_DIR             defaults: $(INSTALL_DIR)"
 	$(_E) "    Sets the default installation directory for NewGRFs"
+	$(_E) "Manifest: $(MANIFEST)"
 

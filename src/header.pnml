@@ -12,8 +12,8 @@ grf {
 	name:	string(STR_GRF_NAME);
 	desc:	string(STR_GRF_DESCRIPTION);
     url:    string(STR_GRF_URL);
-	version:		REPO_REVISION;
-	min_compatible_version:	7582;
+	version:	NEWGRF_VERSION;	//7695; //REPO_REVISION;
+	min_compatible_version:	7695;
     param {
         param_purchase_cost {
             type:   int;

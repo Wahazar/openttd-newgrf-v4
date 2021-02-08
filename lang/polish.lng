@@ -134,10 +134,10 @@ STR_SCAA_TOOLBAR                :Linia normalnotorowa pierwszorzędna, zelektryf
 STR_SCAA_MENU                   :{DKBLUE}Linia pierwszorzędna 1435mm, zelektryfikowana 25kV AC
 STR_SCAA_BUILD_CAPTION          :Tor normalny, średnia prędkość, zelektryfikowany 25kV AC
 
-STR_SEAA_NAME                   :Tor normalny, duża prędkość, zelektryfikowany 25kV AC
-STR_SEAA_TOOLBAR                :Magistralna linia normalnotorowa 1435mm, zelektryfikowana 25kV AC
-STR_SEAA_MENU                   :{DKBLUE}Linia magistralna, 1435mm, 25kV AC
-STR_SEAA_BUILD_CAPTION          :Tor 1435mm dużych prędkości, zelektryfikowany 25kV AC
+STR_SDAA_NAME                   :Tor normalny, duża prędkość, zelektryfikowany 25kV AC
+STR_SDAA_TOOLBAR                :Magistralna linia normalnotorowa 1435mm, zelektryfikowana 25kV AC
+STR_SDAA_MENU                   :{DKBLUE}Linia magistralna, 1435mm, 25kV AC
+STR_SDAA_BUILD_CAPTION          :Tor 1435mm dużych prędkości, zelektryfikowany 25kV AC
 
 STR_SEAA_NAME                   :Tor normalny wielkich prędkości, zelektryfikowany 25kV AC
 STR_SEAA_TOOLBAR                :Linia normalnotorowa wielkich prędkości, zelektryfikowana 25kV AC

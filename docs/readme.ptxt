@@ -1,6 +1,6 @@
 {{GRF_TITLE}}
 ===================================
-2cc Trains In NML
+V4 CEE Trains In NML
 
 ----------
 0 Contents
@@ -42,7 +42,7 @@ GRF ID:   "MCTM"
 
 2.1 Requirements
 ----------------
-- OpenTTD 1.2.0-RC1 or nightly r23971, or higher
+- OpenTTD 1.10.3, or higher
 - Not compatible with TTDPatch
 - NG600 newgrf should be loaded before this newgrf.
 
@@ -89,6 +89,7 @@ include new features.
 ---------
 6 Credits
 ---------
+See attribution.txt file.
 
 Graphics from the original 2cc Trainset:
 - Emperor Jake
@@ -193,7 +194,9 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 9 Obtaining the source
 ----------------------
 
-The source code can be obtained from the #openttdcoop DevZone:
+The source code can be obtained from the Github repository:
+
+Old versions were hosted by #openttdcoop DevZone:
     http://dev.openttdcoop.org/projects/v4/repository
 
 

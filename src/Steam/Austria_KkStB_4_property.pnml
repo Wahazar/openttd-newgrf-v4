@@ -6,7 +6,9 @@
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include "../undefine_properties.pnml"
+#include "../undefine_properties.pnml" 
+
+#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
 
  
 #define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
@@ -16,7 +18,7 @@
 #define VEHIDCODE steam_Austria_KkStB_4
 #define ITEM item_steam_Austria_KkStB_4
 #define NAME string(str_steam_Austria_KkStB_4,string(str_Steam))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_steam_Austria_KkStB_4,string(str_Steam_Tender_Locomotive));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_steam_Austria_KkStB_4,string(str_Steam_Tender_Locomotive,RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(AUSTRIA,POLAND,CZECHIA)
 
@@ -52,7 +54,7 @@
 #define RUNNINGCOSTENGINESWITCHCALL 
 
 #define REFIT_COST DEFAULT_REFIT_COST
-#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
+
 #define CARGO_AGE_PERIOD DEFAULT_CARGO_AGE_PERIOD
 #define POWER_PER_WAGON DEFAULT_POWER_PER_WAGON
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK

@@ -1026,15 +1026,15 @@ str_AC503_Voltage	: {RED}AC 50/3 Hz system{BLACK}
 str_AC50_Voltage	: {DKBLUE}AC 50 Hz system{BLACK}
 str_Dual_Voltage	: {BLUE}multisystem{BLACK}
 
-str_Steam_Tender_Locomotive	: tender locomotive
-str_Steam_Tank_Locomotive	: tank locomotive 
+str_Steam_Tender_Locomotive	: tender locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Steam_Tank_Locomotive	: tank locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
-str_Diesel_Electric	: diesel-electric engine{}{STRING}
-str_Diesel_Hydraulic	: diesel-hydraulic engine{}{STRING}
-str_Diesel_Mechanic	: diesel-mechanical engine{}{STRING}
-str_Gas_Turbine		: gas-turbine locomotive
+str_Diesel_Electric	: diesel-electric engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Hydraulic	: diesel-hydraulic engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Mechanic	: diesel-mechanical engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Gas_Turbine		: gas-turbine locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
-str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster
+str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Steam		: (Steam)
 str_Steam_Russian	: (Steam, broad gauge)

@@ -6,7 +6,9 @@
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include "../undefine_properties.pnml"
+#include "../undefine_properties.pnml" 
+
+#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
 
 
 #define LIVERYMAPPINGSWITCHCALL colour_mapping: switch_livery_subtype_default_emu_mapping_reversed;
@@ -55,7 +57,7 @@
 
 
 #define REFIT_COST DEFAULT_REFIT_COST
-#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
+
 #define CARGO_AGE_PERIOD COMMUTER_COMFORT
 #define POWER_PER_WAGON DEFAULT_POWER_PER_WAGON
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK

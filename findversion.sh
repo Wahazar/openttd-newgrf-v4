@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #     make-nml NewGRF build framework
 #     (c) 2014 planetmaker and others
 #     Contact: planetmaker@openttd.org
@@ -25,8 +27,7 @@ if [ "$#" != "0" ]; then
 	cat <<EOF
 Usage: ./findversion.sh
 Finds the current revision and if the code is modified.
-
-Output: <HASH>\t<VERSION>\t<MODIFIED>\t<TAG>\t<DISPLAY_VERSION>\t<BRANCH>
+Output: <HASH>\t<VERSION>\t<MODIFIED>\t<TAG>\t<DISPLAY_VERSION>\t<BRANCH>\t<DATE>
 HASH
     a string unique to the version of the code the current checkout is
     based on. The exact format of this string depends on the version
@@ -36,24 +37,20 @@ HASH
     modified and which branch was checked out. This value is not
     guaranteed to be sortable, but is mainly meant for identifying the
     revision and user display.
-
     If no revision identifier could be found, this is left empty.
 VERSION
     the version number to be reported to OpenTTD (aka NewGRF version).
     This usually is the number of days passed since 1.1.2000 up to the
     date of the last commit in the repository.
-
     This number should be sortable. Within a given branch or trunk, a
     higher number means a newer version. However, when using git or hg,
     this number will not increase on new commits.
-
     If no revision number could be found, this is left empty.
 MODIFIED
     Whether (the src directory of) this checkout is modified or not. A
     value of 0 means not modified, a value of 2 means it was modified.
     Modification is determined in relation to the commit identified by
     REV, so not in relation to the svn revision identified by REV_NR.
-
     A value of 1 means that the modified status is unknown, because this
     is not an svn/git/hg checkout for example.
 TAG
@@ -62,8 +59,8 @@ DISPLAY_VERSION
     The version string shown to the user of the NewGRF
 BRANCH
     The branch the version is based on
-
-
+DATE
+    The date of the last commit in ISO format
 By setting the AWK environment variable, a caller can determine which
 version of "awk" is used. If nothing is set, this script defaults to
 "awk".
@@ -76,6 +73,8 @@ if [ -z "$AWK" ]; then
 	AWK=awk
 fi
 
+DAYS_SINCE_2000=$( date --date="1 Jan 2000" +"%s" )
+
 # Find out some dirs
 cd `dirname "$0"`
 ROOT_DIR=`pwd`
@@ -84,21 +83,27 @@ ROOT_DIR=`pwd`
 # Assume the dir is not modified
 MODIFIED=""
 REPO_DATE="2000,1,1"
-if [ -d "$ROOT_DIR/.hg" ]; then
-	# We are a hg checkout
-	if [ -n "`hg status -S | grep -v '^?'`" ]; then
+if [ -d "$ROOT_DIR/.git" ]; then
+	# We are a git checkout
+	# Refresh the index to make sure file stat info is in sync, then look for modifications
+	git update-index --refresh >/dev/null
+	if [ -n "`git diff-index HEAD`" ]; then
 		MODIFIED="M"
 	fi
-	HASH=`LC_ALL=C hg id -i | cut -c1-12`
-	REV="h`echo $HASH | cut -c1-8`"
-	BRANCH="`hg branch | sed 's@^default$@@'`"
-	TAG="`hg id -t | grep -v 'tip$'`"
-	REPO_DATE="`hg log -r$HASH --template="{date|shortdate}" | sed s/-/,/g | sed s/,0/,/g`"
-	VERSION=`python -c "from datetime import date; print (date($REPO_DATE)-date(2000,1,1)).days"`
+	HASH=`LC_ALL=C git rev-parse --verify HEAD 2>/dev/null`
+	REV="g`echo $HASH | cut -c1-8`"
+	BRANCH="`git symbolic-ref -q HEAD 2>/dev/null | sed 's@.*/@@;s@^master$@@'`"
+	TAG="`git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null | sed 's@\^0$@@'`"
+	ISO_DATE="`git log HEAD^..HEAD --pretty="%ai"`"
+	REPO_DATE="`echo ${ISO_DATE} | sed s/-/,/g | sed s/,0/,/g`"
+	GIT_DATE=$(git log HEAD^..HEAD --pretty="%ai" | cut -d\  -f1)
+  GIT_DATE_DAYS=$( date --date=$GIT_DATE +'%s' )
+  VERSION=$[ ($GIT_DATE_DAYS - $DAYS_SINCE_2000) / 86400 ]
+	#VERSION=$[ ( ${GIT_DATE} - $(date --date="1 Jan 2000" +"%s") ) / 86400 ]
 	DISPLAY_VERSION="v${VERSION}"
 	if [ -n "$TAG" ]; then
 		BRANCH=""
-		DISPLAY_VERSION="${TAG}"
+		REV="$TAG"
 	fi
 elif [ -f "$ROOT_DIR/.rev" ]; then
 	# We are an exported source bundle
@@ -112,6 +117,7 @@ else
 	BRANCH=""
 	TAG=""
 	DISPLAY_VERSION="noRev"
+	ISO_DATE=""
 fi
 
 DISPLAY_VERSION="${DISPLAY_VERSION}${MODIFIED}"
@@ -124,4 +130,4 @@ if [ -z "${TAG}" -a -n "${HASH}" ]; then
 	DISPLAY_VERSION="${DISPLAY_VERSION} (${HASH})"
 fi
 
-echo "$HASH	$VERSION	$MODIFIED	$TAG	$DISPLAY_VERSION	$BRANCH"
+echo "$HASH	$VERSION	$MODIFIED	$TAG	$DISPLAY_VERSION	$BRANCH	$ISO_DATE"

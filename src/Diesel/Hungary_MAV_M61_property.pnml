@@ -6,7 +6,9 @@
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include "../undefine_properties.pnml"
+#include "../undefine_properties.pnml" 
+
+#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
 
 #define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
 #define CARGOSUBTYPESWITCHCALL DEFAULT_LIVERY_TEXT
@@ -15,7 +17,7 @@
 #define VEHIDCODE diesel_Hungary_MAV_M61
 #define ITEM item_diesel_Hungary_MAV_M61
 #define NAME string(str_diesel_Hungary_MAV_M61,string(str_Diesel))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_Hungary_MAV_M61,string(str_Diesel_Electric, string(STR_RAI_AUTOREPLACE)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_Hungary_MAV_M61,string(str_Diesel_Electric, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(HUNGARY,NOREGION,NOREGION)
 
@@ -52,7 +54,7 @@
 
 
 #define REFIT_COST DEFAULT_REFIT_COST
-#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
+
 #define CARGO_AGE_PERIOD DEFAULT_CARGO_AGE_PERIOD
 #define POWER_PER_WAGON DEFAULT_POWER_PER_WAGON
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK
