@@ -1028,10 +1028,11 @@ str_Dual_Voltage	: {BLUE}multisystem{BLACK}
 
 str_Steam_Tender_Locomotive	: tender locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Steam_Tank_Locomotive	: tank locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Steam_Railcar	: steam railcar{}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
-str_Diesel_Electric	: diesel-electric engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
-str_Diesel_Hydraulic	: diesel-hydraulic engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
-str_Diesel_Mechanic	: diesel-mechanical engine {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Electric	: diesel-electric engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Hydraulic	: diesel-hydraulic engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Mechanic	: diesel-mechanical engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Gas_Turbine		: gas-turbine locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
