@@ -18,7 +18,7 @@
 #define VEHIDCODE electric_Ukraine_UZ_ChS7
 #define ITEM item_electric_Ukraine_UZ_ChS7
 #define NAME string(str_electric_Ukraine_UZ_ChS7,string(str_Electric_Russian))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Ukraine_UZ_ChS7,string(str_Voltage_System, VOLTAGE, string(STR_ERD_AUTOREPLACE)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Ukraine_UZ_ChS7,string(str_Voltage_System, VOLTAGE, string(STR_ERD_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(EASTERNEUROPE,NOREGION,NOCONCEPT)
 

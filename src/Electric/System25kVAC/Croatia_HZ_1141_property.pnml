@@ -20,7 +20,7 @@
 #define VEHIDCODE electric_Croatia_HZ_1141
 #define ITEM item_electric_Croatia_HZ_1141
 #define NAME string(str_electric_Croatia_HZ_1141,string(str_Electric,string(str_AC50_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Croatia_HZ_1141,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Croatia_HZ_1141,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(SOUTHERNEUROPE,ROMANIA,NOCONCEPT)
 

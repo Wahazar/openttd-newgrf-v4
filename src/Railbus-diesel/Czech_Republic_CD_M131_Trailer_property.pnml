@@ -17,7 +17,7 @@
 #define VEHIDCODE rbd_Czech_Republic_CD_M131_Trailer
 #define ITEM item_rbd_Czech_Republic_CD_M131_Trailer
 #define NAME string(str_rbd_Czech_Republic_CSD_CDlm,string(str_Railbus_Trailer))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD);
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD)
 
 #define VEHICLE_REGION REGION(CZECHIA,NOREGION,NOREGION)
 

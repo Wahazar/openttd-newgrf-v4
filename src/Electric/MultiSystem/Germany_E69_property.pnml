@@ -18,7 +18,7 @@
 #define VEHIDCODE electric_Germany_DB_169
 #define ITEM item_electric_Germany_DB_169
 #define NAME string(str_electric_Germany_DB_169,string(str_Electric,string(str_Dual_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Germany_DB_169,string(str_Multi_Voltage_System, string(STR_RAI_AUTOREPLACE)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Germany_DB_169,string(str_Multi_Voltage_System, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(GERMANY,NOREGION,PRIVATE)
 

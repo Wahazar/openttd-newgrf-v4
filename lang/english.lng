@@ -1018,8 +1018,8 @@ STR_LIVERY_INVISIBLE		: Invisible leading engine
 str_Fixed_Refit		: {RED}Fixed refit (only in depot){BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}
 str_AutoRefit		: {GREEN}Station autorefit available{BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}
 
-str_Voltage_System	: {}Voltage System: {UNSIGNED_WORD} kV {}{STRING}
-str_Multi_Voltage_System	: {}Multi-Voltage System {}{STRING}
+str_Voltage_System	: {}Voltage System: {UNSIGNED_WORD} kV. {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Multi_Voltage_System	: {}Multi-Voltage System.{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_DC_Voltage		: {LTBLUE}DC system{BLACK}
 str_AC503_Voltage	: {RED}AC 50/3 Hz system{BLACK}

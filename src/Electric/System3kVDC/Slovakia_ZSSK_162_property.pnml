@@ -18,7 +18,7 @@
 #define VEHIDCODE electric_Slovakia_ZSSK_162
 #define ITEM item_electric_Slovakia_ZSSK_162
 #define NAME string(str_electric_Slovakia_ZSSK_162,string(str_Electric,string(str_DC_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Slovakia_ZSSK_162,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Slovakia_ZSSK_162,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(CZECHIA,NOREGION,NOCONCEPT)
 

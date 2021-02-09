@@ -17,7 +17,7 @@
 #define VEHIDCODE rbd_Austria_OBB_5042
 #define ITEM item_rbd_Austria_OBB_5042
 #define NAME string(str_rbd_Austria_OBB_5042,string(str_Diesel_Railbus))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_rbd_Austria_OBB_5042,string(str_Diesel_Mechanic,string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD)));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_rbd_Austria_OBB_5042,string(str_Diesel_Mechanic,string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(AUSTRIA,NOREGION,NOCONCEPT)
 

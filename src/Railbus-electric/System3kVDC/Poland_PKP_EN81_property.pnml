@@ -18,7 +18,7 @@
 #define ITEM item_rbe_Poland_PKP_EN81
 #define NAME string(str_rbe_Poland_PKP_EN81,string(str_Electric_Railbus,string(str_DC_Voltage)))
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_rbe_Poland_PKP_EN81, string(str_Voltage_System, VOLTAGE, \
- string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD)));
+ string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(POLAND,NOREGION,NOCONCEPT)
 
