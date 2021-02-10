@@ -224,6 +224,7 @@ str_rbd_Germany_DB_VT_133 						:VT 133 Wismar A1 {STRING}
 str_rbd_Austria_OBB_5042 						:VT42 Simmering (1A)'(A1)' {STRING}
 str_rbd_Germany_DB_VT_989 						:VT98.9 Uerdingen A1 {STRING}
 #str_rbd_Russia_RZD_ACh2 						:ACh2 Studenka B'2' {STRING}
+str_rbd_Russia_RZD_AS1A 						:AS1A BLWRZ 1A {STRING}
 str_rbd_Austria_OBB_5047 						:5047 Jenbacher 2'B' {STRING}
 str_rbd_Germany_DB_670 							:670 DWA 1'A' {STRING}
 str_rbd_Lithuania_Lithuanian_Railways_AR2 		:AR2 RVR B'2' {STRING}
@@ -709,6 +710,7 @@ str_class_rbd_Austria_OBB_5042 						:BBO VT42/OBB 5042 {STRING}
 str_class_rbd_Germany_DB_VT_989 					:DB 795/OBB 5081/JZ 812/CFR 79 {STRING}
 str_class_rbd_Germany_OHE_520_GDT 					:OHE 520 GDT {STRING}
 #str_class_rbd_Russia_RZD_ACh2 						:RZD ACh2 {STRING}
+str_class_rbd_Russia_RZD_AS1A 						:RZD AS1A {STRING}
 str_class_rbd_Austria_OBB_5047 						:OBB 5047/GySEV 5047 {STRING}
 str_class_rbd_Germany_DB_670 						:DB 670 {STRING}
 str_class_rbd_Lithuania_Lithuanian_Railways_AR2 			:LG AR2 {STRING}
