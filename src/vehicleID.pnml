@@ -73,6 +73,7 @@ item(FEAT_TRAINS, item_rbd_Czech_Republic_CSD_Btax_Trailer, 15004) {}
 
 //Railbus-Diesel broad gauge, available ID range: 2500-2504 (hex 0x09C4..0x09C8)
 #define ID_RANGE_RBD_B 0x09C4..0x09C8
+item(FEAT_TRAINS, item_rbd_Russia_RZD_AS1A, 2500) {}
 //item(FEAT_TRAINS, item_rbd_Russia_RZD_ACh2, 2501) {}
 item(FEAT_TRAINS, item_rbd_Lithuania_Lithuanian_Railways_AR2, 2503) {}
 

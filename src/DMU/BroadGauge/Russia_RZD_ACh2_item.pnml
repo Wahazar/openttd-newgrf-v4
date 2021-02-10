@@ -79,3 +79,4 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_dmu_Russia_RZD_ACh2_cargo_selection;
 	}
 }
+SET_TRACK_TYPE

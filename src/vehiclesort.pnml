@@ -41,6 +41,7 @@ item_rbd_Germany_DB_VT_989,  \
 item_rbd_Czech_Republic_CD_809,
 
 #define SORTING_RBD_B \
+item_rbd_Russia_RZD_AS1A, /*Year: 1964*/ \
 item_rbd_Lithuania_Lithuanian_Railways_AR2, /*Year: 1997*/ \
 
 #define SORTING_RBE_15KVAC \
