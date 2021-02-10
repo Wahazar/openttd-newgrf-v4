@@ -27,12 +27,29 @@ spriteset(spriteset_diesel_Russia_RZD_TGM23_engine2, "gfx/Diesel/Russia_RZD_TGM2
 	template_2cc_engines_general(1, 32)
 }
 
+spriteset(spriteset_diesel_Russia_RZD_TGM23_engine1_r, "gfx/Diesel/Russia_RZD_TGM23.png") {
+	template_2cc_engines_general(178, 1)
+}
+
+spriteset(spriteset_diesel_Russia_RZD_TGM23_engine2_r, "gfx/Diesel/Russia_RZD_TGM23.png") {
+	template_2cc_engines_general(178, 32)
+}
+
 //Animation states
-switch(FEAT_TRAINS, SELF, switch_diesel_Russia_RZD_TGM23_animation, motion_counter % 2){
+switch(FEAT_TRAINS, SELF, switch_diesel_Russia_RZD_TGM23_animation_f, motion_counter % 2){
 	0: spriteset_diesel_Russia_RZD_TGM23_engine1;
 	spriteset_diesel_Russia_RZD_TGM23_engine2;
 }
 
+switch(FEAT_TRAINS, SELF, switch_diesel_Russia_RZD_TGM23_animation_r, motion_counter % 2){
+	0: spriteset_diesel_Russia_RZD_TGM23_engine1_r;
+	spriteset_diesel_Russia_RZD_TGM23_engine2_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_diesel_Russia_RZD_TGM23_animation, vehicle_is_reversed){
+	1: switch_diesel_Russia_RZD_TGM23_animation_r;
+	switch_diesel_Russia_RZD_TGM23_animation_f;
+}
 
 //Add defined switches
 

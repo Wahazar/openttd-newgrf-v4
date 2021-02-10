@@ -223,7 +223,7 @@ str_rbs_Austria_kkStB_4_0	:IXb Floridsdorf A1 (Steam Goods Railbus)
 str_rbd_Germany_DB_VT_133 						:VT 133 Wismar A1 {STRING}
 str_rbd_Austria_OBB_5042 						:VT42 Simmering (1A)'(A1)' {STRING}
 str_rbd_Germany_DB_VT_989 						:VT98.9 Uerdingen A1 {STRING}
-str_rbd_Russia_RZD_ACh2 						:ACh2 Studenka B'2' {STRING}
+#str_rbd_Russia_RZD_ACh2 						:ACh2 Studenka B'2' {STRING}
 str_rbd_Austria_OBB_5047 						:5047 Jenbacher 2'B' {STRING}
 str_rbd_Germany_DB_670 							:670 DWA 1'A' {STRING}
 str_rbd_Lithuania_Lithuanian_Railways_AR2 		:AR2 RVR B'2' {STRING}
@@ -445,7 +445,6 @@ str_electric_Ukraine_UZ_DE1 					:DE1 DEVZ Bo'Bo'+Bo'Bo' {STRING}
 
 
 #DMU
-str_dmu_Germany_DB_VT04_Flying_Hamburger 	:'Flying Hamburger'  WUMAG 2'Bo'2' {STRING}
 #str_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
 #str_dmu_Germany_DB_VT_085 					:DB VT 08.5 {STRING}
 #str_dmu_Germany_DB_VT_115 					:DB VT11.5/DB 601 'TEE' {STRING}
@@ -460,7 +459,10 @@ str_dmu_Czech_Republic_CD_814 					:'Regionova' PARS 1'A' + 1'1' {STRING}
 str_dmu_Slovakia_ZSSK_861 					:861 ZOS Vrutky B'2'2'B' {STRING}
 str_dmu_Germany_DB_6282 					:628.2 Duwag 2'B'+2'2' {STRING}
 str_dmu_Germany_DB_648 						:'Lint 41' Alsthom B'(2)B' {STRING}
-str_dmu_Czech_Republic_CSD_M495_0 				:'Hargita' Ganz (1B)2' + 2'2' {STRING}
+str_dmu_Czech_Republic_CSD_M495_0 				:'Hargita' Ganz (1B)'2' + 2'2' {STRING}
+str_dmu_Germany_DB_VT04_Flying_Hamburger 	:'Flying Hamburger'  WUMAG 2'Bo'2' {STRING}
+str_dmu_Russia_RZD_DP 				:'Hargita' Ganz (A1A)'2' + 2'2' {STRING}
+str_dmu_Russia_RZD_ACh2 						:ACh2 Studenka B'2' + 2'2' {STRING}
 
 #EMU
 str_emu_Austria_OBB_4041 					:ET10 ELIN 3'(Ao1Ao)' {STRING}
@@ -699,14 +701,14 @@ str_class_Railbus_Trailer		 				:- light railbus trailer
 #Railbus-steam
 str_class_rbs_Austria_NOLB_1		:NOLB 1/PKP PCix {STRING}
 str_class_rbs_Germany_Bavarian_MCCi :K.Bay.Sts.B. MCCi {STRING}
-str_class_rbs_Austria_kkStB_4_0	:ONWB IXb/CSD M112.0
+str_class_rbs_Austria_kkStB_4_0	:ONWB IXb/CSD M112.0 {STRING}
 
 #Railbus-diesel
 str_class_rbd_Germany_DB_VT_133 					:DRG/DB VT 133 {STRING}
 str_class_rbd_Austria_OBB_5042 						:BBO VT42/OBB 5042 {STRING}
 str_class_rbd_Germany_DB_VT_989 					:DB 795/OBB 5081/JZ 812/CFR 79 {STRING}
 str_class_rbd_Germany_OHE_520_GDT 					:OHE 520 GDT {STRING}
-str_class_rbd_Russia_RZD_ACh2 						:RZD ACh2 {STRING}
+#str_class_rbd_Russia_RZD_ACh2 						:RZD ACh2 {STRING}
 str_class_rbd_Austria_OBB_5047 						:OBB 5047/GySEV 5047 {STRING}
 str_class_rbd_Germany_DB_670 						:DB 670 {STRING}
 str_class_rbd_Lithuania_Lithuanian_Railways_AR2 			:LG AR2 {STRING}
@@ -952,6 +954,8 @@ str_class_dmu_Germany_DB_6282 					:DB 628.2 {STRING}
 str_class_dmu_Germany_DB_648 					:DB 648 {STRING}
 str_class_dmu_Czech_Republic_CSD_M495_0 			:CSD M495.0/DR VT 12.14/MAV CBMot {STRING}
 str_class_dmu_Germany_DB_VT04_Flying_Hamburger 			:DR 137/CSD M297 {STRING}
+str_class_dmu_Russia_RZD_DP  				:SZD DP {STRING}
+str_class_dmu_Russia_RZD_ACh2 						:RZD ACh2/APCh2 {STRING}
 
 #EMU
 str_class_emu_Austria_OBB_4041 					:BBO ET10/OBB 4041 {STRING}

@@ -41,7 +41,6 @@ item_rbd_Germany_DB_VT_989,  \
 item_rbd_Czech_Republic_CD_809,
 
 #define SORTING_RBD_B \
-item_rbd_Russia_RZD_ACh2, /*Year: 1984*/ \
 item_rbd_Lithuania_Lithuanian_Railways_AR2, /*Year: 1997*/ \
 
 #define SORTING_RBE_15KVAC \
@@ -265,7 +264,9 @@ item_dmu_Slovakia_ZSSK_861, /* 2011 */ \
 item_dmu_Croatia_HZ_7022, /* 2011 */ 
 
 #define SORTING_DMU_B \
+item_dmu_Russia_RZD_DP, /* 1949 */ \
 item_dmu_Russia_RZD_D1, /* 1963 */ \
+item_dmu_Russia_RZD_ACh2, /* 1984*/ \
 item_dmu_Russia_RZD_RA2, /* 2006 */ \
 item_dmu_Belarus_BCh_DP3, /* 2014 */ 
 

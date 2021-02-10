@@ -182,9 +182,9 @@
 
 //Railbus-diesel broad gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_RBD_B.pnml"
-#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_property.pnml"
-#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_graphics.pnml"
-#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_item.pnml"
+//#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_property.pnml"
+//#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_graphics.pnml"
+//#include "src/Railbus-diesel/BroadGauge/Russia_RZD_ACh2_item.pnml"
 #include "src/Railbus-diesel/BroadGauge/Lithuania_Lithuanian_Railways_AR2_property.pnml"
 #include "src/Railbus-diesel/BroadGauge/Lithuania_Lithuanian_Railways_AR2_graphics.pnml"
 #include "src/Railbus-diesel/BroadGauge/Lithuania_Lithuanian_Railways_AR2_item.pnml"
@@ -844,9 +844,15 @@
 
 //DMU Russian
 #include "src/_CodeSupport/TypeInitialization/init_type_DMU_Broad_Gauge.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_DP_property.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_DP_graphics.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_DP_item.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_D1_property.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_D1_graphics.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_D1_item.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_ACh2_property.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_ACh2_graphics.pnml"
+#include "src/DMU/BroadGauge/Russia_RZD_ACh2_item.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_RA2_property.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_RA2_graphics.pnml"
 #include "src/DMU/BroadGauge/Russia_RZD_RA2_item.pnml"

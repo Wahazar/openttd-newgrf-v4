@@ -73,7 +73,7 @@ item(FEAT_TRAINS, item_rbd_Czech_Republic_CSD_Btax_Trailer, 15004) {}
 
 //Railbus-Diesel broad gauge, available ID range: 2500-2504 (hex 0x09C4..0x09C8)
 #define ID_RANGE_RBD_B 0x09C4..0x09C8
-item(FEAT_TRAINS, item_rbd_Russia_RZD_ACh2, 2501) {}
+//item(FEAT_TRAINS, item_rbd_Russia_RZD_ACh2, 2501) {}
 item(FEAT_TRAINS, item_rbd_Lithuania_Lithuanian_Railways_AR2, 2503) {}
 
 //Railbus-Electric, available ID range: 3000-3499 (hex 0x0BB8..0x0DAB)
@@ -434,8 +434,10 @@ item(FEAT_TRAINS, item_dmu_Denmark_Arriva_Lint_41, 7048) {}
 
 //DMU, available ID range: 7900-7999 (hex 0x1EDC..0x1F3F) - broad gauge
 #define ID_RANGE_DMU_B 0x1EDC..0x1F3F
-item(FEAT_TRAINS, item_dmu_Russia_RZD_D1, 7900) {}
-item(FEAT_TRAINS, item_dmu_Russia_RZD_RA2, 7902) {}
+item(FEAT_TRAINS, item_dmu_Russia_RZD_DP, 7900) {}
+item(FEAT_TRAINS, item_dmu_Russia_RZD_D1, 7901) {}
+item(FEAT_TRAINS, item_dmu_Russia_RZD_ACh2, 7902) {}
+item(FEAT_TRAINS, item_dmu_Russia_RZD_RA2, 7903) {}
 item(FEAT_TRAINS, item_dmu_Belarus_BCh_DP3, 7904) {}
 
 //EMU, available ID range: 8000-8899 (hex 0x1F40..0x22C3) - normal gauge
