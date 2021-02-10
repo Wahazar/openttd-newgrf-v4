@@ -1,0 +1,120 @@
+/*
+ *  Copyright (C) 2017-2021 Transportman, McZapkie
+ *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_dmu_Russia_RZD_DP_purchase, "gfx/DMU/Russia_RZD_DP.png") {
+	template_purchase_dualheaded(1, 128)
+}
+
+/*
+* VEHICLE
+*/
+
+//Front
+spriteset(spriteset_dmu_Russia_RZD_DP_front_pass, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(1, 1)
+}
+
+//Back
+spriteset(spriteset_dmu_Russia_RZD_DP_front_mail, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(179, 1)
+}
+
+//Front mail
+spriteset(spriteset_dmu_Russia_RZD_DP_back_pass, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(1, 32)
+}
+
+//Back mail
+spriteset(spriteset_dmu_Russia_RZD_DP_back_mail, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(179, 32)
+}
+
+//Middle - PAX unpowered
+spriteset(spriteset_dmu_Russia_RZD_DP_middlepass_LU, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(1, 96)
+}
+
+//Middle - PAX powered
+spriteset(spriteset_dmu_Russia_RZD_DP_middlepass_LP, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(1, 64)
+}
+
+//Middle - MAIL unpowered
+spriteset(spriteset_dmu_Russia_RZD_DP_middlemail_LU, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(179, 96)
+}
+
+//Middle - MAI powered
+spriteset(spriteset_dmu_Russia_RZD_DP_middlemail_LP, "gfx/DMU/Russia_RZD_DP.png") {
+	template_2cc_engines_general(179, 64)
+}
+
+//Graphics for the head wagon based on cargo class
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_front_head_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): spriteset_dmu_Russia_RZD_DP_front_pass;
+	spriteset_dmu_Russia_RZD_DP_front_mail;
+}
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_back_head_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): spriteset_dmu_Russia_RZD_DP_back_pass;
+	spriteset_dmu_Russia_RZD_DP_back_mail;
+}
+
+//Dualheaded engines
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_reversed, var[0xC8]) {
+	0xFE: switch_dmu_Russia_RZD_DP_back_head_cargo_selection;
+    0xFF: switch_dmu_Russia_RZD_DP_back_head_cargo_selection; 
+    switch_dmu_Russia_RZD_DP_front_head_cargo_selection;
+}
+
+
+
+//Visual effect, for DMU this is done on the part with diesel engine
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_visual_effect_and_powered, var[0xC8]) {
+	0xFE: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+	0xFF: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+
+	visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -4, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_middlepass_livery, vehicle_type_id) {
+	item_mu_wagon_powered: return spriteset_dmu_Russia_RZD_DP_middlepass_LP;
+	return spriteset_dmu_Russia_RZD_DP_middlepass_LU;
+}
+
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_middlemail_livery, vehicle_type_id) {
+	item_mu_wagon_powered: return spriteset_dmu_Russia_RZD_DP_middlemail_LP;
+	return spriteset_dmu_Russia_RZD_DP_middlemail_LU;
+}
+
+
+/*
+* Cargo capacity
+*/
+
+ENGINECAPACITYSWITCH(VEHIDCODE)
+
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
+//Graphics for the unit wagon based on cargo class
+switch(FEAT_TRAINS, SELF, switch_dmu_Russia_RZD_DP_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): switch_dmu_Russia_RZD_DP_middlepass_livery;
+	switch_dmu_Russia_RZD_DP_middlemail_livery;
+}
+
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+RUNNINGCOSTMUWAGONSWITCH
+
+PURCHASETEXTSWITCH
