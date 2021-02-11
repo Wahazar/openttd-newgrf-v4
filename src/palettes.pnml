@@ -1124,4 +1124,19 @@ switch (FEAT_TRAINS, SELF, switch_livery_subtype_default_diesel_mapping, cargo_t
   return CB_FAILED;
 }  
 
+STR_LIVERY_BOXCAR		: General boxcar
+STR_LIVERY_ISOTHERM		: Insulated boxcar
+STR_LIVERY_LIVESTOCK		: Stock boxcar
+STR_LIVERY_ARMOURED		: Armoured boxcar
+
+
+switch (FEAT_TRAINS, SELF, switch_livery_subtype_boxcar_text, cargo_subtype)
+{
+  0: return string(STR_LIVERY_BOXCAR);
+  1: return string(STR_LIVERY_ISOTHERM);
+  2: return string(STR_LIVERY_LIVESTOCK);
+  3: return string(STR_LIVERY_ARMOURED);
+  return CB_RESULT_NO_TEXT;
+}  
+
 

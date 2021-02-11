@@ -648,7 +648,7 @@ item(FEAT_TRAINS, item_wagon_Gen1_Mixed, 12000) {}
 item(FEAT_TRAINS, item_wagon_Gen1_Flat_Wagon_European, 12001) {}
 item(FEAT_TRAINS, item_wagon_Gen1_Tanker_European, 12002) {}
 item(FEAT_TRAINS, item_wagon_Gen1_Open_Wagon_European, 12003) {}
-
+item(FEAT_TRAINS, item_wagon_Gen1_Boxcar_European, 12004) {}
 item(FEAT_TRAINS, item_wagon_Gen2_Mixed, 12005) {}
 item(FEAT_TRAINS, item_wagon_Gen2_Flat_Wagon_European, 12006) {}
 //heavy flat

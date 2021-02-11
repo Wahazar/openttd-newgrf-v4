@@ -513,6 +513,7 @@ str_wagon_Gen1_Flat_Wagon_European 				:1st Gen Flat Wagon (normal gauge)
 str_wagon_Gen1_Mixed						:1st Gen Mixed Train Wagons (normal gauge)
 str_wagon_Gen1_Tanker_European 					:1st Gen Tanker (normal gauge)
 str_wagon_Gen1_Open_Wagon_European 				:1st Gen Wooden Open Wagon (normal gauge)
+str_wagon_Gen1_Boxcar_European				:1st Gen Wooden Box Van (normal gauge)
 str_wagon_Gen1_Flat_Wagon_Russian 				:1st Gen Flat Wagon (broad gauge)
 str_wagon_Gen1_Boxcar_Russian					:1st Gen Wooden Universal Box Van (broad gauge)
 str_wagon_Gen1_Tanker_Russian 					:1st Gen Tanker (broad gauge)
@@ -1020,6 +1021,13 @@ STR_LIVERY_PRIBALTICA		: Baltic states livery
 STR_LIVERY_YELLOW_MAIL		: Yellow livery, can carry mail
 STR_LIVERY_GREEN_PASS		: Green livery, can carry passengers
 STR_LIVERY_INVISIBLE		: Invisible leading engine
+
+STR_LIVERY_BOXCAR		: General boxcar
+STR_LIVERY_ISOTHERM		: Insulated boxcar
+STR_LIVERY_LIVESTOCK		: Stock boxcar
+STR_LIVERY_ARMOURED		: Armoured boxcar
+
+
 
 str_Fixed_Refit		: {RED}Fixed refit (only in depot){BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}
 str_AutoRefit		: {GREEN}Station autorefit available{BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}

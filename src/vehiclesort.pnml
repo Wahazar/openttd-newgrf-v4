@@ -380,6 +380,7 @@ item_coach_Gen6_Union_Voyager_Coach,
 #define SORTING_WAGONS_N \
 item_wagon_Gen1_Mixed, \
 item_wagon_Gen1_Flat_Wagon_European, \
+item_wagon_Gen1_Boxcar_European, \
 item_wagon_Gen1_Open_Wagon_European, \
 item_wagon_Gen1_Tanker_European, \
 item_wagon_Gen2_Mixed, \
