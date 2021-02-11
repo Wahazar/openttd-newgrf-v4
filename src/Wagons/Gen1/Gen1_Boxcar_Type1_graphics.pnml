@@ -37,7 +37,7 @@ spriteset(spriteset_wagon_Gen1_Boxcar_Type1_L4_S1, "gfx/Wagons/Gen1/Gen1_Boxcar_
 }
 
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen1_Boxcar_Type1) {
-	3: spriteset_wagon_Gen1_Boxcar_Type1_L1_S1;
+	2: spriteset_wagon_Gen1_Boxcar_Type1_L1_S1;
 	1: spriteset_wagon_Gen1_Boxcar_Type1_L2_S1;
 	1: spriteset_wagon_Gen1_Boxcar_Type1_L3_S1;
 	1: spriteset_wagon_Gen1_Boxcar_Type1_L4_S1;
