@@ -9,7 +9,7 @@
 #include "../undefine_properties.pnml"
 
 #define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
-#define CARGOSUBTYPESWITCHCALL DEFAULT_LIVERY_TEXT
+#define CARGOSUBTYPESWITCHCALL cargo_subtype_text: switch_livery_subtype_boxcar_text;
 
 
 #define VEHIDCODE wagon_Gen4_Boxcar_European

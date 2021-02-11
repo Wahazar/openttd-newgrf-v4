@@ -123,23 +123,25 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Reefer_capacity, cargo_
 	MILK: return HEAD_CAPACITY;
 	FISH: return HEAD_CAPACITY;
 	WATR: return HEAD_CAPACITY;
+	EOIL: return HEAD_CAPACITY;
 	BEER: return HEAD_CAPACITY;
 	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_REFRIGERATED); 
 }
 
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Livestock_capacity, cargo_type_in_veh) {
-	LVST: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	LVST: return min(2 * HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
 	FERT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	FMSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	PEAT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	WOOL: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	return 0; 
 }
 
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Armoured_capacity, cargo_type_in_veh) {
-	GOOD: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	GOOD: return HEAD_CAPACITY * 24 / cargo_unit_weight;
 	ENSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	BOOM: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
-	VALU: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	VALU: return HEAD_CAPACITY * 24 / cargo_unit_weight;
 	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_ARMOURED);  
 }
 
@@ -154,11 +156,11 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_cargo_capacity, cargo_s
 
 //livery subtype switch
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_cargo_selection, cargo_subtype) {
-	0: return switch_wagon_Gen4_Boxcar_Type1_Standard_livery;  //general boxcar
-	1: return switch_wagon_Gen4_Boxcar_Type1_Reefer_livery;    //insulated boxcar
-	2: return switch_wagon_Gen4_Boxcar_Type1_Livestock_livery; //stock boxcar
-	3: return switch_wagon_Gen4_Boxcar_Type1_Armoured_livery;  //armoured boxcar
-	return switch_wagon_Gen4_Boxcar_Type1_Standard_livery; 
+	0: return spritegroup_wagon_Gen4_Boxcar_Type1_Standard_livery;  //general boxcar
+	1: return spritegroup_wagon_Gen4_Boxcar_Type1_Reefer_livery;    //insulated boxcar
+	2: return spritegroup_wagon_Gen4_Boxcar_Type1_Livestock_livery; //stock boxcar
+	3: return spritegroup_wagon_Gen4_Boxcar_Type1_Armoured_livery;  //armoured boxcar
+	return spritegroup_wagon_Gen4_Boxcar_Type1_Standard_livery; 
 }
 
 /*

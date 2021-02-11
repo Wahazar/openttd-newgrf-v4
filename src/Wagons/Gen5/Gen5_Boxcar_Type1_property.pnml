@@ -8,13 +8,16 @@
 
 #include "../undefine_properties.pnml"
 
+#define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
+#define CARGOSUBTYPESWITCHCALL cargo_subtype_text: switch_livery_subtype_boxcar_text;
+
 #define VEHIDCODE wagon_Gen5_Boxcar_European
 #define ITEM item_wagon_Gen5_Boxcar_European
 #define NAME string(str_wagon_Gen5_Boxcar_European)
 
 #define VEHICLE_REGION REGION(REGIONTYPE1,NOREGION,NOCONCEPT)
 
-#define INTRODUCTION_YEAR 1990
+#define INTRODUCTION_YEAR 2005
 #define MODEL_LIFE 0
 #define RETIRE_EARLY DEFAULT_RETIRE_EARLY
 #define VEHICLE_LIFE 25

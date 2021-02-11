@@ -47,6 +47,9 @@ item(FEAT_TRAINS, ITEM ) {
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
+		ADDITIONALTEXTSWITCHCALL
+		CARGOSUBTYPESWITCHCALL
+		LIVERYMAPPINGSWITCHCALL
 		default: switch_wagon_Gen5_Boxcar_Type1_cargo_selection;
 	}
 }

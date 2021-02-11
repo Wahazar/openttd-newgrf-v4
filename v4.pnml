@@ -1302,6 +1302,9 @@
 #include "src/Wagons/Gen4/Gen4_Car_Transporter_graphics.pnml"
 #include "src/Wagons/Gen4/Gen4_Car_Transporter_item.pnml"
 
+#include "src/Wagons/Gen5/Gen5_Boxcar_Type1_property.pnml"
+#include "src/Wagons/Gen5/Gen5_Boxcar_Type1_graphics.pnml"
+#include "src/Wagons/Gen5/Gen5_Boxcar_Type1_item.pnml"
 #include "src/Wagons/Gen5/Gen5_Heavy_Flatcar_Type1_property.pnml"
 #include "src/Wagons/Gen5/Gen5_Heavy_Flatcar_Type1_graphics.pnml"
 #include "src/Wagons/Gen5/Gen5_Heavy_Flatcar_Type1_item.pnml"

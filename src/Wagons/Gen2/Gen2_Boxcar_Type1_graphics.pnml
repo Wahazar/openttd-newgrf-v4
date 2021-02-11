@@ -124,6 +124,7 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Boxcar_Type1_Reefer_capacity, cargo_
 	MILK: return HEAD_CAPACITY;
 	FISH: return HEAD_CAPACITY;
 	WATR: return HEAD_CAPACITY;
+	EOIL: return HEAD_CAPACITY;
 	BEER: return HEAD_CAPACITY;
 	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_REFRIGERATED); 
 }
@@ -133,6 +134,7 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Boxcar_Type1_Livestock_capacity, car
 	FERT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	FMSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	PEAT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	WOOL: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	return 0; 
 }
 
