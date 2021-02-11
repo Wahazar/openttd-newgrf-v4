@@ -115,7 +115,53 @@ spritegroup spritegroup_wagon_Gen4_Boxcar_Type1_Standard_livery {
 	loaded: [spriteset_wagon_Gen4_Boxcar_Type1_Standard_L1_S1, spriteset_wagon_Gen4_Boxcar_Type1_Standard_L1_S3, spriteset_wagon_Gen4_Boxcar_Type1_Standard_L1_S3];
 }
 
+//capacity depend on livery subtype:
 
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Reefer_capacity, cargo_type_in_veh) {
+	FOOD: return HEAD_CAPACITY;
+	FRUT: return HEAD_CAPACITY;
+	MILK: return HEAD_CAPACITY;
+	FISH: return HEAD_CAPACITY;
+	WATR: return HEAD_CAPACITY;
+	BEER: return HEAD_CAPACITY;
+	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_REFRIGERATED); 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Livestock_capacity, cargo_type_in_veh) {
+	LVST: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	FERT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	FMSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	PEAT: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	return 0; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Armoured_capacity, cargo_type_in_veh) {
+	GOOD: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	ENSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	BOOM: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
+	VALU: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
+	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_ARMOURED);  
+}
+
+//livery subtype switch
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_cargo_capacity, cargo_subtype) {
+	0: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);  //general boxcar
+	1: return switch_wagon_Gen4_Boxcar_Type1_Reefer_capacity;    //insulated boxcar
+	2: return switch_wagon_Gen4_Boxcar_Type1_Livestock_capacity; //stock boxcar
+	3: return switch_wagon_Gen4_Boxcar_Type1_Armoured_capacity;  //armoured boxcar
+	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight); 
+}
+
+//livery subtype switch
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_cargo_selection, cargo_subtype) {
+	0: return switch_wagon_Gen4_Boxcar_Type1_Standard_livery;  //general boxcar
+	1: return switch_wagon_Gen4_Boxcar_Type1_Reefer_livery;    //insulated boxcar
+	2: return switch_wagon_Gen4_Boxcar_Type1_Livestock_livery; //stock boxcar
+	3: return switch_wagon_Gen4_Boxcar_Type1_Armoured_livery;  //armoured boxcar
+	return switch_wagon_Gen4_Boxcar_Type1_Standard_livery; 
+}
+
+/*
 //Goods have multiple liveries
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Goods_livery) {
 	7: spritegroup_wagon_Gen4_Boxcar_Type1_Standard_livery;
@@ -135,6 +181,7 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_cargo_selection, cargo_
 	FISH: return spritegroup_wagon_Gen4_Boxcar_Type1_Reefer_livery;
 	return spritegroup_wagon_Gen4_Boxcar_Type1_Standard_livery; //GRAI, PAPR, WHEA, MAIZ, SUGR, TOYS, BATT, BUBL, BDMT, BRCK, CERA, CERE, COPR,ENSP, FERT, FMSP, GLAS, JAVA, MNSP, OLSD, POTA, RCYC, SGBT, SGCN, SULP, VEHI, WOOL
 }
+*/
 
 //Add defined switches
 

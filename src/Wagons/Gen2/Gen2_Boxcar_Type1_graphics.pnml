@@ -141,7 +141,7 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Boxcar_Type1_Armoured_capacity, carg
 	ENSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	BOOM: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	VALU: return min(HEAD_CAPACITY, HEAD_CAPACITY * 24 / cargo_unit_weight);
-	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_ARMOURED); ; 
+	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_ARMOURED);  
 }
 
 //livery subtype switch
@@ -150,8 +150,17 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Boxcar_Type1_cargo_capacity, cargo_s
 	1: return switch_wagon_Gen2_Boxcar_Type1_Reefer_capacity;    //insulated boxcar
 	2: return switch_wagon_Gen2_Boxcar_Type1_Livestock_capacity; //stock boxcar
 	3: return switch_wagon_Gen2_Boxcar_Type1_Armoured_capacity;  //armoured boxcar
-	return switch_wagon_Gen2_Boxcar_Type1_Standard_livery; 
+	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight); 
+}
 
+//livery subtype switch
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen2_Boxcar_Type1_cargo_selection, cargo_subtype) {
+	0: return switch_wagon_Gen2_Boxcar_Type1_Standard_livery;  //general boxcar
+	1: return switch_wagon_Gen2_Boxcar_Type1_Reefer_livery;    //insulated boxcar
+	2: return switch_wagon_Gen2_Boxcar_Type1_Livestock_livery; //stock boxcar
+	3: return switch_wagon_Gen2_Boxcar_Type1_Armoured_livery;  //armoured boxcar
+	return switch_wagon_Gen2_Boxcar_Type1_Standard_livery; 
+}
 
 //Goods have multiple liveries
 /*
