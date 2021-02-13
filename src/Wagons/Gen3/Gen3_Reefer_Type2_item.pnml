@@ -53,4 +53,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_wagon_Gen3_Type2_Reefer;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

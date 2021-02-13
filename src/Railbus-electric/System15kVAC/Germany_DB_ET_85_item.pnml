@@ -55,4 +55,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_rbe_Germany_DB_ET_85;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

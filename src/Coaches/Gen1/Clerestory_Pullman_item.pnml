@@ -53,4 +53,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_coach_Gen1_Clerestory_Pullman_livery;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

@@ -169,6 +169,14 @@ grf {
 			def_value: 1;
 		}
 	}
+	param {
+		param_slow_decay {
+			type:	bool;
+			name:	string(STR_PARAM_SLOW_DECAY);
+			desc:	string(STR_PARAM_SLOW_DECAY_DESC);
+			def_value: 1;
+		}
+	}
 }
 
 //disable original rail vehicles

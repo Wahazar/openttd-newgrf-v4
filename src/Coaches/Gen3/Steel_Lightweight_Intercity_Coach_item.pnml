@@ -53,4 +53,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_coach_Gen3_Steel_Lightweight_Intercity_Coach_livery;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

@@ -55,3 +55,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_rbd_Czech_Republic_CD_M120;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

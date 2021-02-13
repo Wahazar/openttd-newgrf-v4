@@ -68,3 +68,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_mtro_Germany_Munchen_MVG_A2_middle;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

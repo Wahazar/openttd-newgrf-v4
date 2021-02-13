@@ -68,3 +68,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_mtro_Germany_Berlin_U_Bahn_A_I_middle;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

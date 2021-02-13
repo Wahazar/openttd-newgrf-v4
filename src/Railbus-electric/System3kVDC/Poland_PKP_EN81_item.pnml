@@ -55,4 +55,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_rbe_Poland_PKP_EN81;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

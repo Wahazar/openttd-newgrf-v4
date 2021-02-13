@@ -55,4 +55,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_rbd_Lithuania_Lithuanian_Railways_AR2;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

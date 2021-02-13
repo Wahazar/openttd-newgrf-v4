@@ -79,3 +79,6 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_emu_Czech_Republic_CD_640_cargo_selection;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY
+

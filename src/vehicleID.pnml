@@ -713,7 +713,7 @@ item(FEAT_TRAINS, item_wagon_Gen5_Centerbeam_European, 12064) {}
 //car transporter
 item(FEAT_TRAINS, item_wagon_Gen5_Car_Transporter, 12065) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Reefercar_European, 12067) {}
-// item(FEAT_TRAINS, item_wagon_Gen5_Boxcar_European, 12068) {}
+item(FEAT_TRAINS, item_wagon_Gen5_Boxcar_European, 12068) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Armoured_Boxcar_European, 12069) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Livestock_Boxcar_European, 12070) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Grain_Boxcar_European, 12071) {}

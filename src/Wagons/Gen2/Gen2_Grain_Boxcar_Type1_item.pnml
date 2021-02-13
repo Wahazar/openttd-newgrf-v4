@@ -54,4 +54,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_wagon_Gen2_Grain_Boxcar_Type1;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

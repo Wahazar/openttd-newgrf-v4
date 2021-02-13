@@ -59,3 +59,5 @@ item(FEAT_TRAINS, ITEM ) {
 		purchase_cargo_capacity:    return HEAD_CAPACITY;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

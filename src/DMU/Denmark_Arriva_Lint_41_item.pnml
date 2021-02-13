@@ -78,3 +78,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_dmu_Denmark_Arriva_Lint_41_cargo_selection;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

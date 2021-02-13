@@ -55,3 +55,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_rbd_Germany_OHE_520_GDT;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

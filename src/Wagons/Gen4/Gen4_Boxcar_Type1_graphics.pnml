@@ -138,10 +138,10 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Livestock_capacity, car
 }
 
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Boxcar_Type1_Armoured_capacity, cargo_type_in_veh) {
-	GOOD: return HEAD_CAPACITY * 24 / cargo_unit_weight;
+	GOOD: return HEAD_CAPACITY * 16 / cargo_unit_weight;
 	ENSP: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
 	BOOM: return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight);
-	VALU: return HEAD_CAPACITY * 24 / cargo_unit_weight;
+	VALU: return HEAD_CAPACITY * 16 / cargo_unit_weight;
 	return min(HEAD_CAPACITY, HEAD_CAPACITY * 16 / cargo_unit_weight) * hasbit(cargo_classes, CC_ARMOURED);  
 }
 

@@ -68,3 +68,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: spriteset_mtro_Singapore_Singapore_C830_Metropolis_middle;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

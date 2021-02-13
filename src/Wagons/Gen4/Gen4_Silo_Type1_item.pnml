@@ -54,4 +54,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_wagon_Gen4_Silo_Type1_livery;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

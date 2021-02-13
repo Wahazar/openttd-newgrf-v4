@@ -75,4 +75,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_emu_Switzerland_SBB_RABe_523_Flirt_cargo_selection;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

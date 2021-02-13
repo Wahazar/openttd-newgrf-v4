@@ -424,6 +424,7 @@ item_wagon_Gen5_Flat_Wagon_European, \
 item_wagon_Gen5_Heavy_Flatcar, \
 item_wagon_Gen5_Car_Transporter, \
 item_wagon_Gen5_Reefercar_European, \
+item_wagon_Gen5_Boxcar_European, \
 item_wagon_Gen5_Armoured_Boxcar_European, \
 item_wagon_Gen5_Livestock_Boxcar_European, \
 item_wagon_Gen5_Grain_Boxcar_European, \

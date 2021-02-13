@@ -57,12 +57,14 @@ STR_PARAM_LOADINGSPEED_ULTRA			:As fast as possible
 STR_PARAM_CUSTOM_TRACKS			:Enable custom tracks
 STR_PARAM_CUSTOM_TRACKS_DESC		:Enable custom tracks (normal or broad gauge, with different voltages and speeds). Given type will be enabled if appropriate rolling stock fleet is also enabled.
 
+STR_PARAM_CARGO_RUNNING_COST			:Variable running costs for freight wagons
+STR_PARAM_CARGO_RUNNING_COST_DESC		:Running costs depend on weight of cargo loaded (low costs for empty car), if this option is enabled.
+
 STR_PARAM_DISABLE_ATTACH			:Disable attaching vehicles from other newgrfs
 STR_PARAM_DISABLE_ATTACH_DESC		:Wagons and locomotives from other newgrfs cannot be attached to vehicles from this set (to avoid broken game balance, glitches etc).
 
-
-STR_PARAM_CARGO_RUNNING_COST			:Variable running costs for freight wagons
-STR_PARAM_CARGO_RUNNING_COST_DESC		:Running costs depend on weight of cargo loaded (low costs for empty car), if this option is enabled.
+STR_PARAM_SLOW_DECAY			:Cargo ageing speed decreased x4
+STR_PARAM_SLOW_DECAY_DESC		:Cargo revenue decay is slower, like for ships. This settings is recommended for large maps and/or XIX century scenarios.
 
 STR_EOL				:{}
 
@@ -592,7 +594,7 @@ str_wagon_Gen4_Heavy_Flatcar_European 			:4th Gen Heavy Flatcar (normal gauge)
 
 # str_wagon_Gen5_Flat_Wagon_European 			:5th Gen Flat Wagon
 # str_wagon_Gen5_Flat_Wagon_Russian 			:5th Gen Flat Wagon (broad gauge)
-# str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
+str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
 str_wagon_Gen5_Sliding_Wall_European 			:5th Gen Sliding Wall Van (normal gauge)
 str_wagon_Gen5_Boxcar_Russian 			:5th Gen Universal Boxcar (broad gauge)
 str_wagon_Gen5_Armoured_Boxcar_European			:5th Gen Armoured Car (normal gauge)

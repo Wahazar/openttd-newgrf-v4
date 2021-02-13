@@ -79,4 +79,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_emu_Bulgaria_BDZ_10_Desiro_cargo_selection;
 	}
 }
-SET_TRACK_TYPE
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

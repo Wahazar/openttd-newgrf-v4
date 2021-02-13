@@ -20,3 +20,12 @@
 
 #define COMMUTER_CLIMA_COMFORT 140
 
+#define EXTENDED_CARGO_DECAY \
+if (param_slow_decay) {\
+ item(FEAT_TRAINS, ITEM ) {\
+  property {\
+   		cargo_age_period: 4 * CARGO_AGE_PERIOD;\
+  }\
+ }\
+} 
+
