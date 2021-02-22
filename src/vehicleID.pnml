@@ -303,18 +303,17 @@ item(FEAT_TRAINS, item_electric_Germany_DR_E_18, 6015) {}
 
 item(FEAT_TRAINS, item_electric_Austria_OBB_1020_Crocodile, 6017) {}
 
-
+item(FEAT_TRAINS, item_electric_Austria_OBB_1040, 6026) {}
 item(FEAT_TRAINS, item_electric_Italy_FS_E646, 6027) {}
-
 item(FEAT_TRAINS, item_electric_Austria_OBB_1010, 6028) {}
-
+item(FEAT_TRAINS, item_electric_Austria_OBB_1042, 6029) {}
 item(FEAT_TRAINS, item_electric_France_SNCF_CC_40100, 6030) {}
 item(FEAT_TRAINS, item_electric_Croatia_HZ_1141, 6031) {}
 item(FEAT_TRAINS, item_electric_Germany_DB_1031, 6032) {}
 item(FEAT_TRAINS, item_electric_Germany_DR_E42, 6033) {}
-
+item(FEAT_TRAINS, item_electric_Austria_OBB_4061, 6034) {}
 item(FEAT_TRAINS, item_electric_Austria_OBB_1044, 6035) {}
-
+item(FEAT_TRAINS, item_electric_Austria_OBB_1014, 6036) {}
 item(FEAT_TRAINS, item_electric_Poland_PKP_ET41, 6037) {}
 item(FEAT_TRAINS, item_electric_Germany_DR_243, 6038) {}
 item(FEAT_TRAINS, item_electric_Austria_OBB_1063, 6039) {}

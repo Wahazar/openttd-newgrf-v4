@@ -201,7 +201,9 @@ item_electric_Austria_OBB_1161, /*Year: 1928*/ \
 item_electric_Germany_DB_104, /*Year: 1933*/ \
 item_electric_Germany_DR_E_18, /*Year: 1935*/ \
 item_electric_Austria_OBB_1020_Crocodile, /*Year: 1940*/ \
+item_electric_Austria_OBB_1040, /*Year: 1950*/ \
 item_electric_Austria_OBB_1010, /*Year: 1955*/ \
+item_electric_Austria_OBB_4061, /*Year: 1956*/ \
 item_electric_Germany_DR_E42, /*Year: 1962*/ \
 item_electric_Germany_DB_1031, /*Year: 1970*/ \
 item_electric_Austria_OBB_1044, /*Year: 1974*/ \
@@ -216,6 +218,7 @@ item_electric_Slovakia_ZSSK_350, /* 1973 */ \
 item_electric_Czech_Republic_CD_363, /* 1980 */ \
 item_electric_Czech_Republic_CD_372, /* 1991 */ \
 item_electric_Czech_Republic_CD_362, /* 1993 */ \
+item_electric_Austria_OBB_1014, /* 1993*/ \
 item_electric_Germany_DB_185_TRAXX_F140, /* 2000*/ \
 item_electric_Germany_DB_182_ES64U_Taurus, /*Year: 2000*/ \
 item_electric_Czech_Republic_CD_380, /* 2008 */ \

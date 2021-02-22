@@ -10,6 +10,7 @@
 
 #include "undefine_type.pnml"
 
+#define SET_TRACK_TYPE //standard rail
 #define CURRENT_TRACK_TYPE RAIL
 #define CURRENT_RUNNING_COST_BASE RUNNING_COST_DIESEL
 #define CURRENT_ENGINE_CLASS ENGINE_CLASS_DIESEL

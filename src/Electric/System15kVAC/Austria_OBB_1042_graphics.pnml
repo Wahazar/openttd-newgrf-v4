@@ -1,22 +1,30 @@
 /*
- *  Copyright (C) 2017 Transportman
- *  This file is part of the 2cc Trains In NML and is based on The Dutch Trainset 2.0 by Jasper Vries
+ *  Copyright (C) 2017-2020 Transportman, McZapkie
+ *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 */
 
-//this file is used to define steam railbus vehicle type information
+/*
+* PURCHASE
+*/
 
-#include "undefine_type.pnml"
+spriteset(spriteset_electric_Austria_OBB_1042_purchase, "gfx/Electric/Austria_OBB_1042.png") {
+	template_purchase(1, 64)
+}
 
-#define SET_TRACK_TYPE //standard rail
-#define CURRENT_TRACK_TYPE RAIL
-#define CURRENT_RUNNING_COST_BASE RUNNING_COST_STEAM
-#define CURRENT_ENGINE_CLASS ENGINE_CLASS_STEAM
+/*
+* VEHICLE
+*/
 
-// Room for specific defines
-#define PURCHASECOSTVALUE PURCHASECOSTSTEAMRAILBUSVALUE
-#define RUNNINGCOSTVALUE RUNNINGCOSTSTEAMRAILBUSVALUE
+//Engine
+spriteset(spriteset_electric_Austria_OBB_1042, "gfx/Electric/Austria_OBB_1042.png") {
+	template_2cc_engines_general(1, 1)
+}
 
-#define DEFAULT_RELIABILITY_DECAY STEAMTANK_RELIABILITY_DECAY
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

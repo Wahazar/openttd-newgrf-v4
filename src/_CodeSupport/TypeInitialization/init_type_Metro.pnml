@@ -10,6 +10,14 @@
 
 #include "undefine_type.pnml"
 
+#define SET_TRACK_TYPE if (param_custom_tracks) {\
+ item(FEAT_TRAINS, ITEM ) {\
+  property {\
+   track_type: MTRO;\
+  }\
+ }\
+} 
+
 #define CURRENT_TRACK_TYPE MTRO
 #define CURRENT_RUNNING_COST_BASE RUNNING_COST_ELECTRIC
 #define CURRENT_ENGINE_CLASS ENGINE_CLASS_MAGLEV
