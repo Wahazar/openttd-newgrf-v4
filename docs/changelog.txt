@@ -1,6 +1,10 @@
 V4 Trains changelog
 =========================
 
+7740:
+ - PKP, OBB diesel and electric locomotives added
+ - 3 kV EMU parameters fixed
+
 7723:
  - reliability decay descriptive strings added
  - extended cargo decay rates option added

@@ -19,7 +19,7 @@
 #define NAME string(str_diesel_Austria_OBB_2016,string(str_Diesel))
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_Austria_OBB_2016,string(str_Diesel_Hydraulic, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
-#define VEHICLE_REGION REGION(WESTEUROPE,PRIVATE,NOCONCEPT)
+#define VEHICLE_REGION REGION(WESTERNEUROPE,PRIVATE,NOCONCEPT)
 
 #define INTRODUCTION_YEAR 2002
 #define MODEL_LIFE VEHICLE_NEVER_EXPIRES
