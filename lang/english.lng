@@ -348,9 +348,9 @@ str_diesel_Poland_PKP_SP32 			:LDE1300 FAUR Bo'Bo' {STRING}
 str_diesel_Poland_PKP_SU160 			:SU160 Pesa Bo'Bo' "Gama"{STRING}
 str_diesel_Serbia_ZS_621 			:T 239.1 CKD Praha Bo {STRING}
 str_diesel_UK_BR_66		:JT42CWRM EMD Co'Co' {STRING}
-# str_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
+str_diesel_Austria_OBB_2043	:2043 Jenbacher B'B'{STRING}
 # str_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
-# str_diesel_Austria_OBB_2016	:OBB 2016 {STRING}
+str_diesel_Austria_OBB_2016	:ER20 Siemens Bo'Bo' "Eurorunner"{STRING}
 # str_diesel_Czechia_CSD_753_T669 		:CSD T669.0/CD 753 {STRING}
 # str_diesel_Czechia_CSD_742_T4662 		:CSD T466.2/CD 742 {STRING}
 # str_diesel_Czechia_CSD_7415 		:CD 741.5 {STRING}
@@ -359,6 +359,8 @@ str_diesel_Germany_DR_132 		:TE109 Luhansk Co'Co' {STRING}
 # str_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
 # str_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
 str_diesel_Poland_PKP_SM42 		:6D Fablok Bo'Bo' {STRING}
+str_diesel_Poland_PKP_SP45 		:301D Cegielski Co'Co' {STRING}
+str_diesel_Poland_PKP_SU46 		:303D Cegielski Co'Co' {STRING}
 
 str_diesel_UE_CNG_Shunter 	:CNG Shunter (Diesel Hybrid)
 str_diesel_Shed_shunter :Shed shunter {STRING}
@@ -391,6 +393,10 @@ str_electric_Germany_Prussian_EG511 				:EG511 AEG B'B' {STRING}
 str_electric_Germany_DR_230 					:76E Skoda Bo'Bo' {STRING}
 str_electric_Austria_OBB_1020_Crocodile 			:AEG Co'Co' "Crocodile"{STRING}
 str_electric_Austria_OBB_1010 					:1010 ABES Co'Co' {STRING}
+str_electric_Austria_OBB_1014 					:1014 SGP/ELIN Bo'Bo' {STRING}
+str_electric_Austria_OBB_1040 					:1040 ELIN Bo'Bo' {STRING}
+str_electric_Austria_OBB_1042 					:1042 BES Bo'Bo' {STRING}
+str_electric_Austria_OBB_4061 					:4061  WLF/ABES Bo'Bo' {STRING}
 str_electric_Germany_DB_1031 					:103.1 Henschel Co'Co' {STRING}
 str_electric_Germany_DR_E42 					:E42 LEW Hennigsdorf Bo'Bo' {STRING}
 str_electric_Austria_OBB_1044 					:1044 BBC Baden Bo'Bo' {STRING}
@@ -409,8 +415,10 @@ str_electric_Hungary_MAV_Class_V46 		:VM16 Ganz-MAVAG Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_S499 		:47E Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_E458_1 		:78E Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CSD_E669_1 		:31E Skoda Co'Co' {STRING}
+str_electric_Czech_Republic_CSD_E458_1 		:78E Skoda Bo'Bo' {STRING}
 
 str_electric_Czech_Republic_CD_380 		:109E Skoda Bo'Bo' {STRING}
+str_electric_Czech_Republic_CD_114 		:90E Skoda Bo'Bo' {STRING}
 str_electric_Croatia_HZ_1141 					:040-EC ASEA/Koncar Bo'Bo' {STRING}
 str_electric_Macedonia_Macedonian_Railways_462 			:060-EA ASEA/Electroputere Co'Co' {STRING}
 str_electric_Romania_CFR_478_Phoenix 			:'Phoenix' Softronic 478 Co'Co' {STRING}
@@ -423,6 +431,7 @@ str_electric_Czech_Republic_CD_363 		:69E Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_362 		:69Er Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_372 		:76E Skoda Bo'Bo' {STRING}
 str_electric_Poland_PKP_EL_200 		:EL.200 Cegielski Bo'Bo' {STRING}
+str_electric_Poland_PKP_EP02 		:1E Pafawag Bo'Bo' {STRING}
 str_electric_Poland_PKP_EP03 		:E150 ASEA Bo'Bo' {STRING}
 str_electric_Poland_PKP_EU06 		:AEI E Vulcan Bo'Bo' {STRING}
 str_electric_Poland_PKP_ET21 		:3E Pafawag Co'Co' {STRING}
@@ -493,6 +502,8 @@ str_emu_Russia_RZD_S 					:S MWM Bo'Bo' {STRING}
 str_emu_Russia_RZD_ER2 					:ER2 RVR Bo'Bo' {STRING}
 str_emu_Russia_RZD_ER200 				:ER200 RVR Bo'Bo' {STRING}
 str_emu_Russia_RZD_ES1_Lastochka 			:'Lastochka' Siemens/Ural Bo'Bo' {STRING}
+
+str_edmu_Poland_Newag_36_WEh 					:Newag Bo'2'2'Bo' "Impuls" {STRING}
 
 #Multiple Unit Metro
 str_mtro_Germany_DB_ET_171					:DRG ET 171/DB 471 (Metro)
@@ -862,7 +873,7 @@ str_class_diesel_UE_CNG_Shunter 		:DB 372/ELP NGHS1
 str_class_diesel_UK_BR_66			:FPL 66/HGK 266/MRCE dispolok 66
 str_class_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
 str_class_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
-str_class_diesel_Austria_OBB_2016	:OBB 2016 {STRING}
+str_class_diesel_Austria_OBB_2016	:OBB 2016/DLB ER20 {STRING}
 str_class_diesel_Czechia_CSD_753_T669 		:CSD T669.0/CD 753 {STRING}
 str_class_diesel_Czechia_CSD_742_T4662 		:CSD T466.2/CD 742 {STRING}
 str_class_diesel_Czechia_CSD_7415 		:CD 741.5 {STRING}
@@ -872,6 +883,8 @@ str_class_diesel_Germany_DR_132 		:DR 132/DB 232 {STRING}
 str_class_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
 str_class_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
 str_class_diesel_Poland_PKP_SM42 		:PKP SM42/Kolprem Ls800P {STRING}
+str_class_diesel_Poland_PKP_SP45 		:PKP SP45/SU45 {STRING}
+str_class_diesel_Poland_PKP_SU46 		:PKP SU46 {STRING}
 
 str_hint_diesel_Shed_shunter 		:Refit to goods to make invisible leading/spacer engine
 
@@ -882,6 +895,10 @@ str_class_electric_Germany_DB_104 					:DRG E 04/DB 104/DR 204 {STRING}
 str_class_electric_Germany_DR_E_18 					:DRG E 18/DR 218/OBB 1018 {STRING}
 str_class_electric_Austria_OBB_1020_Crocodile 				:DRG E94/DR 254/OBB 1020  {STRING}
 str_class_electric_Austria_OBB_1010 					:OBB 1010 {STRING}
+str_class_electric_Austria_OBB_1040 					:OBB 1040 {STRING}
+str_class_electric_Austria_OBB_1042 					:OBB 1042 {STRING}
+str_class_electric_Austria_OBB_1014 					:OBB 1014 {STRING}
+str_class_electric_Austria_OBB_4061 					:OBB 4061 {STRING}
 str_class_electric_Russia_RZD_VL22M 					:SZD VL22M {STRING}
 str_class_electric_Croatia_HZ_1141 					:JZ 441/HZ 1141/CFR 40 {STRING}
 str_class_electric_Germany_DB_1031 					:DB 103.1 {STRING}
@@ -899,6 +916,7 @@ str_class_electric_Germany_DB_182_ES64U_Taurus 				:DB 182/OBB 1016/MAV 1047/MRC
 str_class_electric_Kazakhstan_KTZ_KZ4A 				:KTZ KZ4A {STRING}
 str_class_electric_Germany_DB_E_919 					:E 91.9/DB 191.9 {STRING}
 str_class_electric_Poland_PKP_EL_200 					:PKP EL.200 {STRING}
+str_class_electric_Poland_PKP_EP02 					:PKP EP02 {STRING}
 str_class_electric_Poland_PKP_EP03 					:PKP EP03 {STRING}
 str_class_electric_Russia_RZD_ChS3 					:SZD ChS3 {STRING}
 str_class_electric_Czech_Republic_CSD_E499_1				:CSD E499.1/CD 141/PKP EU05 {STRING}
@@ -914,6 +932,7 @@ str_class_electric_Hungary_MAV_Class_V63 				:MAV V63 {STRING}
 str_class_electric_Hungary_MAV_Class_V46 				:MAV V46 {STRING}
 str_class_electric_Czech_Republic_CD_S499 				:CSD S499/CD 240 {STRING}
 str_class_electric_Czech_Republic_CD_380 				:CD 380/DB 102 {STRING}
+str_class_electric_Czech_Republic_CD_114 				:CD 114.5 {STRING}
 str_class_electric_Russia_RZD_EP20 :RZD EP20 {STRING}
 str_class_electric_Kazakhstan_KTZ_KZ8A :KTZ KZ8A {STRING}
 str_class_electric_Macedonia_Macedonian_Railways_462 			:CFR 40/JZ 461 {STRING}
@@ -989,6 +1008,7 @@ str_class_emu_Europe_Sureot :Sureot {STRING}
 str_class_emu_Germany_DB_ET420 					:DB 420 {STRING}
 str_class_emu_Czechia_Leo_480 					:LE 480/PKP ED160 {STRING}
 
+str_class_edmu_Poland_Newag_36_WEh				:PKP EN63H {STRING}
 
 #PURCHASE MENU TEXTS
 str_unit_wagon_passenger	:This generic wagon can ONLY be used with passenger MUs to create trains of the desired length
@@ -1051,7 +1071,8 @@ str_Diesel_Hydraulic	: diesel-hydraulic engine {}{STRING} {}Reliability decay: {
 str_Diesel_Mechanic	: diesel-mechanical engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Gas_Turbine		: gas-turbine locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
-str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster 
+str_Hybrid	: hybrid engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Steam		: (Steam)
 str_Steam_Russian	: (Steam, broad gauge)
@@ -1067,6 +1088,7 @@ str_Electric		: (Electric, {STRING})
 str_Electric_Russian	: (Electric, broad gauge, DC system)
 # str_Electric_Universal	: (Electric, broad or normal gauge, DC system)
 str_EMU			: (EMU, {STRING})
+str_EMU_Hybrid		: (EMU {STRING} hybrid with {UNSIGNED_WORD} hp diesel engine)
 str_EMU_Russian		: (EMU, broad gauge)
 str_DMU			: (DMU)
 str_DMU_Russian		: (DMU, broad gauge)

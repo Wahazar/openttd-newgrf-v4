@@ -204,7 +204,8 @@ item(FEAT_TRAINS, item_diesel_Germany_DB_270, 5003) {}
 // 5011 feee
 
 item(FEAT_TRAINS, item_diesel_Austria_OBB_2060, 5015) {}
-
+item(FEAT_TRAINS, item_diesel_Austria_OBB_2043, 5016) {}
+item(FEAT_TRAINS, item_diesel_Austria_OBB_2016, 5017) {}
 item(FEAT_TRAINS, item_diesel_Hungary_MAV_M44, 5018) {}
 item(FEAT_TRAINS, item_diesel_Hungary_MAV_M28, 5019) {}
 
@@ -241,7 +242,8 @@ item(FEAT_TRAINS, item_diesel_Germany_HVLE_V490, 5062) {}
 //5064 free
 
 item(FEAT_TRAINS, item_diesel_Poland_PKP_SM42, 5110) {}
-
+item(FEAT_TRAINS, item_diesel_Poland_PKP_SP45, 5111) {}
+item(FEAT_TRAINS, item_diesel_Poland_PKP_SU46, 5112) {}
 
 item(FEAT_TRAINS, item_diesel_Poland_PKP_SP32, 5114) {}
 item(FEAT_TRAINS, item_diesel_Poland_PKP_SU160, 5115) {}
@@ -332,7 +334,7 @@ item(FEAT_TRAINS, item_electric_Germany_DR_251, 6059) {}
 //6062 free
 
 item(FEAT_TRAINS, item_electric_Italy_FS_E626, 6067) {}
-//item(FEAT_TRAINS, item_electric_Italy_FS_E550, 6068) {}
+item(FEAT_TRAINS, item_electric_Poland_PKP_EP02, 6088) {}
 item(FEAT_TRAINS, item_electric_Sweden_SJ_O_Class, 6069) {}
 
 item(FEAT_TRAINS, item_electric_Germany_DB_E_919, 6074) {}
@@ -353,7 +355,7 @@ item(FEAT_TRAINS, item_electric_Slovenia_SZ_363, 6087) {}
 item(FEAT_TRAINS, item_electric_Czech_Republic_CD_S499, 6089) {}
 item(FEAT_TRAINS, item_electric_Italy_FS_E444, 6090) {}
 item(FEAT_TRAINS, item_electric_Czech_Republic_CD_380, 6091) {}
-
+item(FEAT_TRAINS, item_electric_Czech_Republic_CD_114, 6092) {}
 item(FEAT_TRAINS, item_electric_Hungary_MAV_Class_V63, 6093) {}
 
 item(FEAT_TRAINS, item_electric_Hungary_MAV_Class_V46, 6096) {}
@@ -431,6 +433,8 @@ item(FEAT_TRAINS, item_dmu_Germany_DB_6282, 7047) {}
 
 item(FEAT_TRAINS, item_dmu_Denmark_Arriva_Lint_41, 7048) {}
 
+
+item(FEAT_TRAINS, item_edmu_Poland_Newag_36_WEh, 7800) {}
 
 //DMU, available ID range: 7900-7999 (hex 0x1EDC..0x1F3F) - broad gauge
 #define ID_RANGE_DMU_B 0x1EDC..0x1F3F

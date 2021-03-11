@@ -319,7 +319,7 @@ str_diesel_Germany_DB_261_Gravita_10BB          :'Gravita' Voith B'B' {STRING}
 str_diesel_Germany_HVLE_V490                    :'Maxima 30CC' Voith Turbo Kiel C'C'{STRING}
 str_diesel_Poland_PKP_SP32                      :LDE1300 FAUR Bo'Bo' {STRING}
 str_diesel_Serbia_ZS_621                        :T234.0 CKD Praha Bo {STRING}
-str_diesel_UK_BR_66             :JT42CWRM EMD Co'Co'
+str_diesel_UK_BR_66             :JT42CWRM EMD Co'Co' {STRING}
 # str_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
 # str_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
 # str_diesel_Austria_OBB_2016	:OBB 2016 {STRING}
@@ -642,7 +642,7 @@ str_class_Railbus_Trailer                                               :- docze
 #Railbus-steam
 str_class_rbs_Austria_NOLB_1            :NOLB 1/PKP PCix {STRING}
 str_class_rbs_Germany_Bavarian_MCCi :K.Bay.Sts.B. MCCi {STRING}
-str_class_rbs_Austria_kkStB_4_0 :ONWB IXb/CSD M112.0
+str_class_rbs_Austria_kkStB_4_0 :ONWB IXb/CSD M112.0 {STRING}
 
 #Railbus-diesel
 str_class_rbd_Germany_DB_VT_133                                         :DRG/DB VT 133 {STRING}
@@ -906,30 +906,31 @@ STR_LIVERY_PRIBALTICA           : koleje litewskie
 
 STR_LIVERY_YELLOW_MAIL		: malowanie żółte, przewóz poczty
 STR_LIVERY_GREEN_PASS		: malowanie zielone, przewóz pasażerów
-STR_LIVERY_YELLOW               : malowanie żółte
-STR_LIVERY_GREEN                : malowanie zielone
+# STR_LIVERY_YELLOW               : malowanie żółte
+# STR_LIVERY_GREEN                : malowanie zielone
 STR_LIVERY_INVISIBLE            :Niewidoczny
 
 str_Fixed_Refit         : {RED}Przebudowa na inny towar tylko w warsztatach{BLACK}{}Szybkość wyładunku: {GOLD}{UNSIGNED_WORD}{BLACK}{}Komfort/trwałość wartości towaru: {GOLD}{UNSIGNED_WORD}{BLACK}
 str_AutoRefit           : {GREEN}Możliwość zmiany towaru na stacji{BLACK}{}Szybkość wyładunku: {GOLD}{UNSIGNED_WORD}{BLACK}{}Komfort/trwałość wartości towaru: {GOLD}{UNSIGNED_WORD}{BLACK}
 
-str_Voltage_System      : napięcie trakcyjne: {UNSIGNED_WORD} kV{}{STRING}
-str_Multi_Voltage_System        : dostosowany do różnych napięć{}{STRING}
+str_Voltage_System      : napięcie trakcyjne: {UNSIGNED_WORD} kV{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Multi_Voltage_System        : dostosowany do różnych napięć{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_DC_Voltage          : {LTBLUE}system stałoprądowy{BLACK}
 str_AC503_Voltage       :{RED}system 50:3 Hz{BLACK}
 str_AC50_Voltage        : {DKBLUE}system 50 Hz{BLACK}
 str_Dual_Voltage        : {BLUE}wielosystemowy{BLACK}
 
-str_Steam_Tender_Locomotive     :lokomotywa z tendrem
-str_Steam_Tank_Locomotive       :tendrzak
+str_Steam_Tender_Locomotive     :lokomotywa z tendrem {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Steam_Tank_Locomotive       :tendrzak {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 
-str_Diesel_Electric     : z przekładnią elektryczną{}{STRING}
-str_Diesel_Hydraulic    : z przekładnią hydrauliczną{}{STRING}
-str_Diesel_Mechanic     : z przekładnią mechaniczną{}{STRING}
-str_Gas_Turbine         :z turbiną gazową
+str_Diesel_Electric     : z przekładnią elektryczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Hydraulic    : z przekładnią hydrauliczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Diesel_Mechanic     : z przekładnią mechaniczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Gas_Turbine         :z turbiną gazową {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Electric_Diesel	: elektrowóz {STRING} ze spalinowym modułem dojazdowym (moc {UNSIGNED_WORD} KM)
+str_Hybrid	: napęd hybrydowy {}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Steam               :(Parowóz)
 str_Steam_Russian       : (Parowóz, 1520mm)

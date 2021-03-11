@@ -1,0 +1,181 @@
+/*
+ *  Copyright (C) 2017-2021 Transportman, McZapkie
+ *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_purchase, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_purchase_dualheaded(1, 160)
+}
+
+/*
+* VEHICLE
+*/
+
+//Front
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_front_pass, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 1)
+}
+
+//Back
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_front_mail, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 1)
+}
+
+//Front mail
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_back_pass, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 32)
+}
+
+//Back mail
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_back_mail, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 32)
+}
+
+//Middle - PAX unpowered
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_middlepass_LP, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 96)
+}
+
+//Middle - PAX powered
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_middlepass_LU, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 64)
+}
+
+//Middle - MAIL unpowered
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_middlemail_LP, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 96)
+}
+
+//Middle - MAIL powered
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_middlemail_LU, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 64)
+}
+
+//Front diesel
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_front_pass_diesel, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 128)
+}
+
+//Front mail diesel
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_front_mail_diesel, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 128)
+}
+
+//Back diesel
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_back_pass_diesel, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(1, 32)
+}
+
+//Back mail diesel
+spriteset(spriteset_edmu_Poland_Newag_36_WEh_back_mail_diesel, "gfx/EMU/Poland_Newag_36_WEh.png") {
+	template_2cc_engines_general(179, 32)
+}
+
+//Graphics for the head pass wagon based on track type
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_front_pass, current_railtype ) {
+	SAAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	SBAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	SCAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	SDAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	SEAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	SFAD: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	ELRL: spriteset_edmu_Poland_Newag_36_WEh_front_pass;
+	RAIL: spriteset_edmu_Poland_Newag_36_WEh_front_pass_diesel;
+	0xFF: spriteset_edmu_Poland_Newag_36_WEh_front_pass_diesel;
+	spriteset_edmu_Poland_Newag_36_WEh_front_pass_diesel;
+}
+
+//Graphics for the head mail wagon based on track type
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_front_mail, current_railtype ) {
+	SAAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	SBAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	SCAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	SDAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	SEAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	SFAD: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	ELRL: spriteset_edmu_Poland_Newag_36_WEh_front_mail;
+	RAIL: spriteset_edmu_Poland_Newag_36_WEh_front_mail_diesel;
+	0xFF: spriteset_edmu_Poland_Newag_36_WEh_front_mail_diesel;
+	spriteset_edmu_Poland_Newag_36_WEh_front_mail_diesel;
+}
+
+//Graphics for the head wagon based on cargo class
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_front_head_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): switch_edmu_Poland_Newag_36_WEh_front_pass;
+	switch_edmu_Poland_Newag_36_WEh_front_mail;
+}
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_back_head_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): spriteset_edmu_Poland_Newag_36_WEh_back_pass;
+	spriteset_edmu_Poland_Newag_36_WEh_back_mail;
+}
+
+//Dualheaded engines
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_reversed, var[0xC8]) {
+	0xFE: switch_edmu_Poland_Newag_36_WEh_back_head_cargo_selection;
+    0xFF: switch_edmu_Poland_Newag_36_WEh_back_head_cargo_selection; 
+    switch_edmu_Poland_Newag_36_WEh_front_head_cargo_selection;
+}
+
+
+//Visual effect, depend on track type
+
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_traction_effect, current_railtype ) {
+	SAAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SBAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SCAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SDAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SEAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SFAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	ELRL: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	RAIL: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+	0xFF: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+	return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}
+
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_visual_effect_and_powered, var[0xC8]) {
+	0xFE: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+	0xFF: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
+
+	switch_edmu_Poland_Newag_36_WEh_traction_effect;
+}
+
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_middlepass_livery, vehicle_type_id) {
+	item_mu_wagon_powered: return spriteset_edmu_Poland_Newag_36_WEh_middlepass_LP;
+	return spriteset_edmu_Poland_Newag_36_WEh_middlepass_LU;
+}
+
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_middlemail_livery, vehicle_type_id) {
+	item_mu_wagon_powered: return spriteset_edmu_Poland_Newag_36_WEh_middlemail_LP;
+	return spriteset_edmu_Poland_Newag_36_WEh_middlemail_LU;
+}
+
+
+/*
+* Cargo capacity
+*/
+
+ENGINECAPACITYSWITCH(VEHIDCODE)
+
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
+//Graphics for the unit wagon based on cargo class
+switch(FEAT_TRAINS, SELF, switch_edmu_Poland_Newag_36_WEh_cargo_selection, cargo_classes){
+	bitmask(CC_PASSENGERS): switch_edmu_Poland_Newag_36_WEh_middlepass_livery;
+	switch_edmu_Poland_Newag_36_WEh_middlemail_livery;
+}
+
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+RUNNINGCOSTMUWAGONSWITCH
+
+PURCHASETEXTSWITCH

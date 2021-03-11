@@ -18,7 +18,7 @@
 #define VEHIDCODE electric_diesel_Poland_Newag_ET26
 #define ITEM item_electric_diesel_Poland_Newag_ET26
 #define NAME string(str_electric_diesel_Poland_Newag_ET26,string(str_Electric_Diesel,string(str_DC_Voltage),ET26_DIESEL_POWER))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_diesel_Poland_Newag_ET26,string(STR_ELE_AUTOREPLACE),RELIABILITY_DECAY);
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_diesel_Poland_Newag_ET26,string(str_Hybrid,string(STR_ELE_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(POLAND, PRIVATE, NOCONCEPT)
 

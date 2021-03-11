@@ -1,6 +1,15 @@
 V4 Trains changelog
 =========================
 
+7723:
+ - reliability decay descriptive strings added
+ - extended cargo decay rates option added
+ - ACh2 motor car removed, ACh2 DMU added
+ - increased speed of armoured vans
+ - increased speed of service cars
+ - normal gauge box cars can be autorefitted, depend on subtype
+ - Austrian elloks added 
+
 7695:
 github initial commit
 

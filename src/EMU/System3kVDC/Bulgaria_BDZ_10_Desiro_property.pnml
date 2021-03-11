@@ -31,8 +31,8 @@
 #define CARGODEF CARGODEF_PASSENGERS
 
 #define SPEED 140
-#define POWER 550
-#define WEIGHT 57
+#define POWER 2682
+#define WEIGHT 43
 #define TE_COEFFICIENT 0.21
 #define AIR_DRAG_COEFFICIENT 0
 
@@ -40,8 +40,8 @@
 #define ACTUAL_LENGTH 8
 #define WAGON_LENGTH 8
 
-#define HEAD_CAPACITY 80
-#define WAGON_CAPACITY 80
+#define HEAD_CAPACITY 62
+#define WAGON_CAPACITY 63
 
 
 #define DUAL_HEADED 1
