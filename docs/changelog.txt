@@ -1,7 +1,10 @@
 V4 Trains changelog
 =========================
 
+ - max MU length 10 (12 for broad gauge EMU)
+
 7740:
+ - "Impuls" hybrid 3kv/diesel multiple unit
  - PKP, OBB diesel and electric locomotives added
  - 3 kV EMU parameters fixed
 

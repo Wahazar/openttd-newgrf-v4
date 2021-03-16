@@ -1100,5 +1100,7 @@ str_last_wagon_only	: Wagon should be attached only to the tail of the train
 STR_MU_LONGER_THAN_2	: This class of Multiple Unit Train need at least 3 cariages
 STR_MU_LONGER_THAN_3	: This class of Multiple Unit Train need at least 4 cariages
 STR_MU_LONGER_THAN_4	: This class of Multiple Unit Train need at least 5 cariages
+STR_MU_LONGER_THAN_10	: Maximal length for this MU class can't exceed 10 carriages
+STR_MU_LONGER_THAN_12	: Maximal length for this MU class can't exceed 12 carriages
 
 #Obsolete vehicles

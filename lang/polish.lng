@@ -957,5 +957,7 @@ str_last_wagon_only     :Wagon może być doczepiony tylko do końca składu
 STR_MU_LONGER_THAN_2    :Ten typ zespołu trakcyjnego musi składać się co najmniej z 3 członów
 STR_MU_LONGER_THAN_3    :Ten typ zespołu trakcyjnego musi składać się co najmniej z 4 członów
 STR_MU_LONGER_THAN_4    :Ten typ zespołu trakcyjnego musi składać się co najmniej z 5 członów
+STR_MU_LONGER_THAN_10	: Maksymalna długość 10 członów
+STR_MU_LONGER_THAN_12	: Maksymalna długość 12 członów
 
 #Obsolete vehicles

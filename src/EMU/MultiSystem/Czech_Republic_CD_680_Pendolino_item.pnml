@@ -52,7 +52,7 @@ item(FEAT_TRAINS, ITEM ) {
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-	start_stop: switch_MU_3_vehicles_start_stop; 
+	start_stop: switch_MU_4_vehicles_start_stop; 
 
 		default: switch_emu_Czech_Republic_CD_680_Pendolino_reversed;
 	}
