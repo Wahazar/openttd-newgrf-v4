@@ -35,7 +35,7 @@
 #define SPEED 160
 #define EN63H_DIESEL_SPEED 120
 #define POWER 2145
-#define WEIGHT 53
+#define WEIGHT 48
 #define TE_COEFFICIENT 0.26
 #define AIR_DRAG_COEFFICIENT 0.03
 

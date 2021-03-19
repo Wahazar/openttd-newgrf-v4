@@ -1,6 +1,6 @@
 /*
- *  Copyright (C) 2017 Transportman
- *  This file is part of the 2cc Trains In NML and is based on The Dutch Trainset 2.0 by Jasper Vries
+ *  Copyright (C) 2017-2021 Transportman, McZapkie
+ *  This file is part of the V4 CEE Trainset based on 2cc Trains In NML fork
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
@@ -42,10 +42,11 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_emu_Europe_Sureot_purchase;
-		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_emu_Europe_Sureot_visual_effect_and_powered;
-		can_attach_wagon: switch_can_attach_vehicle;
+		purchase: spriteset_electric_Russia_RZD_2ES4K_purchase;
+		visual_effect_and_powered: switch_electric_Russia_RZD_2ES4K_visual_effect;
+		length: switch_electric_Russia_RZD_2ES4K_length;
+		articulated_part: switch_electric_Russia_RZD_2ES4K_articulated;
+		can_attach_wagon: CAN_ATTACH_VEHICLE;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
@@ -53,30 +54,10 @@ item(FEAT_TRAINS, ITEM ) {
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
 
-		default: switch_emu_Europe_Sureot_reversed;
-	}
-	livery_override (item_mu_wagon_unpowered ) {
-		LOADINGSPEEDPROPERTY
-		RUNNINGCOSTMUWAGONUNPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
-
-		weight: WEIGHTMUWAGONUNPOWERED
-		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
-		length: WAGON_LENGTH;
-		default: switch_emu_Europe_Sureot_cargo_selection;
-	}
-	livery_override (item_mu_wagon_powered ) {
-		LOADINGSPEEDPROPERTY
-		RUNNINGCOSTMUWAGONPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
-
-		power: POWERMUWAGONPOWERED
-		weight: WEIGHTMUWAGONPOWERED
-		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
-		tractive_effort_coefficient: TEMUWAGONPOWERED
-		length: WAGON_LENGTH;
-		default: switch_emu_Europe_Sureot_cargo_selection;
+			
+		purchase_cargo_capacity: return 0;
+		cargo_capacity: return 0;
+		default: switch_electric_Russia_RZD_2ES4K_position;
 	}
 }
-SET_TRACK_TYPE 
-EXTENDED_CARGO_DECAY
+SET_TRACK_TYPE

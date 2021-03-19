@@ -260,6 +260,7 @@ item_electric_Russia_RZD_VL11, /* 1974 */ \
 item_electric_Russia_RZD_VL15, /* 1984 */ \
 item_electric_Ukraine_UZ_ChS7, /* 1983 */ \
 item_electric_Ukraine_UZ_DE1, /* 1995 */ \
+item_electric_Russia_RZD_2ES4K, /* 2009 */ \
 item_electric_Russia_RZD_EP20, /* 2011 */ 
 
 #define SORTING_DMU_N \

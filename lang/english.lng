@@ -454,7 +454,7 @@ str_electric_Russia_RZD_EP20 					:EP20 NEVZ Bo'Bo'Bo' {STRING}
 str_electric_Ukraine_UZ_ChS7 					:82E Skoda Bo'Bo'+Bo'Bo' {STRING}
 str_electric_Ukraine_UZ_DE1 					:DE1 DEVZ Bo'Bo'+Bo'Bo' {STRING}
 #str_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
-
+str_electric_Russia_RZD_2ES4K 					:2ES4K NEVZ Bo'Bo'+Bo'Bo' {STRING}
 
 #DMU
 #str_dmu_Czech_Republic_CD_M131 				:CD M131 {STRING}
@@ -907,6 +907,7 @@ str_class_electric_Austria_OBB_1044 					:OBB 1044 {STRING}
 str_class_electric_Poland_PKP_ET41 					:PKP ET41/HZ 1081 {STRING}
 str_class_electric_Austria_OBB_1063 					:OBB 1063 {STRING}
 str_class_electric_Russia_RZD_VL15 					:SZD VL15 {STRING}
+str_class_electric_Russia_RZD_2ES4K 					:RZD 2ES4K/UZ 2ES4K 'Donchak' {STRING}
 str_class_electric_Germany_DR_212 					:DR 212/DB 112 {STRING}
 str_class_electric_Germany_DR_243 					:DR 243/DB 143 {STRING}
 str_class_electric_Germany_DR_250 					:DR 250/DB 155 {STRING}

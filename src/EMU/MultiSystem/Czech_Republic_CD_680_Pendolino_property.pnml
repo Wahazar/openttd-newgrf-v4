@@ -33,7 +33,7 @@
 
 #define SPEED 230
 #define POWER 2680
-#define WEIGHT 86
+#define WEIGHT 75
 #define TE_COEFFICIENT 0.35
 #define AIR_DRAG_COEFFICIENT 0.01
 

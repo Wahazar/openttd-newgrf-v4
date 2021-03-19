@@ -399,6 +399,7 @@ item(FEAT_TRAINS, item_electric_Kazakhstan_KTZ_KZ8A, 6905) {}
 item(FEAT_TRAINS, item_electric_Russia_RZD_VL85, 6906) {}
 item(FEAT_TRAINS, item_electric_Russia_RZD_VL15, 6908) {}
 item(FEAT_TRAINS, item_electric_Russia_RZD_EP20, 6909) {}
+item(FEAT_TRAINS, item_electric_Russia_RZD_2ES4K, 6910) {}
 
 // sitem(FEAT_TRAINS, item_electric_Ukraine_UZ_DS3, 6916) {}
 item(FEAT_TRAINS, item_electric_Ukraine_UZ_DE1, 6917) {}

@@ -828,7 +828,9 @@
 #include "src/Electric/BroadGauge/Russia_RZD_VL15_property.pnml"
 #include "src/Electric/BroadGauge/Russia_RZD_VL15_graphics.pnml"
 #include "src/Electric/BroadGauge/Russia_RZD_VL15_item.pnml"
-
+#include "src/Electric/BroadGauge/Russia_RZD_2ES4K_property.pnml"
+#include "src/Electric/BroadGauge/Russia_RZD_2ES4K_graphics.pnml"
+#include "src/Electric/BroadGauge/Russia_RZD_2ES4K_item.pnml"
 
 //DMU
 #include "src/_CodeSupport/TypeInitialization/init_type_DMU.pnml"
