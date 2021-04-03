@@ -185,7 +185,7 @@ STR_ERD_NEW_ENGINE              :tabor szerokotorowy 3kV DC
 
 STR_ERD1_NAME                   :Tor szeroki, średnia prędkość, zelektryfikowany 3kV DC
 STR_ERD1_TOOLBAR                :Linia szerokotorowa, zelektryfikowana 3kV DC
-STR_ERD1_MENU                   :{PURPLE}Linia kolejowa 1520mm, 3kV DC{BLACK}
+STR_ERD1_MENU                   :{PURPLE}Linia kolejowa 1520mm, 3kV DC
 STR_ERD1_BUILD_CAPTION          :Tor 1520mm, średnia prędkość, 3kV DC
 
 STR_ERD2_NAME                   :Tor szeroki, wysoka prędkość, zelektryfikowany 3kV DC

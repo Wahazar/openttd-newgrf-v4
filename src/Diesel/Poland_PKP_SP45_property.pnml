@@ -17,7 +17,7 @@
 #define VEHIDCODE diesel_Poland_PKP_SP45
 #define ITEM item_diesel_Poland_PKP_SP45
 #define NAME string(str_diesel_Poland_PKP_SP45,string(str_Diesel))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_Poland_PKP_SP45,string(str_Diesel_Hydraulic, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_Poland_PKP_SP45,string(str_Diesel_Electric, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(POLAND,NOREGION,NOCONCEPT)
 

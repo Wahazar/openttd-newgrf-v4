@@ -31,7 +31,7 @@
 
 #define SPEED 140
 #define POWER 1580
-#define WEIGHT 45
+#define WEIGHT 48
 #define TE_COEFFICIENT 0.34
 #define AIR_DRAG_COEFFICIENT 0
 
@@ -39,8 +39,8 @@
 #define ACTUAL_LENGTH 8
 #define WAGON_LENGTH 7
 
-#define HEAD_CAPACITY 60
-#define WAGON_CAPACITY 60
+#define HEAD_CAPACITY 97
+#define WAGON_CAPACITY 97
 
 
 #define DUAL_HEADED 1

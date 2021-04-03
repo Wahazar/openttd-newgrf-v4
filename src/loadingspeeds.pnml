@@ -24,6 +24,7 @@ isUltraSpeed = param_loadingspeed == 3; // 4 means ultra fast
 
 //Commuter vehicles
 #define LOADINGSPEEDDEF_COMMUTER 40
+#define LOADINGSPEEDDEF_COMMUTER_NARROW 30
 
 //Metro vehicles
 #define LOADINGSPEEDDEF_METRO 120

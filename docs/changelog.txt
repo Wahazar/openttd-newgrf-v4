@@ -1,6 +1,8 @@
 V4 Trains changelog
 =========================
 
+7748
+ - fixed EMU and DMU vehicle params
  - max MU length 10 (12 for broad gauge EMU)
 
 7740:
