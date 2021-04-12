@@ -1,6 +1,7 @@
 V4 Trains changelog
 =========================
 
+7762
  - DMU, EMU, diesellok added
 
 7748
