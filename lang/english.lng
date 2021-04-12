@@ -349,7 +349,7 @@ str_diesel_Poland_PKP_SU160 			:SU160 Pesa Bo'Bo' "Gama"{STRING}
 str_diesel_Serbia_ZS_621 			:T 239.1 CKD Praha Bo {STRING}
 str_diesel_UK_BR_66		:JT42CWRM EMD Co'Co' {STRING}
 str_diesel_Austria_OBB_2043	:2043 Jenbacher B'B'{STRING}
-# str_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
+str_diesel_Austria_OBB_2070	:2070 Vossloh B'B' {STRING}
 str_diesel_Austria_OBB_2016	:ER20 Siemens Bo'Bo' "Eurorunner"{STRING}
 # str_diesel_Czechia_CSD_753_T669 		:CSD T669.0/CD 753 {STRING}
 # str_diesel_Czechia_CSD_742_T4662 		:CSD T466.2/CD 742 {STRING}
@@ -472,16 +472,20 @@ str_dmu_Slovakia_ZSSK_861 					:861 ZOS Vrutky B'2'2'B' {STRING}
 str_dmu_Germany_DB_6282 					:628.2 Duwag 2'B'+2'2' {STRING}
 str_dmu_Germany_DB_648 						:'Lint 41' Alsthom B'(2)B' {STRING}
 str_dmu_Czech_Republic_CSD_M495_0 				:'Hargita' Ganz (1B)'2' + 2'2' {STRING}
+str_dmu_Czech_Republic_CSD_M296_1 				:'Hydra' Tatra B'2' + 2'2' {STRING}
 str_dmu_Germany_DB_VT04_Flying_Hamburger 	:'Flying Hamburger'  WUMAG 2'Bo'2' {STRING}
 str_dmu_Russia_RZD_DP 				:'Hargita' Ganz (A1A)'2' + 2'2' {STRING}
 str_dmu_Russia_RZD_ACh2 						:ACh2 Studenka B'2' + 2'2' {STRING}
+str_dmu_Czech_Republic_CD_844					:'Link II' Pesa 233M B'2'B' {STRING}
 
 #EMU
 str_emu_Austria_OBB_4041 					:ET10 ELIN 3'(Ao1Ao)' {STRING}
 str_emu_Hungary_MAV_BDVmot 					:BDVmot Ganz-MAVAG B'B'+2'2' {STRING}
+str_emu_Hungary_MAV_815 					:Stadler Bo'Bo'+2'2' {STRING}
 str_emu_Czech_Republic_CSD_EM475_1_CityFrog 			:EM475 'City Frog' Studenka Bo'Bo'+2'2' {STRING}
 str_emu_Czech_Republic_CSD_EM488_0	 			:EM488 Studenka Bo'Bo'+2'2' {STRING}
 str_emu_Czech_Republic_CSD_SM488_0	 			:SM488 Studenka Bo'Bo'+2'2' {STRING}
+str_emu_Czech_Republic_CD_471	 				:'City Elephant' 1Ev CKD Vagonka Bo'Bo'+2'2' {STRING}
 str_emu_Czech_Republic_CD_680_Pendolino 			:'Pendolino' Alstom Ferroviara (1A)'(A1)' + 2'2' {STRING}
 str_emu_Czech_Republic_CD_640 					:'Regio Panter' 7 Ev Skoda Vagonka Bo'2'+Bo'2' {STRING}
 str_emu_Germany_DB_403_ICE_3 					:ICE-3 Siemens Bo'Bo'+2'2' {STRING}
@@ -978,6 +982,8 @@ str_class_dmu_Slovakia_ZSSK_861 				:ZSSK 861 {STRING}
 str_class_dmu_Germany_DB_6282 					:DB 628.2 {STRING}
 str_class_dmu_Germany_DB_648 					:DB 648 {STRING}
 str_class_dmu_Czech_Republic_CSD_M495_0 			:CSD M495.0/DR VT 12.14/MAV CBMot {STRING}
+str_class_dmu_Czech_Republic_CSD_M296_1 			:CSD M296.1/CD 853 {STRING}
+str_class_dmu_Czech_Republic_CD_844 				:CD 844 / DB 633 / PKP SA139 {STRING}
 str_class_dmu_Germany_DB_VT04_Flying_Hamburger 			:DR 137/CSD M297 {STRING}
 str_class_dmu_Russia_RZD_DP  				:SZD DP {STRING}
 str_class_dmu_Russia_RZD_ACh2 						:RZD ACh2/APCh2 {STRING}
@@ -985,9 +991,11 @@ str_class_dmu_Russia_RZD_ACh2 						:RZD ACh2/APCh2 {STRING}
 #EMU
 str_class_emu_Austria_OBB_4041 					:BBO ET10/OBB 4041 {STRING}
 str_class_emu_Hungary_MAV_BDVmot 				:MAV BDVmot/414 {STRING}
+str_class_emu_Hungary_MAV_815 					:MAV 815 {STRING}
 str_class_emu_Czech_Republic_CSD_EM475_1_CityFrog 		:CSD EM475.1/CD 451 {STRING}
 str_class_emu_Czech_Republic_CSD_EM488_0	 		:CSD EM488.0/CD 460 {STRING}
 str_class_emu_Czech_Republic_CSD_SM488_0	 		:CSD SM488.0/CD 560 {STRING}
+str_class_emu_Czech_Republic_CD_471		 		:CD 471 {STRING}
 str_class_emu_Czech_Republic_CD_680_Pendolino 			:CD 680/PKP ED250 {STRING}
 str_class_emu_Czech_Republic_CD_640	 			:CD 640 {STRING}
 str_class_emu_Germany_DB_403_ICE_3 				:DB 403 {STRING}

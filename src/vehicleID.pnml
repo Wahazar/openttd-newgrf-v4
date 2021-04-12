@@ -208,7 +208,7 @@ item(FEAT_TRAINS, item_diesel_Austria_OBB_2043, 5016) {}
 item(FEAT_TRAINS, item_diesel_Austria_OBB_2016, 5017) {}
 item(FEAT_TRAINS, item_diesel_Hungary_MAV_M44, 5018) {}
 item(FEAT_TRAINS, item_diesel_Hungary_MAV_M28, 5019) {}
-
+item(FEAT_TRAINS, item_diesel_Austria_OBB_2070, 5020) {}
 item(FEAT_TRAINS, item_diesel_Germany_DB_220, 5021) {}
 
 
@@ -429,6 +429,8 @@ item(FEAT_TRAINS, item_dmu_Czech_Republic_CD_814, 7026) {}
 
 item(FEAT_TRAINS, item_dmu_Czech_Republic_CSD_M495_0, 7034) {}
 item(FEAT_TRAINS, item_dmu_Slovakia_ZSSK_861, 7035) {}
+item(FEAT_TRAINS, item_dmu_Czech_Republic_CSD_M296_1, 7036) {}
+item(FEAT_TRAINS, item_dmu_Czech_Republic_CD_844, 7037) {}
 
 item(FEAT_TRAINS, item_dmu_Germany_DB_6282, 7047) {}
 
@@ -456,8 +458,9 @@ item(FEAT_TRAINS, item_emu_Germany_DB_ET420, 8014) {}
 item(FEAT_TRAINS, item_emu_Czech_Republic_CSD_EM475_1_CityFrog, 8018) {}
 item(FEAT_TRAINS, item_emu_Czech_Republic_CSD_EM488_0, 8019) {}
 item(FEAT_TRAINS, item_emu_Czech_Republic_CSD_SM488_0, 8020) {}
-
+item(FEAT_TRAINS, item_emu_Czech_Republic_CD_471, 8021) {}
 item(FEAT_TRAINS, item_emu_Hungary_MAV_BDVmot, 8022) {}
+item(FEAT_TRAINS, item_emu_Hungary_MAV_815, 8023) {}
 
 item(FEAT_TRAINS, item_emu_Czech_Republic_CD_680_Pendolino, 8033) {}
 

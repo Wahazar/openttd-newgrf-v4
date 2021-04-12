@@ -42,41 +42,40 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_emu_Croatia_HZ_6112_purchase;
+		purchase: spriteset_dmu_Czech_Republic_CD_844_purchase;
 		can_attach_wagon: switch_can_attach_vehicle;
 		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_emu_Croatia_HZ_6112_visual_effect_and_powered;
+		visual_effect_and_powered: switch_dmu_Czech_Republic_CD_844_visual_effect_and_powered;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-	start_stop: switch_MU_3_vehicles_start_stop; 
 
-		default: switch_emu_Croatia_HZ_6112_reversed;
+		default: switch_dmu_Czech_Republic_CD_844_reversed;
 	}
 	livery_override (item_mu_wagon_unpowered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONUNPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
 
 		weight: WEIGHTMUWAGONUNPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_dmu_Czech_Republic_CD_844_cargo_selection;
 	}
 	livery_override (item_mu_wagon_powered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
 
 		power: POWERMUWAGONPOWERED
 		weight: WEIGHTMUWAGONPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		tractive_effort_coefficient: TEMUWAGONPOWERED
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_dmu_Czech_Republic_CD_844_cargo_selection;
 	}
 }
 SET_TRACK_TYPE 

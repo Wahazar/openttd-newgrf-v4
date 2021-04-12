@@ -677,7 +677,7 @@ str_class_rbe_Germany_Buckower_Kleinbahn_Nr_1_3 :Buckower Kleinbahn Nr. 1-3 {STR
 str_class_rbe_Germany_DB_4792: DB 479.2 {STRING}
 
 #Steam
-str_class_steam_Germany_Adler                   :BL "Adler"/KFNB "Vindobona"/DZWW 3 {STRING}
+str_class_steam_Germany_Adler                   :BL "Adler" {STRING}
 str_class_steam_Austria_CLB_I                   :CLB I/kkStB 11 {STRING}
 str_class_steam_Hungary_MAV_335                 :MAV 335/JZ 123/kkStB 46/CFR 335 {STRING}
 str_class_steam_Hungary_MAV_325                 :MAV 325/CSD 325.0/JZ 126/CFR 335 {STRING}

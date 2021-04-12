@@ -1,6 +1,6 @@
 /*
  *  Copyright (C) 2017-2021 McZapkie, Transportman
- *  This file is part of the V4 CEE Train Set, fork of the 2cc Trains In NML
+ *  This file is part of the V4 CEE Train Set and is based on 2cc Trains in NML
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
@@ -42,41 +42,40 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_emu_Croatia_HZ_6112_purchase;
-		can_attach_wagon: switch_can_attach_vehicle;
+		purchase: spriteset_dmu_Czech_Republic_CSD_M296_1_purchase;
 		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_emu_Croatia_HZ_6112_visual_effect_and_powered;
+		visual_effect_and_powered: switch_dmu_Czech_Republic_CSD_M296_1_visual_effect_and_powered;
+		can_attach_wagon: switch_can_attach_vehicle;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-	start_stop: switch_MU_3_vehicles_start_stop; 
 
-		default: switch_emu_Croatia_HZ_6112_reversed;
+		default: switch_dmu_Czech_Republic_CSD_M296_1_reversed;
 	}
 	livery_override (item_mu_wagon_unpowered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONUNPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
 
 		weight: WEIGHTMUWAGONUNPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_dmu_Czech_Republic_CSD_M296_1_cargo_selection;
 	}
 	livery_override (item_mu_wagon_powered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
 
 		power: POWERMUWAGONPOWERED
 		weight: WEIGHTMUWAGONPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		tractive_effort_coefficient: TEMUWAGONPOWERED
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_dmu_Czech_Republic_CSD_M296_1_cargo_selection;
 	}
 }
 SET_TRACK_TYPE 

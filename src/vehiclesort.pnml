@@ -157,6 +157,7 @@ item_diesel_Czech_Republic_CD_731, /*1991*/\
 item_diesel_Serbia_ZS_621,  /*1993*/\
 item_diesel_UK_BR_66,  /*1998*/\
 item_diesel_Romania_CFR_060_DA1,  /*2000*/\
+item_diesel_Austria_OBB_2070,  /*2000*/\
 item_diesel_Austria_OBB_2016,  /*2002*/\
 item_diesel_Germany_HVLE_V490,  /*2006*/\
 item_diesel_Germany_DB_261_Gravita_10BB,  /*2010*/\
@@ -266,6 +267,7 @@ item_electric_Russia_RZD_EP20, /* 2011 */
 #define SORTING_DMU_N \
 item_dmu_Germany_DB_VT04_Flying_Hamburger, /* 1936 */ \
 item_dmu_Czech_Republic_CSD_M495_0, /* 1954 */ \
+item_dmu_Czech_Republic_CSD_M296_1, /* 1969 */ \
 item_dmu_Serbia_ZS_811, /* 1974 */ \
 item_dmu_Germany_DB_6282, /* 1986 */ \
 item_dmu_Germany_DB_612_Regio_Swinger, /* 1998 */ \
@@ -273,7 +275,8 @@ item_dmu_Germany_DB_642_Desiro, /* 2000 */ \
 item_dmu_Denmark_Arriva_Lint_41, /* 2001 */ \
 item_dmu_Czech_Republic_CD_814, /* 2005 */ \
 item_dmu_Slovakia_ZSSK_861, /* 2011 */ \
-item_dmu_Croatia_HZ_7022, /* 2011 */ 
+item_dmu_Croatia_HZ_7022, /* 2011 */ \
+item_dmu_Czech_Republic_CD_844, /* 2012 */ 
 
 #define SORTING_DMU_B \
 item_dmu_Russia_RZD_DP, /* 1949 */ \
@@ -287,6 +290,7 @@ item_emu_Romania_CFR_58, /*Year: 1965*/ \
 item_emu_Czech_Republic_CSD_SM488_0, /*Year: 1966*/ \
 item_emu_Macedonia_Macedonian_Railways_412, /*Year: 1980*/ \
 item_emu_Hungary_MAV_BDVmot, /*Year: 1988*/ \
+item_emu_Hungary_MAV_815, /*Year: 2010*/ \
 item_emu_Croatia_HZ_6112, /*Year: 2015*/ \
 item_emu_Europe_Sureot, /*Year: 2030*/
 
@@ -307,6 +311,7 @@ item_emu_Poland_PKP_EW54, /*Year: 1950*/ \
 item_emu_Czech_Republic_CSD_EM475_1_CityFrog, /*Year: 1964*/ \
 item_emu_Poland_PKP_EN71, /*Year: 1965*/ \
 item_emu_Czech_Republic_CSD_EM488_0, /*Year: 1971*/ \
+item_emu_Czech_Republic_CD_471, /*Year: 2000*/ \
 item_emu_Bulgaria_BDZ_10_Desiro, /*Year: 2005*/ \
 item_emu_Switzerland_SBB_RABe_523_Flirt, /* 2008 */ \
 item_emu_Poland_PKP_EN76, /*Year: 2010*/ \

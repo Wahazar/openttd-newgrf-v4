@@ -42,10 +42,10 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_emu_Croatia_HZ_6112_purchase;
+		purchase: spriteset_emu_Hungary_MAV_815_purchase;
 		can_attach_wagon: switch_can_attach_vehicle;
 		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_emu_Croatia_HZ_6112_visual_effect_and_powered;
+		visual_effect_and_powered: switch_emu_Hungary_MAV_815_visual_effect_and_powered;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
@@ -54,7 +54,7 @@ item(FEAT_TRAINS, ITEM ) {
 		LIVERYMAPPINGSWITCHCALL
 	start_stop: switch_MU_3_vehicles_start_stop; 
 
-		default: switch_emu_Croatia_HZ_6112_reversed;
+		default: switch_emu_Hungary_MAV_815_reversed;
 	}
 	livery_override (item_mu_wagon_unpowered ) {
 		LOADINGSPEEDPROPERTY
@@ -64,7 +64,7 @@ item(FEAT_TRAINS, ITEM ) {
 		weight: WEIGHTMUWAGONUNPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_emu_Hungary_MAV_815_cargo_selection;
 	}
 	livery_override (item_mu_wagon_powered ) {
 		LOADINGSPEEDPROPERTY
@@ -76,7 +76,7 @@ item(FEAT_TRAINS, ITEM ) {
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		tractive_effort_coefficient: TEMUWAGONPOWERED
 		length: WAGON_LENGTH;
-		default: switch_emu_Croatia_HZ_6112_cargo_selection;
+		default: switch_emu_Hungary_MAV_815_cargo_selection;
 	}
 }
 SET_TRACK_TYPE 
