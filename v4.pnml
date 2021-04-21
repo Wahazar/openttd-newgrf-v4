@@ -76,6 +76,7 @@
 #include "src/Tracks/signals_SZD.pnml"
 
 #include "src/Tracks/RL2S.pnml"
+#include "src/Tracks/ER2S.pnml"
 
 #include "src/Tracks/RLA0.pnml"
 #include "src/Tracks/RLA1.pnml"
@@ -994,6 +995,12 @@
 #include "src/EMU/MultiSystem/Czech_Republic_CD_680_Pendolino_property.pnml"
 #include "src/EMU/MultiSystem/Czech_Republic_CD_680_Pendolino_graphics.pnml"
 #include "src/EMU/MultiSystem/Czech_Republic_CD_680_Pendolino_item.pnml"
+
+//EMU Dual Gauge
+#include "src/_CodeSupport/TypeInitialization/init_type_EMU_Dual_Gauge.pnml"
+#include "src/EMU/DualGauge/KZ4A_Talgo_property.pnml"
+#include "src/EMU/DualGauge/KZ4A_Talgo_graphics.pnml"
+#include "src/EMU/DualGauge/KZ4A_Talgo_item.pnml"
 
 //EMU Russian
 #include "src/_CodeSupport/TypeInitialization/init_type_EMU_Broad_Gauge.pnml"

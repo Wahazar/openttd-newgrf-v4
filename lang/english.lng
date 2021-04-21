@@ -207,7 +207,7 @@ STR_ER2_NEW_ENGINE		:normal/broad gauge electric railway stock
 
 STR_ER2S_NAME			:Dual gauge track, low speed, electrified
 STR_ER2S_TOOLBAR		:Dual gauge branch railroad, electrified
-STR_ER2S_MENU			:{BLUE}1435/1520mm branch railroad, 3kV DC
+STR_ER2S_MENU			:{CREAM}1435/1520mm branch railroad, 3kV DC
 STR_ER2S_BUILD_CAPTION		:1435/1520mm track, low speed, 3kV DC
 
 
@@ -508,6 +508,8 @@ str_emu_Russia_RZD_ER200 				:ER200 RVR Bo'Bo' {STRING}
 str_emu_Russia_RZD_ES1_Lastochka 			:'Lastochka' Siemens/Ural Bo'Bo' {STRING}
 
 str_edmu_Poland_Newag_36_WEh 					:Newag Bo'2'2'Bo' "Impuls" {STRING}
+
+str_emu_KZ4A_Talgo 				:KZ4A Talgo Zhuzhou/Siemens/Oriol Bo'Bo' {STRING}
 
 #Multiple Unit Metro
 str_mtro_Germany_DB_ET_171					:DRG ET 171/DB 471 (Metro)
@@ -918,7 +920,7 @@ str_class_electric_Germany_DR_250 					:DR 250/DB 155 {STRING}
 str_class_electric_Germany_DB_185_TRAXX_F140 				:DB 185/PKP-PR EU43 {STRING}
 str_class_electric_Germany_DB_182_ES64U_Taurus 				:DB 182/OBB 1016/MAV 1047/MRCE dispolok X4E{STRING}
 # str_class_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
-str_class_electric_Kazakhstan_KTZ_KZ4A 				:KTZ KZ4A {STRING}
+# str_class_electric_Kazakhstan_KTZ_KZ4A 				:KTZ KZ4A {STRING}
 str_class_electric_Germany_DB_E_919 					:E 91.9/DB 191.9 {STRING}
 str_class_electric_Poland_PKP_EL_200 					:PKP EL.200 {STRING}
 str_class_electric_Poland_PKP_EP02 					:PKP EP02 {STRING}
@@ -1019,6 +1021,8 @@ str_class_emu_Czechia_Leo_480 					:LE 480/PKP ED160 {STRING}
 
 str_class_edmu_Poland_Newag_36_WEh				:PKP EN63H {STRING}
 
+str_class_emu_KZ4A_Talgo 				:KTZ KZ4A Talgo {STRING}
+
 #PURCHASE MENU TEXTS
 str_unit_wagon_passenger	:This generic wagon can ONLY be used with passenger MUs to create trains of the desired length
 str_unit_wagon_cargo		:This generic wagon can ONLY be used with cargo MUs to create trains of the desired length
@@ -1099,8 +1103,9 @@ str_Electric_Russian	: (Electric, broad gauge, DC system)
 str_EMU			: (EMU, {STRING})
 str_EMU_Hybrid		: (EMU {STRING} hybrid with {UNSIGNED_WORD} hp diesel engine)
 str_EMU_Russian		: (EMU, broad gauge)
+str_EMU_DualGauge		: (EMU, broad gauge)
 str_DMU			: (DMU)
-str_DMU_Russian		: (DMU, broad gauge)
+str_DMU_Russian		: (DMU, broad or normal gauge)
 
 
 STR_TRAIN_TOO_LONG              :There are too many vehicles attached to the train.
@@ -1109,6 +1114,7 @@ str_last_wagon_only	: Wagon should be attached only to the tail of the train
 STR_MU_LONGER_THAN_2	: This class of Multiple Unit Train need at least 3 cariages
 STR_MU_LONGER_THAN_3	: This class of Multiple Unit Train need at least 4 cariages
 STR_MU_LONGER_THAN_4	: This class of Multiple Unit Train need at least 5 cariages
+STR_MU_LONGER_THAN_6	: Maximal length for this MU class can't exceed 6 carriages
 STR_MU_LONGER_THAN_10	: Maximal length for this MU class can't exceed 10 carriages
 STR_MU_LONGER_THAN_12	: Maximal length for this MU class can't exceed 12 carriages
 

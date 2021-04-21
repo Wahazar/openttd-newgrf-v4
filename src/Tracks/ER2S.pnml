@@ -9,57 +9,57 @@
 
 //sprites
 
-#define IMAGEFILE  "gfx/Tracks/RL2S/RL2S_gui.png"
+#define IMAGEFILE  "gfx/Tracks/ER2S/ER2S_gui.png"
 
-spriteset(RL2S_gui, IMAGEFILE)
+spriteset(ER2S_gui, IMAGEFILE)
 {
   rail_gui_template(0, 0)
 }
 
 #undef IMAGEFILE
 
-#define IMAGEFILE  "gfx/Tracks/RL2S/RL2S_track_normal.png"
+#define IMAGEFILE  "gfx/Tracks/ER2S/ER2S_track_normal.png"
 
-spriteset(RL2S_track_overlay_normal, IMAGEFILE)
+spriteset(ER2S_track_overlay_normal, IMAGEFILE)
 {
   rail_track_overlay_template(2, 23)
 }
 
-spriteset(RL2S_underlay_normal, IMAGEFILE)
+spriteset(ER2S_underlay_normal, IMAGEFILE)
 {
   rail_underlay_template(2, 77)
 }
 
-spriteset(RL2S_bridge_surfaces_normal, IMAGEFILE)
+spriteset(ER2S_bridge_surfaces_normal, IMAGEFILE)
 {
   rail_bridge_surfaces_template(2, 131)
 }
 
-spriteset(RL2S_tunnels_normal, IMAGEFILE)
+spriteset(ER2S_tunnels_normal, IMAGEFILE)
 {
   rail_tunnels_template(2, 183)
 }
 
 #undef IMAGEFILE
 
-#define IMAGEFILE  "gfx/Tracks/RL2S/RL2S_track_snow.png"
+#define IMAGEFILE  "gfx/Tracks/ER2S/ER2S_track_snow.png"
 
-spriteset(RL2S_track_overlay_snow, IMAGEFILE)
+spriteset(ER2S_track_overlay_snow, IMAGEFILE)
 {
   rail_track_overlay_template(2, 23)
 }
 
-spriteset(RL2S_underlay_snow, IMAGEFILE)
+spriteset(ER2S_underlay_snow, IMAGEFILE)
 {
   rail_underlay_template(2, 77)
 }
 
-spriteset(RL2S_bridge_surfaces_snow, IMAGEFILE)
+spriteset(ER2S_bridge_surfaces_snow, IMAGEFILE)
 {
   rail_bridge_surfaces_template(2, 131)
 }
 
-spriteset(RL2S_tunnels_snow, IMAGEFILE)
+spriteset(ER2S_tunnels_snow, IMAGEFILE)
 {
   rail_tunnels_template(2, 183)
 }
@@ -68,27 +68,27 @@ spriteset(RL2S_tunnels_snow, IMAGEFILE)
 
 // depot
 
-#define IMAGEFILE  "gfx/Tracks/RL2S/RL2S_depot_normal.png"
+#define IMAGEFILE  "gfx/Tracks/ER2S/ER2S_depot_normal.png"
 
-spriteset(RL2S_depot_normal, IMAGEFILE)
+spriteset(ER2S_depot_normal, IMAGEFILE)
 {
   depot_template()
 }
 
 #undef IMAGEFILE
 
-#define IMAGEFILE  "gfx/Tracks/RL2S/RL2S_depot_snow.png"
+#define IMAGEFILE  "gfx/Tracks/ER2S/ER2S_depot_snow.png"
 
-spriteset(RL2S_depot_snow, IMAGEFILE)
+spriteset(ER2S_depot_snow, IMAGEFILE)
 {
   depot_template()
 }
 
 #undef IMAGEFILE
 
-#define IMAGEFILE1  "gfx/Tracks/RL2S/RL2S_track_normal.png"
+#define IMAGEFILE1  "gfx/Tracks/ER2S/ER2S_track_normal.png"
 #define IMAGEFILE2  "gfx/Tracks/crossing_slow.png"
-spriteset(RL2S_level_crossings_open)
+spriteset(ER2S_level_crossings_open)
 {
   level_crossings_railway_template(2, 298, IMAGEFILE1)
   level_crossings_1_template(10, 133, IMAGEFILE2)
@@ -101,70 +101,70 @@ spriteset(RL2S_level_crossings_open)
 
 // switches
 
-switch(FEAT_RAILTYPES, SELF, RL2S_track_overlay, terrain_type) {
-	TILETYPE_SNOW: RL2S_track_overlay_snow;
-	RL2S_track_overlay_normal;
+switch(FEAT_RAILTYPES, SELF, ER2S_track_overlay, terrain_type) {
+	TILETYPE_SNOW: ER2S_track_overlay_snow;
+	ER2S_track_overlay_normal;
 }
 
-switch(FEAT_RAILTYPES, SELF, RL2S_underlay, terrain_type) {
-	TILETYPE_SNOW: RL2S_underlay_snow;
-	RL2S_underlay_normal;
+switch(FEAT_RAILTYPES, SELF, ER2S_underlay, terrain_type) {
+	TILETYPE_SNOW: ER2S_underlay_snow;
+	ER2S_underlay_normal;
 }
 
-switch(FEAT_RAILTYPES, SELF, RL2S_bridge_surfaces, terrain_type) {
-	TILETYPE_SNOW: RL2S_bridge_surfaces_snow;
-	RL2S_bridge_surfaces_normal;
+switch(FEAT_RAILTYPES, SELF, ER2S_bridge_surfaces, terrain_type) {
+	TILETYPE_SNOW: ER2S_bridge_surfaces_snow;
+	ER2S_bridge_surfaces_normal;
 }
 
-switch(FEAT_RAILTYPES, SELF, RL2S_tunnels, terrain_type) {
-	TILETYPE_SNOW: RL2S_tunnels_snow;
-	RL2S_tunnels_normal;
+switch(FEAT_RAILTYPES, SELF, ER2S_tunnels, terrain_type) {
+	TILETYPE_SNOW: ER2S_tunnels_snow;
+	ER2S_tunnels_normal;
 }
 
-switch(FEAT_RAILTYPES, SELF, RL2S_depot, terrain_type) {
-	TILETYPE_SNOW: RL2S_depot_snow;
-	RL2S_depot_normal;
+switch(FEAT_RAILTYPES, SELF, ER2S_depot, terrain_type) {
+	TILETYPE_SNOW: ER2S_depot_snow;
+	ER2S_depot_normal;
 }
 
 //properties
 
 if (param_custom_tracks) {
-if (railtype_available("RL2S") || (loading_stage == LOADING_STAGE_RESERVE)) {
-  item (FEAT_RAILTYPES, RL2S)
+if (railtype_available("ER2S") || (loading_stage == LOADING_STAGE_RESERVE)) {
+  item (FEAT_RAILTYPES, ER2S)
   {
     property
     {
-      label: "RL2S";
-      introduction_date: date(RL2S_YEAR, 1, 1);
-      name: string(STR_RL2S_NAME);
-      toolbar_caption: string(STR_RL2S_TOOLBAR);
-      menu_text: string(STR_RL2S_MENU);
-      build_window_caption: string(STR_RL2S_BUILD_CAPTION);
+      label: "ER2S";
+      introduction_date: date(ER2S_YEAR, 1, 1);
+      name: string(STR_ER2S_NAME);
+      toolbar_caption: string(STR_ER2S_TOOLBAR);
+      menu_text: string(STR_ER2S_MENU);
+      build_window_caption: string(STR_ER2S_BUILD_CAPTION);
       autoreplace_text: string(STR_RL2_AUTOREPLACE);
       new_engine_text: string(STR_RL2_NEW_ENGINE);
-      compatible_railtype_list: ["RAIL", "RLOW", "RHIG", "ELOW", "EMED", "EHIG", "DBNE", "DBHE", "DBHS", "SEAE", "ELRL", "RLA0", "RLA1", "RLA2", "ERD1", "ERD2", "ER2S"];
-      powered_railtype_list: ["RAIL", "ERD1", "ERD2", "ER2S", "ELOW", "EMED", "EHIG"];
+      compatible_railtype_list: [ALL_NORMAL_GAUGES, DUAL_GAUGES, DUAL_GAUGES_3KV, ALL_BROAD_GAUGES];
+      powered_railtype_list: [NORMAL_GAUGES_3KV, NORMAL_GAUGES_MULTISYSTEM, DUAL_GAUGES_3KV, BROAD_GAUGES_3KV];
       curve_speed_multiplier: 100;
       station_graphics: RAILTYPE_STATION_NORMAL;
-      construction_cost: RL2S_BUILDCOST
-      maintenance_cost: RL2S_INFRACOST
-      speed_limit: RL2S_VMAX km/h;      
+      construction_cost: ER2S_BUILDCOST
+      maintenance_cost: ER2S_INFRACOST
+      speed_limit: ER2S_VMAX km/h;      
       acceleration_model: ACC_MODEL_RAIL;
-      map_colour: 0xAB;
-      sort_order: RL2S_SORT;
+      map_colour: 0x74;
+      sort_order: ER2S_SORT;
       railtype_flags:	bitmask(RAILTYPE_FLAG_CATENARY);
     }
     graphics
     {
-      gui: RL2S_gui;
-      track_overlay: RL2S_track_overlay;
-      underlay: RL2S_underlay;
-      tunnels: RL2S_tunnels;
+      gui: ER2S_gui;
+      track_overlay: ER2S_track_overlay;
+      underlay: ER2S_underlay;
+      tunnels: ER2S_tunnels;
 //      tunnel_overlay: RL2S_tunnels;
       fences: EMPTY_SPRITESET
-      bridge_surfaces: RL2S_bridge_surfaces;
-      level_crossings: RL2S_level_crossings_open;
-      depots: RL2S_depot;
+      bridge_surfaces: ER2S_bridge_surfaces;
+      level_crossings: ER2S_level_crossings_open;
+      depots: ER2S_depot;
       signals: switch_light_signals_russian_type;
     }
   }

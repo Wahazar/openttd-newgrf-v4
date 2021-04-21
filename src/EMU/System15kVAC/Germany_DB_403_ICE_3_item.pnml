@@ -51,7 +51,7 @@ item(FEAT_TRAINS, ITEM ) {
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-	start_stop: switch_MU_3_vehicles_start_stop; 
+	start_stop: switch_MU_5_vehicles_start_stop; 
 
 		default: switch_emu_Germany_DB_403_ICE_3_reversed;
 	}

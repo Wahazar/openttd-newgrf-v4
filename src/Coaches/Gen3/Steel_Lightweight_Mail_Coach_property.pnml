@@ -39,6 +39,7 @@
 #define HEAD_CAPACITY 120
 
 
+#define WAGON_CAPACITY HEAD_CAPACITY 
 #define DUAL_HEADED 0
 #define PASSENGER 1
 #define MISC_FLAGS bitmask(TRAIN_FLAG_2CC)

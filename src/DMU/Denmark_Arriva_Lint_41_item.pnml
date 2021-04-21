@@ -52,6 +52,7 @@ item(FEAT_TRAINS, ITEM ) {
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
+	start_stop: switch_MU_6_vehicles_start_stop; 
 
 		default: switch_dmu_Denmark_Arriva_Lint_41_reversed;
 	}

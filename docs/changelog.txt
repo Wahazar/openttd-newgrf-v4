@@ -1,6 +1,11 @@
 V4 Trains changelog
 =========================
 
+ - new track (dual gauge electrified) added
+ - new EMU Talgo added
+ - DMU with length restrictions
+ - MU wagon capacity fixed
+ 
 7762
  - DMU, EMU, diesellok added
 

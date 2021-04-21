@@ -86,10 +86,10 @@
 #define RL2S_VMAX  60
 #define RL2S_YEAR 1870
 #define RL2S_SORT 161
-#define ER2S_BUILDCOST 12;
-#define ER2S_INFRACOST 10;
-#define ER2S_VMAX  60
-#define ER2S_YEAR 1965
+#define ER2S_BUILDCOST 13;
+#define ER2S_INFRACOST 11;
+#define ER2S_VMAX  70
+#define ER2S_YEAR 1975
 #define ER2S_SORT 165
 
 #define RLA0_BUILDCOST 7;

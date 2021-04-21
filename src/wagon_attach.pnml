@@ -50,6 +50,7 @@ switch(FEAT_TRAINS, PARENT, switch_can_attach_wagon, [STORE_TEMP(position_in_con
 	ID_RANGE_DMU_B: string(str_cannot_attach_wagon_to_MU); //DMU, disallow
 	ID_RANGE_EMU_N: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_EMU_B: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
+	ID_RANGE_EMU_D: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_MULTIMETRO: string(str_cannot_attach_wagon_to_MU); //Multi Unit Metro, disallow
 	ID_RANGE_COACHES_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Coaches, allow
 	ID_RANGE_COACHES_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Coaches, allow
@@ -83,6 +84,7 @@ switch(FEAT_TRAINS, PARENT, switch_can_attach_wagon_normalgauge, [STORE_TEMP(pos
 	ID_RANGE_DMU_B: string(str_cannot_attach_wagon_to_MU); //DMU, disallow
 	ID_RANGE_EMU_N: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_EMU_B: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
+	ID_RANGE_EMU_D: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_MULTIMETRO: string(str_cannot_attach_wagon_to_MU); //Multi Unit Metro, disallow
 	ID_RANGE_COACHES_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Coaches, allow
 	ID_RANGE_COACHES_B: string(str_cannot_attach_normal_gauge_vehicle); //Russian, disallow
@@ -116,6 +118,7 @@ switch(FEAT_TRAINS, PARENT, switch_can_attach_wagon_broadgauge, [STORE_TEMP(posi
 	ID_RANGE_DMU_B: string(str_cannot_attach_wagon_to_MU); //DMU, disallow
 	ID_RANGE_EMU_N: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_EMU_B: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
+	ID_RANGE_EMU_D: string(str_cannot_attach_wagon_to_MU); //EMU, disallow
 	ID_RANGE_MULTIMETRO: string(str_cannot_attach_wagon_to_MU); //Multi Unit Metro, disallow
 	ID_RANGE_COACHES_N: string(str_cannot_attach_broad_gauge_vehicle); //European, disallow
 	ID_RANGE_COACHES_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Coaches, allow
@@ -159,6 +162,7 @@ switch(FEAT_TRAINS, PARENT, switch_can_attach_unit_rail, [STORE_TEMP(position_in
 	ID_RANGE_DMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //DMU, allow
 	ID_RANGE_EMU_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, allow
 	ID_RANGE_EMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, allow
+	ID_RANGE_EMU_D: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, allow
 	ID_RANGE_MULTIMETRO: CB_RESULT_ATTACH_DISALLOW; //Multi Unit Metro, disallow
 	ID_RANGE_COACHES_N: string(str_cannot_attach_Unit_wagon_to_wagon); //Coaches, disallow
 	ID_RANGE_COACHES_B: string(str_cannot_attach_Unit_wagon_to_wagon); //Coaches, disallow
@@ -197,6 +201,7 @@ switch(FEAT_TRAINS, PARENT, switch_can_attach_unit_mtro, [STORE_TEMP(position_in
 	ID_RANGE_DMU_B: CB_RESULT_ATTACH_DISALLOW; //DMU, disallow
 	ID_RANGE_EMU_N: CB_RESULT_ATTACH_DISALLOW; //EMU, disallow
 	ID_RANGE_EMU_B: CB_RESULT_ATTACH_DISALLOW; //EMU, disallow
+	ID_RANGE_EMU_D: CB_RESULT_ATTACH_DISALLOW; //EMU, disallow
 	ID_RANGE_MULTIMETRO: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Multi Unit Metro, allow
 	ID_RANGE_COACHES_N: string(str_cannot_attach_Unit_wagon_to_wagon); //Coaches, disallow
 	ID_RANGE_COACHES_B: string(str_cannot_attach_Unit_wagon_to_wagon); //Coaches, disallow
@@ -299,6 +304,7 @@ switch(FEAT_TRAINS, SELF, switch_can_attach_vehicle, vehicle_type_id) {
 	ID_RANGE_DMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //DMU, always allow
 	ID_RANGE_EMU_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_EMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
+	ID_RANGE_EMU_D: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_MULTIMETRO: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Multi Unit Metro, always allow
 	ID_RANGE_COACHES_N: switch_can_attach_wagon_normalgauge; //Coaches, go to Regular-switch
 	ID_RANGE_COACHES_B: switch_can_attach_wagon_broadgauge; //Coaches, go to Regular-switch
@@ -337,6 +343,7 @@ switch(FEAT_TRAINS, SELF, switch_can_attach_normal_gauge_vehicle, vehicle_type_i
 	ID_RANGE_DMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //DMU, always allow
 	ID_RANGE_EMU_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_EMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
+	ID_RANGE_EMU_D: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_MULTIMETRO: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Multi Unit Metro, always allow
 	ID_RANGE_COACHES_N: switch_can_attach_wagon_normalgauge; //Coaches, go to Regular-switch
 	ID_RANGE_COACHES_B: switch_can_attach_wagon_broadgauge; //Coaches, go to Regular-switch
@@ -372,6 +379,7 @@ switch(FEAT_TRAINS, SELF, switch_can_attach_broad_gauge_vehicle, vehicle_type_id
 	ID_RANGE_DMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //DMU, always allow
 	ID_RANGE_EMU_N: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_EMU_B: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
+	ID_RANGE_EMU_D: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //EMU, always allow
 	ID_RANGE_MULTIMETRO: CB_RESULT_ATTACH_ALLOW_IF_RAILTYPES; //Multi Unit Metro, always allow
 	ID_RANGE_COACHES_N: switch_can_attach_wagon_normalgauge; //Coaches, go to Regular-switch
 	ID_RANGE_COACHES_B: switch_can_attach_wagon_broadgauge; //Coaches, go to Regular-switch
@@ -389,16 +397,25 @@ switch (FEAT_TRAINS, SELF, switch_3_vehicles_start_stop, num_vehs_in_consist ) {
 	return string(STR_TRAIN_TOO_LONG);
 }
 
+// ..6 units
+switch (FEAT_TRAINS, SELF, switch_MU_6_vehicles_start_stop, num_vehs_in_consist ) {
+	1..6: return CB_RESULT_NO_TEXT;
+	return string(STR_MU_LONGER_THAN_6);
+}
+
+// ..10 units
 switch (FEAT_TRAINS, SELF, switch_MU_10_vehicles_start_stop, num_vehs_in_consist ) {
 	1..10: return CB_RESULT_NO_TEXT;
 	return string(STR_MU_LONGER_THAN_10);
 }
 
+// 3..10 units
 switch (FEAT_TRAINS, SELF, switch_MU_3_vehicles_start_stop, num_vehs_in_consist ) {
 	1..2: return string(STR_MU_LONGER_THAN_2);
 	return switch_MU_10_vehicles_start_stop;
 }
 
+// 4..10 units
 switch (FEAT_TRAINS, SELF, switch_MU_4_vehicles_start_stop, num_vehs_in_consist ) {
 	1..3: return string(STR_MU_LONGER_THAN_3);
 	return switch_MU_10_vehicles_start_stop;
@@ -409,6 +426,7 @@ switch (FEAT_TRAINS, SELF, switch_MU_12_vehicles_start_stop, num_vehs_in_consist
 	return string(STR_MU_LONGER_THAN_12);
 }
 
+// 5..12 units
 switch (FEAT_TRAINS, SELF, switch_MU_5_vehicles_start_stop, num_vehs_in_consist ) {
 	1..4: return string(STR_MU_LONGER_THAN_4);
 	return switch_MU_12_vehicles_start_stop;

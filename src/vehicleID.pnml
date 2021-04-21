@@ -490,13 +490,17 @@ item(FEAT_TRAINS, item_emu_Croatia_HZ_6112, 8070) {}
 
 item(FEAT_TRAINS, item_emu_Europe_Sureot, 8072) {}
 
-//EMU, available ID range: 8900-8999 (hex 0x22C4..0x2327) - broad gauge
-#define ID_RANGE_EMU_B 0x22C4..0x2327
+//EMU, available ID range: 8900-8989 (hex 0x22C4..0x231D) - broad gauge
+#define ID_RANGE_EMU_B 0x22C4..0x231D
 item(FEAT_TRAINS, item_emu_Russia_RZD_S, 8900) {}
 item(FEAT_TRAINS, item_emu_Russia_RZD_ER2, 8901) {}
 item(FEAT_TRAINS, item_emu_Russia_RZD_ER200, 8902) {}
 
 item(FEAT_TRAINS, item_emu_Russia_RZD_ES1_Lastochka, 8904) {}
+
+//EMU, available ID range: 8990-8999 (hex 0x231E..0x2327) - dual 3kV gauge
+#define ID_RANGE_EMU_D 0x231E..0x2327
+item(FEAT_TRAINS, item_emu_KZ4A_Talgo, 8990) {}
 
 //Multi Unit Metro, available ID range: 9000-9999 (hex 0x2328..0x270F)
 #define ID_RANGE_MULTIMETRO 0x2328..0x270F

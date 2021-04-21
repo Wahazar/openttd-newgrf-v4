@@ -317,6 +317,9 @@ item_emu_Switzerland_SBB_RABe_523_Flirt, /* 2008 */ \
 item_emu_Poland_PKP_EN76, /*Year: 2010*/ \
 item_edmu_Poland_Newag_36_WEh, /*Year: 2021*/ 
 
+#define SORTING_EMU_D \
+item_emu_KZ4A_Talgo, /*Year: 2023*/ \
+
 #define SORTING_EMU_B \
 item_emu_Russia_RZD_S, /*Year: 1929*/ \
 item_emu_Russia_RZD_ER2, /*Year: 1962*/ \
@@ -531,6 +534,7 @@ sort(FEAT_TRAINS, [
 	SORTING_ELECTRIC_25KVAC
 	SORTING_ELECTRIC_MULTI
 	SORTING_DIESEL_D
+	SORTING_EMU_D
 	SORTING_STEAM_B
 	SORTING_DIESEL_B
 	SORTING_RBD_B

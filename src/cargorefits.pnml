@@ -59,10 +59,10 @@ default_cargo_type : LVST;
 
 #define CARGODEF_PETROTANKER refittable_cargo_classes: 0; non_refittable_cargo_classes: 0; cargo_allow_refit: [OIL_, RUBR, PETR, PLAS, RFPR]; 
 
-#define CARGODEF_OPEN_WAGON refittable_cargo_classes: bitmask(CC_BULK); non_refittable_cargo_classes: 0; cargo_allow_refit: [COAL, GRAI, WOOD, IORE, WHEA, FRUT, MAIZ, CORE, SUGR, TOFF, CTCD, BUBL, AORE, CERE, CLAY, GRVL, LIME, OLSD, POTA, SAND, SGBT, SCMT]; \
+#define CARGODEF_OPEN_WAGON refittable_cargo_classes: bitmask(CC_BULK); non_refittable_cargo_classes: 0; cargo_allow_refit: [COAL, GRAI, WOOD, IORE, WHEA, FRUT, MAIZ, CORE, SUGR, TOFF, CTCD, BUBL, AORE, CERE, CLAY, GRVL, LIME, OLSD, POTA, SAND, SGBT, SCMT, MNO2]; \
 cargo_disallow_refit: [PASS, MAIL, TOUR, OIL_, LVST, GOOD, STEL, VALU, PAPR, FOOD, GOLD, RUBR, WATR, DIAM, TOYS, BATT, SWET, COLA, PLST, FZDR, BEER, CERA, COPR, DYES, ENSP, FERT, FICR, FISH, FMSP, GLAS, JAVA, MILK, MNSP, PETR, PLAS, RCYC, RFPR, SGCN, VEHI, VPTS, WDPR, WOOL, URAN, YETI, YETY, SALT, CMNT, QLME, SASH, KAOL, NUTS];
 
-#define CARGODEF_GONDOLA refittable_cargo_classes: bitmask(CC_BULK); non_refittable_cargo_classes: bitmask(CC_COVERED, CC_REFRIGERATED); cargo_allow_refit: [COAL, GRAI, WOOD, IORE, CORE, TOFF, CTCD, AORE, GRVL, LIME, SAND, SCMT, SGBT]; \
+#define CARGODEF_GONDOLA refittable_cargo_classes: bitmask(CC_BULK); non_refittable_cargo_classes: bitmask(CC_COVERED, CC_REFRIGERATED); cargo_allow_refit: [COAL, GRAI, WOOD, IORE, CORE, TOFF, CTCD, AORE, GRVL, LIME, SAND, SCMT, SGBT, MNO2]; \
 cargo_disallow_refit: [PASS, MAIL, TOUR, OIL_, LVST, GOOD, STEL, VALU, PAPR, FOOD, GOLD, RUBR, WATR, DIAM, TOYS, BATT, SWET, COLA, BUBL, PLST, FZDR, BEER, BRCK, CERA, COPR, DYES, ENSP, FERT, FICR, FISH, FMSP, GLAS, JAVA, MILK, MNSP, OLSD, PETR, PLAS, RCYC, RFPR, SGCN, VEHI, VPTS, WOOL, URAN, YETI, YETY, GRAI, MAIZ, WHEA, NUTS];
 
 #define CARGODEF_SILO refittable_cargo_classes: bitmask(CC_POWDERIZED); non_refittable_cargo_classes: bitmask(CC_NON_POURABLE); cargo_allow_refit: [GRAI, WHEA, MAIZ, SUGR, CERE, OLSD, POTA, SULP, URAN, CLAY, MNO2, KAOL, QLME, NITR, PHOS, SALT, SASH, SLAG, FERT, CMNT, BDMT, NUTS]; \

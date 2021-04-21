@@ -80,7 +80,7 @@ item(FEAT_TRAINS, ITEM ) {
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-//	start_stop: switch_MU_3_vehicles_start_stop; 
+	start_stop: switch_MU_10_vehicles_start_stop; 
 
 		default: switch_edmu_Poland_Newag_36_WEh_reversed;
 	}
