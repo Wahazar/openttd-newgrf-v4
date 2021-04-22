@@ -1,0 +1,77 @@
+
+
+// one horse 
+
+spriteset(spriteset_onehorse_purchase, "gfx/Special/horse4bgait_harness.png") { template_sprite_window_sideview7(8) }
+
+#define ONEHORSE_ANIMATION_SWITCHES_DEFINITION(hname, spritelink) \
+spriteset(hname##_walkstop_graphic, spritelink) { template_spriteh(8) } \
+spriteset(hname##_walk0_graphic, spritelink) { template_spriteh(38) } \
+spriteset(hname##_walk1_graphic, spritelink) { template_spriteh(68) } \
+spriteset(hname##_walk2_graphic, spritelink) { template_spriteh(98) } \
+spriteset(hname##_walk3_graphic, spritelink) { template_spriteh(128) } \
+switch(FEAT_TRAINS, SELF, animated_##hname##_switch, motion_counter % 4) {  \
+0 : return hname##_walk0_graphic; \
+1 : return hname##_walk1_graphic; \
+2 : return hname##_walk2_graphic; \
+3 : return hname##_walk3_graphic; \
+return CB_FAILED; \
+} \
+switch(FEAT_TRAINS, SELF, velocity_##hname##_switch, current_speed) {   \
+0 : return hname##_walkstop_graphic; \
+return animated_##hname##_switch;  \
+}
+
+ONEHORSE_ANIMATION_SWITCHES_DEFINITION(onehorse, "gfx/Special/horse4bgait_harness.png")
+
+switch (FEAT_TRAINS, SELF, switch_onehorse_start_stop, (count_veh_id(OneHorse)>1) ) {
+	0: return CB_RESULT_NO_TEXT;
+	return string(STR_SINGLE_HORSE);
+}
+
+switch(FEAT_TRAINS, SELF, horse_sound_switch, (extra_callback_info1 & 0xFF)) { 
+SOUND_EVENT_BREAKDOWN : return SOUND_HORSE;
+return CB_RESULT_NO_SOUND;
+}
+
+item(FEAT_TRAINS, OneHorse) { 
+	property { 
+	name:			   	string(STR_1_HORSE); 
+	REGION(REGIONTYPE1,NOREGION,NOCONCEPT)
+	introduction_date:		date(1660, 1, 1);	    
+	model_life:     		230; 
+	vehicle_life:		   	25; 
+	retire_early:			10; 
+	reliability_decay:	    	10; 
+	loading_speed:		  	5; 
+	cost_factor:		    	5;   
+	refit_cost:   			0;
+	running_cost_factor:		10; 
+	sprite_id:		      	SPRITE_ID_NEW_TRAIN; 
+	speed:			  	12 km/h; 
+	misc_flags:		   	bitmask(TRAIN_FLAG_2CC,ROADVEH_FLAG_NO_BREAKDOWN_SMOKE); 
+	cargo_age_period:	 	185; 
+	cargo_capacity:		 	0; 
+	power:			  	12 hp; 
+	tractive_effort_coefficient:    1; 
+	air_drag_coefficient:	   	0.9; 
+	running_cost_base:	   	RUNNING_COST_ELECTRIC; 
+        track_type:                     SAaN; 
+        ai_engine_rank:                 0; 
+        engine_class:                   ENGINE_CLASS_STEAM; 
+	weight:			 	1; 
+	length:      	    		4; 
+        extra_weight_per_wagon:         0; 
+	visual_effect_and_powered:      visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER); 
+        bitmask_vehicle_info:           0; 
+    } 
+
+    graphics { 
+	default:	    	velocity_onehorse_switch;  
+	purchase:	   	spriteset_onehorse_purchase;  
+	sound_effect: horse_sound_switch;
+        start_stop:             switch_onehorse_start_stop;   
+    }  
+}
+
+

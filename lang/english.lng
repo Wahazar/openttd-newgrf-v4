@@ -210,6 +210,8 @@ STR_ER2S_TOOLBAR		:Dual gauge branch railroad, electrified
 STR_ER2S_MENU			:{CREAM}1435/1520mm branch railroad, 3kV DC
 STR_ER2S_BUILD_CAPTION		:1435/1520mm track, low speed, 3kV DC
 
+STR_1_HORSE			: One Percheron, single harness
+STR_SINGLE_HORSE		: Only one single harness horse can be attached to the train
 
 str_Light_Railbus		 				: (light railbus)
 str_Railbus_Trailer		 				:- light railbus trailer
@@ -636,6 +638,7 @@ str_wagon_Gen5_Heavy_Flatcar_European 			:5th Gen Heavy Flatcar (normal gauge)
 # str_wagon_Gen5_Heavy_Flatcar_Russian 			:5th Gen Heavy Flatcar (broad gauge)
 str_wagon_Gen5_Superheavy_Flatcar_Russian 		:5th Gen Superheavy Flatcar (broad gauge)
 
+str_wagon_Gen1_Service_Car_European			:Small Service Car (normal gauge)
 str_wagon_Gen2_Service_Car_European			:Wooden Service Car (normal gauge)
 str_wagon_Gen3_Service_Car_European			:Service Car (normal gauge)
 str_wagon_Service_Draisine_European			:Service Vehicle (normal gauge draisine)

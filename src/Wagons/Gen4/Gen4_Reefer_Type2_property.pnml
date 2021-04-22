@@ -28,7 +28,7 @@
 
 #define SPEED 100
 #define POWER 0
-#define WEIGHT 32
+#define WEIGHT 35
 #define TE_COEFFICIENT 0.0
 #define AIR_DRAG_COEFFICIENT 0
 
@@ -61,6 +61,6 @@ VARIABLERUNNINGCOSTVALUESWITCH(wagon_Gen4_Reefercar_Russian)
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK
 #define SPRITE_ID DEFAULT_SPRITE_ID
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_AutoRefit, LOADINGSPEED, CARGO_AGE_PERIOD);
-#define POPULARITY 0
+#define POPULARITY -12
 #define VOLTAGE 0
 

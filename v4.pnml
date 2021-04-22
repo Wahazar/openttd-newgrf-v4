@@ -91,6 +91,8 @@
 * VEHICLES
 */
 
+#include "src/Special/horses.pnml"
+
 //Unit wagons
 #include "src/_CodeSupport/TypeInitialization/init_type_MU_Wagons.pnml"
 #include "src/Special/MU_Wagon_Unpowered_property.pnml"
@@ -1399,6 +1401,9 @@
 #include "src/Wagons/Gen5/Gen5_Centerbeam_Type1_graphics.pnml"
 #include "src/Wagons/Gen5/Gen5_Centerbeam_Type1_item.pnml"
 
+#include "src/Wagons/Service_Car/Gen1_Service_Car_Type1_property.pnml"
+#include "src/Wagons/Service_Car/Gen1_Service_Car_Type1_graphics.pnml"
+#include "src/Wagons/Service_Car/Gen1_Service_Car_Type1_item.pnml"
 #include "src/Wagons/Service_Car/Gen2_Service_Car_Type1_property.pnml"
 #include "src/Wagons/Service_Car/Gen2_Service_Car_Type1_graphics.pnml"
 #include "src/Wagons/Service_Car/Gen2_Service_Car_Type1_item.pnml"

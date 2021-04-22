@@ -169,9 +169,9 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen1_Mixed_cargo_selection, cargo_type_in
 	return switch_wagon_Gen1_Mixed_reefer_class; 
 }
 
-spriteset(spriteset_wagon_Gen1_Service_Car_Type1_L4, "gfx/Wagons/Gen1/Gen1_Boxcar_Standard.png") {
-	template_2cc_wagons(535, 1)
-}
+//spriteset(spriteset_wagon_Gen1_Service_Car_Type1_L4, "gfx/Wagons/Gen1/Gen1_Boxcar_Standard.png") {
+//	template_2cc_wagons(535, 1)
+//}
 /*
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen1_Mixed_caboose_position, [STORE_TEMP(-1, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
 	ID_RANGE_WAGONS_N: switch_wagon_Gen1_Mixed_cargo_selection;

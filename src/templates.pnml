@@ -411,4 +411,19 @@ template tmpl_signals_x2() {
     [325, 0, 64, 64, -35, -43, ANIM]
 }
 
+//For horses
+template template_sprite_window_sideview7(y) {
+    [160,          y,       28,        13,         -15,         -7, ANIM]
+}
+template template_spriteh(y) {
+[8, y, 8, 22, -3,-11, ANIM]
+[24, y, 20, 17, -11,-8, ANIM]
+[52, y, 28, 13, -12, -7, ANIM]
+[88, y, 20, 15, -3,-5, ANIM]
+[116, y, 8, 20, -3,-10, ANIM]
+[132, y, 20, 15, -17,-5, ANIM]
+[160, y, 28, 13, -12,-7, ANIM]
+[196, y, 20, 17, -8,-9, ANIM]
+}
+
 

@@ -736,6 +736,7 @@ item(FEAT_TRAINS, item_wagon_Gen5_Hopper_European, 12076) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Tanker_European, 12077) {}
 item(FEAT_TRAINS, item_wagon_Gen5_PetroTanker_European, 12078) {}
 
+item(FEAT_TRAINS, item_wagon_Gen1_Service_Car_Type1, 12191) {}
 item(FEAT_TRAINS, item_wagon_Gen2_Service_Car_Type1, 12192) {}
 item(FEAT_TRAINS, item_wagon_Gen3_Service_Car_Type1, 12193) {}
 

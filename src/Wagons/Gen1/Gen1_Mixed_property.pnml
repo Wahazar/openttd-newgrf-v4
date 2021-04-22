@@ -61,6 +61,6 @@ VARIABLERUNNINGCOSTVALUESWITCH(wagon_Gen1_Mixed)
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD);
 
 
-#define POPULARITY 10
+#define POPULARITY 20
 #define VOLTAGE 0
 

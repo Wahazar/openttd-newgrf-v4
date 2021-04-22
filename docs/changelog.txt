@@ -1,6 +1,10 @@
 V4 Trains changelog
 =========================
 
+ - single horse added
+ - Gen1 service car added
+
+7780 
  - new track (dual gauge electrified) added
  - new EMU Talgo added
  - DMU with length restrictions

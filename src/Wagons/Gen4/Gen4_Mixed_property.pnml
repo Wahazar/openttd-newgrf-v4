@@ -28,7 +28,7 @@
 
 #define SPEED 80
 #define POWER 0
-#define WEIGHT 20
+#define WEIGHT 18
 #define TE_COEFFICIENT 0.3
 #define AIR_DRAG_COEFFICIENT 0
 
@@ -63,6 +63,6 @@ VARIABLERUNNINGCOSTVALUESWITCH(wagon_Gen4_Mixed)
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD);
 
 
-#define POPULARITY 5
+#define POPULARITY 10
 #define VOLTAGE 0
 

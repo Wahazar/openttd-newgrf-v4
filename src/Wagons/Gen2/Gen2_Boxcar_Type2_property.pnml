@@ -61,6 +61,6 @@ VARIABLERUNNINGCOSTVALUESWITCH(wagon_Gen2_Boxcar_Russian)
 #define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD);
 
 
-#define POPULARITY 0
+#define POPULARITY 5
 #define VOLTAGE 0
 
