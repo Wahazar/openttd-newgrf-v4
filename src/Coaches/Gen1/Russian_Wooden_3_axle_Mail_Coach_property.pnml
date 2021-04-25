@@ -12,7 +12,7 @@
 
 #define LIVERYMAPPINGSWITCHCALL colour_mapping: switch_livery_subtype_default_mail_mapping;
 #define CARGOSUBTYPESWITCHCALL
-#define POPULARITY -5
+#define POPULARITY 0
 #define VOLTAGE 0  
 
 
@@ -39,7 +39,7 @@
 #define LENGTH 7
 #define ACTUAL_LENGTH 7
 
-#define HEAD_CAPACITY 80
+#define HEAD_CAPACITY 90
 
 
 #define WAGON_CAPACITY HEAD_CAPACITY 

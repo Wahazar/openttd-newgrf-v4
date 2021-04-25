@@ -28,33 +28,33 @@
 #define RHIG_SORT 113
 
 #define ELOW_BUILDCOST 16;
-#define ELOW_INFRACOST 18;
+#define ELOW_INFRACOST 22;
 #define ELOW_VMAX  	110
 #define ELOW_YEAR 1936
 #define ELOW_SORT 121
 #define EMED_BUILDCOST 22;
-#define EMED_INFRACOST 24;
+#define EMED_INFRACOST 28;
 #define EMED_VMAX  	160
 #define EMED_YEAR 1970
 #define EMED_SORT 122
 #define EHIG_BUILDCOST 32;
-#define EHIG_INFRACOST 30;
+#define EHIG_INFRACOST 36;
 #define EHIG_VMAX  	250
 #define EHIG_YEAR 1990
 #define EHIG_SORT 123
 
 #define DBNE_BUILDCOST 28;
-#define DBNE_INFRACOST 15;
+#define DBNE_INFRACOST 18;
 #define DBNE_VMAX  	90
 #define DBNE_YEAR 1930
 #define DBNE_SORT 141
 #define DBHE_BUILDCOST 36;
-#define DBHE_INFRACOST 22;
+#define DBHE_INFRACOST 24;
 #define DBHE_VMAX  	130
 #define DBHE_YEAR 1935
 #define DBHE_SORT 142
 #define DBHS_BUILDCOST 55;
-#define DBHS_INFRACOST 31;
+#define DBHS_INFRACOST 38;
 #define DBHS_VMAX  	300
 #define DBHS_YEAR 2000
 #define DBHS_SORT 143
@@ -65,18 +65,18 @@
 #define SCAA_YEAR 1965
 #define SCAA_SORT 145
 #define SDAA_BUILDCOST 45;
-#define SDAA_INFRACOST 22;
+#define SDAA_INFRACOST 25;
 #define SDAA_VMAX  	180
 #define SDAA_YEAR 1980
 #define SDAA_SORT 146
 #define SEAA_BUILDCOST 65;
-#define SEAA_INFRACOST 29;
+#define SEAA_INFRACOST 32;
 #define SEAA_VMAX  	320
 #define SEAA_YEAR 2010
 #define SEAA_SORT 147
 
 #define ELRL_BUILDCOST 18;
-#define ELRL_INFRACOST 14;
+#define ELRL_INFRACOST 17;
 #define ELRL_VMAX  70
 #define ELRL_YEAR 	1905
 #define ELRL_SORT 151
@@ -87,7 +87,7 @@
 #define RL2S_YEAR 1870
 #define RL2S_SORT 161
 #define ER2S_BUILDCOST 13;
-#define ER2S_INFRACOST 11;
+#define ER2S_INFRACOST 20;
 #define ER2S_VMAX  70
 #define ER2S_YEAR 1975
 #define ER2S_SORT 165
@@ -109,12 +109,12 @@
 #define RLA2_SORT 173
 
 #define ERD1_BUILDCOST 18;
-#define ERD1_INFRACOST 16;
+#define ERD1_INFRACOST 22;
 #define ERD1_VMAX  110
 #define ERD1_YEAR 1925
 #define ERD1_SORT 181
 #define ERD2_BUILDCOST 36;
-#define ERD2_INFRACOST 24;
+#define ERD2_INFRACOST 30;
 #define ERD2_VMAX  200
 #define ERD2_YEAR 1980
 #define ERD2_SORT 182
