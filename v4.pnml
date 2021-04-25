@@ -1186,6 +1186,11 @@
 #include "src/Coaches/Gen5/Talgo_Pendular_Mail_graphics.pnml"
 #include "src/Coaches/Gen5/Talgo_Pendular_Mail_item.pnml"
 
+//mail vans, broad gauge
+#include "src/_CodeSupport/TypeInitialization/init_type_MailVans_Broad_Gauge.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_item.pnml"
 
 //coaches, dual gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Coaches_Dual_Gauge.pnml"
@@ -1223,8 +1228,11 @@
 #include "src/Coaches/Gen6/Grand_Voyager_Coach_graphics.pnml"
 #include "src/Coaches/Gen6/Grand_Voyager_Coach_item.pnml"
 
-//coaches, broad gauge
+//passenger coaches, broad gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Coaches_Broad_Gauge.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Compartment_Coach_property.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Compartment_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Compartment_Coach_item.pnml"
 #include "src/Coaches/Gen1/Clerestory_Regional_Coach_property.pnml"
 #include "src/Coaches/Gen1/Clerestory_Regional_Coach_graphics.pnml"
 #include "src/Coaches/Gen1/Clerestory_Regional_Coach_item.pnml"

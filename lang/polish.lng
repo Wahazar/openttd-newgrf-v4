@@ -202,6 +202,9 @@ STR_ER2S_MENU                   :{BLUE}Bocznica 1435/1520mm, 3kV DC
 STR_ER2S_BUILD_CAPTION          :Tor 1435/1520mm, niska prędkość, 3kV DC
 
 
+STR_1_HORSE			: Perszeron, pojedynczy zaprzęg
+STR_SINGLE_HORSE		: Brak trakcji ukrotnionej
+
 str_Light_Railbus                                               : (szynobus)
 str_Railbus_Trailer                                             :- doczepa do szynobusu
 
@@ -575,6 +578,8 @@ str_coach_Gen1_Clerestory_Luggage_Van                   :Wagon bagażowy z dache
 str_coach_Gen1_Wooden_3_axle_Compartment_Coach          :Trzyosiowy wagon przedziałowy, nadwozie drewniane
 str_coach_Gen1_Wooden_3_axle_Regional_Coach             :Trzyosiowy wagon bezprzedziałowy, nadwozie drewniane
 str_coach_Gen1_Wooden_3_axle_Mail_Coach                 :Trzyosiowy wagon pocztowy, nadwozie drewniane
+str_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach          :Szerokotorowy 3-osiowy wagon przedziałowy, nadwozie drewniane
+str_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach                 :Szerokotorowy 3-osiowy wagon pocztowy, nadwozie drewniane
 str_coach_Gen2_Heavyweight_Intercity_Coach              :Wagon dalekobieżny 'Pulmann'
 str_coach_Gen2_Heavyweight_Mail_Coach                   :Dalekobieżny wagon pocztowy
 str_coach_Gen2_Steel_Intercity_Coach                    :Wagon dalekobieżny, nadwozie stalowe
@@ -810,7 +815,7 @@ str_class_electric_Russia_RZD_VL15                                      :SZD VL1
 str_class_electric_Germany_DB_185_TRAXX_F140                            :DB 185/PKP-PR EU43 {STRING}
 str_class_electric_Germany_DB_182_ES64U_Taurus                          :DB 182/OBB 1016/MAV 1047/MRCE dispolok X4E{STRING}
 # str_class_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
-str_class_electric_Kazakhstan_KTZ_KZ4A                          :KTZ KZ4A {STRING}
+# str_class_electric_Kazakhstan_KTZ_KZ4A                          :KTZ KZ4A {STRING}
 str_class_electric_Germany_DB_E_919                                     :E 91.9/DB 191.9 {STRING}
 str_class_electric_Poland_PKP_EP03                                      :PKP EP03 {STRING}
 str_class_electric_Russia_RZD_ChS3 :SZD ChS3 {STRING}

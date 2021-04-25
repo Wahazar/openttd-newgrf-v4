@@ -10,7 +10,7 @@
 * PURCHASE
 */
 
-spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_purchase, "gfx/Coaches/Gen1/Wooden_3_axle_Mail_Coach_Purchase.png") {
+spriteset(spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_purchase, "gfx/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_Purchase.png") {
 	template_purchase_wagon(1, 1)
 }
 
@@ -19,30 +19,30 @@ spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_purchase, "gfx/Coaches/G
 */
 
 //Livery 1
-spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L1, "gfx/Coaches/Gen1/Wooden_3_axle_Mail_Coach.png") {
+spriteset(spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L1, "gfx/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach.png") {
 	template_2cc_wagons(1, 1)
 }
 
 //Livery 2
-spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L2, "gfx/Coaches/Gen1/Wooden_3_axle_Mail_Coach.png") {
+spriteset(spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L2, "gfx/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach.png") {
 	template_2cc_wagons(179, 1)
 }
 
 //Livery 3
-spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L3, "gfx/Coaches/Gen1/Wooden_3_axle_Mail_Coach.png") {
+spriteset(spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L3, "gfx/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach.png") {
 	template_2cc_wagons(357, 1)
 }
 
 //Livery 4
-spriteset(spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L4, "gfx/Coaches/Gen1/Wooden_3_axle_Mail_Coach.png") {
+spriteset(spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L4, "gfx/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach.png") {
 	template_2cc_wagons(535, 1)
 }
 
-random_switch(FEAT_TRAINS, SELF, switch_coach_Gen1_Wooden_3_axle_Mail_Coach_livery) {
-	7: spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L1;
-	1: spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L2;
-	1: spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L3;
-	1: spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_L4;
+random_switch(FEAT_TRAINS, SELF, switch_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_livery) {
+	7: spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L1;
+	1: spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L2;
+	1: spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L3;
+	1: spriteset_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach_L4;
 }
 
 //Add defined switches

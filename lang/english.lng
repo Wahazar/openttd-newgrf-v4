@@ -658,6 +658,8 @@ str_coach_Gen1_Clerestory_Luggage_Van 			:Clerestory Luggage Van (broad gauge)
 str_coach_Gen1_Wooden_3_axle_Compartment_Coach 		:Wooden 3-axle 2nd class Compartment Coach (normal gauge)
 str_coach_Gen1_Wooden_3_axle_Regional_Coach 		:Wooden 3-axle 3rd class Coach (normal gauge)
 str_coach_Gen1_Wooden_3_axle_Mail_Coach 		:Wooden 3-axle Mail Coach (normal gauge)
+str_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach 		:Russian 3-axle 2nd class Compartment Coach (broad gauge)
+str_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach 		:Russian  3-axle Mail Coach (broad gauge)
 str_coach_Gen2_Heavyweight_Intercity_Coach 		:Heavyweight Sleeping Coach 
 str_coach_Gen2_Heavyweight_Mail_Coach 			:Heavyweight Mail Coach
 str_coach_Gen2_Steel_Intercity_Coach 			:Steel 1st class Coach (normal gauge)

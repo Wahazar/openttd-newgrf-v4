@@ -1,50 +1,51 @@
 /*
- *  Copyright (C) 2017 Transportman, McZapkie
- *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
+ *  Copyright (C) 2017-2021 McZapkie, Transportman
+ *  This file is part of the V4 CEE, fork of the 2cc Trains In NML
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include "../undefine_properties.pnml" 
-
-#define RELIABILITY_DECAY EARLY_ELECTRIC_RELIABILITY_DECAY
+#include "../undefine_properties.pnml"
 
 
 #define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
-#define CARGOSUBTYPESWITCHCALL DEFAULT_LIVERY_TEXT
+#define CARGOSUBTYPESWITCHCALL
+#define POPULARITY 0
+#define VOLTAGE 0  
 
-#define VEHIDCODE electric_Germany_DR_E_18
-#define ITEM item_electric_Germany_DR_E_18
-#define NAME string(str_electric_Germany_DR_E_18,string(str_Electric,string(str_AC503_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Germany_DR_E_18,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
-#define VEHICLE_REGION REGION(GERMANY,AUSTRIA,NOREGION)
+#define VEHIDCODE coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach
+#define ITEM item_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach
+#define NAME string(str_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach)
 
-#define INTRODUCTION_YEAR 1935
-#define MODEL_LIFE 60
+#define VEHICLE_REGION REGION(REGIONTYPE2,NOREGION,NOCONCEPT)
+
+#define INTRODUCTION_YEAR 1870
+#define MODEL_LIFE 80
 #define RETIRE_EARLY DEFAULT_RETIRE_EARLY
-#define VEHICLE_LIFE 35
+#define VEHICLE_LIFE 25
 
-#define LOADINGSPEED LOADINGSPEEDDEF_NONE
-#define CARGODEF CARGODEF_LOCO
+#define LOADINGSPEED LOADINGSPEEDDEF_INTERCITY
+#define CARGODEF CARGODEF_PASSENGERS_ONLY
 
-#define SPEED 130
-#define POWER 3810
-#define WEIGHT 109
-#define TE_COEFFICIENT 0.19
-#define AIR_DRAG_COEFFICIENT 0.01
+#define SPEED 70
+#define POWER 0
+#define WEIGHT 20
+#define TE_COEFFICIENT 0.3
+#define AIR_DRAG_COEFFICIENT 0
 
-#define LENGTH 8
-#define ACTUAL_LENGTH 8
+#define LENGTH 7
+#define ACTUAL_LENGTH 7
 
-#define HEAD_CAPACITY 1
+#define HEAD_CAPACITY 50
 
 
+#define WAGON_CAPACITY HEAD_CAPACITY 
 #define DUAL_HEADED 0
 #define PASSENGER 1
-#define MISC_FLAGS bitmask(TRAIN_FLAG_2CC)
-#define VISUAL_FLAG visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, -3, DISABLE_WAGON_POWER)
+#define MISC_FLAGS bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_AUTOREFIT)
+#define VISUAL_FLAG visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER)
 
 
 #define TRACK_TYPE CURRENT_TRACK_TYPE
@@ -54,11 +55,9 @@
 
 
 #define REFIT_COST DEFAULT_REFIT_COST
-
+#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
 #define CARGO_AGE_PERIOD DEFAULT_CARGO_AGE_PERIOD
 #define POWER_PER_WAGON DEFAULT_POWER_PER_WAGON
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK
 #define SPRITE_ID DEFAULT_SPRITE_ID
-#define POPULARITY -15
-#define VOLTAGE 15
-
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_AutoRefit, LOADINGSPEED, CARGO_AGE_PERIOD);

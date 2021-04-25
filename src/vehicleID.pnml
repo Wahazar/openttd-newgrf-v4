@@ -642,6 +642,8 @@ item(FEAT_TRAINS, item_coach_Gen6_Grand_Voyager_Coach, 11890) {}
 
 //Coaches, available ID range: 11900-11899 (hex 0x2E7C..0x2EDF) - broad gauge
 #define ID_RANGE_COACHES_B 0x2E7C..0x2EDF
+item(FEAT_TRAINS, item_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach, 11901) {}
+item(FEAT_TRAINS, item_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach, 11902) {}
 item(FEAT_TRAINS, item_coach_Gen1_Clerestory_Regional_Coach, 11904) {}
 
 item(FEAT_TRAINS, item_coach_Gen3_Steel_Lightweight_Regional_Coach, 11922) {}

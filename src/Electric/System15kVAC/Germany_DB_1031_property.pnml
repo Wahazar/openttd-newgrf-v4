@@ -15,14 +15,6 @@
 #define CARGOSUBTYPESWITCHCALL DEFAULT_LIVERY_TEXT
 
 
-
-
-
-
-
-
-
-
 #define VEHIDCODE electric_Germany_DB_1031
 #define ITEM item_electric_Germany_DB_1031
 #define NAME string(str_electric_Germany_DB_1031,string(str_Electric,string(str_AC503_Voltage)))

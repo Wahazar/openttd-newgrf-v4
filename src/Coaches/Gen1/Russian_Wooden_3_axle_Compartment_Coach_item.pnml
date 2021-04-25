@@ -42,7 +42,7 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_coach_Gen1_Wooden_3_axle_Mail_Coach_purchase;
+		purchase: spriteset_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach_purchase;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
@@ -50,7 +50,7 @@ item(FEAT_TRAINS, ITEM ) {
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
 
-		default: switch_coach_Gen1_Wooden_3_axle_Mail_Coach_livery;
+		default: switch_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach_livery;
 	}
 }
 SET_TRACK_TYPE 
