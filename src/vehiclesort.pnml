@@ -113,7 +113,7 @@ item_steam_Czech_Republic_CSD_556_0, /*1951*/\
 item_steam_Germany_DB_18_201, 
 
 #define SORTING_STEAM_B \
-item_steam_Russia_RZD_MZk, /*1858*/\
+item_steam_Russia_RZD_G, /*1858*/\
 item_steam_Russia_RZD_MZk, /*1865*/\
 item_steam_Russia_RZD_F, /*1871*/\
 item_steam_Russia_RZD_D, /*1874*/\
@@ -200,6 +200,7 @@ item_electric_Macedonia_Macedonian_Railways_462, /* 1965 */ \
 item_electric_Czech_Republic_CD_S499, /* 1966 */ \
 item_electric_Croatia_HZ_1141, /* 1967 */ \
 item_electric_Hungary_MAV_Class_V63, /* 1974 */ \
+item_electric_Croatia_HZ_1142, /* 1981 */ \
 item_electric_Hungary_MAV_Class_V46, /* 1983 */ \
 item_electric_Romania_CFR_478_Phoenix, /* 2009 */ 
 
@@ -458,6 +459,7 @@ item_wagon_Gen5_Livestock_Boxcar_European, \
 item_wagon_Gen5_Grain_Boxcar_European, \
 item_wagon_Gen5_Silo_European, \
 item_wagon_Gen5_Sliding_Wall_European, \
+item_wagon_Gen5_Open_Wagon_European, \
 item_wagon_Gen5_Hopper_European, \
 item_wagon_Gen5_Tanker_European, \
 item_wagon_Gen5_PetroTanker_European, \

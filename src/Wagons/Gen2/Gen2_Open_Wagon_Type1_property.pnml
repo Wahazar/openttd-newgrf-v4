@@ -28,14 +28,14 @@
 
 #define SPEED 50
 #define POWER 0
-#define WEIGHT 7
+#define WEIGHT 6
 #define TE_COEFFICIENT 0.3
 #define AIR_DRAG_COEFFICIENT 0
 
 #define LENGTH 6
 #define ACTUAL_LENGTH 6
 
-#define HEAD_CAPACITY 26
+#define HEAD_CAPACITY 24
 
 
 #define WAGON_CAPACITY HEAD_CAPACITY 

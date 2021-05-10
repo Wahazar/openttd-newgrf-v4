@@ -284,6 +284,7 @@ str_steam_Germany_Prussian_S_3 			:S3 Hanomag 2'B {STRING}
 str_steam_Germany_Saxon_XX_HV 			:XX HV Chemnitz 1'D1' {STRING}
 str_steam_Russia_RZD_MZk 			:MZk Kolomna Bt {STRING}
 str_steam_Russia_RZD_T13 			:T13 Kolomna C {STRING}
+str_steam_Russia_RZD_G                        	:G Kolomna D {STRING}
 str_steam_Russia_RZD_D                        	:D Kolomna 1'B {STRING}
 str_steam_Russia_RZD_F                        	:F Yorkshire C'C' {STRING}
 str_steam_Russia_RZD_Ow 			:Ov Bryansk D {STRING}
@@ -363,7 +364,6 @@ str_diesel_Austria_OBB_2016	:ER20 Siemens Bo'Bo' "Eurorunner"{STRING}
 # str_diesel_Czechia_CSD_794 		:CD 794 {STRING}
 str_diesel_Germany_DR_132 		:TE109 Luhansk Co'Co' {STRING}
 # str_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
-# str_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
 str_diesel_Poland_PKP_SM42 		:6D Fablok Bo'Bo' {STRING}
 str_diesel_Poland_PKP_SP45 		:301D Cegielski Co'Co' {STRING}
 str_diesel_Poland_PKP_SU46 		:303D Cegielski Co'Co' {STRING}
@@ -426,6 +426,7 @@ str_electric_Czech_Republic_CSD_E458_1 		:78E Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_380 		:109E Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_114 		:90E Skoda Bo'Bo' {STRING}
 str_electric_Croatia_HZ_1141 					:040-EC ASEA/Koncar Bo'Bo' {STRING}
+str_electric_Croatia_HZ_1142 					:442 Koncar Bo'Bo' {STRING}
 str_electric_Macedonia_Macedonian_Railways_462 			:060-EA ASEA/Electroputere Co'Co' {STRING}
 str_electric_Romania_CFR_478_Phoenix 			:'Phoenix' Softronic 478 Co'Co' {STRING}
 str_electric_Germany_DR_251 			:251 LEW Co'Co' {STRING}
@@ -632,6 +633,7 @@ str_wagon_Gen5_PetroTanker_Russian 			:5th Gen Petroleum Tanker (broad gauge)
 str_wagon_Gen5_Silo_European				:5th Gen Silo (normal gauge)
 str_wagon_Gen5_Silo_Russian				:5th Gen Silo (broad gauge)
 str_wagon_Gen5_Grain_Boxcar_European			:5th Gen Grain Box Van (normal gauge)
+str_wagon_Gen5_Open_Wagon_European 			:5th Gen Open Wagon (normal gauge)
 str_wagon_Gen5_Hopper_European 				:5th Gen Self Discharging Hopper (normal gauge)
 str_wagon_Gen5_Hopper_Russian 				:5th Gen Hopper (broad gauge)
 str_wagon_Gen5_Car_Transporter_European 			:5th Gen Car Transporter (normal gauge)
@@ -799,6 +801,7 @@ str_class_steam_Russia_RZD_9P 			:SZD 9P {STRING}
 str_class_steam_Russia_RZD_P36 			:SZD P36 {STRING}
 str_class_steam_Russia_RZD_MZk 			:RZD/SZD MZk {STRING}
 str_class_steam_Russia_RZD_T13 			:RZD/SZD T13 {STRING}
+str_class_steam_Russia_RZD_G                   :RZD/SZD G {STRING}
 str_class_steam_Russia_RZD_D                   :RZD/SZD D {STRING}
 str_class_steam_Russia_RZD_F                   :RZD/SZD F {STRING}
 str_class_steam_Russia_RZD_Ow 			:RZD/SZD Ov {STRING}
@@ -900,7 +903,6 @@ str_class_diesel_Czechia_CSD_794 		:CD 794 {STRING}
 str_class_diesel_Czech_Republic_CSD_T4783 		:CSD T478.3/CD 753 {STRING}
 str_class_diesel_Germany_DR_132 		:DR 132/DB 232 {STRING}
 str_class_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
-str_class_diesel_Croatia_HZ_2044 		:JZ 645/HZ 2044 {STRING}
 str_class_diesel_Poland_PKP_SM42 		:PKP SM42/Kolprem Ls800P {STRING}
 str_class_diesel_Poland_PKP_SP45 		:PKP SP45/SU45 {STRING}
 str_class_diesel_Poland_PKP_SU46 		:PKP SU46 {STRING}
@@ -920,6 +922,7 @@ str_class_electric_Austria_OBB_1014 					:OBB 1014 {STRING}
 str_class_electric_Austria_OBB_4061 					:OBB 4061 {STRING}
 str_class_electric_Russia_RZD_VL22M 					:SZD VL22M {STRING}
 str_class_electric_Croatia_HZ_1141 					:JZ 441/HZ 1141/CFR 40 {STRING}
+str_class_electric_Croatia_HZ_1142 					:JZ 442/HZ 1142 {STRING}
 str_class_electric_Germany_DB_1031 					:DB 103.1 {STRING}
 str_class_electric_Germany_DR_E42 					:DR E42/242/DB 142 {STRING}
 str_class_electric_Austria_OBB_1044 					:OBB 1044 {STRING}

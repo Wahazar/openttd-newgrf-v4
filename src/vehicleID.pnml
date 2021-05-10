@@ -325,6 +325,7 @@ item(FEAT_TRAINS, item_electric_Germany_DR_243, 6038) {}
 item(FEAT_TRAINS, item_electric_Austria_OBB_1063, 6039) {}
 item(FEAT_TRAINS, item_electric_Germany_DR_250, 6040) {}
 item(FEAT_TRAINS, item_electric_Germany_DR_212, 6041) {}
+item(FEAT_TRAINS, item_electric_Croatia_HZ_1142, 6042) {}
 
 item(FEAT_TRAINS, item_electric_Germany_DB_185_TRAXX_F140, 6049) {}
 
@@ -737,7 +738,7 @@ item(FEAT_TRAINS, item_wagon_Gen5_Livestock_Boxcar_European, 12070) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Grain_Boxcar_European, 12071) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Silo_European, 12072) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Sliding_Wall_European, 12073) {}
-//
+item(FEAT_TRAINS, item_wagon_Gen5_Open_Wagon_European, 12074) {}
 //
 item(FEAT_TRAINS, item_wagon_Gen5_Hopper_European, 12076) {}
 item(FEAT_TRAINS, item_wagon_Gen5_Tanker_European, 12077) {}

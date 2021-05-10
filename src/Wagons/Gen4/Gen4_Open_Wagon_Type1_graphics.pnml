@@ -123,10 +123,10 @@ spritegroup spritegroup_wagon_Gen4_Open_Wagon_Grain_L4 {
 }
 
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Open_Wagon_Gray_livery) {
-	7: spritegroup_wagon_Gen4_Open_Wagon_Grain_L1;
+//	7: spritegroup_wagon_Gen4_Open_Wagon_Grain_L1;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L2;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L3;
-	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L4;
+//	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L4;
 }
 
 /*
@@ -218,10 +218,10 @@ spritegroup spritegroup_wagon_Gen4_Open_Wagon_Gray_L4 {
 }
 
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Open_Wagon_Bulk_livery) {
-	7: spritegroup_wagon_Gen4_Open_Wagon_Gray_L1;
+//	7: spritegroup_wagon_Gen4_Open_Wagon_Gray_L1;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L2;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L3;
-	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L4;
+//	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L4;
 }
 
 /*
@@ -314,10 +314,10 @@ spritegroup spritegroup_wagon_Gen4_Open_Wagon_Wood_L4 {
 }
 
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Open_Wagon_Wood_livery) {
-	7: spritegroup_wagon_Gen4_Open_Wagon_Wood_L1;
+//	7: spritegroup_wagon_Gen4_Open_Wagon_Wood_L1;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L2;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L3;
-	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L4;
+//	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L4;
 }
 
 
@@ -410,10 +410,10 @@ spritegroup spritegroup_wagon_Gen4_Open_Wagon_Crates_L4 {
 }
 
 random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Open_Wagon_Crates_livery) {
-	7: spritegroup_wagon_Gen4_Open_Wagon_Crates_L1;
+//	7: spritegroup_wagon_Gen4_Open_Wagon_Crates_L1;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L2;
 	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L3;
-	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L4;
+//	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L4;
 }
 
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen4_Open_Wagon_Type1_class_selection, hasbit(cargo_classes, CC_COVERED)) {

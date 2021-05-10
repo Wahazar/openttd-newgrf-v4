@@ -1,0 +1,64 @@
+/*
+ *  Copyright (C) 2017 Transportman
+ *  This file is part of the V4 CEE set based on 2cc Trains In NML
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+*/
+
+/*
+* PURCHASE
+*/
+
+spriteset(spriteset_wagon_Gen5_Open_Wagon_Type1_purchase, "gfx/Wagons/Gen5/Gen5_Open_Wagon_Purchase.png") {
+	template_purchase_wagon(1, 1)
+}
+
+/*
+half of gen4 sprites used
+*/
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Gray_livery) {
+	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L1;
+	1: spritegroup_wagon_Gen4_Open_Wagon_Grain_L4;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Bulk_livery) {
+	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L1;
+	1: spritegroup_wagon_Gen4_Open_Wagon_Gray_L4;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Wood_livery) {
+	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L1;
+	1: spritegroup_wagon_Gen4_Open_Wagon_Wood_L4;
+}
+
+
+random_switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Crates_livery) {
+	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L1;
+	1: spritegroup_wagon_Gen4_Open_Wagon_Crates_L4;
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Type1_class_selection, hasbit(cargo_classes, CC_COVERED)) {
+	1 : return switch_wagon_Gen5_Open_Wagon_Gray_livery;
+        return switch_wagon_Gen5_Open_Wagon_Bulk_livery; 
+}
+
+switch(FEAT_TRAINS, SELF, switch_wagon_Gen5_Open_Wagon_Type1_cargo_selection, cargo_type_in_veh) {
+	COAL: return switch_wagon_Gen5_Open_Wagon_Bulk_livery;
+	GRAI: return switch_wagon_Gen5_Open_Wagon_Gray_livery;
+	FRUT: return switch_wagon_Gen5_Open_Wagon_Crates_livery;
+	BDMT: return switch_wagon_Gen5_Open_Wagon_Crates_livery;
+	WOOD: return switch_wagon_Gen5_Open_Wagon_Wood_livery;
+	SUGR: return switch_wagon_Gen5_Open_Wagon_Crates_livery;
+	CTCD: return switch_wagon_Gen5_Open_Wagon_Crates_livery;
+	OLSD: return switch_wagon_Gen5_Open_Wagon_Crates_livery;
+	return switch_wagon_Gen5_Open_Wagon_Type1_class_selection; 
+}
+
+//Add defined switches
+
+RUNNINGCOSTENGINESWITCH
+
+PURCHASETEXTSWITCH

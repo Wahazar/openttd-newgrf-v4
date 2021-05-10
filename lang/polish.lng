@@ -550,6 +550,7 @@ str_wagon_Gen5_PetroTanker_Russian                      :5-ta generacja wagonu c
 str_wagon_Gen5_Silo_European                            :5-ta generacja wagonu zbiornikowego (normalnotorowy)
 str_wagon_Gen5_Silo_Russian                             :5-ta generacja wagonu zbiornikowego (szerokotorowy)
 str_wagon_Gen5_Grain_Boxcar_European                    :5-ta generacja wagonu krytego z zastawami (normalnotorowy)
+str_wagon_Gen5_Open_Wagon_European                      :5-ta generacja wagonu węglarki (normalnotorowy)
 str_wagon_Gen5_Hopper_European                          :5-ta generacja wagonu z wyładunkiem grawitacyjnym (normalnotorowy)
 str_wagon_Gen5_Hopper_Russian                           :5-ta generacja wagonu samowyładowczego (szerokotorowy)
 str_wagon_Gen5_Car_Transporter_European                         :5-ta generacja wagonu do transportu samochodów (normalnotorowy)
