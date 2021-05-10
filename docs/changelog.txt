@@ -2,6 +2,7 @@ V4 Trains changelog
 =========================
 
 7799
+- capacity balance
 - HZ 1142, 2044 added
 - gen2 hopper added, short open wagons splitted into gen 4 and 5
 - MAV steam locomotives added,
