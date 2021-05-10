@@ -60,6 +60,7 @@ item_steam_Germany_Saxon_VIa, /*1856*/\
 item_steam_Austria_SudBahn_29, /*1860*/\
 item_steam_Austria_KFNB_Ia, /*1862*/\
 item_steam_Germany_Mecklenburg_1,  /*1863*/\
+item_steam_Austria_StEG_I, /*1868*/\
 item_steam_Hungary_MAV_335, /*1869*/\
 item_steam_Austria_CLB_I, /*1872*/\
 item_steam_Germany_Magdeburg_1455, /*1876*/\
@@ -80,6 +81,7 @@ item_steam_Germany_Prussian_T_11,  \
 item_steam_Austria_KkStB_299,  \
 item_steam_Germany_Prussian_P_8,  /*1908*/\
 item_steam_Austria_KkStB_429,  /*1909*/\
+item_steam_Hungary_MAV_175,  /*1910*/\
 item_steam_Germany_Prussian_G_10,  /*1910*/\
 item_steam_Germany_Prussian_S10,  /*1910*/\
 item_steam_Austria_KkStB_310,  /*1911*/\
@@ -91,6 +93,7 @@ item_steam_Czech_Republic_CSD_534_0, /*1923*/\
 item_steam_Croatia_HZ_11, /*1924*/\
 item_steam_Czech_Republic_CSD_387_0, /*1926*/\
 item_steam_Austria_BBO_378,  /*1927*/\
+item_steam_Hungary_MAV_275,  /*1928*/\
 item_steam_Yugoslavia_JZ_30,  /*1930*/\
 item_steam_Poland_PKP_Pt31,  /*1931*/\
 item_steam_Poland_PKP_Okz32,  /*1932*/\
@@ -110,6 +113,7 @@ item_steam_Czech_Republic_CSD_556_0, /*1951*/\
 item_steam_Germany_DB_18_201, 
 
 #define SORTING_STEAM_B \
+item_steam_Russia_RZD_MZk, /*1858*/\
 item_steam_Russia_RZD_MZk, /*1865*/\
 item_steam_Russia_RZD_F, /*1871*/\
 item_steam_Russia_RZD_D, /*1874*/\
@@ -152,6 +156,7 @@ item_diesel_Hungary_MAV_M41,  /*1972*/\
 item_diesel_Croatia_HZ_2062,  /*1973*/\
 item_diesel_Poland_PKP_SU46, /*1974*/\
 item_diesel_Russia_RZD_TEM2, /*1976*/\
+item_diesel_Croatia_HZ_2044,  /*1981*/\
 item_diesel_Poland_PKP_SP32,  /*1985*/\
 item_diesel_Czech_Republic_CD_731, /*1991*/\
 item_diesel_Serbia_ZS_621,  /*1993*/\
@@ -413,6 +418,7 @@ item_wagon_Gen2_Armoured_Boxcar_European, \
 item_wagon_Gen2_Livestock_Boxcar_European, \
 item_wagon_Gen2_Grain_Boxcar_European, \
 item_wagon_Gen2_Open_Wagon_European, \
+item_wagon_Gen2_Hopper_European, \
 item_wagon_Gen2_Tanker_European, \
 item_wagon_Gen2_PetroTanker_European, \
 item_wagon_Gen3_Mixed, \

@@ -139,8 +139,10 @@ item(FEAT_TRAINS, item_steam_Austria_KkStB_429, 4035) {}
 item(FEAT_TRAINS, item_steam_Austria_BBO_378, 4036) {}
 item(FEAT_TRAINS, item_steam_Austria_SudBahn_29, 4037) {}
 item(FEAT_TRAINS, item_steam_Austria_KFNB_Ia, 4038) {}
-
+item(FEAT_TRAINS, item_steam_Austria_StEG_I, 4039) {}
 item(FEAT_TRAINS, item_steam_Poland_DZWW_Ow, 4040) {}
+item(FEAT_TRAINS, item_steam_Hungary_MAV_175, 4041) {}
+item(FEAT_TRAINS, item_steam_Hungary_MAV_275, 4042) {}
 
 item(FEAT_TRAINS, item_steam_Germany_DRG_86, 4050) {}
 item(FEAT_TRAINS, item_steam_Germany_DB_52, 4051) {}
@@ -186,6 +188,7 @@ item(FEAT_TRAINS, item_steam_Russia_RZD_9P, 4911) {}
 item(FEAT_TRAINS, item_steam_Russia_RZD_Lv, 4914) {}
 item(FEAT_TRAINS, item_steam_Russia_RZD_P36, 4915) {}
 
+item(FEAT_TRAINS, item_steam_Russia_RZD_G, 4919) {}
 item(FEAT_TRAINS, item_steam_Russia_RZD_D, 4920) {}
 item(FEAT_TRAINS, item_steam_Russia_RZD_F, 4921) {}
 
@@ -229,6 +232,7 @@ item(FEAT_TRAINS, item_diesel_Czech_Republic_CD_770, 5039) {}
 item(FEAT_TRAINS, item_diesel_Croatia_HZ_2062, 5040) {}
 item(FEAT_TRAINS, item_diesel_Czech_Republic_CSD_T4783, 5041) {}
 item(FEAT_TRAINS, item_diesel_Czech_Republic_CD_731, 5042) {}
+item(FEAT_TRAINS, item_diesel_Croatia_HZ_2044, 5043) {}
 
 item(FEAT_TRAINS, item_diesel_UK_BR_66, 5054) {}
 
@@ -678,6 +682,7 @@ item(FEAT_TRAINS, item_wagon_Gen2_Grain_Boxcar_European, 12011) {}
 item(FEAT_TRAINS, item_wagon_Gen2_Open_Wagon_European, 12014) {}
 //gondola
 //hopper
+item(FEAT_TRAINS, item_wagon_Gen2_Hopper_European, 12016) {}
 item(FEAT_TRAINS, item_wagon_Gen2_Tanker_European, 12017) {}
 item(FEAT_TRAINS, item_wagon_Gen2_PetroTanker_European, 12018) {}
 

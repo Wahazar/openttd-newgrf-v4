@@ -79,3 +79,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_dmu_Germany_DB_VT04_Flying_Hamburger_cargo_selection;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

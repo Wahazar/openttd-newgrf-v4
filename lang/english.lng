@@ -264,7 +264,10 @@ str_steam_Hungary_MAV_335 			:335 Sigl/Wr. Neustadt Ct {STRING}
 str_steam_Hungary_MAV_325 			:325 Gepgyar C {STRING}
 str_steam_Hungary_MAV_377 			:377 MAVAG Ct {STRING}
 str_steam_Hungary_MAV_203 			:203 Gepgyar 2B1 {STRING}
+str_steam_Hungary_MAV_175 			:175 MAVAG 1At {STRING}
+str_steam_Hungary_MAV_275 			:275 MAVAG 1'B1't {STRING}
 str_steam_Austria_SudBahn_29 			:SB 29 Esslingen C {STRING}
+str_steam_Austria_StEG_I 			:StEG I D {STRING}
 str_steam_Austria_KkStB_4 			:4 Wr. Neustadt 2'B {STRING}
 str_steam_Austria_KkStB_99 			:99 Krauss 1Ct {STRING}
 str_steam_Austria_KkStB_299 			:299 Krauss 1Ct {STRING}
@@ -343,7 +346,8 @@ str_diesel_Czech_Republic_CSD_T4783 		:T478.3 CKD Praha Bo'Bo' {STRING}
 str_diesel_Romania_CFR_LDH_70 			:LDH70 Bucharest B'B' {STRING}
 str_diesel_Romania_CFR_060_DA 			:060DA Craiova Co'Co' {STRING}
 str_diesel_Romania_CFR_060_DA1 			:060DA1 Craiova Co'Co' {STRING}
-str_diesel_Croatia_HZ_2062 			:664 EMD Co'Co' {STRING}
+str_diesel_Croatia_HZ_2062 			:G26 EMD Co'Co' {STRING}
+str_diesel_Croatia_HZ_2044 			:GT22HW-2 EMD 1A1'1A1' {STRING}
 str_diesel_Germany_DB_261_Gravita_10BB 		:'Gravita' Voith B'B' {STRING}
 str_diesel_Germany_HVLE_V490			:'Maxima 30CC' Voith Turbo Kiel C'C'{STRING}
 str_diesel_Poland_PKP_SP32 			:LDE1300 FAUR Bo'Bo' {STRING}
@@ -558,7 +562,7 @@ str_wagon_Gen2_Open_Wagon_European 			:2nd Gen Wooden Open Wagon (normal gauge)
 str_wagon_Gen2_Gondola_Russian 				:2nd Gen Wooden Gondola (broad gauge)
 str_wagon_Gen2_Grain_Boxcar_European			:2nd Gen Wooden Grain Box Van (normal gauge)
 # str_wagon_Gen2_Silo_Russian 				:2nd Gen Silo (broad gauge)
-# str_wagon_Gen2_Hopper_European 				:2nd Gen Wooden Hopper (normal gauge)
+str_wagon_Gen2_Hopper_European 				:2nd Gen Wooden Hopper (normal gauge)
 # str_wagon_Gen2_Hopper_Russian 				:2nd Gen Wooden Hopper (broad gauge)
 
 str_wagon_Gen3_Mixed					:3rd Gen Mixed Train Wagons (normal gauge)
@@ -581,7 +585,7 @@ str_wagon_Gen3_Gondola_Russian 				:3rd Gen Gondola (broad gauge)
 str_wagon_Gen3_Silo_European				:3rd Gen Silo (normal gauge)
 str_wagon_Gen3_Silo_Russian				:3rd Gen Silo (broad gauge)
 str_wagon_Gen3_Grain_Boxcar_European			:3rd Gen Wooden Grain Box Van (normal gauge)
-str_wagon_Gen3_Hopper_European 				:3rd Gen Wooden Hopper (normal gauge)
+str_wagon_Gen3_Hopper_European 				:3rd Gen Self Discharging Hopper (normal gauge)
 str_wagon_Gen3_Hopper_Russian 				:3rd Gen Hopper (broad gauge)
 
 str_wagon_Gen4_Mixed					:4th Gen Mixed Train Wagons (normal gauge)
@@ -613,7 +617,7 @@ str_wagon_Gen4_Heavy_Flatcar_European 			:4th Gen Heavy Flatcar (normal gauge)
 
 # str_wagon_Gen5_Flat_Wagon_European 			:5th Gen Flat Wagon
 # str_wagon_Gen5_Flat_Wagon_Russian 			:5th Gen Flat Wagon (broad gauge)
-str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
+str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar (normal gauge)
 str_wagon_Gen5_Sliding_Wall_European 			:5th Gen Sliding Wall Van (normal gauge)
 str_wagon_Gen5_Boxcar_Russian 			:5th Gen Universal Boxcar (broad gauge)
 str_wagon_Gen5_Armoured_Boxcar_European			:5th Gen Armoured Car (normal gauge)
@@ -772,7 +776,10 @@ str_class_steam_Hungary_MAV_335 		:MAV 335/JZ 123/kkStB 46/CFR 335 {STRING}
 str_class_steam_Hungary_MAV_325 		:MAV 325/CSD 325.0/JZ 126/CFR 335 {STRING}
 str_class_steam_Hungary_MAV_377 		:MAV 377/CSD 310.4/JZ 51/CFR 375 {STRING}
 str_class_steam_Hungary_MAV_203 		:MAV 203/CFR 203 {STRING}
+str_class_steam_Hungary_MAV_175 		:MAV 175/CFR 11/JZ 160 {STRING}
+str_class_steam_Hungary_MAV_275 		:MAV 275/JZ 16 {STRING}
 str_class_steam_Austria_SudBahn_29 		:SudBahn 29/JZ 124/kkStB 49/MAV 332 {STRING}
+str_class_steam_Austria_StEG_I 		:StEG I/kkStB 571/CSD 401.0/JZ 133/MAV/CFR 459/PKP Tp 11 {STRING}
 str_class_steam_Austria_KkStB_4 		:kkStB 4/CSD 254.2/PKP Od13 {STRING}
 str_class_steam_Austria_KkStB_99 		:kkStB 99/CSD 320.0/JZ 153/MAV 376" {STRING}
 str_class_steam_Austria_KkStB_299 		:kkStB 299/NOLB 202 {STRING}
@@ -863,6 +870,7 @@ str_class_diesel_Hungary_MAV_M62 			:MAV M62/CSD T679.1/DR 120/PKP ST44 {STRING}
 str_class_diesel_Russia_RZD_M62 			:SZD/RZD M62 {STRING}
 str_class_diesel_Russia_RZD_2M62 			:SZD/RZD 2M62 {STRING}
 str_class_diesel_Croatia_HZ_2062 			:JZ 664/HZ 2062 {STRING}
+str_class_diesel_Croatia_HZ_2044 			:JZ 645/HZ 2044 {STRING}
 str_class_diesel_Ukraine_UZ_TEP150 			:UZ TEP150 {STRING}
 str_class_diesel_Germany_DB_261_Gravita_10BB 		:DB 261 {STRING}
 str_class_diesel_Russia_RZD_GT1 			:RZD GT1 {STRING}
@@ -880,8 +888,8 @@ str_class_diesel_Russia_RZD_TEM1 		:SZD TEM1 {STRING}
 str_class_diesel_Russia_RZD_TEM2 		:PKP SM48/JZ 667/PTKiGK TEM2 {STRING}
 str_class_diesel_Russia_RZD_TEM2U 		:SZD/RZD TEM2U {STRING}
 str_class_diesel_Russia_RZD_TGM23 		:SZD/RZD TGM23 {STRING}
-str_class_diesel_UE_CNG_Shunter 		:DB 372/ELP NGHS1
-str_class_diesel_UK_BR_66			:FPL 66/HGK 266/MRCE dispolok 66
+str_class_diesel_UE_CNG_Shunter 		:DB 372/ELP NGHS1 {STRING}
+str_class_diesel_UK_BR_66			:FPL 66/HGK 266/MRCE dispolok 66 {STRING}
 str_class_diesel_Austria_OBB_2043	:OBB 2043 {STRING}
 str_class_diesel_Austria_OBB_2070	:OBB 2070 {STRING}
 str_class_diesel_Austria_OBB_2016	:OBB 2016/DLB ER20 {STRING}

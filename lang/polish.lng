@@ -480,7 +480,7 @@ str_wagon_Gen2_Open_Wagon_European                      :2-ga generacja wagonu w
 str_wagon_Gen2_Gondola_Russian                          :2-ga generacja wagonu gondoli (szerokotorowy)
 str_wagon_Gen2_Grain_Boxcar_European                    :2-ga generacja wagonu krytego z zastawami, o konstrukcji drewnianej (normalnotorowy)
 # str_wagon_Gen2_Silo_Russian 				:2nd Gen Silo (broad gauge)
-# str_wagon_Gen2_Hopper_European 				:2nd Gen Wooden Hopper (normal gauge)
+str_wagon_Gen2_Hopper_European 				:2-ga generacja wagonu samowyładowczego (normalnotorowy)
 # str_wagon_Gen2_Hopper_Russian 				:2nd Gen Wooden Hopper (broad gauge)
 
 str_wagon_Gen3_Mixed                                    :3-cia generacja wagonów pociągu zbiorowego (normalnotorowy)
@@ -535,7 +535,7 @@ str_wagon_Gen4_Heavy_Flatcar_European                   :4-ta generacja wagonu p
 
 # str_wagon_Gen5_Flat_Wagon_European 			:5th Gen Flat Wagon
 # str_wagon_Gen5_Flat_Wagon_Russian 			:5th Gen Flat Wagon (broad gauge)
-# str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar
+str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar (normalnotorowy)
 str_wagon_Gen5_Sliding_Wall_European                    :5-ta generacja wagonu z przesuwnymi ścianami (normalnotorowy)
 str_wagon_Gen5_Boxcar_Russian                   :5-ta generacja uniwersalnego wagonu krytego (szerokotorowy)
 str_wagon_Gen5_Armoured_Boxcar_European                 :5-ta generacja wagonu pocztowo-bagażowego (normalnotorowy)
@@ -783,8 +783,8 @@ str_class_diesel_Russia_RZD_TEM1 :SZD TEM1 {STRING}
 str_class_diesel_Russia_RZD_TEM2 :PKP SM48/JZ 667/PTKiGK TEM2 {STRING}
 str_class_diesel_Russia_RZD_TEM2U :SZD/RZD TEM2U {STRING}
 str_class_diesel_Russia_RZD_TGM23 :SZD/RZD TGM23 {STRING}
-str_class_diesel_UE_CNG_Shunter :DB 372/ELP NGHS1
-str_class_diesel_UK_BR_66       :FPL 66/HGK 266/MRCE dispolok 66
+str_class_diesel_UE_CNG_Shunter :DB 372/ELP NGHS1  {STRING}
+str_class_diesel_UK_BR_66       :FPL 66/HGK 266/MRCE dispolok 66  {STRING}
 str_class_diesel_Austria_OBB_2043       :OBB 2043 {STRING}
 str_class_diesel_Austria_OBB_2070       :OBB 2070 {STRING}
 str_class_diesel_Austria_OBB_2016       :OBB 2016 {STRING}

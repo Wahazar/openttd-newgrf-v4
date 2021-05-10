@@ -8,11 +8,12 @@
 
 #include "../undefine_properties.pnml" 
 
-#define RELIABILITY_DECAY DEFAULT_RELIABILITY_DECAY
+#define RELIABILITY_DECAY DIESEL_MECHANICAL_RELIABILITY_DECAY
 
 #define VEHIDCODE diesel_Belgium_NMBS_SNCB_7800
 #define ITEM item_diesel_Belgium_NMBS_SNCB_7800
 #define NAME string(str_diesel_UE_CNG_Shunter)
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_diesel_UE_CNG_Shunter,string(str_Hybrid, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(WESTERNEUROPE,CENTRALEUROPE,PRIVATE)
 

@@ -79,3 +79,5 @@ item(FEAT_TRAINS, ITEM ) {
 		default: switch_dmu_Czech_Republic_CSD_M495_0_cargo_selection;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

@@ -1,6 +1,10 @@
 V4 Trains changelog
 =========================
 
+- gen2 hopper added
+- MAV steam locomotives added, JZ diesel added
+- early russian and austrian 0-4-0 locomotive added
+
 7784
 - Early Russian coaches added
 - reliability decay fixed, electric rail maintenance cost increased
