@@ -34,7 +34,7 @@
 #define POWER 1290
 #define WEIGHT 125
 #define TE_COEFFICIENT 0.1
-#define AIR_DRAG_COEFFICIENT 0
+#define AIR_DRAG_COEFFICIENT 0.04
 
 #define LENGTH 7
 #define ACTUAL_LENGTH 8

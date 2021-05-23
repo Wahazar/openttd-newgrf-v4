@@ -44,6 +44,7 @@ item(FEAT_TRAINS, ITEM ) {
 	graphics {
 		purchase: spriteset_coach_Gen6_Grand_Voyager_Coach_purchase;
 		//Add calls to defined switches below
+		TOURCAPACITYSWITCHCALL
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL

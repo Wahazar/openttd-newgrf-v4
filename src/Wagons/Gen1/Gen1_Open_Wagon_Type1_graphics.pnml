@@ -202,6 +202,7 @@ switch(FEAT_TRAINS, SELF, switch_wagon_Gen1_Open_Wagon_Type1_class_selection, ha
 switch(FEAT_TRAINS, SELF, switch_wagon_Gen1_Open_Wagon_Type1_cargo_selection, cargo_type_in_veh) {
 	COAL: return switch_wagon_Gen1_Open_Wagon_Bulk_livery;
 	GRAI: return switch_wagon_Gen1_Open_Wagon_Gray_livery;
+	CERE: return switch_wagon_Gen1_Open_Wagon_Gray_livery;
 	FRUT: return switch_wagon_Gen1_Open_Wagon_Crates_livery;
 	BDMT: return switch_wagon_Gen1_Open_Wagon_Crates_livery;
 	WOOD: return switch_wagon_Gen1_Open_Wagon_Wood_livery;

@@ -33,8 +33,8 @@
 #define SPEED 110
 #define POWER 1155
 #define WEIGHT 147
-#define TE_COEFFICIENT 0.1
-#define AIR_DRAG_COEFFICIENT 0
+#define TE_COEFFICIENT 0.08
+#define AIR_DRAG_COEFFICIENT 0.05
 
 #define LENGTH 8
 #define ACTUAL_LENGTH 8

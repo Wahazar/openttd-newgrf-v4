@@ -942,34 +942,50 @@ replace(palette_cargo_bulk_company){
     }
 
 
-switch(FEAT_TRAINS, SELF, switch_bulk_recolour, cargo_type_in_veh) {
-    COAL: return palette_cargo_bulk_company + 0*NUM_CC_COLOURS + LOAD_TEMP(1);
-    GRAI: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1);
-    WHEA: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+switch(FEAT_TRAINS, SELF, switch_bulk_recolour_same, cargo_type_in_veh) {
     MAIZ: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
-    IORE: return palette_cargo_bulk_company + 2*NUM_CC_COLOURS + LOAD_TEMP(1);
-    CORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1);
-    AORE: return palette_cargo_bulk_company + 4*NUM_CC_COLOURS + LOAD_TEMP(1);
-    CLAY: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1);
+    CERE: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
     FERT: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CLAY
-    GRVL: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1);
-    LIME: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1);
-    OLSD: return palette_cargo_bulk_company + 8*NUM_CC_COLOURS + LOAD_TEMP(1);
+    BEAN: return palette_cargo_bulk_company + 8*NUM_CC_COLOURS + LOAD_TEMP(1); //same as OLSD
     POTA: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
-    SAND: return palette_cargo_bulk_company + 9*NUM_CC_COLOURS + LOAD_TEMP(1);
-    SCMT: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1);
-    SGBT: return palette_cargo_bulk_company + 11*NUM_CC_COLOURS + LOAD_TEMP(1);
     SGCN: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1); //same as SCMT
-    SULP: return palette_cargo_bulk_company + 12*NUM_CC_COLOURS + LOAD_TEMP(1);
-    MNO2: return palette_cargo_bulk_company + 13*NUM_CC_COLOURS + LOAD_TEMP(1);
-    COKE: return palette_cargo_bulk_company + 14*NUM_CC_COLOURS + LOAD_TEMP(1);
-    SLAG: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
-    NITR: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
     PHOS: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1); //same as NITR
     SASH: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
     CMNT: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1); //same as GRVL
     PORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CORE
  return palette_cargo_bulk_company + 14*NUM_CC_COLOURS + LOAD_TEMP(1);
+}
+
+switch(FEAT_TRAINS, SELF, switch_bulk_recolour, cargo_type_in_veh) {
+    COAL: return palette_cargo_bulk_company + 0*NUM_CC_COLOURS + LOAD_TEMP(1);
+    GRAI: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1);
+    WHEA: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+ //   MAIZ: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+ //   CERE: return palette_cargo_bulk_company + 1*NUM_CC_COLOURS + LOAD_TEMP(1); // same as GRAI
+    IORE: return palette_cargo_bulk_company + 2*NUM_CC_COLOURS + LOAD_TEMP(1);
+    CORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1);
+    AORE: return palette_cargo_bulk_company + 4*NUM_CC_COLOURS + LOAD_TEMP(1);
+    CLAY: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1);
+ //   FERT: return palette_cargo_bulk_company + 5*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CLAY
+    GRVL: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1);
+    LIME: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1);
+    OLSD: return palette_cargo_bulk_company + 8*NUM_CC_COLOURS + LOAD_TEMP(1);
+ //   BEAN: return palette_cargo_bulk_company + 8*NUM_CC_COLOURS + LOAD_TEMP(1); //same as OLSD
+ //   POTA: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
+    SAND: return palette_cargo_bulk_company + 9*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SCMT: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SGBT: return palette_cargo_bulk_company + 11*NUM_CC_COLOURS + LOAD_TEMP(1);
+ //   SGCN: return palette_cargo_bulk_company + 10*NUM_CC_COLOURS + LOAD_TEMP(1); //same as SCMT
+    SULP: return palette_cargo_bulk_company + 12*NUM_CC_COLOURS + LOAD_TEMP(1);
+    MNO2: return palette_cargo_bulk_company + 13*NUM_CC_COLOURS + LOAD_TEMP(1);
+    COKE: return palette_cargo_bulk_company + 14*NUM_CC_COLOURS + LOAD_TEMP(1);
+    SLAG: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
+    NITR: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1);
+ //   PHOS: return palette_cargo_bulk_company + 15*NUM_CC_COLOURS + LOAD_TEMP(1); //same as NITR
+ //   SASH: return palette_cargo_bulk_company + 7*NUM_CC_COLOURS + LOAD_TEMP(1); //same as LIME
+ //   CMNT: return palette_cargo_bulk_company + 6*NUM_CC_COLOURS + LOAD_TEMP(1); //same as GRVL
+ //   PORE: return palette_cargo_bulk_company + 3*NUM_CC_COLOURS + LOAD_TEMP(1); //same as CORE
+ return switch_bulk_recolour_same;
 }
 
 //0    RECOLOUR_BULK_SPRITE(cargo, BLUEccBROWNcc) \

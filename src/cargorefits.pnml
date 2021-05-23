@@ -24,6 +24,10 @@
 //Metro does not allow it
 #define CARGODEF_PASSENGERS_ONLY refittable_cargo_classes: bitmask(CC_PASSENGERS); non_refittable_cargo_classes: 0;
 
+//no tourist in regional coaches
+#define CARGODEF_PASSENGERS_ONLY_REGIONAL refittable_cargo_classes: bitmask(CC_PASSENGERS); non_refittable_cargo_classes: 0; cargo_disallow_refit: [TOUR];
+
+
 #define CARGODEF_MAIL_ONLY refittable_cargo_classes: bitmask(CC_MAIL, CC_ARMOURED); non_refittable_cargo_classes: 0;
 
 #define CARGODEF_BOXCAR_ARMOURED refittable_cargo_classes: bitmask(CC_MAIL, CC_ARMOURED); non_refittable_cargo_classes: 0; cargo_allow_refit: [GOOD]; default_cargo_type : VALU;
@@ -88,6 +92,6 @@ cargo_disallow_refit: [PASS, MAIL, TOUR, COAL, OIL_, LVST, GRAI, WOOD, IORE, STE
 
 #define CARGODEF_REEFER refittable_cargo_classes: bitmask(CC_REFRIGERATED); non_refittable_cargo_classes: bitmask(CC_OVERSIZED); cargo_allow_refit: [FOOD, FRUT, FZDR, BEER, FISH, MILK, WATR, EOIL]; cargo_disallow_refit: [PASS, MAIL, TOUR, COAL, OIL_, LVST, GRAI, IORE, VALU, WHEA, GOLD, RUBR, MAIZ, CORE, DIAM, SUGR, TOFF, COLA, CTCD, PLST, AORE, CERE, CLAY, CMNT, DYES, FICR, GRVL, LIME, OLSD, PETR, PLAS, POTA, RFPR, SAND, SCMT, SGBT, SGCN, SULP, VEHI, YETI, YETY, WOOD];
 
-#define CARGODEF_MIXED refittable_cargo_classes: bitmask(CC_REFRIGERATED, CC_PIECE_GOODS, CC_COVERED, CC_EXPRESS, CC_HAZARDOUS, CC_ARMOURED, CC_BULK, CC_LIQUID); non_refittable_cargo_classes: bitmask(CC_OVERSIZED, CC_POWDERIZED); cargo_disallow_refit: [PASS, MAIL, TOUR, YETI, YETY]; \
+#define CARGODEF_MIXED refittable_cargo_classes: bitmask(CC_REFRIGERATED, CC_PIECE_GOODS, CC_COVERED, CC_EXPRESS, CC_HAZARDOUS, CC_ARMOURED, CC_BULK, CC_LIQUID); non_refittable_cargo_classes: bitmask(CC_OVERSIZED, CC_POWDERIZED); cargo_allow_refit: [GLAS]; cargo_disallow_refit: [PASS, MAIL, TOUR, YETI, YETY]; \
 default_cargo_type : GOOD;
 
