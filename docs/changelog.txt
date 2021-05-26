@@ -1,6 +1,10 @@
 V4 Trains changelog
 =========================
 
+ - tour cargo capacity fixed
+ - TE for steam loc. fixed
+ - liquid in barrel capacity nerfed
+
 7799
 - capacity balance
 - HZ 1142, 2044 added

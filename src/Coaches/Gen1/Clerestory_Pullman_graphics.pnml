@@ -26,6 +26,8 @@ spriteset(spriteset_coach_Gen1_Clerestory_Pullman_livery, "gfx/Coaches/Gen1///Cl
 
 //Add defined switches
 
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
 RUNNINGCOSTENGINESWITCH
 
 PURCHASETEXTSWITCH

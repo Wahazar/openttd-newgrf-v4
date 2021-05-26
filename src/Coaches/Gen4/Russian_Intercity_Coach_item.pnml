@@ -44,6 +44,7 @@ item(FEAT_TRAINS, ITEM ) {
 	graphics {
 		purchase: spriteset_coach_Gen4_Russian_Intercity_Coach_purchase;
 		//Add calls to defined switches below
+		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL

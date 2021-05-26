@@ -60,8 +60,8 @@ ENGINECAPACITYSWITCH(VEHIDCODE)
 WAGONCAPACITYSWITCH(VEHIDCODE)
 
 //Graphics for the unit wagon based on cargo class
-switch(FEAT_TRAINS, SELF, switch_emu_Switzerland_SBB_RABe_523_Flirt_cargo_selection, cargo_classes){
-	bitmask(CC_PASSENGERS): spriteset_emu_Switzerland_SBB_RABe_523_Flirt_middlepass;
+switch(FEAT_TRAINS, SELF, switch_emu_Switzerland_SBB_RABe_523_Flirt_cargo_selection, hasbit(cargo_classes,CC_PASSENGERS)){
+	1: spriteset_emu_Switzerland_SBB_RABe_523_Flirt_middlepass;
 	spriteset_emu_Switzerland_SBB_RABe_523_Flirt_middlemail;
 }
 

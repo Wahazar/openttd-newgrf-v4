@@ -47,6 +47,8 @@ random_switch(FEAT_TRAINS, SELF, switch_coach_Gen2_Heavyweight_Intercity_Coach_l
 
 //Add defined switches
 
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
 RUNNINGCOSTENGINESWITCH
 
 PURCHASETEXTSWITCH

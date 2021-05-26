@@ -44,6 +44,7 @@ item(FEAT_TRAINS, ITEM ) {
 	graphics {
 		purchase: spriteset_coach_Gen3_Steel_Lightweight_Intercity_Coach_purchase;
 		//Add calls to defined switches below
+		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL

@@ -18,7 +18,7 @@
 switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_engine, cargo_classes) { \
 	bitmask(CC_MAIL): HEAD_CAPACITY/2; \
 	bitmask(CC_ARMOURED): HEAD_CAPACITY/4; \
-	HEAD_CAPACITY; \
+	HEAD_CAPACITY / (1 + 3 * (cargo_type_in_veh == TOUR)); \
 }
 
 #define WAGONCAPACITYSWITCHNAME(VEHIDCODE) EXPANDEDWAGONCAPACITYSWITCHNAME(VEHIDCODE)
@@ -30,14 +30,25 @@ switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_engine, cargo_classe
 #define EXPANDEDWAGONCAPACITYSWITCHCALL(VEHIDCODE) cargo_capacity: switch_ ## VEHIDCODE ## _capacity_wagon;
 
 #define EXPANDEDWAGONCAPACITYSWITCH(VEHIDCODE) \
-switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_passenger_wagon, cargo_type_in_veh) { \
-	TOUR: WAGON_CAPACITY / 3; \
+switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_wagon, cargo_type_in_veh) { \
+	TOUR: WAGON_SITTING_PLACES / 2; \
 	PASS: WAGON_CAPACITY; \
-	min(WAGON_CAPACITY, 16 * WAGON_CAPACITY/ cargo_unit_weight); \
-} \
-switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_wagon, cargo_classes) { \
-	bitmask(CC_PASSENGERS): switch_ ## VEHIDCODE ## _capacity_passenger_wagon; \
+	min(WAGON_CAPACITY, 16 * WAGON_CAPACITY/ (cargo_unit_weight + 2 * hasbit(cargo_classes,CC_PASSENGERS))); \
+} 
+
+#define FREIGHTWAGONCAPACITYSWITCHNAME(VEHIDCODE) EXPANDEDFREIGHTWAGONCAPACITYSWITCHNAME(VEHIDCODE)
+#define FREIGHTWAGONCAPACITYSWITCHCALL(VEHIDCODE) EXPANDEDFREIGHTWAGONCAPACITYSWITCHCALL(VEHIDCODE)
+
+#define FREIGHTWAGONCAPACITYSWITCH(VEHIDCODE) EXPANDEDFREIGHTWAGONCAPACITYSWITCH(VEHIDCODE)
+
+#define EXPANDEDFREIGHTWAGONCAPACITYSWITCHNAME(VEHIDCODE) switch_ ## VEHIDCODE ## _capacity_freight_wagon
+#define EXPANDEDFREIGHTWAGONCAPACITYSWITCHCALL(VEHIDCODE) cargo_capacity: switch_ ## VEHIDCODE ## _capacity_freight_wagon;
+
+#define EXPANDEDFREIGHTWAGONCAPACITYSWITCH(VEHIDCODE) \
+switch(FEAT_TRAINS, SELF, switch_ ## VEHIDCODE ## _capacity_freight_wagon, cargo_classes) { \
+	bitmask(CC_PASSENGERS): WAGON_CAPACITY; \
 	bitmask(CC_MAIL): WAGON_CAPACITY/2; \
 	bitmask(CC_ARMOURED): WAGON_CAPACITY/4; \
-	min(2 * HEAD_CAPACITY, 16 * WAGON_CAPACITY/ cargo_unit_weight); \
+	bitmask(CC_LIQUID): WAGON_CAPACITY/2; \
+	min(2 * WAGON_CAPACITY, 16 * WAGON_CAPACITY/ (cargo_unit_weight + 2 * hasbit(cargo_classes,CC_PASSENGERS))); \
 }

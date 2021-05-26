@@ -47,6 +47,8 @@ random_switch(FEAT_TRAINS, SELF, switch_coach_Gen6_Grand_Voyager_Coach_livery) {
 
 //Add defined switches
 
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
 RUNNINGCOSTENGINESWITCH
 
 PURCHASETEXTSWITCH

@@ -44,7 +44,7 @@
 
 #define HEAD_CAPACITY 214
 #define WAGON_CAPACITY 215
-
+#define WAGON_SITTING_PLACES 96
 
 #define DUAL_HEADED 1
 #define PASSENGER 1

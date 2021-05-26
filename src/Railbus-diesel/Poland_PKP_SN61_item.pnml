@@ -44,6 +44,7 @@ item(FEAT_TRAINS, ITEM ) {
 	graphics {
 		cargo_capacity: switch_rbd_Poland_PKP_SN61_capacity_position;
 		purchase: spriteset_rbd_Poland_PKP_SN61_purchase;
+		purchase_cargo_capacity: switch_rbd_Poland_PKP_SN61_capacity_position;
 		visual_effect_and_powered: switch_rbd_Poland_PKP_SN61_visual_effect;
 		articulated_part: switch_rbd_Poland_PKP_SN61_articulated;
 		length: switch_rbd_Poland_PKP_SN61_length;
@@ -56,7 +57,7 @@ item(FEAT_TRAINS, ITEM ) {
 		LIVERYMAPPINGSWITCHCALL
 
 		default: switch_rbd_Poland_PKP_SN61_position;
-		purchase_cargo_capacity:    return HEAD_CAPACITY;
+
 	}
 }
 SET_TRACK_TYPE 

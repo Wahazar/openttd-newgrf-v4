@@ -47,6 +47,8 @@ random_switch(FEAT_TRAINS, SELF, switch_coach_Gen3_Steel_Lightweight_Intercity_C
 
 //Add defined switches
 
+WAGONCAPACITYSWITCH(VEHIDCODE)
+
 RUNNINGCOSTENGINESWITCH
 
 PURCHASETEXTSWITCH
