@@ -410,7 +410,8 @@ str_electric_Austria_OBB_1063 					:1063 SGP Bo'Bo' {STRING}
 str_electric_Germany_DR_212 					:212 LEW Hennigsdorf Bo'Bo' {STRING}
 str_electric_Germany_DR_243 					:243 LEW Hennigsdorf Bo'Bo' {STRING}
 str_electric_Germany_DR_250 					:250 LEW Hennigsdorf Co'Co' {STRING}
-str_electric_Germany_DB_185_TRAXX_F140 				:TRAXX F140MS Bombardier Bo'Bo' {STRING}
+str_electric_Germany_DB_185_TRAXX_F140 				:'TRAXX' Bombardier F140MS Bo'Bo' {STRING}
+str_electric_Germany_DB_152_ES64_F_Eurosprinter 		:'Eurosprinter' Siemens ES64F Bo'Bo' {STRING}
 str_electric_Germany_DB_182_ES64U_Taurus 			:ES64U Siemens Bo'Bo' "Taurus"{STRING}
 str_electric_Germany_DB_E_919 					:E91.9 Krauss C'C' {STRING}
 str_electric_Germany_DB_193 					:'Vectron MS' Siemens Bo'Bo' {STRING}
@@ -419,7 +420,7 @@ str_electric_Hungary_MAV_Class_V43 		:VM14 Ganz-MAVAG B'B' {STRING}
 str_electric_Hungary_MAV_Class_V63 		:VM15 Ganz-MAVAG Co'Co' {STRING}
 str_electric_Hungary_MAV_Class_V46 		:VM16 Ganz-MAVAG Bo'Bo' {STRING}
 str_electric_Czech_Republic_CD_S499 		:47E Skoda Bo'Bo' {STRING}
-str_electric_Czech_Republic_CD_E458_1 		:78E Skoda Bo'Bo' {STRING}
+str_electric_Czech_Republic_CSD_E458_0 		:33E1 Skoda Bo'Bo' {STRING}
 str_electric_Czech_Republic_CSD_E669_1 		:31E Skoda Co'Co' {STRING}
 str_electric_Czech_Republic_CSD_E458_1 		:78E Skoda Bo'Bo' {STRING}
 
@@ -447,6 +448,7 @@ str_electric_Poland_PKP_ET41 		:203E Cegielski Bo'Bo'+Bo'Bo' {STRING}
 str_electric_Poland_PKP_EP09 		:104E Pafawag Bo'Bo' {STRING}
 str_electric_Poland_PKP_ET22 		:201E Pafawag Co'Co' {STRING}
 str_electric_diesel_Poland_Newag_ET26 		:'Dragon' E6ACTd Newag Co'Co' {STRING}
+str_electric_diesel_Germany_DB_248_Vectron_DM 		:'Vectron DM Light' Siemens Bo'Bo' {STRING}
 str_electric_Poland_Newag_ET43 		:'Dragon 2' E6ACTab Newag Co'Co' {STRING}
 
 str_electric_Slovakia_ZSSK_162 		:98E Skoda Bo'Bo' {STRING}
@@ -477,6 +479,7 @@ str_dmu_Croatia_HZ_7022 					:7022 TZV Gredelj Bo'2'+2'Bo' {STRING}
 str_dmu_Czech_Republic_CD_814 					:'Regionova' PARS 1'A' + 1'1' {STRING}
 str_dmu_Slovakia_ZSSK_861 					:861 ZOS Vrutky B'2'2'B' {STRING}
 str_dmu_Germany_DB_6282 					:628.2 Duwag 2'B'+2'2' {STRING}
+str_dmu_Germany_DB_644_Talent 					:644 'Talent' Bombardier B'2'2'B' {STRING}
 str_dmu_Germany_DB_648 						:'Lint 41' Alsthom B'(2)B' {STRING}
 str_dmu_Czech_Republic_CSD_M495_0 				:'Hargita' Ganz (1B)'2' + 2'2' {STRING}
 str_dmu_Czech_Republic_CSD_M296_1 				:'Hydra' Tatra B'2' + 2'2' {STRING}
@@ -513,6 +516,7 @@ str_emu_Russia_RZD_S 					:S MWM Bo'Bo' {STRING}
 str_emu_Russia_RZD_ER2 					:ER2 RVR Bo'Bo' {STRING}
 str_emu_Russia_RZD_ER200 				:ER200 RVR Bo'Bo' {STRING}
 str_emu_Russia_RZD_ES1_Lastochka 			:'Lastochka' Siemens/Ural Bo'Bo' {STRING}
+str_emu_Austria_OBB_4024 					:4024 Bombardier Talent Bo'2'2'2'Bo' {STRING}
 
 str_edmu_Poland_Newag_36_WEh 					:Newag Bo'2'2'Bo' "Impuls" {STRING}
 
@@ -934,6 +938,7 @@ str_class_electric_Germany_DR_212 					:DR 212/DB 112 {STRING}
 str_class_electric_Germany_DR_243 					:DR 243/DB 143 {STRING}
 str_class_electric_Germany_DR_250 					:DR 250/DB 155 {STRING}
 str_class_electric_Germany_DB_185_TRAXX_F140 				:DB 185/PKP-PR EU43 {STRING}
+str_class_electric_Germany_DB_152_ES64_F_Eurosprinter 			:DB 152 {STRING}
 str_class_electric_Germany_DB_182_ES64U_Taurus 				:DB 182/OBB 1016/MAV 1047/MRCE dispolok X4E{STRING}
 # str_class_electric_Ukraine_UZ_DS3 					:UZ DS3 {STRING}
 # str_class_electric_Kazakhstan_KTZ_KZ4A 				:KTZ KZ4A {STRING}
@@ -943,6 +948,7 @@ str_class_electric_Poland_PKP_EP02 					:PKP EP02 {STRING}
 str_class_electric_Poland_PKP_EP03 					:PKP EP03 {STRING}
 str_class_electric_Russia_RZD_ChS3 					:SZD ChS3 {STRING}
 str_class_electric_Czech_Republic_CSD_E499_1				:CSD E499.1/CD 141/PKP EU05 {STRING}
+str_class_electric_Czech_Republic_CSD_E458_0				:CSD E458.0/CD 110 {STRING}
 str_class_electric_Czech_Republic_CSD_E458_1				:CSD E458.1/CD 111 {STRING}
 str_class_electric_Czech_Republic_CSD_E669_1				:CSD E669.1/CD 181/Transoda ET23 {STRING}
 
@@ -981,6 +987,7 @@ str_class_electric_Germany_Prussian_ES_6 				:K.P.St.E. ES 6 {STRING}
 str_class_electric_Germany_DR_230 					:DR 230/DB 180/CSD ES 499.2/CD 372 {STRING}
 str_class_electric_Poland_PKP_ET22 					:PKP ET22 {STRING}
 str_class_electric_diesel_Poland_Newag_ET26 					:Freightliner-PL E6ACTd/PKP ET26 {}{STRING}
+str_class_electric_diesel_Germany_DB_248_Vectron_DM 				:DB 248 {}{STRING}
 str_class_electric_Poland_Newag_ET43 					:Industrial Division E6ACTab/PKP ET43 {}{STRING}
 str_class_electric_Germany_DB_193 					:DB 193/OBB 1293/CD 383/PKP EU46 {STRING}
 
@@ -998,6 +1005,7 @@ str_class_dmu_Czech_Republic_CD_814 				:CD 814 {STRING}
 str_class_dmu_UK_BR_150_0_Sprinter :BR 150/0 'Sprinter' {STRING}
 str_class_dmu_Slovakia_ZSSK_861 				:ZSSK 861 {STRING}
 str_class_dmu_Germany_DB_6282 					:DB 628.2 {STRING}
+str_class_dmu_Germany_DB_644_Talent 				:DB 644/RegioJet Talent {STRING}
 str_class_dmu_Germany_DB_648 					:DB 648 {STRING}
 str_class_dmu_Czech_Republic_CSD_M495_0 			:CSD M495.0/DR VT 12.14/MAV CBMot {STRING}
 str_class_dmu_Czech_Republic_CSD_M296_1 			:CSD M296.1/CD 853 {STRING}
@@ -1034,6 +1042,7 @@ str_class_emu_Croatia_HZ_6112 					:HZ 6112 {STRING}
 str_class_emu_Europe_Sureot :Sureot {STRING}
 str_class_emu_Germany_DB_ET420 					:DB 420 {STRING}
 str_class_emu_Czechia_Leo_480 					:LE 480/PKP ED160 {STRING}
+str_class_emu_Austria_OBB_4024 					:OBB 4024 {STRING}
 
 str_class_edmu_Poland_Newag_36_WEh				:PKP EN63H {STRING}
 

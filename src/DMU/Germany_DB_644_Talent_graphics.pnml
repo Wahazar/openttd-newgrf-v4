@@ -10,7 +10,7 @@
 * PURCHASE
 */
 
-spriteset(spriteset_dmu_Germany_DB_6282_purchase, "gfx/DMU/Germany_DB_6282.png") {
+spriteset(spriteset_dmu_Germany_DB_644_Talent_purchase, "gfx/DMU/Germany_DB_644_Talent.png") {
 	template_purchase_dualheaded(1, 128)
 }
 
@@ -19,33 +19,33 @@ spriteset(spriteset_dmu_Germany_DB_6282_purchase, "gfx/DMU/Germany_DB_6282.png")
 */
 
 //Front
-spriteset(spriteset_dmu_Germany_DB_6282_front, "gfx/DMU/Germany_DB_6282.png") {
+spriteset(spriteset_dmu_Germany_DB_644_Talent_front, "gfx/DMU/Germany_DB_644_Talent.png") {
 	template_2cc_engines_general(1, 1)
 }
 
 //Back
-spriteset(spriteset_dmu_Germany_DB_6282_back, "gfx/DMU/Germany_DB_6282.png") {
+spriteset(spriteset_dmu_Germany_DB_644_Talent_back, "gfx/DMU/Germany_DB_644_Talent.png") {
 	template_2cc_engines_general(1, 32)
 }
 
 //Middle - PAX
-spriteset(spriteset_dmu_Germany_DB_6282_middlepass, "gfx/DMU/Germany_DB_6282.png") {
+spriteset(spriteset_dmu_Germany_DB_644_Talent_middlepass, "gfx/DMU/Germany_DB_644_Talent.png") {
 	template_2cc_engines_general(1, 64)
 }
 //Middle - MAIL
-spriteset(spriteset_dmu_Germany_DB_6282_middlemail, "gfx/DMU/Germany_DB_6282.png") {
+spriteset(spriteset_dmu_Germany_DB_644_Talent_middlemail, "gfx/DMU/Germany_DB_644_Talent.png") {
 	template_2cc_engines_general(1, 96)
 }
 
 //Dualheaded engines
-switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_6282_reversed, var[0xC8]) {
-	0xFE: spriteset_dmu_Germany_DB_6282_back;
-    0xFF: spriteset_dmu_Germany_DB_6282_back; 
-    spriteset_dmu_Germany_DB_6282_front;
+switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_644_Talent_reversed, var[0xC8]) {
+	0xFE: spriteset_dmu_Germany_DB_644_Talent_back;
+    0xFF: spriteset_dmu_Germany_DB_644_Talent_back; 
+    spriteset_dmu_Germany_DB_644_Talent_front;
 }
 
 //Visual effect, for DMU this is done on the front engine
-switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_6282_visual_effect_and_powered, var[0xC8]) {
+switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_644_Talent_visual_effect_and_powered, var[0xC8]) {
 	0xFE: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 	0xFF: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 	visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
@@ -60,9 +60,9 @@ ENGINECAPACITYSWITCH(VEHIDCODE)
 WAGONCAPACITYSWITCH(VEHIDCODE)
 
 //Graphics for the unit wagon based on cargo class
-switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_6282_cargo_selection, hasbit(cargo_classes,CC_PASSENGERS)){
-	1: spriteset_dmu_Germany_DB_6282_middlepass;
-	spriteset_dmu_Germany_DB_6282_middlemail;
+switch(FEAT_TRAINS, SELF, switch_dmu_Germany_DB_644_Talent_cargo_selection, hasbit(cargo_classes,CC_PASSENGERS)){
+	1: spriteset_dmu_Germany_DB_644_Talent_middlepass;
+	spriteset_dmu_Germany_DB_644_Talent_middlemail;
 }
 
 //Add defined switches

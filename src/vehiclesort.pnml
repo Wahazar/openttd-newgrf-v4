@@ -223,6 +223,8 @@ item_electric_Germany_DR_250, /*Year: 1977*/ \
 item_electric_Austria_OBB_1063, /*Year: 1982*/ \
 item_electric_Germany_DR_243, /*Year: 1984*/ \
 item_electric_Germany_DR_212, /*Year: 1990*/ \
+item_electric_Germany_DB_152_ES64_F_Eurosprinter, /*Year: 1996*/ \
+item_electric_diesel_Germany_DB_248_Vectron_DM, /*Year: 2023*/ 
 
 #define SORTING_ELECTRIC_MULTI \
 item_electric_Germany_DB_169, /*Year: 1905*/ \
@@ -248,10 +250,10 @@ item_electric_Czech_Republic_CSD_E499_1, /* 1961*/ \
 item_electric_Czech_Republic_CSD_E669_1, /* 1961*/ \
 item_electric_Poland_PKP_EU06, /* 1962*/ \
 item_electric_Poland_PKP_ET22, /* 1971 */ \
+item_electric_Czech_Republic_CSD_E458_0, /* 1971*/ \
 item_electric_Slovenia_SZ_363, /* 1975 */ \
 item_electric_Poland_PKP_ET41, /* 1977 */ \
 item_electric_Slovakia_ZSSK_131, /* 1980 */ \
-item_electric_Czech_Republic_CSD_E458_1, /* 1982*/ \
 item_electric_Poland_PKP_EP09, /* 1986 */ \
 item_electric_Slovakia_ZSSK_162, /* 1991 */\
 item_electric_Czech_Republic_CD_114, /* 1996*/ \
@@ -276,6 +278,7 @@ item_dmu_Czech_Republic_CSD_M495_0, /* 1954 */ \
 item_dmu_Czech_Republic_CSD_M296_1, /* 1969 */ \
 item_dmu_Serbia_ZS_811, /* 1974 */ \
 item_dmu_Germany_DB_6282, /* 1986 */ \
+item_dmu_Germany_DB_644_Talent, /* 1996 */ \
 item_dmu_Germany_DB_612_Regio_Swinger, /* 1998 */ \
 item_dmu_Germany_DB_642_Desiro, /* 2000 */ \
 item_dmu_Denmark_Arriva_Lint_41, /* 2001 */ \
@@ -305,7 +308,8 @@ item_emu_Austria_OBB_4041, /*Year: 1929*/ \
 item_emu_Austria_OBB_4030, /*Year: 1956*/ \
 item_emu_Germany_DB_ET420, /*Year: 1969*/ \
 item_emu_Germany_DB_403_ICE_3, /*Year: 2000*/ \
-item_emu_Austria_WESTbahn_4010_KISS, /*Year: 2011*/ \
+item_emu_Austria_OBB_4024, /*Year: 2004*/ \
+item_emu_Austria_WESTbahn_4010_KISS, /*Year: 2011*/ 
 
 #define SORTING_EMU_MULTI \
 item_emu_Czech_Republic_CD_680_Pendolino, /*Year: 1999*/ \

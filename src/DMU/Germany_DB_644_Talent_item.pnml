@@ -42,10 +42,10 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_dmu_Germany_DB_6282_purchase;
+		purchase: spriteset_dmu_Germany_DB_644_Talent_purchase;
 		can_attach_wagon: switch_can_attach_vehicle;
 		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_dmu_Germany_DB_6282_visual_effect_and_powered;
+		visual_effect_and_powered: switch_dmu_Germany_DB_644_Talent_visual_effect_and_powered;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
@@ -54,7 +54,7 @@ item(FEAT_TRAINS, ITEM ) {
 		LIVERYMAPPINGSWITCHCALL
 	start_stop: switch_MU_6_vehicles_start_stop; 
 
-		default: switch_dmu_Germany_DB_6282_reversed;
+		default: switch_dmu_Germany_DB_644_Talent_reversed;
 	}
 	livery_override (item_mu_wagon_unpowered ) {
 		LOADINGSPEEDPROPERTY
@@ -64,7 +64,7 @@ item(FEAT_TRAINS, ITEM ) {
 		weight: WEIGHTMUWAGONUNPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
+		default: switch_dmu_Germany_DB_644_Talent_cargo_selection;
 	}
 	livery_override (item_mu_wagon_powered ) {
 		LOADINGSPEEDPROPERTY
@@ -76,7 +76,7 @@ item(FEAT_TRAINS, ITEM ) {
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		tractive_effort_coefficient: TEMUWAGONPOWERED
 		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
+		default: switch_dmu_Germany_DB_644_Talent_cargo_selection;
 	}
 }
 SET_TRACK_TYPE 

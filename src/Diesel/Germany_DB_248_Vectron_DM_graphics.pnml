@@ -10,7 +10,7 @@
 * PURCHASE
 */
 
-spriteset(spriteset_electric_diesel_Poland_Newag_ET26_purchase, "gfx/Electric/Poland_Newag_ET26.png") {
+spriteset(spriteset_electric_diesel_Germany_DB_248_Vectron_DM_purchase, "gfx/Electric/Germany_DB_248_Vectron_DM.png") {
 	template_purchase(1, 128)
 }
 
@@ -19,33 +19,33 @@ spriteset(spriteset_electric_diesel_Poland_Newag_ET26_purchase, "gfx/Electric/Po
 */
 
 //Engine
-spriteset(spriteset_electric_diesel_Poland_Newag_ET26_3kV, "gfx/Electric/Poland_Newag_ET26.png") {
+spriteset(spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV, "gfx/Electric/Germany_DB_248_Vectron_DM.png") {
 	template_2cc_L12(1, 1)
 }
 
-spriteset(spriteset_electric_diesel_Poland_Newag_ET26_diesel, "gfx/Electric/Poland_Newag_ET26.png") {
+spriteset(spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel, "gfx/Electric/Germany_DB_248_Vectron_DM.png") {
 	template_2cc_L12(1, 64)
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_traction_spriteset, current_railtype ) {
-	SAAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	SBAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	SCAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	SDAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	SEAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	SFAD: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	ELRL: spriteset_electric_diesel_Poland_Newag_ET26_3kV;
-	RAIL: spriteset_electric_diesel_Poland_Newag_ET26_diesel;
-	0xFF: spriteset_electric_diesel_Poland_Newag_ET26_diesel;
-	spriteset_electric_diesel_Poland_Newag_ET26_diesel;
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_spriteset, current_railtype ) {
+	SAAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SBAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SCAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SDAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SEAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SFAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	ELRL: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	RAIL: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel;
+	0xFF: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel;
+	spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel;
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_position, position_in_vehid_chain % 2) {
-	0: switch_electric_diesel_Poland_Newag_ET26_traction_spriteset;
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_position, position_in_vehid_chain % 2) {
+	0: switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_spriteset;
 	EMPTY_SPRITESET
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_traction_effect, current_railtype ) {
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_effect, current_railtype ) {
 	SAAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
 	SBAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
 	SCAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
@@ -58,18 +58,18 @@ switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_traction_effe
 	return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_visual_effect, position_in_vehid_chain % 2) {
-	0: return switch_electric_diesel_Poland_Newag_ET26_traction_effect;
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_visual_effect, position_in_vehid_chain % 2) {
+	0: return switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_effect;
 	return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_length, position_in_vehid_chain % 2) {
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_length, position_in_vehid_chain % 2) {
 	0: LENGTH;
 	ACTUAL_LENGTH-LENGTH;
 }
 
-switch(FEAT_TRAINS, SELF, switch_electric_diesel_Poland_Newag_ET26_articulated, extra_callback_info1) {
-	1: return item_electric_diesel_Poland_Newag_ET26;
+switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_articulated, extra_callback_info1) {
+	1: return item_electric_diesel_Germany_DB_248_Vectron_DM;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 

@@ -579,6 +579,10 @@
 #include "src/Diesel/Poland_Newag_ET26_graphics.pnml"
 #include "src/Diesel/Poland_Newag_ET26_item.pnml"
 
+#include "src/Diesel/Germany_DB_248_Vectron_DM_property.pnml"
+#include "src/Diesel/Germany_DB_248_Vectron_DM_graphics.pnml"
+#include "src/Diesel/Germany_DB_248_Vectron_DM_item.pnml"
+
 //Diesel broadgauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Diesel_Broad_Gauge.pnml"
 #include "src/Diesel/BroadGauge/Russia_RZD_Db_property.pnml"
@@ -650,9 +654,9 @@
 #include "src/Electric/System3kVDC/Czech_Republic_CSD_E669_1_property.pnml"
 #include "src/Electric/System3kVDC/Czech_Republic_CSD_E669_1_graphics.pnml"
 #include "src/Electric/System3kVDC/Czech_Republic_CSD_E669_1_item.pnml"
-#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_1_property.pnml"
-#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_1_graphics.pnml"
-#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_1_item.pnml"
+#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_0_property.pnml"
+#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_0_graphics.pnml"
+#include "src/Electric/System3kVDC/Czech_Republic_CSD_E458_0_item.pnml"
 #include "src/Electric/System3kVDC/Czech_Republic_CD_114_property.pnml"
 #include "src/Electric/System3kVDC/Czech_Republic_CD_114_graphics.pnml"
 #include "src/Electric/System3kVDC/Czech_Republic_CD_114_item.pnml"
@@ -750,6 +754,9 @@
 #include "src/Electric/System15kVAC/Germany_Prussian_EG511_property.pnml"
 #include "src/Electric/System15kVAC/Germany_Prussian_EG511_graphics.pnml"
 #include "src/Electric/System15kVAC/Germany_Prussian_EG511_item.pnml"
+#include "src/Electric/System15kVAC/Germany_DB_152_ES64_F_Eurosprinter_property.pnml"
+#include "src/Electric/System15kVAC/Germany_DB_152_ES64_F_Eurosprinter_graphics.pnml"
+#include "src/Electric/System15kVAC/Germany_DB_152_ES64_F_Eurosprinter_item.pnml"
 
 //Electric 25kV
 #include "src/_CodeSupport/TypeInitialization/init_type_Electric_25kV.pnml"
@@ -909,6 +916,9 @@
 #include "src/DMU/Poland_Newag_36_WEh_property.pnml"
 #include "src/DMU/Poland_Newag_36_WEh_graphics.pnml"
 #include "src/DMU/Poland_Newag_36_WEh_item.pnml"
+#include "src/DMU/Germany_DB_644_Talent_property.pnml"
+#include "src/DMU/Germany_DB_644_Talent_graphics.pnml"
+#include "src/DMU/Germany_DB_644_Talent_item.pnml"
 
 //DMU Russian
 #include "src/_CodeSupport/TypeInitialization/init_type_DMU_Broad_Gauge.pnml"
@@ -981,7 +991,9 @@
 #include "src/EMU/System15kVAC/Austria_WESTbahn_4010_KISS_property.pnml"
 #include "src/EMU/System15kVAC/Austria_WESTbahn_4010_KISS_graphics.pnml"
 #include "src/EMU/System15kVAC/Austria_WESTbahn_4010_KISS_item.pnml"
-
+#include "src/EMU/System15kVAC/Austria_OBB_4024_property.pnml"
+#include "src/EMU/System15kVAC/Austria_OBB_4024_graphics.pnml"
+#include "src/EMU/System15kVAC/Austria_OBB_4024_item.pnml"
 
 //EMU 25kV
 #include "src/_CodeSupport/TypeInitialization/init_type_EMU_25kV.pnml"

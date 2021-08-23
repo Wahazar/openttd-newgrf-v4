@@ -257,8 +257,9 @@ item(FEAT_TRAINS, item_diesel_Serbia_ZS_621, 5119) {}  //CSD
 item(FEAT_TRAINS, item_diesel_Belgium_NMBS_SNCB_7800, 5150) {}  //UE CNG
 
 item(FEAT_TRAINS, item_electric_diesel_Poland_Newag_ET26, 5600) {}
+item(FEAT_TRAINS, item_electric_diesel_Germany_DB_248_Vectron_DM, 5601) {}
 
-//Diesel, available ID range: 5700-5899 (hex 0x1644..0x170B) - dual gauge
+//Diesel normal and broad gauge, available ID range: 5700-5899 (hex 0x1644..0x170B) - dual gauge
 #define ID_RANGE_DIESEL_D 0x1644..0x170B
 item(FEAT_TRAINS, item_diesel_Shed_shunter, 5700) {}
 
@@ -348,7 +349,7 @@ item(FEAT_TRAINS, item_electric_Sweden_SJ_F_Class, 6076) {}
 item(FEAT_TRAINS, item_electric_Italy_FS_E424, 6077) {}
 item(FEAT_TRAINS, item_electric_Czech_Republic_CSD_E669_1, 6078) {}
 item(FEAT_TRAINS, item_electric_Czech_Republic_CSD_E499_1, 6079) {}
-item(FEAT_TRAINS, item_electric_Czech_Republic_CSD_E458_1, 6080) {}
+item(FEAT_TRAINS, item_electric_Czech_Republic_CSD_E458_0, 6080) {}
 
 item(FEAT_TRAINS, item_electric_Hungary_MAV_Class_V41, 6082) {}
 item(FEAT_TRAINS, item_electric_Poland_PKP_EL_200, 6083) {}
@@ -388,6 +389,7 @@ item(FEAT_TRAINS, item_electric_Romania_CFR_478_Phoenix, 6130) {}
 
 //item(FEAT_TRAINS, item_electric_Germany_Prussian_ES_6, 6135) {}
 item(FEAT_TRAINS, item_electric_Germany_Prussian_EG511, 6136) {}
+item(FEAT_TRAINS, item_electric_Germany_DB_152_ES64_F_Eurosprinter, 6137) {}
 
 //Electric, available ID range: 6800-6899 (hex 0x1A90..0x1AF3) - dual gauge
 #define ID_RANGE_ELECTRIC_D 0x1A90..0x1AF3
@@ -438,9 +440,8 @@ item(FEAT_TRAINS, item_dmu_Czech_Republic_CSD_M296_1, 7036) {}
 item(FEAT_TRAINS, item_dmu_Czech_Republic_CD_844, 7037) {}
 
 item(FEAT_TRAINS, item_dmu_Germany_DB_6282, 7047) {}
-
 item(FEAT_TRAINS, item_dmu_Denmark_Arriva_Lint_41, 7048) {}
-
+item(FEAT_TRAINS, item_dmu_Germany_DB_644_Talent, 7049) {}
 
 item(FEAT_TRAINS, item_edmu_Poland_Newag_36_WEh, 7800) {}
 
@@ -489,7 +490,7 @@ item(FEAT_TRAINS, item_emu_Romania_CFR_58, 8061) {}
 item(FEAT_TRAINS, item_emu_Poland_PKP_EN71, 8065) {}
 
 item(FEAT_TRAINS, item_emu_Poland_PKP_EN76, 8067) {}
-
+item(FEAT_TRAINS, item_emu_Austria_OBB_4024, 8068) {}
 item(FEAT_TRAINS, item_emu_Austria_WESTbahn_4010_KISS, 8069) {}
 item(FEAT_TRAINS, item_emu_Croatia_HZ_6112, 8070) {}
 

@@ -14,14 +14,14 @@
 #define LIVERYMAPPINGSWITCHCALL DEFAULT_LIVERY_RECOLOUR
 #define CARGOSUBTYPESWITCHCALL DEFAULT_LIVERY_TEXT
 
-#define VEHIDCODE electric_Germany_DB_182_ES64U_Taurus
-#define ITEM item_electric_Germany_DB_182_ES64U_Taurus
-#define NAME string(str_electric_Germany_DB_182_ES64U_Taurus,string(str_Electric,string(str_AC503_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Germany_DB_182_ES64U_Taurus,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
+#define VEHIDCODE electric_Germany_DB_152_ES64_F_Eurosprinter
+#define ITEM item_electric_Germany_DB_152_ES64_F_Eurosprinter
+#define NAME string(str_electric_Germany_DB_152_ES64_F_Eurosprinter,string(str_Electric,string(str_AC503_Voltage)))
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_electric_Germany_DB_152_ES64_F_Eurosprinter,string(str_Voltage_System, VOLTAGE, string(STR_RAI_AUTOREPLACE),RELIABILITY_DECAY));
 
-#define VEHICLE_REGION REGION(WESTERNEUROPE,HUNGARY,POLAND)
+#define VEHICLE_REGION REGION(GERMANY,PRIVATE,NOCONCEPT)
 
-#define INTRODUCTION_YEAR 2000
+#define INTRODUCTION_YEAR 1996
 #define MODEL_LIFE VEHICLE_NEVER_EXPIRES
 #define RETIRE_EARLY DEFAULT_RETIRE_EARLY
 #define VEHICLE_LIFE 40
@@ -29,11 +29,11 @@
 #define LOADINGSPEED LOADINGSPEEDDEF_NONE
 #define CARGODEF CARGODEF_LOCO
 
-#define SPEED 230
-#define POWER 11266
-#define WEIGHT 86
-#define TE_COEFFICIENT 0.35
-#define AIR_DRAG_COEFFICIENT 0
+#define SPEED 140
+#define POWER 8600
+#define WEIGHT 87
+#define TE_COEFFICIENT 0.34
+#define AIR_DRAG_COEFFICIENT 0.03
 
 #define LENGTH 8
 #define ACTUAL_LENGTH 8
@@ -59,6 +59,6 @@
 #define POWER_PER_WAGON DEFAULT_POWER_PER_WAGON
 #define BITMASK_VEHICLE_INFO DEFAULT_BITMASK
 #define SPRITE_ID DEFAULT_SPRITE_ID
-#define POPULARITY 5
+#define POPULARITY 0
 #define VOLTAGE 15
 

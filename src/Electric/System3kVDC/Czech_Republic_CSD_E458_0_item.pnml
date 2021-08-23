@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2017-2021 Transportman, McZapkie
+ *  Copyright (C) 2017-2020 Transportman, McZapkie
  *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
@@ -42,42 +42,18 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_dmu_Germany_DB_6282_purchase;
-		can_attach_wagon: switch_can_attach_vehicle;
-		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_dmu_Germany_DB_6282_visual_effect_and_powered;
+		purchase: spriteset_electric_Czech_Republic_CSD_E458_0_purchase;
+		can_attach_wagon: CAN_ATTACH_VEHICLE;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-	start_stop: switch_MU_6_vehicles_start_stop; 
-
-		default: switch_dmu_Germany_DB_6282_reversed;
-	}
-	livery_override (item_mu_wagon_unpowered ) {
-		LOADINGSPEEDPROPERTY
-		RUNNINGCOSTMUWAGONUNPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
-
-		weight: WEIGHTMUWAGONUNPOWERED
-		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
-		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
-	}
-	livery_override (item_mu_wagon_powered ) {
-		LOADINGSPEEDPROPERTY
-		RUNNINGCOSTMUWAGONPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
-
-		power: POWERMUWAGONPOWERED
-		weight: WEIGHTMUWAGONPOWERED
-		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
-		tractive_effort_coefficient: TEMUWAGONPOWERED
-		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
+		
+		purchase_cargo_capacity: return 0;
+		cargo_capacity: return 0;
+		default: spriteset_electric_Czech_Republic_CSD_E458_0;
 	}
 }
-SET_TRACK_TYPE 
-EXTENDED_CARGO_DECAY
+SET_TRACK_TYPE

@@ -42,10 +42,10 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_dmu_Germany_DB_6282_purchase;
-		can_attach_wagon: switch_can_attach_vehicle;
+		purchase: spriteset_emu_Austria_OBB_4024_purchase;
 		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		visual_effect_and_powered: switch_dmu_Germany_DB_6282_visual_effect_and_powered;
+		visual_effect_and_powered: switch_emu_Austria_OBB_4024_visual_effect_and_powered;
+		can_attach_wagon: switch_can_attach_vehicle;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
@@ -54,29 +54,29 @@ item(FEAT_TRAINS, ITEM ) {
 		LIVERYMAPPINGSWITCHCALL
 	start_stop: switch_MU_6_vehicles_start_stop; 
 
-		default: switch_dmu_Germany_DB_6282_reversed;
+		default: switch_emu_Austria_OBB_4024_reversed;
 	}
 	livery_override (item_mu_wagon_unpowered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONUNPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
 
 		weight: WEIGHTMUWAGONUNPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
+		default: switch_emu_Austria_OBB_4024_cargo_selection;
 	}
 	livery_override (item_mu_wagon_powered ) {
 		LOADINGSPEEDPROPERTY
 		RUNNINGCOSTMUWAGONPOWEREDSWITCHCALL
-		colour_mapping: switch_livery_subtype_trailer_dmu_mapping;
+		colour_mapping: switch_livery_subtype_trailer_emu_mapping;
 
 		power: POWERMUWAGONPOWERED
 		weight: WEIGHTMUWAGONPOWERED
 		WAGONCAPACITYSWITCHCALL(VEHIDCODE)
 		tractive_effort_coefficient: TEMUWAGONPOWERED
 		length: WAGON_LENGTH;
-		default: switch_dmu_Germany_DB_6282_cargo_selection;
+		default: switch_emu_Austria_OBB_4024_cargo_selection;
 	}
 }
 SET_TRACK_TYPE 
