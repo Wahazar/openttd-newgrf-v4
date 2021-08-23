@@ -116,7 +116,8 @@ spriteset(DBHS_catenary_pylons, IMAGEFILE)
 
 //properties
 
-if ((param_custom_tracks) && (AUSTRIA || GERMANY)) {
+//if ((param_custom_tracks) && (AUSTRIA || GERMANY)) {
+if (param_custom_tracks) {
 if (railtype_available("DBHS") || (loading_stage == LOADING_STAGE_RESERVE)) {
   item (FEAT_RAILTYPES, DBHS)
   {

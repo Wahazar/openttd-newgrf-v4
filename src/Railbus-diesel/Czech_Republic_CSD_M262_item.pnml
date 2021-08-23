@@ -42,8 +42,12 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
-		purchase: spriteset_rbd_Czech_Republic_CD_840_purchase;
+		cargo_capacity: switch_rbd_Czech_Republic_CSD_M262_capacity_position;
+		purchase: spriteset_rbd_Czech_Republic_CSD_M262_purchase;
+		purchase_cargo_capacity: switch_rbd_Czech_Republic_CSD_M262_capacity_position;
+		visual_effect_and_powered: switch_rbd_Czech_Republic_CSD_M262_visual_effect;
+		articulated_part: switch_rbd_Czech_Republic_CSD_M262_articulated;
+		length: switch_rbd_Czech_Republic_CSD_M262_length;
 		can_attach_wagon: switch_can_attach_vehicle;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
@@ -52,7 +56,8 @@ item(FEAT_TRAINS, ITEM ) {
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
 
-		default: spriteset_rbd_Czech_Republic_CD_840;
+		default: switch_rbd_Czech_Republic_CSD_M262_position;
+
 	}
 }
 SET_TRACK_TYPE 

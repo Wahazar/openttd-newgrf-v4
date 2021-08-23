@@ -56,6 +56,7 @@ item(FEAT_TRAINS, item_rbd_Czech_Republic_CD_M290, 2029) {}
 
 
 item(FEAT_TRAINS, item_rbd_Czech_Republic_CD_840, 2041) {}
+item(FEAT_TRAINS, item_rbd_Czech_Republic_CSD_M262, 2042) {}
 
 //light railbusses, available ID range: 2300-2399 (hex 0x08FC..0x095F)
 #define ID_RANGE_LRB 0x08FC..0x095F 

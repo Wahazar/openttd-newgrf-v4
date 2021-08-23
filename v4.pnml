@@ -182,6 +182,9 @@
 #include "src/Railbus-diesel/Czech_Republic_CD_840_property.pnml"
 #include "src/Railbus-diesel/Czech_Republic_CD_840_graphics.pnml"
 #include "src/Railbus-diesel/Czech_Republic_CD_840_item.pnml"
+#include "src/Railbus-diesel/Czech_Republic_CSD_M262_property.pnml"
+#include "src/Railbus-diesel/Czech_Republic_CSD_M262_graphics.pnml"
+#include "src/Railbus-diesel/Czech_Republic_CSD_M262_item.pnml"
 
 //Railbus-diesel broad gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_RBD_B.pnml"

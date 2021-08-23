@@ -7,12 +7,14 @@
  */
 
 switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_power, current_railtype ) {
-	SAAD: return POWER;
-	SBAD: return POWER;
-	SCAD: return POWER;
-	SDAD: return POWER;
-	SEAD: return POWER;
-	SFAD: return POWER;
+	SAAa: return POWER;
+	SBAa: return POWER;
+	SCAa: return POWER;
+	SDAa: return POWER;
+	SEAa: return POWER;
+	DBNE: return POWER;
+	DBHE: return POWER;
+	DBHS: return POWER;
 	ELRL: return POWER;
 	RAIL: return VECTRON_DM_DIESEL_POWER;
 	0xFF: return VECTRON_DM_DIESEL_POWER;

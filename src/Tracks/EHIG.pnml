@@ -113,7 +113,8 @@ spriteset(EHIG_catenary_pylons, IMAGEFILE)
 
 //properties
 
-if ((param_custom_tracks) && (POLAND || CZECHIA || SOUTHERNEUROPE)) {
+//if ((param_custom_tracks) && (POLAND || CZECHIA || SOUTHERNEUROPE)) {
+if (param_custom_tracks) {
 if (railtype_available("SCAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
   item (FEAT_RAILTYPES, EHIG)
   {

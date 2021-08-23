@@ -238,6 +238,7 @@ str_rbd_Germany_BSt_6001 				:BSt AEG 1A {STRING}
 str_rbd_Czech_Republic_CD_M120 				:M120 Tatra A1 {STRING}
 str_rbd_Czech_Republic_CD_M290 				:M290 Tatra (1A)'(A1)' {STRING}
 str_rbd_Czech_Republic_CD_840 					:RS1 Stadler B'B' {STRING}
+str_rbd_Czech_Republic_CSD_M262 				:M262.0 Brno Bo'2' {STRING}
 str_rbd_Czech_Republic_CSD_M131 				:M131.1 Tatra A1 {STRING}
 str_rbd_Czech_Republic_CSD_CDlm 				:CDlm (for M131.1) {STRING}
 str_rbd_Czech_Republic_CD_809 					:810 Studenka A1 {STRING}
@@ -755,6 +756,7 @@ str_class_rbd_Germany_BSt_6001 						:BSt 6001/DR VT133.5 {STRING}
 str_class_rbd_Czech_Republic_CD_M120 					:CSD M120 {STRING}
 str_class_rbd_Czech_Republic_CD_M290 					:CSD M290 {STRING}
 str_class_rbd_Czech_Republic_CD_840 					:CD 840 {STRING}
+str_class_rbd_Czech_Republic_CSD_M262 					:CSD M262.0/CD 830 {STRING}
 str_class_rbd_Czech_Republic_CSD_M131 				:CSD M131.1 {STRING}
 str_class_rbd_Czech_Republic_CSD_CDlm 				:CSD CDlm (for M131.1) {STRING}
 str_class_rbd_Czech_Republic_CD_809 					:CSD 810/MAV Bzmot {STRING}

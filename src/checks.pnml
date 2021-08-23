@@ -25,8 +25,8 @@ if (dynamic_engines == 0) {
 	error(FATAL, USED_WITH, string(str_used_with_dynamic_engines));
 }
 
-//check if at least one region is set to available
-if (ALLREGION == 0) {
+//check if at least one region is set to available or custom track types enabled
+if ((ALLREGION == 0) && (!param_custom_tracks) ){
 	//No region = no vehicles
 	//Continue loading to allow changing parameters to fix problem
 	error(FATAL, string(str_error_region));

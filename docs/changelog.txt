@@ -1,5 +1,11 @@
 V4 Trains changelog
 =========================
+
+7904
+ - Standard gauge track possible without any vehicles enabled
+ - Talent, Eurosprinter, Vectron DM added
+ - CSD M262 added
+
 7849
  - tour cargo capacity fixed
  - TE for steam loc. fixed

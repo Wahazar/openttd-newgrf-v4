@@ -10,7 +10,7 @@
 * PURCHASE
 */
 
-spriteset(spriteset_rbd_Poland_PKP_SN61_purchase, "gfx/Railbus-diesel/Poland_PKP_SN61.png") {
+spriteset(spriteset_rbd_Czech_Republic_CSD_M262_purchase, "gfx/Railbus-diesel/Czech_Republic_CSD_M262.png") {
 	template_purchase(1, 128)
 }
 
@@ -19,12 +19,12 @@ spriteset(spriteset_rbd_Poland_PKP_SN61_purchase, "gfx/Railbus-diesel/Poland_PKP
 */
 
 //Engine
-spriteset(spriteset_rbd_Poland_PKP_SN61, "gfx/Railbus-diesel/Poland_PKP_SN61.png") {
+spriteset(spriteset_rbd_Czech_Republic_CSD_M262, "gfx/Railbus-diesel/Czech_Republic_CSD_M262.png") {
 	template_2cc_L12(1, 1)
 }
 
-switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_position, position_in_vehid_chain % 2) {
-	0: spriteset_rbd_Poland_PKP_SN61;
+switch(FEAT_TRAINS, SELF, switch_rbd_Czech_Republic_CSD_M262_position, position_in_vehid_chain % 2) {
+	0: spriteset_rbd_Czech_Republic_CSD_M262;
 	EMPTY_SPRITESET
 }
 
@@ -32,14 +32,14 @@ switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_position, position_in_vehid
 * Visual effect
 */
 
-switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_visual_effect, position_in_vehid_chain % 2) {
+switch(FEAT_TRAINS, SELF, switch_rbd_Czech_Republic_CSD_M262_visual_effect, position_in_vehid_chain % 2) {
 	0: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, -3, DISABLE_WAGON_POWER);
 	return visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
 }
 
-switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_length, position_in_vehid_chain % 2) {
-	0: 8;
-	1;
+switch(FEAT_TRAINS, SELF, switch_rbd_Czech_Republic_CSD_M262_length, position_in_vehid_chain % 2) {
+	0: LENGTH;
+	ACTUAL_LENGTH-LENGTH;
 }
 
 /*
@@ -48,7 +48,7 @@ switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_length, position_in_vehid_c
 
 ENGINECAPACITYSWITCH(VEHIDCODE)
 
-switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_capacity_position, position_in_vehid_chain % 2) {
+switch(FEAT_TRAINS, SELF, switch_rbd_Czech_Republic_CSD_M262_capacity_position, position_in_vehid_chain % 2) {
 	0: ENGINECAPACITYSWITCHNAME(VEHIDCODE);
 	0;
 }
@@ -57,8 +57,8 @@ switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_capacity_position, position
 * Articulated part
 */
 
-switch(FEAT_TRAINS, SELF, switch_rbd_Poland_PKP_SN61_articulated, extra_callback_info1) {
-	1: return item_rbd_Poland_PKP_SN61;
+switch(FEAT_TRAINS, SELF, switch_rbd_Czech_Republic_CSD_M262_articulated, extra_callback_info1) {
+	1: return item_rbd_Czech_Republic_CSD_M262;
     return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
