@@ -28,12 +28,14 @@ spriteset(spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel, "gfx/Elect
 }
 
 switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_spriteset, current_railtype ) {
-	SAAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
-	SBAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
-	SCAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
-	SDAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
-	SEAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
-	SFAD: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SAAa: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SBAa: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SCAa: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SDAa: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	SEAa: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	DBNE: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	DBHE: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
+	DBHS: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
 	ELRL: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_3kV;
 	RAIL: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel;
 	0xFF: spriteset_electric_diesel_Germany_DB_248_Vectron_DM_diesel;
@@ -46,12 +48,14 @@ switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_posit
 }
 
 switch(FEAT_TRAINS, SELF, switch_electric_diesel_Germany_DB_248_Vectron_DM_traction_effect, current_railtype ) {
-	SAAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
-	SBAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
-	SCAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
-	SDAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
-	SEAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
-	SFAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SAAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SBAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SCAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SDAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	SEAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	DBNE: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	DBHE: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
+	DBHS: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
 	ELRL: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 3, DISABLE_WAGON_POWER);
 	RAIL: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
 	0xFF: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);

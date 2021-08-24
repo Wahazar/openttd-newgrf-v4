@@ -1,6 +1,8 @@
 V4 Trains changelog
 =========================
 
+ - glitches fixed
+
 7904
  - Standard gauge track possible without any vehicles enabled
  - Talent, Eurosprinter, Vectron DM added
