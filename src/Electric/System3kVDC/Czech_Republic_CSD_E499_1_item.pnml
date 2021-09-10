@@ -19,14 +19,14 @@ switch(FEAT_TRAINS, SELF, EP05_date_speed_switch, REACHED_DATE(1970)) {
 }
 
 switch(FEAT_TRAINS, SELF, EP05_refit_runningcost_switch, cargo_subtype) {
-  0: return RUNNINGCOSTELECTRICENGINEVALUE;
-  1: return RUNNINGCOSTELECTRICENGINEVALUE;
-  2: return RUNNINGCOSTENGINEVALUE(0.9, 0.009, 0.015, 1);
-  return RUNNINGCOSTELECTRICENGINEVALUE;
+  0: return 80;
+  1: return 80;
+  2: return 103;
+  return 80;
 }
 
 switch(FEAT_TRAINS, SELF, EP05_date_runningcost_switch, REACHED_DATE(1970)) {
-  0: return RUNNINGCOSTELECTRICENGINEVALUE;
+  0: return 80;
   return EP05_refit_runningcost_switch;
 }
 
