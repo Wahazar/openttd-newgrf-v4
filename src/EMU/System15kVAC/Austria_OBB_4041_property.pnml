@@ -18,7 +18,7 @@
 #define VEHIDCODE emu_Austria_OBB_4041
 #define ITEM item_emu_Austria_OBB_4041
 #define NAME string(str_emu_Austria_OBB_4041,string(str_EMU,string(str_AC503_Voltage)))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_emu_Austria_OBB_4041,string(str_Voltage_System, VOLTAGE, string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD),RELIABILITY_DECAY));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_emu_Austria_OBB_4041,string(str_Voltage_System, VOLTAGE, string(str_Fixed_Refit_MU, LOADINGSPEED, CARGO_AGE_PERIOD, 10),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(AUSTRIA,NOREGION,NOCONCEPT)
 

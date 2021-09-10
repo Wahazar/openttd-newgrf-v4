@@ -661,6 +661,7 @@ str_wagon_Service_Draisine_Russian			:Service Vehicle (broad gauge draisine)
 str_coach_Gen1_Wooden_2_axle_Compartment_Coach 		:Wooden 2-axle 2nd class Compartment Coach
 str_coach_Gen1_Wooden_2_axle_Regional_Coach 		:Wooden 2-axle 3rd class Coach
 str_coach_Gen1_Wooden_2_axle_Mail_Coach 		:Wooden 2-axle Mail Coach
+str_coach_Gen1_Wooden_2_axle_Luggage_Coach 		:Wooden 2-axle 4th class/Luggage Coach (normal gauge)
 str_coach_Gen1_Clerestory_Pullman 			:Clerestory Pullman 
 str_coach_Gen1_Clerestory_Compartment_Coach 		:Clerestory 2nd class Compartment Coach (normal gauge)
 str_coach_Gen1_Clerestory_Regional_Coach 		:Clerestory Hard Seats Coach (broad gauge)
@@ -669,6 +670,7 @@ str_coach_Gen1_Clerestory_Luggage_Van 			:Clerestory Luggage Van (broad gauge)
 str_coach_Gen1_Wooden_3_axle_Compartment_Coach 		:Wooden 3-axle 2nd class Compartment Coach (normal gauge)
 str_coach_Gen1_Wooden_3_axle_Regional_Coach 		:Wooden 3-axle 3rd class Coach (normal gauge)
 str_coach_Gen1_Wooden_3_axle_Mail_Coach 		:Wooden 3-axle Mail Coach (normal gauge)
+str_coach_Gen1_Wooden_3_axle_Luggage_Coach 		:Wooden 3-axle 4th class/Luggage Coach (normal gauge)
 str_coach_Gen1_Russian_Wooden_3_axle_Compartment_Coach 		:Russian 3-axle 2nd class Compartment Coach (broad gauge)
 str_coach_Gen1_Russian_Wooden_3_axle_Mail_Coach 		:Russian  3-axle Mail Coach (broad gauge)
 str_coach_Gen2_Heavyweight_Intercity_Coach 		:Heavyweight Sleeping Coach 
@@ -677,12 +679,14 @@ str_coach_Gen2_Steel_Intercity_Coach 			:Steel 1st class Coach (normal gauge)
 str_coach_Gen2_Steel_Compartment_Coach 			:Steel 2nd class Compartment Coach (normal gauge)
 str_coach_Gen2_Steel_Regional_Coach 			:Steel 3rd class Coach (normal gauge)
 str_coach_Gen2_Steel_Mail_Coach 			:Steel Mail Coach (normal gauge)
+str_coach_Gen2_Steel_Luggage_Coach 			:Steel Passenger/Luggage Coach (normal gauge)
 str_coach_Gen2_Steel_2_axle_Compartment_Coach 		:Steel 2-axle 2nd class Compartment Coach (normal gauge)
 str_coach_Gen2_Steel_2_axle_Regional_Coach 		:Steel 2-axle 3rd class Coach (normal gauge)
 str_coach_Gen2_Steel_2_axle_Mail_Coach 			:Steel 2-axle Mail Coach (normal gauge)
 str_coach_Gen2_Steel_3_axle_Compartment_Coach 		:Steel 3-axle 2nd class Compartment Coach (normal gauge)
 str_coach_Gen2_Steel_3_axle_Regional_Coach 		:Steel 3-axle 3rd class Coach (normal gauge)
 str_coach_Gen2_Steel_3_axle_Mail_Coach 			:Steel 3-axle Mail Coach (normal gauge)
+str_coach_Gen2_Steel_3_axle_Luggage_Coach 			:Steel 3-axle Passenger/Luggage Coach (normal gauge)
 str_coach_Gen3_Steel_Lightweight_Intercity_Coach 		:Steel Lightweight Sleeping Coach
 str_coach_Gen3_Steel_Lightweight_Regional_Coach 		:Steel Lightweight Hard Seats Coach (broad gauge)
 str_coach_Gen3_Steel_Lightweight_Mail_Coach 			:Steel Lightweight Mail Coach
@@ -700,6 +704,7 @@ str_coach_Gen3_UIC_X_Regional_Coach 			:UIC-X Regional Coach (normal gauge)
 str_coach_Gen3_Umbauwagen_Local_Coach 			:'Umbauwagen' Local Coach (normal gauge)
 str_coach_Gen3_Doppelstockwagen_Local_Coach 		:'Doppelstockwagen' Local Coach (normal gauge)
 str_coach_Gen3_UIC_X_Mail_Coach 			:UIC-X Mail Coach (normal gauge)
+str_coach_Gen3_UIC_X_Luggage_Coach 			:UIC-X Passenger/Luggage Coach (normal gauge)
 str_coach_Gen4_Eurofima_Intercity_Coach 		:Eurofima Coach (normal gauge)
 str_coach_Gen4_InterRegio_Coach 			:InterRegio Coach (normal gauge)
 str_coach_Gen4_Silberling_Commuter_Coach 		:'Silberling' Commuter Coach (normal gauge)
@@ -716,6 +721,7 @@ str_coach_Gen5_Modern_Commuter_Coach 			:Modern Commuter Coach (normal gauge)
 str_coach_Gen5_Modern_Double_Decker_Coach 		:Modern Double Decker Coach (normal gauge)
 str_coach_Gen5_High_Speed_Double_Decker_IC2000 		:High Speed Double Decker (IC2000)
 str_coach_Gen5_High_Speed_Mail_Coach 			:High Speed Mail Coach (normal gauge)
+str_coach_Gen5_High_Speed_Luggage_Coach 			:Modern Passenger/Luggage Coach (normal gauge)
 str_coach_Gen5_Talgo_Pendular 				:Talgo Pendular
 str_coach_Gen5_Talgo_Pendular_Mail 			:Talgo Pendular Mail
 str_coach_Gen6_Grand_Voyager_Coach 			:Euro Voyager Sleeping Coach 
@@ -949,7 +955,7 @@ str_class_electric_Poland_PKP_EL_200 					:PKP EL.200 {STRING}
 str_class_electric_Poland_PKP_EP02 					:PKP EP02 {STRING}
 str_class_electric_Poland_PKP_EP03 					:PKP EP03 {STRING}
 str_class_electric_Russia_RZD_ChS3 					:SZD ChS3 {STRING}
-str_class_electric_Czech_Republic_CSD_E499_1				:CSD E499.1/CD 141/PKP EU05 {STRING}
+str_class_electric_Czech_Republic_CSD_E499_1				:CSD E499.1/CD 141/PKP EU05/EP05 {GREEN}(160 km/h since 1970){BLACK} {STRING}
 str_class_electric_Czech_Republic_CSD_E458_0				:CSD E458.0/CD 110 {STRING}
 str_class_electric_Czech_Republic_CSD_E458_1				:CSD E458.1/CD 111 {STRING}
 str_class_electric_Czech_Republic_CSD_E669_1				:CSD E669.1/CD 181/Transoda ET23 {STRING}
@@ -1092,6 +1098,7 @@ STR_LIVERY_ARMOURED		: Armoured boxcar
 
 
 str_Fixed_Refit		: {RED}Fixed refit (only in depot){BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}
+str_Fixed_Refit_MU		: {RED}Fixed refit (only in depot){BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}{RED}Max units: {GOLD}{UNSIGNED_WORD}{BLACK}
 str_AutoRefit		: {GREEN}Station autorefit available{BLACK}{}Load/unload speed factor: {GOLD}{UNSIGNED_WORD}{BLACK}{}Comfort/cargo decay factor: {GOLD}{UNSIGNED_WORD}{BLACK}
 
 str_Voltage_System	: {}Voltage System: {UNSIGNED_WORD} kV. {STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}

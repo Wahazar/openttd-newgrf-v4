@@ -27,6 +27,8 @@
 //no tourist in regional coaches
 #define CARGODEF_PASSENGERS_ONLY_REGIONAL refittable_cargo_classes: bitmask(CC_PASSENGERS); non_refittable_cargo_classes: 0; cargo_disallow_refit: [TOUR];
 
+//luggage/passenger cars
+#define CARGODEF_LUGGAGE refittable_cargo_classes: bitmask(CC_PASSENGERS); non_refittable_cargo_classes: bitmask(CC_OVERSIZED); cargo_disallow_refit: [TOUR]; cargo_allow_refit: [GOOD, MNSP, TOOL]; default_cargo_type : PASS;
 
 #define CARGODEF_MAIL_ONLY refittable_cargo_classes: bitmask(CC_MAIL, CC_ARMOURED); non_refittable_cargo_classes: 0;
 

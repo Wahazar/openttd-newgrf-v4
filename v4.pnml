@@ -1115,6 +1115,32 @@
 #include "src/Coaches/Gen5/High_Speed_Mail_Coach_graphics.pnml"
 #include "src/Coaches/Gen5/High_Speed_Mail_Coach_item.pnml"
 
+//mail vans, dual gauge
+#include "src/_CodeSupport/TypeInitialization/init_type_MailVans_Dual_Gauge.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_item.pnml"
+#include "src/Coaches/Gen1/Clerestory_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen1/Clerestory_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Clerestory_Mail_Coach_item.pnml"
+#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_item.pnml"
+#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_item.pnml"
+#include "src/Coaches/Gen4/Russian_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen4/Russian_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen4/Russian_Mail_Coach_item.pnml"
+#include "src/Coaches/Gen5/Talgo_Pendular_Mail_property.pnml"
+#include "src/Coaches/Gen5/Talgo_Pendular_Mail_graphics.pnml"
+#include "src/Coaches/Gen5/Talgo_Pendular_Mail_item.pnml"
+
+//mail vans, broad gauge
+#include "src/_CodeSupport/TypeInitialization/init_type_MailVans_Broad_Gauge.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_property.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_item.pnml"
 
 //coaches, normal gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Coaches.pnml"
@@ -1127,6 +1153,12 @@
 #include "src/Coaches/Gen1/Wooden_3_axle_Regional_Coach_property.pnml"
 #include "src/Coaches/Gen1/Wooden_3_axle_Regional_Coach_graphics.pnml"
 #include "src/Coaches/Gen1/Wooden_3_axle_Regional_Coach_item.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Wooden_2_axle_Luggage_Coach_item.pnml"
+#include "src/Coaches/Gen1/Wooden_3_axle_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen1/Wooden_3_axle_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen1/Wooden_3_axle_Luggage_Coach_item.pnml"
 
 #include "src/Coaches/Gen2/Steel_Intercity_Coach_property.pnml"
 #include "src/Coaches/Gen2/Steel_Intercity_Coach_graphics.pnml"
@@ -1137,6 +1169,9 @@
 #include "src/Coaches/Gen2/Steel_Regional_Coach_property.pnml"
 #include "src/Coaches/Gen2/Steel_Regional_Coach_graphics.pnml"
 #include "src/Coaches/Gen2/Steel_Regional_Coach_item.pnml"
+#include "src/Coaches/Gen2/Steel_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen2/Steel_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen2/Steel_Luggage_Coach_item.pnml"
 
 #include "src/Coaches/Gen2/Steel_2_axle_Compartment_Coach_property.pnml"
 #include "src/Coaches/Gen2/Steel_2_axle_Compartment_Coach_graphics.pnml"
@@ -1151,6 +1186,9 @@
 #include "src/Coaches/Gen2/Steel_3_axle_Regional_Coach_property.pnml"
 #include "src/Coaches/Gen2/Steel_3_axle_Regional_Coach_graphics.pnml"
 #include "src/Coaches/Gen2/Steel_3_axle_Regional_Coach_item.pnml"
+#include "src/Coaches/Gen2/Steel_3_axle_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen2/Steel_3_axle_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen2/Steel_3_axle_Luggage_Coach_item.pnml"
 
 #include "src/Coaches/Gen3/UIC_X_Intercity_Coach_property.pnml"
 #include "src/Coaches/Gen3/UIC_X_Intercity_Coach_graphics.pnml"
@@ -1164,6 +1202,9 @@
 #include "src/Coaches/Gen3/Doppelstockwagen_Local_Coach_property.pnml"
 #include "src/Coaches/Gen3/Doppelstockwagen_Local_Coach_graphics.pnml"
 #include "src/Coaches/Gen3/Doppelstockwagen_Local_Coach_item.pnml"
+#include "src/Coaches/Gen3/UIC_X_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen3/UIC_X_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen3/UIC_X_Luggage_Coach_item.pnml"
 
 #include "src/Coaches/Gen4/Eurofima_Intercity_Coach_property.pnml"
 #include "src/Coaches/Gen4/Eurofima_Intercity_Coach_graphics.pnml"
@@ -1193,37 +1234,14 @@
 #include "src/Coaches/Gen5/High_Speed_Double_Decker_IC2000_property.pnml"
 #include "src/Coaches/Gen5/High_Speed_Double_Decker_IC2000_graphics.pnml"
 #include "src/Coaches/Gen5/High_Speed_Double_Decker_IC2000_item.pnml"
+#include "src/Coaches/Gen5/High_Speed_Luggage_Coach_property.pnml"
+#include "src/Coaches/Gen5/High_Speed_Luggage_Coach_graphics.pnml"
+#include "src/Coaches/Gen5/High_Speed_Luggage_Coach_item.pnml"
 
 #include "src/Coaches/Gen6/Metropolis_Coach_property.pnml"
 #include "src/Coaches/Gen6/Metropolis_Coach_graphics.pnml"
 #include "src/Coaches/Gen6/Metropolis_Coach_item.pnml"
 
-//mail vans, dual gauge
-#include "src/_CodeSupport/TypeInitialization/init_type_MailVans_Dual_Gauge.pnml"
-#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen1/Wooden_2_axle_Mail_Coach_item.pnml"
-#include "src/Coaches/Gen1/Clerestory_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen1/Clerestory_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen1/Clerestory_Mail_Coach_item.pnml"
-#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen2/Heavyweight_Mail_Coach_item.pnml"
-#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen3/Steel_Lightweight_Mail_Coach_item.pnml"
-#include "src/Coaches/Gen4/Russian_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen4/Russian_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen4/Russian_Mail_Coach_item.pnml"
-#include "src/Coaches/Gen5/Talgo_Pendular_Mail_property.pnml"
-#include "src/Coaches/Gen5/Talgo_Pendular_Mail_graphics.pnml"
-#include "src/Coaches/Gen5/Talgo_Pendular_Mail_item.pnml"
-
-//mail vans, broad gauge
-#include "src/_CodeSupport/TypeInitialization/init_type_MailVans_Broad_Gauge.pnml"
-#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_property.pnml"
-#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_graphics.pnml"
-#include "src/Coaches/Gen1/Russian_Wooden_3_axle_Mail_Coach_item.pnml"
 
 //coaches, dual gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Coaches_Dual_Gauge.pnml"

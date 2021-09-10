@@ -570,13 +570,14 @@ item(FEAT_TRAINS, item_mtro_Germany_Berlin_U_Bahn_IK, 9054) {}
 //Coaches, available ID range: 11000-11799 (hex 0x2AF8..0x2E17) - normal gauge
 #define ID_RANGE_COACHES_N 0x2AF8..0x2E17
 
+item(FEAT_TRAINS, item_coach_Gen1_Wooden_2_axle_Luggage_Coach, 11002) {}
 
 item(FEAT_TRAINS, item_coach_Gen1_Clerestory_Compartment_Coach, 11003) {}
 
 item(FEAT_TRAINS, item_coach_Gen1_Wooden_3_axle_Compartment_Coach, 11006) {}
 item(FEAT_TRAINS, item_coach_Gen1_Wooden_3_axle_Regional_Coach, 11007) {}
 item(FEAT_TRAINS, item_coach_Gen1_Wooden_3_axle_Mail_Coach, 11008) {}
-
+item(FEAT_TRAINS, item_coach_Gen1_Wooden_3_axle_Luggage_Coach, 11009) {}
 
 item(FEAT_TRAINS, item_coach_Gen2_Steel_Intercity_Coach, 11011) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_Compartment_Coach, 11012) {}
@@ -588,7 +589,7 @@ item(FEAT_TRAINS, item_coach_Gen2_Steel_2_axle_Mail_Coach, 11017) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Compartment_Coach, 11018) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Regional_Coach, 11019) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Mail_Coach, 11020) {}
-
+item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Luggage_Coach, 11021) {}
 
 
 item(FEAT_TRAINS, item_coach_Gen3_UIC_X_Intercity_Coach, 11031) {}
@@ -597,6 +598,7 @@ item(FEAT_TRAINS, item_coach_Gen3_UIC_X_Regional_Coach, 11033) {}
 item(FEAT_TRAINS, item_coach_Gen3_Umbauwagen_Local_Coach, 11034) {}
 item(FEAT_TRAINS, item_coach_Gen3_Doppelstockwagen_Local_Coach, 11035) {}
 item(FEAT_TRAINS, item_coach_Gen3_UIC_X_Mail_Coach, 11036) {}
+item(FEAT_TRAINS, item_coach_Gen3_UIC_X_Luggage_Coach, 11037) {}
 
 item(FEAT_TRAINS, item_coach_Gen4_Eurofima_Intercity_Coach, 11041) {}
 item(FEAT_TRAINS, item_coach_Gen4_InterRegio_Coach, 11042) {}
@@ -615,7 +617,7 @@ item(FEAT_TRAINS, item_coach_Gen5_Modern_Commuter_Coach, 11059) {}
 item(FEAT_TRAINS, item_coach_Gen5_Modern_Double_Decker_Coach, 11060) {}
 item(FEAT_TRAINS, item_coach_Gen5_High_Speed_Double_Decker_IC2000, 11061) {}
 item(FEAT_TRAINS, item_coach_Gen5_High_Speed_Mail_Coach, 11062) {}
-
+item(FEAT_TRAINS, item_coach_Gen5_High_Speed_Luggage_Coach, 11063) {}
 
 //item(FEAT_TRAINS, item_coach_Gen6_Grand_Voyager_Coach, 11065) {}
 //item(FEAT_TRAINS, item_coach_Gen6_Grand_Regio_Coach, 11066) {}

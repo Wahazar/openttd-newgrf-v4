@@ -18,7 +18,7 @@
 #define VEHIDCODE emu_Russia_RZD_ER200
 #define ITEM item_emu_Russia_RZD_ER200
 #define NAME string(str_emu_Russia_RZD_ER200,string(str_EMU_Russian))
-#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_emu_Russia_RZD_ER200,string(str_Voltage_System, VOLTAGE, string(str_Fixed_Refit, LOADINGSPEED, CARGO_AGE_PERIOD),RELIABILITY_DECAY));
+#define ADDITIONALTEXTSWITCHCALL additional_text: return string(str_class_emu_Russia_RZD_ER200,string(str_Voltage_System, VOLTAGE, string(str_Fixed_Refit_MU, LOADINGSPEED, CARGO_AGE_PERIOD, 12),RELIABILITY_DECAY));
 
 #define VEHICLE_REGION REGION(ASIA,NOREGION,NOCONCEPT)
 

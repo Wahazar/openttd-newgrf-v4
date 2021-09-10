@@ -1,5 +1,11 @@
 V4 Trains changelog
 =========================
+ - E499.1 (EU05) refittable to 160km/h in PKP livery after 1970
+ - luggage/passenger coaches added
+ - MU legth restrictions for unpowered cars, not whole train
+ - MU length text info
+ - coaches refit tweaked
+ - Pendolino, Talent, Suerot with tilt function
 
 7905
  - glitches fixed
