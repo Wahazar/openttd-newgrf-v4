@@ -590,6 +590,7 @@ item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Compartment_Coach, 11018) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Regional_Coach, 11019) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Mail_Coach, 11020) {}
 item(FEAT_TRAINS, item_coach_Gen2_Steel_3_axle_Luggage_Coach, 11021) {}
+item(FEAT_TRAINS, item_coach_Gen2_Steel_Luggage_Coach, 11022) {}
 
 
 item(FEAT_TRAINS, item_coach_Gen3_UIC_X_Intercity_Coach, 11031) {}
