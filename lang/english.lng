@@ -57,6 +57,9 @@ STR_PARAM_LOADINGSPEED_ULTRA			:As fast as possible
 STR_PARAM_CUSTOM_TRACKS			:Enable custom tracks
 STR_PARAM_CUSTOM_TRACKS_DESC		:Enable custom tracks (normal or broad gauge, with different voltages and speeds). Given type will be enabled if appropriate rolling stock fleet is also enabled.
 
+STR_PARAM_EXTRA_ASPECTS			:Show additional signal aspects for custom tracks
+STR_PARAM_EXTRA_ASPECTS_DESC		:Works only for JGRPP fork, if Realistic Brakking setting is enabled.
+
 STR_PARAM_CARGO_RUNNING_COST			:Variable running costs for freight wagons
 STR_PARAM_CARGO_RUNNING_COST_DESC		:Running costs depend on weight of cargo loaded (low costs for empty car), if this option is enabled.
 
@@ -627,7 +630,7 @@ str_wagon_Gen5_Boxcar_European 			:5th Gen Universal Boxcar (normal gauge)
 str_wagon_Gen5_Sliding_Wall_European 			:5th Gen Sliding Wall Van (normal gauge)
 str_wagon_Gen5_Boxcar_Russian 			:5th Gen Universal Boxcar (broad gauge)
 str_wagon_Gen5_Armoured_Boxcar_European			:5th Gen Armoured Car (normal gauge)
-str_wagon_Gen5_Livestock_Boxcar_European		:5th Gen Wooden Livestock Car (normal gauge)
+str_wagon_Gen5_Livestock_Boxcar_European		:5th Gen Steel Livestock Car (normal gauge)
 str_wagon_Gen5_Reefercar_European			:5th Gen Reefer Car (normal gauge)
 str_wagon_Gen5_Reefercar_Russian			:5th Gen Reefer Car (broad gauge)
 str_wagon_Gen5_Tanker_European 				:5th Gen Tanker (normal gauge)

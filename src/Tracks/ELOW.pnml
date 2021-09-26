@@ -207,6 +207,7 @@ if (railtype_available("SAAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0x9C;
       sort_order: ELOW_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+      extra_aspects: ELOW_ASPECTS;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_ELOW;

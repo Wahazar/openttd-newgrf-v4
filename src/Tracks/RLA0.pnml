@@ -155,6 +155,7 @@ if (railtype_available("RLA0") || (loading_stage == LOADING_STAGE_RESERVE)) {
       sort_order: RLA0_SORT;
       railtype_flags: bitmask();
       enable_programmable_pre_signals: 1;
+      extra_aspects: RLA0_ASPECTS;
     }
     graphics
     {

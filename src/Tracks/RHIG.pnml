@@ -162,6 +162,7 @@ if (railtype_available("RHIG") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xD1;
       sort_order: RHIG_SORT;
       railtype_flags: bitmask();
+      extra_aspects: RHIG_ASPECTS;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_RHIG;

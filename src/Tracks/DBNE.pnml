@@ -205,6 +205,7 @@ if (railtype_available("DBNE") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xB5;
       sort_order: DBNE_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+      extra_aspects: DBNE_ASPECTS;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_DBNE;

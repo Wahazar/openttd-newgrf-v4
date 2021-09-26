@@ -234,6 +234,7 @@ if (railtype_available("ERD1") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xac;
       sort_order: ERD1_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
+      extra_aspects: ERD1_ASPECTS;
     }
     graphics
     {

@@ -162,6 +162,14 @@ grf {
 		}
 	}
 	param {
+		param_extra_aspects {
+			type:	bool;
+			name:	string(STR_PARAM_EXTRA_ASPECTS);
+			desc:	string(STR_PARAM_EXTRA_ASPECTS_DESC);
+			def_value: 1;
+		}
+	}
+	param {
 		param_disable_attach {
 			type:	bool;
 			name:	string(STR_PARAM_DISABLE_ATTACH);

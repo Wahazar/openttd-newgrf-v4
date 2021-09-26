@@ -14,6 +14,36 @@ spriteset(LS01_russian_signals_block_greenx2, "gfx/Tracks/Signals/signals_SZD/01
     ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/01_russian_signals_block_greenx2.png")   { 
 	tmpl_signals_x2() }
 
+
+spriteset(LS00_russian_signals_block3_redx2, "gfx/Tracks/Signals/signals_SZD/00_russian_signals_block3_red.png") {
+    tmpl_signals()
+}
+ alternative_sprites(LS00_russian_signals_block3_redx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/00_russian_signals_block3_redx2.png")   { 
+	tmpl_signals_x2() }
+
+spriteset(LS01_russian_signals_block3_greenx2, "gfx/Tracks/Signals/signals_SZD/01_russian_signals_block3_green.png") {
+    tmpl_signals()
+}
+ alternative_sprites(LS01_russian_signals_block3_greenx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/01_russian_signals_block3_greenx2.png")   { 
+	tmpl_signals_x2() }
+
+spriteset(LS02_russian_signals_block3_yellowx2, "gfx/Tracks/Signals/signals_SZD/02_russian_signals_block3_yellow.png") {
+    tmpl_signals()
+}
+ alternative_sprites(LS02_russian_signals_block3_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/02_russian_signals_block3_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
+spriteset(LS03_russian_signals_block3_green_yellowx2, "gfx/Tracks/Signals/signals_SZD/03_russian_signals_block3_green_yellow.png") {
+    tmpl_signals()
+}
+ alternative_sprites(LS03_russian_signals_block3_green_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/03_russian_signals_block3_green_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
+
 spriteset(LS10_russian_signals_entry_redx2, "gfx/Tracks/Signals/signals_SZD/10_russian_signals_entry_red.png") {
     tmpl_signals()
 }
@@ -57,6 +87,7 @@ spriteset(LS31_russian_signals_combo_greenx2, "gfx/Tracks/Signals/signals_SZD/31
     ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/31_russian_signals_combo_yellow_greenx2.png")   { 
 	tmpl_signals_x2() }
 
+
 spriteset(LS40_russian_signals_path2w_redx2, "gfx/Tracks/Signals/signals_SZD/40_russian_signals_path2w_red.png") {
     tmpl_signals()
 }
@@ -64,12 +95,27 @@ spriteset(LS40_russian_signals_path2w_redx2, "gfx/Tracks/Signals/signals_SZD/40_
     ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/40_russian_signals_path2w_redx2.png")   { 
 	tmpl_signals_x2() }
 
-spriteset(LS41_russian_signals_path2w_greenx2, "gfx/Tracks/Signals/signals_SZD/41_russian_signals_path2w_green_yellow.png") {
+spriteset(LS41_russian_signals_path2w_greenx2, "gfx/Tracks/Signals/signals_SZD/41_russian_signals_path2w_green.png") {
     tmpl_signals()
 }
 alternative_sprites(LS41_russian_signals_path2w_greenx2,
-    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/41_russian_signals_path2w_green_yellowx2.png")   { 
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/41_russian_signals_path2w_greenx2.png")   { 
 	tmpl_signals_x2() }
+
+spriteset(LS42_russian_signals_path2w_yellowx2, "gfx/Tracks/Signals/signals_SZD/42_russian_signals_path2w_yellow.png") {
+    tmpl_signals()
+}
+alternative_sprites(LS42_russian_signals_path2w_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/42_russian_signals_path2w_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
+spriteset(LS43_russian_signals_path2w_green_yellowx2, "gfx/Tracks/Signals/signals_SZD/43_russian_signals_path2w_green_yellow.png") {
+    tmpl_signals()
+}
+alternative_sprites(LS43_russian_signals_path2w_green_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/43_russian_signals_path2w_green_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
 
 spriteset(LS50_russian_signals_path1w_redx2, "gfx/Tracks/Signals/signals_SZD/50_russian_signals_path1w_red.png") {
     tmpl_signals()
@@ -84,6 +130,21 @@ spriteset(LS51_russian_signals_path1w_greenx2, "gfx/Tracks/Signals/signals_SZD/5
 alternative_sprites(LS51_russian_signals_path1w_greenx2,
     ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/51_russian_signals_path1w_greenx2.png")   { 
 	tmpl_signals_x2() }
+
+spriteset(LS52_russian_signals_path1w_yellowx2, "gfx/Tracks/Signals/signals_SZD/52_russian_signals_path1w_yellow.png") {
+    tmpl_signals()
+}
+alternative_sprites(LS52_russian_signals_path1w_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/52_russian_signals_path1w_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
+spriteset(LS53_russian_signals_path1w_green_yellowx2, "gfx/Tracks/Signals/signals_SZD/53_russian_signals_path1w_green_yellow.png") {
+    tmpl_signals()
+}
+alternative_sprites(LS53_russian_signals_path1w_green_yellowx2,
+    ZOOM_LEVEL_IN_2X, BIT_DEPTH_8BPP, "gfx/Tracks/Signals/signals_SZD/53_russian_signals_path1w_green_yellowx2.png")   { 
+	tmpl_signals_x2() }
+
 
 spriteset(LS60_russian_signals_program_redx2, "gfx/Tracks/Signals/signals_SZD/60_russian_signals_program_red_H.png") {
     tmpl_signals()
@@ -103,7 +164,7 @@ alternative_sprites(LS61_russian_signals_program_greenx2,
 spriteset(LS00_russian_sema_block_red, "gfx/Tracks/Signals/signals_SZD/00_russian_sema_block_red.png") {
     tmpl_signals()
 }
-spriteset(LS01_russian_sema_block_green, "gfx/Tracks/Signals/signals_SZD/01_russian_sema_block_green.png") {
+spriteset(LS01_russian_sema_block_green, "gfx/Tracks/Signals/signals_SZD/01_russian_sema_block_white.png") {
     tmpl_signals()
 }
 spriteset(LS10_russian_sema_entry_red, "gfx/Tracks/Signals/signals_SZD/10_russian_sema_entry_red.png") {
@@ -115,7 +176,7 @@ spriteset(LS11_russian_sema_entry_green, "gfx/Tracks/Signals/signals_SZD/11_russ
 spriteset(LS20_russian_sema_exit_red, "gfx/Tracks/Signals/signals_SZD/20_russian_sema_exit_red.png") {
     tmpl_signals()
 }
-spriteset(LS21_russian_sema_exit_green, "gfx/Tracks/Signals/signals_SZD/21_russian_sema_exit_white.png") {
+spriteset(LS21_russian_sema_exit_green, "gfx/Tracks/Signals/signals_SZD/21_russian_sema_exit_green.png") {
     tmpl_signals()
 }
 spriteset(LS30_russian_sema_combo_red, "gfx/Tracks/Signals/signals_SZD/30_russian_sema_combo_red.png") {
@@ -127,13 +188,19 @@ spriteset(LS31_russian_sema_combo_green, "gfx/Tracks/Signals/signals_SZD/31_russ
 spriteset(LS40_russian_sema_path2w_red, "gfx/Tracks/Signals/signals_SZD/40_russian_sema_path2w_red.png") {
     tmpl_signals()
 }
-spriteset(LS41_russian_sema_path2w_green, "gfx/Tracks/Signals/signals_SZD/41_russian_sema_path2w_green_yellow.png") {
+spriteset(LS41_russian_sema_path2w_green, "gfx/Tracks/Signals/signals_SZD/41_russian_sema_path2w_green.png") {
+    tmpl_signals()
+}
+spriteset(LS42_russian_sema_path2w_green_yellow, "gfx/Tracks/Signals/signals_SZD/42_russian_sema_path2w_green_yellow.png") {
     tmpl_signals()
 }
 spriteset(LS50_russian_sema_path1w_red, "gfx/Tracks/Signals/signals_SZD/50_russian_sema_path1w_red.png") {
     tmpl_signals()
 }
 spriteset(LS51_russian_sema_path1w_green, "gfx/Tracks/Signals/signals_SZD/51_russian_sema_path1w_green.png") {
+    tmpl_signals()
+}
+spriteset(LS52_russian_sema_path1w_green_yellow, "gfx/Tracks/Signals/signals_SZD/52_russian_sema_path1w_green_yellow.png") {
     tmpl_signals()
 }
 spriteset(LS60_russian_sema_program_red, "gfx/Tracks/Signals/signals_SZD/60_russian_sema_program_red.png") {
@@ -143,7 +210,55 @@ spriteset(LS61_russian_sema_program_green, "gfx/Tracks/Signals/signals_SZD/61_ru
     tmpl_signals()
 }
 
-switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type, extra_callback_info2 & 0x00FFFFFF) {
+switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type_extra, extra_callback_info2 & 0x00FFFFFF) {
+    //light signals
+    //TT         VV        SS
+    (0 << 16) | (0 << 8) | 0 : LS00_russian_signals_block3_redx2;
+    (0 << 16) | (0 << 8) | 1 : LS01_russian_signals_block3_greenx2;
+    (0 << 16) | (0 << 8) | 2 : LS02_russian_signals_block3_yellowx2;
+    (0 << 16) | (0 << 8) | 3 : LS03_russian_signals_block3_green_yellowx2;
+    (1 << 16) | (0 << 8) | 0 : LS10_russian_signals_entry_redx2;
+    (1 << 16) | (0 << 8) | 1 : LS11_russian_signals_entry_greenx2;
+    (2 << 16) | (0 << 8) | 0 : LS20_russian_signals_exit_redx2;
+    (2 << 16) | (0 << 8) | 1 : LS21_russian_signals_exit_greenx2;
+    (3 << 16) | (0 << 8) | 0 : LS30_russian_signals_combo_redx2;
+    (3 << 16) | (0 << 8) | 1 : LS31_russian_signals_combo_greenx2;
+    (4 << 16) | (0 << 8) | 0 : LS40_russian_signals_path2w_redx2;
+    (4 << 16) | (0 << 8) | 1 : LS41_russian_signals_path2w_greenx2;
+    (4 << 16) | (0 << 8) | 2 : LS42_russian_signals_path2w_yellowx2;
+    (4 << 16) | (0 << 8) | 3 : LS43_russian_signals_path2w_green_yellowx2;
+    (5 << 16) | (0 << 8) | 0 : LS50_russian_signals_path1w_redx2;
+    (5 << 16) | (0 << 8) | 1 : LS51_russian_signals_path1w_greenx2;
+    (5 << 16) | (0 << 8) | 2 : LS52_russian_signals_path1w_yellowx2;
+    (5 << 16) | (0 << 8) | 3 : LS53_russian_signals_path1w_green_yellowx2;
+    (6 << 16) | (0 << 8) | 0 : LS60_russian_signals_program_redx2;
+    (6 << 16) | (0 << 8) | 1 : LS61_russian_signals_program_greenx2;
+//semaphores
+    (0 << 16) | (1 << 8) | 0 : LS00_russian_sema_block_red;
+    (0 << 16) | (1 << 8) | 1 : LS01_russian_sema_block_green;
+    (0 << 16) | (1 << 8) | 2 : LS01_russian_sema_block_green;
+    (0 << 16) | (1 << 8) | 3 : LS01_russian_sema_block_green;
+    (1 << 16) | (1 << 8) | 0 : LS10_russian_sema_entry_red;
+    (1 << 16) | (1 << 8) | 1 : LS11_russian_sema_entry_green;
+    (2 << 16) | (1 << 8) | 0 : LS20_russian_sema_exit_red;
+    (2 << 16) | (1 << 8) | 1 : LS21_russian_sema_exit_green;
+    (3 << 16) | (1 << 8) | 0 : LS30_russian_sema_combo_red;
+    (3 << 16) | (1 << 8) | 1 : LS31_russian_sema_combo_green;
+    (4 << 16) | (1 << 8) | 0 : LS40_russian_sema_path2w_red;
+    (4 << 16) | (1 << 8) | 1 : LS41_russian_sema_path2w_green;
+    (4 << 16) | (1 << 8) | 2 : LS42_russian_sema_path2w_green_yellow;
+    (4 << 16) | (1 << 8) | 3 : LS42_russian_sema_path2w_green_yellow;
+    (5 << 16) | (1 << 8) | 0 : LS50_russian_sema_path1w_red;
+    (5 << 16) | (1 << 8) | 1 : LS51_russian_sema_path1w_green;
+    (5 << 16) | (1 << 8) | 2 : LS52_russian_sema_path1w_green_yellow;
+    (5 << 16) | (1 << 8) | 3 : LS51_russian_sema_path1w_green;
+    (6 << 16) | (1 << 8) | 0 : LS60_russian_sema_program_red;
+    (6 << 16) | (1 << 8) | 1 : LS61_russian_sema_program_green;
+
+    CB_FAILED;
+}
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type_standard, extra_callback_info2 & 0x00FFFFFF) {
     //light signals
     //TT         VV        SS
     (0 << 16) | (0 << 8) | 0 : LS00_russian_signals_block_redx2;
@@ -179,6 +294,10 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type, extra_callback_info2 
     CB_FAILED;
 }
 
+switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type, param_custom_tracks) {
+ 1 : switch_signals_russian_type_extra;
+ switch_signals_russian_type_standard;
+}
 
 switch (FEAT_RAILTYPES, SELF, switch_light_signals_russian_type, extra_callback_info2 & 0x00FFFFFF) {
     //light signals only

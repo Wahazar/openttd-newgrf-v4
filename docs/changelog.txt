@@ -1,6 +1,10 @@
 V4 Trains changelog
 =========================
 
+- extra JGRPP signal aspects for SZD tracks
+- parameter for extra aspects
+- model date span fixed for BR03, Pt31 and some cargo vans
+
 7922
  - E499.1 (EU05) refittable to 160km/h in PKP livery after 1970
  - luggage/passenger coaches added

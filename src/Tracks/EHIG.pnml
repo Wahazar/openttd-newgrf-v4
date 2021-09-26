@@ -137,6 +137,7 @@ if (railtype_available("SCAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0x9E;
       sort_order: EHIG_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+      extra_aspects: EHIG_ASPECTS;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_EHIG;

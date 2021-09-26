@@ -154,6 +154,7 @@ if (railtype_available("RL2S") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xBA;
       sort_order: RL2S_SORT;
       railtype_flags:	bitmask();
+      extra_aspects: RL2S_ASPECTS;
     }
     graphics
     {

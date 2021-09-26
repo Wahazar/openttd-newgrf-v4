@@ -153,6 +153,7 @@ if (railtype_available("ER2S") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0x74;
       sort_order: ER2S_SORT;
       railtype_flags:	bitmask(RAILTYPE_FLAG_CATENARY);
+      extra_aspects: ER2S_ASPECTS;
     }
     graphics
     {

@@ -136,6 +136,7 @@ if (railtype_available("MTRO") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xC5;
       sort_order: MTRO_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+      extra_aspects: MTRO_ASPECTS;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_MTRO;

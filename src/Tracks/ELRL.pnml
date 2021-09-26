@@ -65,6 +65,7 @@ if (railtype_available("ELRL") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0x97;
       sort_order: ELRL_SORT;
       railtype_flags:	bitmask(RAILTYPE_FLAG_CATENARY);
+      extra_aspects: RLA2_ASPECTS;
     }
 	graphics {
 		fences:          EMPTY_SPRITESET

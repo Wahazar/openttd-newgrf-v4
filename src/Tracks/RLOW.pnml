@@ -162,6 +162,7 @@ if (railtype_available("RLOW") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xCE;
       sort_order: RLOW_SORT;
       railtype_flags: bitmask();
+      extra_aspects: RLOW_ASPECTS;
     }
 	graphics {
        		gui: RLOW_gui;

@@ -170,6 +170,7 @@ if (railtype_available("RAIL") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xD0;
       sort_order: RAIL_SORT;
       railtype_flags: bitmask();
+      extra_aspects: RAIL_ASPECTS;
     }
 	graphics {
        		gui: RAIL_gui;
