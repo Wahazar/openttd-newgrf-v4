@@ -6,6 +6,12 @@
  *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
+switch(FEAT_TRAINS, SELF, Gen4_Heavy_Flatcar_capacity_switch, cargo_type_in_veh) {
+	ENSP: HEAD_CAPACITY * 2;
+	return min(HEAD_CAPACITY * 16 / cargo_unit_weight, HEAD_CAPACITY);
+}
+
+
 item(FEAT_TRAINS, ITEM ) {
 	property {
 		name: NAME;
@@ -49,6 +55,8 @@ item(FEAT_TRAINS, ITEM ) {
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
+
+		cargo_capacity: Gen4_Heavy_Flatcar_capacity_switch;
 
 		default: switch_wagon_Gen4_Heavy_Flatcar_cargo_selection;
 	}

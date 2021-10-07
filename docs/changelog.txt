@@ -1,6 +1,8 @@
 V4 Trains changelog
 =========================
 
+- custom DR/DB signals for 15kV with extra JGRPP signal aspects
+- custom CSD signals for 25kV with extra JGRPP signal aspects 
 - extra JGRPP signal aspects for SZD tracks
 - parameter for extra aspects
 - model date span fixed for BR03, Pt31 and some cargo vans

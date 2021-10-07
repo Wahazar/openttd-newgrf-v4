@@ -140,6 +140,7 @@ if (railtype_available("DBHS") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xB9;
       sort_order: DBHS_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+      enable_programmable_pre_signals: 1;
       extra_aspects: DBHS_ASPECTS;
     }
 	graphics {
@@ -152,6 +153,7 @@ if (railtype_available("DBHS") || (loading_stage == LOADING_STAGE_RESERVE)) {
       		depots: DBHE_depot;
      		catenary_wire: DBHS_catenary_wire;
       		catenary_pylons: DBHS_catenary_pylons;
+      		signals: switch_signals_dr_type_extra;
 	}
   }
 }

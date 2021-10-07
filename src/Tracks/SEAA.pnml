@@ -149,6 +149,7 @@ if (railtype_available("SEAA") || (loading_stage == LOADING_STAGE_RESERVE)) {
       		depots: SCAA_depot;
      		catenary_wire: SEAA_catenary_wire;
       		catenary_pylons: SEAA_catenary_pylons;
+      		signals: switch_signals_cs_type_extra;
 	}
   }
 }

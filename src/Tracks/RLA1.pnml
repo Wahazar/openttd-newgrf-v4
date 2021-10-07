@@ -179,6 +179,7 @@ if (railtype_available("RLA1") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0x37;
       sort_order: RLA1_SORT;
       railtype_flags: bitmask();
+      enable_programmable_pre_signals: 1;
       extra_aspects: RLA1_ASPECTS;
     }
     graphics

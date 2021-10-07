@@ -166,7 +166,7 @@ grf {
 			type:	bool;
 			name:	string(STR_PARAM_EXTRA_ASPECTS);
 			desc:	string(STR_PARAM_EXTRA_ASPECTS_DESC);
-			def_value: 1;
+			def_value: 0;
 		}
 	}
 	param {

@@ -192,6 +192,7 @@ if (railtype_available("ERD2") || (loading_stage == LOADING_STAGE_RESERVE)) {
       map_colour: 0xae;
       sort_order: ERD2_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
+      enable_programmable_pre_signals: 1;
       extra_aspects: ERD2_ASPECTS;
     }
     graphics

@@ -65,9 +65,13 @@
 
 #include "src/Tracks/ELRL.pnml"
 
+#include "src/Tracks/signals_DRG.pnml"
+
 #include "src/Tracks/DBNE.pnml"
 #include "src/Tracks/DBHE.pnml"
 #include "src/Tracks/DBHS.pnml"
+
+#include "src/Tracks/signals_CSD.pnml"
 
 #include "src/Tracks/SCAA.pnml"
 #include "src/Tracks/SDAA.pnml"

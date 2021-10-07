@@ -294,7 +294,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type_standard, extra_callba
     CB_FAILED;
 }
 
-switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type, param_custom_tracks) {
+switch (FEAT_RAILTYPES, SELF, switch_signals_russian_type, param_extra_aspects) {
  1 : switch_signals_russian_type_extra;
  switch_signals_russian_type_standard;
 }
