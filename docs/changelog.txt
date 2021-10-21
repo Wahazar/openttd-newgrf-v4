@@ -1,6 +1,7 @@
 V4 Trains changelog
 =========================
 
+7938
 - custom DR/DB signals for 15kV with extra JGRPP signal aspects
 - custom CSD signals for 25kV with extra JGRPP signal aspects 
 - extra JGRPP signal aspects for SZD tracks
