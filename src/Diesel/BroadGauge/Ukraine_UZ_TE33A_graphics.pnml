@@ -27,7 +27,7 @@ spriteset(spriteset_diesel_Ukraine_UZ_TE33A_engine, "gfx/Diesel/Ukraine_UZ_TE33A
 }
 
 
-switch(FEAT_TRAINS, SELF, switch_diesel_Ukraine_UZ_TE33A_position, position_in_vehid_chain) {
+switch(FEAT_TRAINS, SELF, switch_diesel_Ukraine_UZ_TE33A_position, position_in_vehid_chain % 2) {
 	0: spriteset_diesel_Ukraine_UZ_TE33A_engine;
 	EMPTY_SPRITESET
 }

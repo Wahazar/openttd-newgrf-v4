@@ -17,11 +17,11 @@
 #define RLOW_VMAX  	80
 #define RLOW_YEAR 1855
 #define RLOW_SORT 102
-#define RLOW_ASPECTS 0
+#define RLOW_ASPECTS 2
 #define RAIL_BUILDCOST 12;
 #define RAIL_INFRACOST 12;
 #define RAIL_VMAX 	120
-#define RAIL_YEAR 1890
+#define RAIL_YEAR 1905
 #define RAIL_SORT 103
 #define RAIL_ASPECTS 0
 #define RHIG_BUILDCOST 24;

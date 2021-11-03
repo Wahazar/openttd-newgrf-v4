@@ -1,9 +1,15 @@
 
 
+spriteset(LS00_dr_sema_block_red, "gfx/Tracks/Signals/signals_DRG/00_dr_sema_block_red.png") {
+    tmpl_signals()
+}
 spriteset(LS00_dr_signals_block_red, "gfx/Tracks/Signals/signals_DRG/00_dr_signals_block_red.png") {
     tmpl_signals()
 }
 
+spriteset(LS01_dr_sema_block_green, "gfx/Tracks/Signals/signals_DRG/01_dr_sema_block_green.png") {
+    tmpl_signals()
+}
 spriteset(LS01_dr_signals_block_green, "gfx/Tracks/Signals/signals_DRG/01_dr_signals_block_green.png") {
     tmpl_signals()
 }
@@ -16,38 +22,71 @@ spriteset(LS03_dr_signals_block_yellowblink, "gfx/Tracks/Signals/signals_DRG/03_
     tmpl_signals()
 }
 
+spriteset(LS10_dr_sema_entry_red, "gfx/Tracks/Signals/signals_DRG/10_dr_sema_entry_red.png") {
+    tmpl_signals()
+}
 spriteset(LS10_dr_signals_entry_red, "gfx/Tracks/Signals/signals_DRG/10_dr_signals_entry_red.png") {
     tmpl_signals()
 }
 
+spriteset(LS11_dr_sema_entry_green, "gfx/Tracks/Signals/signals_DRG/11_dr_sema_entry_green_yellow.png") {
+    tmpl_signals()
+}
 spriteset(LS11_dr_signals_entry_green, "gfx/Tracks/Signals/signals_DRG/11_dr_signals_entry_green_yellow.png") {
     tmpl_signals()
 }
 
+spriteset(LS20_dr_sema_exit_red, "gfx/Tracks/Signals/signals_DRG/20_dr_sema_exit_red.png") {
+    tmpl_signals()
+}
 spriteset(LS20_dr_signals_exit_red, "gfx/Tracks/Signals/signals_DRG/20_dr_signals_exit_red.png") {
     tmpl_signals()
 }
 
+spriteset(LS21_dr_sema_exit_green, "gfx/Tracks/Signals/signals_DRG/21_dr_sema_exit_white.png") {
+    tmpl_signals()
+}
 spriteset(LS21_dr_signals_exit_green, "gfx/Tracks/Signals/signals_DRG/21_dr_signals_exit_white.png") {
     tmpl_signals()
 }
 
+spriteset(LS30_dr_sema_combo_red, "gfx/Tracks/Signals/signals_DRG/30_dr_sema_combo_red.png") {
+    tmpl_signals()
+}
 spriteset(LS30_dr_signals_combo_red, "gfx/Tracks/Signals/signals_DRG/30_dr_signals_combo_red.png") {
     tmpl_signals()
 }
 
+spriteset(LS31_dr_sema_combo_green, "gfx/Tracks/Signals/signals_DRG/31_dr_sema_combo_green_yellow.png") {
+    tmpl_signals()
+}
 spriteset(LS31_dr_signals_combo_green, "gfx/Tracks/Signals/signals_DRG/31_dr_signals_combo_green_yellow.png") {
     tmpl_signals()
 }
  
+spriteset(LS40_dr_sema_path2w_red, "gfx/Tracks/Signals/signals_DRG/40_dr_sema_path2w_red.png") {
+    tmpl_signals()
+}
 spriteset(LS40_dr_signals_path2w_red, "gfx/Tracks/Signals/signals_DRG/40_dr_signals_path2w_red.png") {
     tmpl_signals()
 }
+spriteset(LS40_dr_signals_path2w_red_program, "gfx/Tracks/Signals/signals_DRG/40_dr_signals_path2w_red_program.png") {
+    tmpl_signals()
+}
  
+spriteset(LS41_dr_sema_path2w_green, "gfx/Tracks/Signals/signals_DRG/41_dr_sema_path2w_green.png") {
+    tmpl_signals()
+}
 spriteset(LS41_dr_signals_path2w_green, "gfx/Tracks/Signals/signals_DRG/41_dr_signals_path2w_green.png") {
     tmpl_signals()
 }
+spriteset(LS41_dr_signals_path2w_green_program, "gfx/Tracks/Signals/signals_DRG/41_dr_signals_path2w_green_program.png") {
+    tmpl_signals()
+}
 
+spriteset(LS42_dr_sema_path2w_green_yellow, "gfx/Tracks/Signals/signals_DRG/42_dr_sema_path2w_green_yellow.png") {
+    tmpl_signals()
+}
 spriteset(LS42_dr_signals_path2w_yellow, "gfx/Tracks/Signals/signals_DRG/42_dr_signals_path2w_yellow.png") {
     tmpl_signals()
 }
@@ -56,18 +95,30 @@ spriteset(LS43_dr_signals_path2w_yellowblink, "gfx/Tracks/Signals/signals_DRG/43
     tmpl_signals()
 }
 
+spriteset(LS50_dr_sema_path1w_red, "gfx/Tracks/Signals/signals_DRG/50_dr_sema_path1w_red.png") {
+    tmpl_signals()
+}
 spriteset(LS50_dr_signals_path1w_red, "gfx/Tracks/Signals/signals_DRG/50_dr_signals_path1w_red.png") {
     tmpl_signals()
 }
 
+spriteset(LS51_dr_sema_path1w_green, "gfx/Tracks/Signals/signals_DRG/51_dr_sema_path1w_green.png") {
+    tmpl_signals()
+}
 spriteset(LS51_dr_signals_path1w_green, "gfx/Tracks/Signals/signals_DRG/51_dr_signals_path1w_green.png") {
     tmpl_signals()
 }
 
+spriteset(LS52_dr_sema_path1w_yellow_yellow, "gfx/Tracks/Signals/signals_DRG/52_dr_sema_path1w_yellow_yellow.png") {
+    tmpl_signals()
+}
 spriteset(LS52_dr_signals_path1w_yellow_yellow, "gfx/Tracks/Signals/signals_DRG/52_dr_signals_path1w_yellow_yellow.png") {
     tmpl_signals()
 }
 
+spriteset(LS53_dr_sema_path1w_green_yellow, "gfx/Tracks/Signals/signals_DRG/53_dr_sema_path1w_green_yellow.png") {
+    tmpl_signals()
+}
 spriteset(LS53_dr_signals_path1w_green_yellow, "gfx/Tracks/Signals/signals_DRG/53_dr_signals_path1w_green_yellow.png") {
     tmpl_signals()
 }
@@ -94,8 +145,10 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_dr_type_extra, extra_callback_info2
     (2 << 16) | (0 << 8) | 1 : LS21_dr_signals_exit_green;
     (3 << 16) | (0 << 8) | 0 : LS30_dr_signals_combo_red;
     (3 << 16) | (0 << 8) | 1 : LS31_dr_signals_combo_green;
-    (4 << 16) | (0 << 8) | 0 : LS40_dr_signals_path2w_red;
-    (4 << 16) | (0 << 8) | 1 : LS41_dr_signals_path2w_green;
+    (0 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_dr_signals_path2w_red;
+    (1 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_dr_signals_path2w_red_program;
+    (0 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_dr_signals_path2w_green;
+    (1 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_dr_signals_path2w_green_program;
     (4 << 16) | (0 << 8) | 2 : LS42_dr_signals_path2w_yellow;
     (4 << 16) | (0 << 8) | 3 : LS43_dr_signals_path2w_yellowblink;
     (5 << 16) | (0 << 8) | 0 : LS50_dr_signals_path1w_red;
@@ -105,6 +158,27 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_dr_type_extra, extra_callback_info2
     (6 << 16) | (0 << 8) | 0 : LS60_dr_signals_program_red;
     (6 << 16) | (0 << 8) | 1 : LS61_dr_signals_program_green;
 //semaphores
+    (0 << 16) | (1 << 8) | 0 : LS00_dr_sema_block_red;
+    (0 << 16) | (1 << 8) | 1 : LS01_dr_sema_block_green;
+    (0 << 16) | (1 << 8) | 2 : LS01_dr_sema_block_green;
+    (0 << 16) | (1 << 8) | 3 : LS01_dr_sema_block_green;
+    (1 << 16) | (1 << 8) | 0 : LS10_dr_sema_entry_red;
+    (1 << 16) | (1 << 8) | 1 : LS11_dr_sema_entry_green;
+    (2 << 16) | (1 << 8) | 0 : LS20_dr_sema_exit_red;
+    (2 << 16) | (1 << 8) | 1 : LS21_dr_sema_exit_green;
+    (3 << 16) | (1 << 8) | 0 : LS30_dr_sema_combo_red;
+    (3 << 16) | (1 << 8) | 1 : LS31_dr_sema_combo_green;
+    (4 << 16) | (1 << 8) | 0 : LS40_dr_sema_path2w_red;
+    (4 << 16) | (1 << 8) | 1 : LS41_dr_sema_path2w_green;
+    (4 << 16) | (1 << 8) | 2 : LS42_dr_sema_path2w_green_yellow;
+    (4 << 16) | (1 << 8) | 3 : LS42_dr_sema_path2w_green_yellow;
+    (5 << 16) | (1 << 8) | 0 : LS50_dr_sema_path1w_red;
+    (5 << 16) | (1 << 8) | 1 : LS51_dr_sema_path1w_green;
+    (5 << 16) | (1 << 8) | 2 : LS52_dr_sema_path1w_yellow_yellow;
+    (5 << 16) | (1 << 8) | 3 : LS53_dr_sema_path1w_green_yellow;
+//    (6 << 16) | (1 << 8) | 0 : LS60_dr_sema_program_red;
+//    (6 << 16) | (1 << 8) | 1 : LS61_dr_sema_program_green;
+
 
     CB_FAILED;
 }

@@ -54,6 +54,10 @@
 #include "src/Tracks/tracks.pnml"
 #include "src/Tracks/sprite_templates_nutrack.pnml"
 
+#include "src/Tracks/signals_DRG.pnml"
+#include "src/Tracks/signals_CSD.pnml"
+#include "src/Tracks/signals_SZD.pnml"
+
 #include "src/Tracks/SAaN.pnml"
 #include "src/Tracks/RLOW.pnml"
 #include "src/Tracks/RAIL.pnml"
@@ -62,22 +66,15 @@
 #include "src/Tracks/ELOW.pnml"
 #include "src/Tracks/EMED.pnml"
 #include "src/Tracks/EHIG.pnml"
-
 #include "src/Tracks/ELRL.pnml"
-
-#include "src/Tracks/signals_DRG.pnml"
 
 #include "src/Tracks/DBNE.pnml"
 #include "src/Tracks/DBHE.pnml"
 #include "src/Tracks/DBHS.pnml"
 
-#include "src/Tracks/signals_CSD.pnml"
-
 #include "src/Tracks/SCAA.pnml"
 #include "src/Tracks/SDAA.pnml"
 #include "src/Tracks/SEAA.pnml"
-
-#include "src/Tracks/signals_SZD.pnml"
 
 #include "src/Tracks/RL2S.pnml"
 #include "src/Tracks/ER2S.pnml"
