@@ -1,0 +1,265 @@
+spriteset(LS00_pkp_signals_block_red, "gfx/Tracks/Signals/signals_PKP/00_pkp_signals_block_red.png") {
+    tmpl_signals()
+}
+spriteset(LS00_pkp_signals_block_red_program, "gfx/Tracks/Signals/signals_PKP/00_pkp_signals_block_red_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS01_pkp_signals_block_green, "gfx/Tracks/Signals/signals_PKP/01_pkp_signals_block_green.png") {
+    tmpl_signals()
+}
+spriteset(LS01_pkp_signals_block_green_program, "gfx/Tracks/Signals/signals_PKP/01_pkp_signals_block_green_program.png") {
+    tmpl_signals()
+}
+
+
+spriteset(LS00_pkp_signals_block3_red, "gfx/Tracks/Signals/signals_PKP/00_pkp_signals_block3_red.png") {
+    tmpl_signals()
+}
+spriteset(LS00_pkp_signals_block3_red_program, "gfx/Tracks/Signals/signals_PKP/00_pkp_signals_block3_red_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS01_pkp_signals_block3_green, "gfx/Tracks/Signals/signals_PKP/01_pkp_signals_block3_green.png") {
+    tmpl_signals()
+}
+spriteset(LS01_pkp_signals_block3_green_program, "gfx/Tracks/Signals/signals_PKP/01_pkp_signals_block3_green_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS02_pkp_signals_block3_yellow, "gfx/Tracks/Signals/signals_PKP/02_pkp_signals_block3_yellow.png") {
+    tmpl_signals()
+}
+spriteset(LS02_pkp_signals_block3_yellow_program, "gfx/Tracks/Signals/signals_PKP/02_pkp_signals_block3_yellow_program.png") {
+    tmpl_signals()
+}
+ 
+spriteset(LS03_pkp_signals_block3_yellowblink, "gfx/Tracks/Signals/signals_PKP/03_pkp_signals_block3_yellowblink.png") {
+    tmpl_signals()
+}
+spriteset(LS03_pkp_signals_block3_yellowblink_program, "gfx/Tracks/Signals/signals_PKP/03_pkp_signals_block3_yellowblink_program.png") {
+    tmpl_signals()
+}
+
+
+spriteset(LS10_pkp_signals_entry_red, "gfx/Tracks/Signals/signals_PKP/10_pkp_signals_entry_red.png") {
+    tmpl_signals()
+}
+
+spriteset(LS11_pkp_signals_entry_green, "gfx/Tracks/Signals/signals_PKP/11_pkp_signals_entry_green_yellow.png") {
+    tmpl_signals()
+}
+
+spriteset(LS20_pkp_signals_exit_blue, "gfx/Tracks/Signals/signals_PKP/20_pkp_signals_exit_blue.png") {
+    tmpl_signals()
+}
+
+spriteset(LS21_pkp_signals_exit_white, "gfx/Tracks/Signals/signals_PKP/21_pkp_signals_exit_white.png") {
+    tmpl_signals()
+}
+
+spriteset(LS30_pkp_signals_combo_red, "gfx/Tracks/Signals/signals_PKP/30_pkp_signals_combo_red.png") {
+    tmpl_signals()
+}
+
+spriteset(LS31_pkp_signals_combo_green, "gfx/Tracks/Signals/signals_PKP/31_pkp_signals_combo_green_yellow.png") {
+    tmpl_signals()
+}
+ 
+spriteset(LS40_pkp_signals_path2w_red, "gfx/Tracks/Signals/signals_PKP/40_pkp_signals_path2w_red.png") {
+    tmpl_signals()
+}
+spriteset(LS40_pkp_signals_path2w_red_program, "gfx/Tracks/Signals/signals_PKP/40_pkp_signals_path2w_red_program.png") {
+    tmpl_signals()
+}
+ 
+spriteset(LS41_pkp_signals_path2w_green, "gfx/Tracks/Signals/signals_PKP/41_pkp_signals_path2w_green.png") {
+    tmpl_signals()
+}
+spriteset(LS41_pkp_signals_path2w_green_program, "gfx/Tracks/Signals/signals_PKP/41_pkp_signals_path2w_green_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS42_pkp_signals_path2w_yellow, "gfx/Tracks/Signals/signals_PKP/42_pkp_signals_path2w_yellow.png") {
+    tmpl_signals()
+}
+spriteset(LS42_pkp_signals_path2w_yellow_program, "gfx/Tracks/Signals/signals_PKP/42_pkp_signals_path2w_yellow_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS43_pkp_signals_path2w_green_yellow, "gfx/Tracks/Signals/signals_PKP/43_pkp_signals_path2w_green_yellow.png") {
+    tmpl_signals()
+}
+spriteset(LS43_pkp_signals_path2w_green_yellow_program, "gfx/Tracks/Signals/signals_PKP/43_pkp_signals_path2w_green_yellow_program.png") {
+    tmpl_signals()
+}
+
+
+spriteset(LS50_pkp_signals_path1w_red, "gfx/Tracks/Signals/signals_PKP/50_pkp_signals_path1w_red.png") {
+    tmpl_signals()
+}
+spriteset(LS50_pkp_signals_path1w_red_program, "gfx/Tracks/Signals/signals_PKP/50_pkp_signals_path1w_red_program.png") {
+    tmpl_signals()
+}
+
+
+spriteset(LS51_pkp_signals_path1w_green, "gfx/Tracks/Signals/signals_PKP/51_pkp_signals_path1w_green.png") {
+    tmpl_signals()
+}
+spriteset(LS51_pkp_signals_path1w_green_program, "gfx/Tracks/Signals/signals_PKP/51_pkp_signals_path1w_green_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS52_pkp_signals_path1w_yellow_yellow, "gfx/Tracks/Signals/signals_PKP/52_pkp_signals_path1w_yellow_yellow.png") {
+    tmpl_signals()
+}
+spriteset(LS52_pkp_signals_path1w_yellow_yellow_program, "gfx/Tracks/Signals/signals_PKP/52_pkp_signals_path1w_yellow_yellow_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS53_pkp_signals_path1w_green_yellow, "gfx/Tracks/Signals/signals_PKP/53_pkp_signals_path1w_green_yellow.png") {
+    tmpl_signals()
+}
+spriteset(LS53_pkp_signals_path1w_green_yellow_program, "gfx/Tracks/Signals/signals_PKP/53_pkp_signals_path1w_green_yellow_program.png") {
+    tmpl_signals()
+}
+
+spriteset(LS60_pkp_signals_program_red, "gfx/Tracks/Signals/signals_PKP/60_pkp_signals_program_red.png") {
+    tmpl_signals()
+}
+
+spriteset(LS61_pkp_signals_program_green, "gfx/Tracks/Signals/signals_PKP/61_pkp_signals_program_yellow_yellow.png") {
+    tmpl_signals()
+}
+
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra_aspects, extra_callback_info2 & 0x01FFFFFF) {
+    //light signals
+    //TT         VV        SS
+    (0 << 24) | (0 << 16) | (0 << 8) | 0 : LS00_pkp_signals_block3_red;
+    (0 << 24) | (0 << 16) | (0 << 8) | 1 : LS01_pkp_signals_block3_green;
+    (0 << 24) | (0 << 16) | (0 << 8) | 2 : LS02_pkp_signals_block3_yellow;
+    (0 << 24) | (0 << 16) | (0 << 8) | 3 : LS03_pkp_signals_block3_yellowblink;
+    (1 << 24) | (0 << 16) | (0 << 8) | 0 : LS00_pkp_signals_block3_red_program;
+    (1 << 24) | (0 << 16) | (0 << 8) | 1 : LS01_pkp_signals_block3_green_program;
+    (1 << 24) | (0 << 16) | (0 << 8) | 2 : LS02_pkp_signals_block3_yellow_program;
+    (1 << 24) | (0 << 16) | (0 << 8) | 3 : LS03_pkp_signals_block3_yellowblink_program;
+    		(1 << 16) | (0 << 8) | 0 : LS10_pkp_signals_entry_red;
+    		(1 << 16) | (0 << 8) | 1 : LS11_pkp_signals_entry_green;
+    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_blue;
+    		(2 << 16) | (0 << 8) | 1 : LS21_pkp_signals_exit_white;
+    		(3 << 16) | (0 << 8) | 0 : LS30_pkp_signals_combo_red;
+    		(3 << 16) | (0 << 8) | 1 : LS31_pkp_signals_combo_green;
+    (0 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_pkp_signals_path2w_red;
+    (1 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_pkp_signals_path2w_red_program;
+    (0 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_pkp_signals_path2w_green;
+    (1 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_pkp_signals_path2w_green_program;
+    (0 << 24) | (4 << 16) | (0 << 8) | 2 : LS42_pkp_signals_path2w_yellow;
+    (1 << 24) | (4 << 16) | (0 << 8) | 2 : LS42_pkp_signals_path2w_yellow_program;
+    (0 << 24) | (4 << 16) | (0 << 8) | 3 : LS43_pkp_signals_path2w_green_yellow;
+    (1 << 24) | (4 << 16) | (0 << 8) | 3 : LS43_pkp_signals_path2w_green_yellow_program;
+    (0 << 24) | (5 << 16) | (0 << 8) | 0 : LS50_pkp_signals_path1w_red;
+    (0 << 24) | (5 << 16) | (0 << 8) | 1 : LS51_pkp_signals_path1w_green;
+    (0 << 24) | (5 << 16) | (0 << 8) | 2 : LS52_pkp_signals_path1w_yellow_yellow;
+    (0 << 24) | (5 << 16) | (0 << 8) | 3 : LS53_pkp_signals_path1w_green_yellow;
+    (1 << 24) | (5 << 16) | (0 << 8) | 0 : LS50_pkp_signals_path1w_red_program;
+    (1 << 24) | (5 << 16) | (0 << 8) | 1 : LS51_pkp_signals_path1w_green_program;
+    (1 << 24) | (5 << 16) | (0 << 8) | 2 : LS52_pkp_signals_path1w_yellow_yellow_program;
+    (1 << 24) | (5 << 16) | (0 << 8) | 3 : LS53_pkp_signals_path1w_green_yellow_program;
+    		(6 << 16) | (0 << 8) | 0 : LS60_pkp_signals_program_red;
+    		(6 << 16) | (0 << 8) | 1 : LS61_pkp_signals_program_green;
+//semaphores
+    (0 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red;
+    (0 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green;
+    (0 << 24) | (0 << 16) | (1 << 8) | 2 : SS01_dr_sema_block_green;
+    (0 << 24) | (0 << 16) | (1 << 8) | 3 : SS01_dr_sema_block_green;
+    (1 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red_program;
+    (1 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green_program;
+    (1 << 24) | (0 << 16) | (1 << 8) | 2 : SS02_dr_sema_block_red_blink_program;
+    (1 << 24) | (0 << 16) | (1 << 8) | 3 : SS01_dr_sema_block_green_program;
+    		(1 << 16) | (1 << 8) | 0 : SS10_dr_sema_entry_red;
+    		(1 << 16) | (1 << 8) | 1 : SS11_dr_sema_entry_green;
+    		(2 << 16) | (1 << 8) | 0 : SS20_cs_sema_exit_blue;
+    		(2 << 16) | (1 << 8) | 1 : SS21_cs_sema_exit_white;
+    		(3 << 16) | (1 << 8) | 0 : SS30_dr_sema_combo_red;
+    		(3 << 16) | (1 << 8) | 1 : SS31_dr_sema_combo_green;
+    (0 << 24) | (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red;
+    (0 << 24) | (4 << 16) | (1 << 8) | 1 : SS41_dr_sema_path2w_green;
+    (0 << 24) | (4 << 16) | (1 << 8) | 2 : SS42_dr_sema_path2w_green_yellow;
+    (0 << 24) | (4 << 16) | (1 << 8) | 3 : SS42_dr_sema_path2w_green_yellow;
+    (1 << 24) | (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red_program;
+    (1 << 24) | (4 << 16) | (1 << 8) | 1 : SS41_dr_sema_path2w_green_program;
+    (1 << 24) | (4 << 16) | (1 << 8) | 2 : SS42_dr_sema_path2w_green_yellow_program;
+    (1 << 24) | (4 << 16) | (1 << 8) | 3 : SS42_dr_sema_path2w_green_yellow_program;
+    (0 << 24) | (5 << 16) | (1 << 8) | 0 : SS50_dr_sema_path1w_red;
+    (0 << 24) | (5 << 16) | (1 << 8) | 1 : SS51_dr_sema_path1w_green;
+    (0 << 24) | (5 << 16) | (1 << 8) | 2 : SS52_dr_sema_path1w_yellow_yellow;
+    (0 << 24) | (5 << 16) | (1 << 8) | 3 : SS53_dr_sema_path1w_green_yellow;
+    (1 << 24) | (5 << 16) | (1 << 8) | 0 : SS50_dr_sema_path1w_red_program;
+    (1 << 24) | (5 << 16) | (1 << 8) | 1 : SS51_dr_sema_path1w_green_program;
+    (1 << 24) | (5 << 16) | (1 << 8) | 2 : SS52_dr_sema_path1w_yellow_yellow_program;
+    (1 << 24) | (5 << 16) | (1 << 8) | 3 : SS53_dr_sema_path1w_green_yellow_program;
+    		(6 << 16) | (1 << 8) | 0 : SS60_dr_sema_program_red;
+    		(6 << 16) | (1 << 8) | 1 : SS61_dr_sema_program_green;
+
+
+    CB_FAILED;
+}
+
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_standard, extra_callback_info2 & 0x01FFFFFF) {
+    //light signals
+    //TT         VV        SS
+    (0 << 24) | (0 << 16) | (0 << 8) | 0 : LS00_pkp_signals_block_red;
+    (0 << 24) | (0 << 16) | (0 << 8) | 1 : LS01_pkp_signals_block_green;
+    (1 << 24) | (0 << 16) | (0 << 8) | 0 : LS00_pkp_signals_block_red_program;
+    (1 << 24) | (0 << 16) | (0 << 8) | 1 : LS01_pkp_signals_block_green_program;
+    		(1 << 16) | (0 << 8) | 0 : LS10_pkp_signals_entry_red;
+    		(1 << 16) | (0 << 8) | 1 : LS11_pkp_signals_entry_green;
+    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_blue;
+    		(2 << 16) | (0 << 8) | 1 : LS21_pkp_signals_exit_white;
+    		(3 << 16) | (0 << 8) | 0 : LS30_pkp_signals_combo_red;
+    		(3 << 16) | (0 << 8) | 1 : LS31_pkp_signals_combo_green;
+    (0 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_pkp_signals_path2w_red;
+    (1 << 24) | (4 << 16) | (0 << 8) | 0 : LS40_pkp_signals_path2w_red_program;
+    (0 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_pkp_signals_path2w_green;
+    (1 << 24) | (4 << 16) | (0 << 8) | 1 : LS41_pkp_signals_path2w_green_program;
+    (0 << 24) | (5 << 16) | (0 << 8) | 0 : LS50_pkp_signals_path1w_red;
+    (0 << 24) | (5 << 16) | (0 << 8) | 1 : LS51_pkp_signals_path1w_green;
+    (1 << 24) | (5 << 16) | (0 << 8) | 0 : LS50_pkp_signals_path1w_red_program;
+    (1 << 24) | (5 << 16) | (0 << 8) | 1 : LS51_pkp_signals_path1w_green_program;
+    		(6 << 16) | (0 << 8) | 0 : LS60_pkp_signals_program_red;
+    		(6 << 16) | (0 << 8) | 1 : LS61_pkp_signals_program_green;
+//semaphores
+    (0 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red;
+    (0 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green;
+    (1 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red_program;
+    (1 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green_program;
+    		(1 << 16) | (1 << 8) | 0 : SS10_dr_sema_entry_red;
+    		(1 << 16) | (1 << 8) | 1 : SS11_dr_sema_entry_green;
+    		(2 << 16) | (1 << 8) | 0 : SS20_cs_sema_exit_blue;
+    		(2 << 16) | (1 << 8) | 1 : SS21_cs_sema_exit_white;
+    		(3 << 16) | (1 << 8) | 0 : SS30_dr_sema_combo_red;
+    		(3 << 16) | (1 << 8) | 1 : SS31_dr_sema_combo_green;
+    (0 << 24) | (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red;
+    (0 << 24) | (4 << 16) | (1 << 8) | 1 : SS41_dr_sema_path2w_green;
+    (1 << 24) | (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red_program;
+    (1 << 24) | (4 << 16) | (1 << 8) | 1 : SS41_dr_sema_path2w_green_program;
+    (0 << 24) | (5 << 16) | (1 << 8) | 0 : SS50_dr_sema_path1w_red;
+    (0 << 24) | (5 << 16) | (1 << 8) | 1 : SS51_dr_sema_path1w_green;
+    (1 << 24) | (5 << 16) | (1 << 8) | 0 : SS50_dr_sema_path1w_red_program;
+    (1 << 24) | (5 << 16) | (1 << 8) | 1 : SS51_dr_sema_path1w_green_program;
+    		(6 << 16) | (1 << 8) | 0 : SS60_dr_sema_program_red;
+    		(6 << 16) | (1 << 8) | 1 : SS61_dr_sema_program_green;
+
+
+    CB_FAILED;
+}
+
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra, param_extra_aspects) {
+ 1 : switch_signals_pkp_type_extra_aspects;
+ switch_signals_pkp_type_standard;
+}
+
+

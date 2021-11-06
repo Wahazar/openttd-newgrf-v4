@@ -57,6 +57,33 @@ switch(FEAT_TRAINS, SELF, switch_electric_Switzerland_SBB_Eem_923_traction, curr
 	return spriteset_electric_Switzerland_SBB_Eem_923_diesel;
 }
 
+switch(FEAT_TRAINS, SELF, switch_electric_Switzerland_SBB_Eem_923_traction_effect, current_railtype ) {
+	SAAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SBAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SCAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SDAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SEAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SFAD: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SAAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SBAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SCAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SDAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SEAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SFAA: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SAAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SBAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SCAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SDAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SEAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	SFAa: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	DBNE: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	DBHE: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	DBHS: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	ELRL: return visual_effect_and_powered(VISUAL_EFFECT_ELECTRIC, 1, DISABLE_WAGON_POWER);
+	RAIL: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+	0xFF: return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+	return visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 0, DISABLE_WAGON_POWER);
+}
 
 //Add defined switches
 

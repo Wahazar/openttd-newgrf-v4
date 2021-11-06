@@ -165,6 +165,8 @@ if (railtype_available("SAaN") || (loading_stage == LOADING_STAGE_RESERVE)) {
       sort_order: SAaN_SORT;
       railtype_flags: bitmask();
       extra_aspects: SAaN_ASPECTS;
+      enable_programmable_pre_signals: 1;
+      enable_restricted_signals: 1;
     }
 	graphics {
        		gui: SAaN_gui;
@@ -174,6 +176,7 @@ if (railtype_available("SAaN") || (loading_stage == LOADING_STAGE_RESERVE)) {
 		bridge_surfaces: bridge_SAaN_overlay_terrain_switch;
                 fences: EMPTY_SPRITESET
       		level_crossings: level_crossing_SAaN_switch;
+      		signals: switch_signals_pkp_type_extra;
 //      		depots: SAaN_depot;
 	}
   }

@@ -56,6 +56,7 @@
 
 #include "src/Tracks/signals_DRG.pnml"
 #include "src/Tracks/signals_CSD.pnml"
+#include "src/Tracks/signals_PKP.pnml"
 #include "src/Tracks/signals_SZD.pnml"
 
 #include "src/Tracks/SAaN.pnml"

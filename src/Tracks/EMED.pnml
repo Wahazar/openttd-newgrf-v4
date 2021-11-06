@@ -170,6 +170,8 @@ if (railtype_available("SBAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       sort_order: EMED_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
       extra_aspects: EMED_ASPECTS;
+      enable_programmable_pre_signals: 1;
+      enable_restricted_signals: 1;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_EMED;
@@ -182,6 +184,7 @@ if (railtype_available("SBAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       		depots: ELOW_depot;
      		catenary_wire: EMED_catenary_wire;
       		catenary_pylons: EMED_catenary_pylons;
+      		signals: switch_signals_pkp_type_extra;
 	}
   }
 }

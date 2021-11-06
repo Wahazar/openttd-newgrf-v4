@@ -176,7 +176,7 @@ if (railtype_available("RLOW") || (loading_stage == LOADING_STAGE_RESERVE)) {
                 fences: EMPTY_SPRITESET
       		level_crossings: level_crossing_RLOW_switch;
       		depots: RLOW_depot;
-      		signals: switch_signals_dr_type_extra;
+      		signals: switch_signals_pkp_type_extra;
 	}
   }
 }

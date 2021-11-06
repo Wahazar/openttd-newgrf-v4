@@ -206,6 +206,7 @@ if (railtype_available("DBNE") || (loading_stage == LOADING_STAGE_RESERVE)) {
       sort_order: DBNE_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY);
       enable_programmable_pre_signals: 1;
+      enable_restricted_signals: 1;
       extra_aspects: DBNE_ASPECTS;
     }
 	graphics {

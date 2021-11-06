@@ -2,6 +2,9 @@ V4 Trains changelog
 =========================
 
 - bugfixes: Hagrita, Hydra, TE33A
+- new locomotive Eem 923
+- more flexible assigment to track types
+- custom signals for non-electrified and 3kVDC track types
 
 7938
 - custom DR/DB signals for 15kV with extra JGRPP signal aspects

@@ -138,6 +138,8 @@ if (railtype_available("SCAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       sort_order: EHIG_SORT;
       railtype_flags: bitmask(RAILTYPE_FLAG_CATENARY, RAILTYPE_FLAG_NO_LEVEL_CROSSING);
       extra_aspects: EHIG_ASPECTS;
+      enable_programmable_pre_signals: 1;
+      enable_restricted_signals: 1;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_EHIG;
@@ -149,6 +151,7 @@ if (railtype_available("SCAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       		depots: ELOW_depot_new;
      		catenary_wire: EHIG_catenary_wire;
       		catenary_pylons: EHIG_catenary_pylons;
+      		signals: switch_signals_pkp_type_extra;
 	}
   }
 }
