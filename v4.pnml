@@ -587,6 +587,10 @@
 #include "src/Diesel/Germany_DB_248_Vectron_DM_graphics.pnml"
 #include "src/Diesel/Germany_DB_248_Vectron_DM_item.pnml"
 
+#include "src/Diesel/Switzerland_SBB_Eem_923_property.pnml"
+#include "src/Diesel/Switzerland_SBB_Eem_923_graphics.pnml"
+#include "src/Diesel/Switzerland_SBB_Eem_923_item.pnml"
+
 //Diesel broadgauge
 #include "src/_CodeSupport/TypeInitialization/init_type_Diesel_Broad_Gauge.pnml"
 #include "src/Diesel/BroadGauge/Russia_RZD_Db_property.pnml"

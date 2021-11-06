@@ -455,6 +455,8 @@ str_electric_diesel_Poland_Newag_ET26 		:'Dragon' E6ACTd Newag Co'Co' {STRING}
 str_electric_diesel_Germany_DB_248_Vectron_DM 		:'Vectron DM Light' Siemens Bo'Bo' {STRING}
 str_electric_Poland_Newag_ET43 		:'Dragon 2' E6ACTab Newag Co'Co' {STRING}
 
+str_electric_Switzerland_SBB_Eem_923 		:Eem 923 Stadler Bo {STRING}
+
 str_electric_Slovakia_ZSSK_162 		:98E Skoda Bo'Bo' {STRING}
 str_electric_Slovakia_ZSSK_131 		:58E Skoda Bo'Bo' + Bo'Bo' {STRING}
 str_electric_Slovakia_ZSSK_350 		:55E Skoda Bo'Bo' {STRING}
@@ -998,6 +1000,9 @@ str_class_electric_Germany_Prussian_ES_6 				:K.P.St.E. ES 6 {STRING}
 str_class_electric_Germany_DR_230 					:DR 230/DB 180/CSD ES 499.2/CD 372 {STRING}
 str_class_electric_Poland_PKP_ET22 					:PKP ET22 {STRING}
 str_class_electric_diesel_Poland_Newag_ET26 					:Freightliner-PL E6ACTd/PKP ET26 {}{STRING}
+
+str_class_electric_Switzerland_SBB_Eem_923 					:SBB Eem 923 {}{STRING}
+
 str_class_electric_diesel_Germany_DB_248_Vectron_DM 				:DB 248 {}{STRING}
 str_class_electric_Poland_Newag_ET43 					:Industrial Division E6ACTab/PKP ET43 {}{STRING}
 str_class_electric_Germany_DB_193 					:DB 193/OBB 1293/CD 383/PKP EU46 {STRING}

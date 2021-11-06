@@ -259,6 +259,8 @@ item(FEAT_TRAINS, item_diesel_Belgium_NMBS_SNCB_7800, 5150) {}  //UE CNG
 
 item(FEAT_TRAINS, item_electric_diesel_Poland_Newag_ET26, 5600) {}
 item(FEAT_TRAINS, item_electric_diesel_Germany_DB_248_Vectron_DM, 5601) {}
+item(FEAT_TRAINS, item_electric_Switzerland_SBB_Eem_923, 5602) {}
+
 
 //Diesel normal and broad gauge, available ID range: 5700-5899 (hex 0x1644..0x170B) - dual gauge
 #define ID_RANGE_DIESEL_D 0x1644..0x170B

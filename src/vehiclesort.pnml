@@ -238,7 +238,8 @@ item_electric_Germany_DB_185_TRAXX_F140, /* 2000*/ \
 item_electric_Germany_DB_182_ES64U_Taurus, /*Year: 2000*/ \
 item_electric_Czech_Republic_CD_380, /* 2008 */ \
 item_electric_Germany_DB_193, /*Year: 2015*/\
-item_electric_Poland_Newag_ET43, /* 2021 */
+item_electric_Poland_Newag_ET43, /* 2021 */ \
+item_electric_Switzerland_SBB_Eem_923, /* 2025 */
 
 #define SORTING_ELECTRIC_3KVDC \
 item_electric_Poland_PKP_EL_200, /* 1937*/ \
