@@ -1,6 +1,7 @@
 V4 Trains changelog
 =========================
 
+7980
 - bugfixes: Hagrita, Hydra, TE33A
 - new locomotive Eem 923
 - more flexible assigment to track types
