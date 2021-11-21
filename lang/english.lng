@@ -250,7 +250,7 @@ str_rbd_Hungary_MAV_Bcmot 					:Bcmot Ganz 1'A {STRING}
 str_rbd_Hungary_MAV_Bbmot 					:Bbmot Ganz (1B) 2' {STRING}
 str_rbd_Hungary_MAV_Aamot 					:Ganz 2'B "Arpad"{STRING}
 str_rbd_Poland_PKP_SN61 					:SN61 Ganz-Mavag (1B) 2' {STRING}
-str_rbd_EU_Hydra 					:Studenka (1A)'(1A)1 "Hydra" {STRING}
+str_rbd_EU_Hydra 					:Studenka (1A)'(1A)1 "Hydrail" {STRING}
 
 #Railbus-electric
 str_rbe_Austria_OBB_4855 :4855 Knotz Bo'Bo' {STRING}

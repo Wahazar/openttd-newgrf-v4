@@ -933,6 +933,7 @@ str_Steam_Tank_Locomotive       :tendrzak {}Spadek niezawodności: {GOLD}{UNSIGN
 str_Diesel_Electric     : z przekładnią elektryczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Diesel_Hydraulic    : z przekładnią hydrauliczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Diesel_Mechanic     : z przekładnią mechaniczną{}{STRING} {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Hydrogen_Electric	: z napędem wodorowym FCE {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Gas_Turbine         :z turbiną gazową {}Spadek niezawodności: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Electric_Diesel	: elektrowóz {STRING} ze spalinowym modułem dojazdowym (moc {UNSIGNED_WORD} KM)

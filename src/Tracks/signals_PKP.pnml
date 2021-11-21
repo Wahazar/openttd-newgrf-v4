@@ -184,8 +184,8 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra_aspects, extra_callb
     (1 << 24) | (0 << 16) | (1 << 8) | 3 : SS01_dr_sema_block_green_program;
     		(1 << 16) | (1 << 8) | 0 : SS10_dr_sema_entry_red;
     		(1 << 16) | (1 << 8) | 1 : SS11_dr_sema_entry_green;
-    		(2 << 16) | (1 << 8) | 0 : SS20_cs_sema_exit_blue;
-    		(2 << 16) | (1 << 8) | 1 : SS21_cs_sema_exit_white;
+    		(2 << 16) | (1 << 8) | 0 : SS20_dr_sema_exit_red;
+    		(2 << 16) | (1 << 8) | 1 : SS21_dr_sema_exit_green;
     		(3 << 16) | (1 << 8) | 0 : SS30_dr_sema_combo_red;
     		(3 << 16) | (1 << 8) | 1 : SS31_dr_sema_combo_green;
     (0 << 24) | (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red;

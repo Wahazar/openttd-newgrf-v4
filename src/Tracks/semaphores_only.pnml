@@ -1,0 +1,48 @@
+
+
+switch (FEAT_RAILTYPES, SELF, switch_signals_semaphores_only_type, extra_callback_info2 & 0x01FFFFFF) {
+    //light signals
+    //TT         VV        SS
+//austrian semaphores instead of light signals
+    (0 << 16) | (0 << 8) | 0 : SS00_cs_sema_block_red;
+    (0 << 16) | (0 << 8) | 1 : SS01_cs_sema_block_green;
+    (0 << 16) | (0 << 8) | 2 : SS01_cs_sema_block_green;
+    (1 << 16) | (0 << 8) | 0 : SS10_cs_sema_entry_red;
+    (1 << 16) | (0 << 8) | 1 : SS11_cs_sema_entry_green;
+    (2 << 16) | (0 << 8) | 0 : SS20_cs_sema_exit_blue;
+    (2 << 16) | (0 << 8) | 1 : SS21_cs_sema_exit_white;
+    (3 << 16) | (0 << 8) | 0 : SS30_cs_sema_combo_red;
+    (3 << 16) | (0 << 8) | 1 : SS31_cs_sema_combo_green;
+    (4 << 16) | (0 << 8) | 0 : SS40_cs_sema_path2w_red;
+    (4 << 16) | (0 << 8) | 1 : SS41_cs_sema_path2w_green;
+    (4 << 16) | (0 << 8) | 2 : SS42_cs_sema_path2w_green_yellow;
+    (5 << 16) | (0 << 8) | 0 : SS50_cs_sema_path1w_red;
+    (5 << 16) | (0 << 8) | 1 : SS51_cs_sema_path1w_green;
+    (5 << 16) | (0 << 8) | 2 : SS52_cs_sema_path1w_green_yellow;
+    (6 << 16) | (0 << 8) | 0 : SS60_cs_sema_program_red;
+    (6 << 16) | (0 << 8) | 1 : SS61_cs_sema_program_green;
+    
+//german semaphores
+    (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red;
+    (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green;
+    (0 << 16) | (1 << 8) | 2 : SS01_dr_sema_block_green;
+    (1 << 16) | (1 << 8) | 0 : SS10_dr_sema_entry_red;
+    (1 << 16) | (1 << 8) | 1 : SS11_dr_sema_entry_green;
+    (2 << 16) | (1 << 8) | 0 : SS20_dr_sema_exit_red;
+    (2 << 16) | (1 << 8) | 1 : SS21_dr_sema_exit_green;
+    (3 << 16) | (1 << 8) | 0 : SS30_dr_sema_combo_red;
+    (3 << 16) | (1 << 8) | 1 : SS31_dr_sema_combo_green;
+    (4 << 16) | (1 << 8) | 0 : SS40_dr_sema_path2w_red;
+    (4 << 16) | (1 << 8) | 1 : SS41_dr_sema_path2w_green;
+    (4 << 16) | (1 << 8) | 2 : SS42_dr_sema_path2w_green_yellow;
+    (5 << 16) | (1 << 8) | 0 : SS50_dr_sema_path1w_red;
+    (5 << 16) | (1 << 8) | 1 : SS51_dr_sema_path1w_green;
+    (5 << 16) | (1 << 8) | 2 : SS52_dr_sema_path1w_yellow_yellow;
+    (6 << 16) | (1 << 8) | 0 : SS60_dr_sema_program_red;
+    (6 << 16) | (1 << 8) | 1 : SS61_dr_sema_program_green;
+    (7 << 16) | (1 << 8) | 0 : SS70_dr_sema_no_entry_red;
+    CB_FAILED;
+}
+
+
+

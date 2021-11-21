@@ -32,7 +32,8 @@ item_rbd_Hungary_MAV_Bbmot,  /* 1954 */ \
 item_rbd_Poland_PKP_SN61,  /* 1961 */ \
 item_rbd_Austria_OBB_5047, /*Year: 1987*/ \
 item_rbd_Germany_DB_670, /*Year: 1996*/ \
-item_rbd_Czech_Republic_CD_840, /*Year: 2011*/
+item_rbd_Czech_Republic_CD_840, /*Year: 2011*/ \
+item_rbd_EU_Hydra, /*Year: 2024*/ 
 
 #define SORTING_LRB \
 item_rbd_Austria_kkStB_19,  \

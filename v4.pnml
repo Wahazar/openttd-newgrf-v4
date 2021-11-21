@@ -58,6 +58,7 @@
 #include "src/Tracks/signals_CSD.pnml"
 #include "src/Tracks/signals_PKP.pnml"
 #include "src/Tracks/signals_SZD.pnml"
+#include "src/Tracks/semaphores_only.pnml"
 
 #include "src/Tracks/SAaN.pnml"
 #include "src/Tracks/RLOW.pnml"
@@ -187,6 +188,9 @@
 #include "src/Railbus-diesel/Czech_Republic_CSD_M262_property.pnml"
 #include "src/Railbus-diesel/Czech_Republic_CSD_M262_graphics.pnml"
 #include "src/Railbus-diesel/Czech_Republic_CSD_M262_item.pnml"
+#include "src/Railbus-diesel/EU_Hydra_property.pnml"
+#include "src/Railbus-diesel/EU_Hydra_graphics.pnml"
+#include "src/Railbus-diesel/EU_Hydra_item.pnml"
 
 //Railbus-diesel broad gauge
 #include "src/_CodeSupport/TypeInitialization/init_type_RBD_B.pnml"

@@ -10,7 +10,14 @@
 
 #include "undefine_type.pnml"
 
-#define SET_TRACK_TYPE //standard rail
+#define SET_TRACK_TYPE if (param_custom_tracks) {\
+ item(FEAT_TRAINS, ITEM ) {\
+  property {\
+   track_type: SAaN;\
+  }\
+ }\
+} 
+
 #define CURRENT_TRACK_TYPE RAIL
 #define CURRENT_RUNNING_COST_BASE RUNNING_COST_DIESEL
 #define CURRENT_ENGINE_CLASS ENGINE_CLASS_DIESEL

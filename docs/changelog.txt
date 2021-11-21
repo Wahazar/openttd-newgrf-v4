@@ -1,7 +1,9 @@
 V4 Trains changelog
 =========================
 
-
+7995
+- only semaphores for first track type
+- track type fix
 - 1-way patch signals fixed
 - support for no-entry signals
 - fictional hydrogen railbus added
