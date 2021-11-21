@@ -167,8 +167,9 @@ item_diesel_Austria_OBB_2070,  /*2000*/\
 item_diesel_Austria_OBB_2016,  /*2002*/\
 item_diesel_Germany_HVLE_V490,  /*2006*/\
 item_diesel_Germany_DB_261_Gravita_10BB,  /*2010*/\
+item_diesel_Poland_PKP_ST48,  /*2011*/\
 item_diesel_Poland_PKP_SU160,  /*2014*/\
-item_diesel_Belgium_NMBS_SNCB_7800, /*2020*/
+item_diesel_Belgium_NMBS_SNCB_7800, /*2022*/
 
  #define SORTING_DIESEL_D \
 item_diesel_Shed_shunter, /*1935*/\

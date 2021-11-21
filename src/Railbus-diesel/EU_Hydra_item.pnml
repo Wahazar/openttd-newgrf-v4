@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2021 Transportman, McZapkie
+ *  Copyright (C) 2017-2021 Transportman, McZapkie
  *  This file is part of the V4 CEE set, fork of the 2cc Trains In NML
  *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
  *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
@@ -42,17 +42,18 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_diesel_Russia_RZD_TEM2_purchase;
-		can_attach_wagon: CAN_ATTACH_VEHICLE;
+		ENGINECAPACITYSWITCHCALL(VEHIDCODE)
+		purchase: spriteset_rbd_EU_Hydra_purchase;
+		can_attach_wagon: switch_can_attach_vehicle;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
 		PURCHASETEXTSWITCHCALL
 		ADDITIONALTEXTSWITCHCALL
 		CARGOSUBTYPESWITCHCALL
 		LIVERYMAPPINGSWITCHCALL
-		purchase_cargo_capacity: return 0;
-		cargo_capacity: return 0;
 
-		default: switch_spriteset_diesel_Russia_RZD_TEM2;
+		default: spriteset_rbd_EU_Hydra;
 	}
 }
+SET_TRACK_TYPE 
+EXTENDED_CARGO_DECAY

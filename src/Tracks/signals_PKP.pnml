@@ -54,6 +54,10 @@ spriteset(LS20_pkp_signals_exit_blue, "gfx/Tracks/Signals/signals_PKP/20_pkp_sig
     tmpl_signals()
 }
 
+spriteset(LS20_pkp_signals_exit_red, "gfx/Tracks/Signals/signals_PKP/20_pkp_signals_exit_red.png") {
+    tmpl_signals()
+}
+
 spriteset(LS21_pkp_signals_exit_white, "gfx/Tracks/Signals/signals_PKP/21_pkp_signals_exit_white.png") {
     tmpl_signals()
 }
@@ -146,7 +150,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra_aspects, extra_callb
     (1 << 24) | (0 << 16) | (0 << 8) | 3 : LS03_pkp_signals_block3_yellowblink_program;
     		(1 << 16) | (0 << 8) | 0 : LS10_pkp_signals_entry_red;
     		(1 << 16) | (0 << 8) | 1 : LS11_pkp_signals_entry_green;
-    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_blue;
+    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_red;
     		(2 << 16) | (0 << 8) | 1 : LS21_pkp_signals_exit_white;
     		(3 << 16) | (0 << 8) | 0 : LS30_pkp_signals_combo_red;
     		(3 << 16) | (0 << 8) | 1 : LS31_pkp_signals_combo_green;
@@ -168,6 +172,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra_aspects, extra_callb
     (1 << 24) | (5 << 16) | (0 << 8) | 3 : LS53_pkp_signals_path1w_green_yellow_program;
     		(6 << 16) | (0 << 8) | 0 : LS60_pkp_signals_program_red;
     		(6 << 16) | (0 << 8) | 1 : LS61_pkp_signals_program_green;
+    		(7 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_blue;
 //semaphores
     (0 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red;
     (0 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green;
@@ -201,7 +206,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_extra_aspects, extra_callb
     (1 << 24) | (5 << 16) | (1 << 8) | 3 : SS53_dr_sema_path1w_green_yellow_program;
     		(6 << 16) | (1 << 8) | 0 : SS60_dr_sema_program_red;
     		(6 << 16) | (1 << 8) | 1 : SS61_dr_sema_program_green;
-
+    		(7 << 16) | (1 << 8) | 0 : SS70_dr_sema_no_entry_red;
 
     CB_FAILED;
 }
@@ -216,7 +221,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_pkp_type_standard, extra_callback_i
     (1 << 24) | (0 << 16) | (0 << 8) | 1 : LS01_pkp_signals_block_green_program;
     		(1 << 16) | (0 << 8) | 0 : LS10_pkp_signals_entry_red;
     		(1 << 16) | (0 << 8) | 1 : LS11_pkp_signals_entry_green;
-    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_blue;
+    		(2 << 16) | (0 << 8) | 0 : LS20_pkp_signals_exit_red;
     		(2 << 16) | (0 << 8) | 1 : LS21_pkp_signals_exit_white;
     		(3 << 16) | (0 << 8) | 0 : LS30_pkp_signals_combo_red;
     		(3 << 16) | (0 << 8) | 1 : LS31_pkp_signals_combo_green;

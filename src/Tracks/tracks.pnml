@@ -12,9 +12,9 @@
 #define SAaN_YEAR 1800
 #define SAaN_SORT 101
 #define SAaN_ASPECTS 0
-#define RLOW_BUILDCOST 6;
+#define RLOW_BUILDCOST 7;
 #define RLOW_INFRACOST 8;
-#define RLOW_VMAX  	80
+#define RLOW_VMAX  	90
 #define RLOW_YEAR 1855
 #define RLOW_SORT 102
 #define RLOW_ASPECTS 2

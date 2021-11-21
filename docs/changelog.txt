@@ -1,6 +1,12 @@
 V4 Trains changelog
 =========================
 
+
+- 1-way patch signals fixed
+- support for no-entry signals
+- fictional hydrogen railbus added
+- ST48 added
+
 7980
 - bugfixes: Hagrita, Hydra, TE33A
 - new locomotive Eem 923

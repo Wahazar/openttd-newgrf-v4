@@ -254,6 +254,7 @@ item(FEAT_TRAINS, item_diesel_Poland_PKP_SP32, 5114) {}
 item(FEAT_TRAINS, item_diesel_Poland_PKP_SU160, 5115) {}
 
 item(FEAT_TRAINS, item_diesel_Serbia_ZS_621, 5119) {}  //CSD
+item(FEAT_TRAINS, item_diesel_Poland_PKP_ST48, 5120) {}
 
 item(FEAT_TRAINS, item_diesel_Belgium_NMBS_SNCB_7800, 5150) {}  //UE CNG
 

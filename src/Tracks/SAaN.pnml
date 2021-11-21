@@ -167,6 +167,7 @@ if (railtype_available("SAaN") || (loading_stage == LOADING_STAGE_RESERVE)) {
       extra_aspects: SAaN_ASPECTS;
       enable_programmable_pre_signals: 1;
       enable_restricted_signals: 1;
+      enable_no_entry_signals: 1;
     }
 	graphics {
        		gui: SAaN_gui;

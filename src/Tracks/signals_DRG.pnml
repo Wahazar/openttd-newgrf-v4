@@ -200,6 +200,12 @@ spriteset(LS61_dr_signals_program_green, "gfx/Tracks/Signals/signals_DRG/61_dr_s
     tmpl_signals()
 }
 
+spriteset(SS70_dr_sema_no_entry_red, "gfx/Tracks/Signals/signals_DRG/70_dr_sema_no_entry.png") {
+    tmpl_signals()
+}
+spriteset(LS70_dr_signals_no_entry_red, "gfx/Tracks/Signals/signals_DRG/70_dr_signals_no_entry.png") {
+    tmpl_signals()
+}
 
 switch (FEAT_RAILTYPES, SELF, switch_signals_dr_type_extra, extra_callback_info2 & 0x01FFFFFF) {
     //light signals
@@ -236,6 +242,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_dr_type_extra, extra_callback_info2
     (1 << 24) | (5 << 16) | (0 << 8) | 3 : LS53_dr_signals_path1w_green_yellow_program;
     		(6 << 16) | (0 << 8) | 0 : LS60_dr_signals_program_red;
     		(6 << 16) | (0 << 8) | 1 : LS61_dr_signals_program_green;
+    		(7 << 16) | (0 << 8) | 0 : LS70_dr_signals_no_entry_red;
 //semaphores
     (0 << 24) | (0 << 16) | (1 << 8) | 0 : SS00_dr_sema_block_red;
     (0 << 24) | (0 << 16) | (1 << 8) | 1 : SS01_dr_sema_block_green;
@@ -269,7 +276,7 @@ switch (FEAT_RAILTYPES, SELF, switch_signals_dr_type_extra, extra_callback_info2
     (1 << 24) | (5 << 16) | (1 << 8) | 3 : SS53_dr_sema_path1w_green_yellow_program;
     		(6 << 16) | (1 << 8) | 0 : SS60_dr_sema_program_red;
     		(6 << 16) | (1 << 8) | 1 : SS61_dr_sema_program_green;
-
+    		(7 << 16) | (1 << 8) | 0 : SS70_dr_sema_no_entry_red;
 
     CB_FAILED;
 }

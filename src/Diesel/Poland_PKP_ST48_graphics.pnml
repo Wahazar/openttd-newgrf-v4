@@ -10,7 +10,7 @@
 * PURCHASE
 */
 
-spriteset(spriteset_diesel_Russia_RZD_TEM2_purchase, "gfx/Diesel/Russia_RZD_TEM2.png") {
+spriteset(spriteset_diesel_Poland_PKP_ST48_purchase, "gfx/Diesel/Poland_PKP_ST48.png") {
 	template_purchase(1, 64)
 }
 
@@ -19,18 +19,18 @@ spriteset(spriteset_diesel_Russia_RZD_TEM2_purchase, "gfx/Diesel/Russia_RZD_TEM2
 */
 
 //Engine
-spriteset(spriteset_diesel_Russia_RZD_TEM2_f, "gfx/Diesel/Russia_RZD_TEM2.png") {
+spriteset(spriteset_diesel_Poland_PKP_ST48_f, "gfx/Diesel/Poland_PKP_ST48.png") {
 	template_2cc_engines_general(1, 1)
 }
-spriteset(spriteset_diesel_Russia_RZD_TEM2_r, "gfx/Diesel/Russia_RZD_TEM2.png") {
+spriteset(spriteset_diesel_Poland_PKP_ST48_r, "gfx/Diesel/Poland_PKP_ST48.png") {
 	template_2cc_engines_general(1, 32)
 }
 
 
 //direction swap
-switch(FEAT_TRAINS, PARENT, switch_spriteset_diesel_Russia_RZD_TEM2, vehicle_is_reversed) {
-    1: return spriteset_diesel_Russia_RZD_TEM2_r;
-    return spriteset_diesel_Russia_RZD_TEM2_f;
+switch(FEAT_TRAINS, PARENT, switch_spriteset_diesel_Poland_PKP_ST48, vehicle_is_reversed) {
+    1: return spriteset_diesel_Poland_PKP_ST48_r;
+    return spriteset_diesel_Poland_PKP_ST48_f;
 
 }
 

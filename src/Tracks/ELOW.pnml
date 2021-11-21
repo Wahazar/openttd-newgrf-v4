@@ -210,6 +210,7 @@ if (railtype_available("SAAD") || (loading_stage == LOADING_STAGE_RESERVE)) {
       extra_aspects: ELOW_ASPECTS;
       enable_programmable_pre_signals: 1;
       enable_restricted_signals: 1;
+      enable_no_entry_signals: 1;
     }
 	graphics {
 		track_overlay:   ground_switch_overlay_ELOW;

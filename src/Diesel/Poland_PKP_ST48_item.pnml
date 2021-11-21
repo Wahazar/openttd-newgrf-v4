@@ -42,7 +42,7 @@ item(FEAT_TRAINS, ITEM ) {
 		bitmask_vehicle_info: BITMASK_VEHICLE_INFO;
 	}
 	graphics {
-		purchase: spriteset_diesel_Russia_RZD_TEM2_purchase;
+		purchase: spriteset_diesel_Poland_PKP_ST48_purchase;
 		can_attach_wagon: CAN_ATTACH_VEHICLE;
 		//Add calls to defined switches below
 		RUNNINGCOSTENGINESWITCHCALL
@@ -53,6 +53,6 @@ item(FEAT_TRAINS, ITEM ) {
 		purchase_cargo_capacity: return 0;
 		cargo_capacity: return 0;
 
-		default: switch_spriteset_diesel_Russia_RZD_TEM2;
+		default: switch_spriteset_diesel_Poland_PKP_ST48;
 	}
 }

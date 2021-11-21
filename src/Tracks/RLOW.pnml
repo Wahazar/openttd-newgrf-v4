@@ -166,6 +166,7 @@ if (railtype_available("RLOW") || (loading_stage == LOADING_STAGE_RESERVE)) {
       enable_programmable_pre_signals: 1;
       enable_restricted_signals: 1;
       enable_signal_recolour: 0;
+      enable_no_entry_signals: 1;
     }
 	graphics {
        		gui: RLOW_gui;

@@ -250,6 +250,7 @@ str_rbd_Hungary_MAV_Bcmot 					:Bcmot Ganz 1'A {STRING}
 str_rbd_Hungary_MAV_Bbmot 					:Bbmot Ganz (1B) 2' {STRING}
 str_rbd_Hungary_MAV_Aamot 					:Ganz 2'B "Arpad"{STRING}
 str_rbd_Poland_PKP_SN61 					:SN61 Ganz-Mavag (1B) 2' {STRING}
+str_rbd_EU_Hydra 					:Studenka (1A)'(1A)1 "Hydra" {STRING}
 
 #Railbus-electric
 str_rbe_Austria_OBB_4855 :4855 Knotz Bo'Bo' {STRING}
@@ -371,6 +372,7 @@ str_diesel_Germany_DR_132 		:TE109 Luhansk Co'Co' {STRING}
 str_diesel_Poland_PKP_SM42 		:6D Fablok Bo'Bo' {STRING}
 str_diesel_Poland_PKP_SP45 		:301D Cegielski Co'Co' {STRING}
 str_diesel_Poland_PKP_SU46 		:303D Cegielski Co'Co' {STRING}
+str_diesel_Poland_PKP_ST48 		:15D Newag Co'Co' {STRING}
 
 str_diesel_UE_CNG_Shunter 	:CNG Shunter (Diesel Hybrid)
 str_diesel_Shed_shunter :Shed shunter {STRING}
@@ -766,7 +768,8 @@ str_class_rbd_Germany_Saxon_DET_1_2 					:Saxon DET 1-2 {STRING}
 str_class_rbd_Germany_BSt_6001 						:BSt 6001/DR VT133.5 {STRING}
 str_class_rbd_Czech_Republic_CD_M120 					:CSD M120 {STRING}
 str_class_rbd_Czech_Republic_CD_M290 					:CSD M290 {STRING}
-str_class_rbd_Czech_Republic_CD_840 					:CD 840 {STRING}
+str_class_rbd_Czech_Republic_CD_840  					:CD 840 {STRING}
+str_class_rbd_EU_Hydra 					:VR Dm13 {STRING}
 str_class_rbd_Czech_Republic_CSD_M262 					:CSD M262.0/CD 830 {STRING}
 str_class_rbd_Czech_Republic_CSD_M131 				:CSD M131.1 {STRING}
 str_class_rbd_Czech_Republic_CSD_CDlm 				:CSD CDlm (for M131.1) {STRING}
@@ -923,6 +926,7 @@ str_class_diesel_Croatia_HZ_2041 		:JZ 642/HZ 2041 {STRING}
 str_class_diesel_Poland_PKP_SM42 		:PKP SM42/Kolprem Ls800P {STRING}
 str_class_diesel_Poland_PKP_SP45 		:PKP SP45/SU45 {STRING}
 str_class_diesel_Poland_PKP_SU46 		:PKP SU46 {STRING}
+str_class_diesel_Poland_PKP_ST48 		:PKP ST48/Koltrans 15D {STRING}
 
 str_hint_diesel_Shed_shunter 		:Refit to goods to make invisible leading/spacer engine
 
@@ -1124,6 +1128,7 @@ str_Steam_Railcar	: steam railcar{}{STRING} {}Reliability decay: {GOLD}{UNSIGNED
 str_Diesel_Electric	: diesel-electric engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Diesel_Hydraulic	: diesel-hydraulic engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Diesel_Mechanic	: diesel-mechanical engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
+str_Hydrogen_Electric	: hydrogen FCE engine {}{STRING} {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 str_Gas_Turbine		: gas-turbine locomotive {}Reliability decay: {GOLD}{UNSIGNED_WORD} {BLACK}
 
 str_Electric_Diesel	: electric {STRING} engine with additional {UNSIGNED_WORD} hp diesel booster 
@@ -1133,7 +1138,7 @@ str_Steam		: (Steam)
 str_Steam_Russian	: (Steam, broad gauge)
 # str_Steam_Universal	: (Steam, broad or normal gauge)
 str_Steam_Railbus	: (Steam Railbus)
-str_Diesel_Railbus	: (Diesel Railbus)
+str_Diesel_Railbus	: (Motor Railbus)
 str_Diesel_Railbus_Russian	: (Diesel Railbus, broad gauge)
 str_Diesel		: (Diesel)
 str_Diesel_Russian	: (Diesel, broad gauge)

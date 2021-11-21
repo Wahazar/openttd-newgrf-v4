@@ -173,6 +173,7 @@ if (railtype_available("RAIL") || (loading_stage == LOADING_STAGE_RESERVE)) {
       extra_aspects: RAIL_ASPECTS;
       enable_programmable_pre_signals: 1;
       enable_restricted_signals: 1;
+      enable_no_entry_signals: 1;
     }
 	graphics {
        		gui: RAIL_gui;
