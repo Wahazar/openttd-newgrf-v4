@@ -10,7 +10,7 @@
 
 #include "undefine_type.pnml"
 
-#define SET_TRACK_TYPE if (param_custom_tracks) {\
+#define SET_TRACK_TYPE if (railtype_available("SAAD")) {\
  item(FEAT_TRAINS, ITEM ) {\
   property {\
    track_type: SAAD;\

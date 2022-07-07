@@ -1,6 +1,6 @@
 V4 Trains changelog
 =========================
-
+ - railtypes check
 7995
 - only semaphores for first track type
 - track type fix
